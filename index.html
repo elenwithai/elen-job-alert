@@ -43,9 +43,20 @@
         <button type="button" class="seg" data-filter="all" aria-pressed="false">전체</button>
       </div>
 
+      <p class="notice" id="crawlOnlyNotice" hidden></p>
+
       <div id="recList" class="cards">
         <p class="loading">공고를 불러오는 중…</p>
       </div>
+    </section>
+
+    <section class="section" id="unjudgedSection" hidden aria-labelledby="unjTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="unjTitle">AI 판단 전</h2>
+        <span class="count" id="unjCount">0</span>
+      </div>
+      <p class="section-note" id="unjNote"></p>
+      <div id="unjList" class="cards"></div>
     </section>
 
     <section class="section" id="pendingSection" hidden aria-labelledby="pendTitle">
@@ -55,6 +66,14 @@
       </div>
       <p class="section-note">AI 호출이 실패해 아직 판정하지 못한 공고입니다. 다음 실행에서 자동으로 다시 판단합니다.</p>
       <div id="pendList" class="cards"></div>
+    </section>
+
+    <section class="section">
+      <details id="expiredBox">
+        <summary class="disclosure">마감된 공고 <span id="expCount">0</span>건 보기</summary>
+        <p class="section-note" id="expNote"></p>
+        <div id="expList" class="cards cards-compact"></div>
+      </details>
     </section>
 
     <section class="section">

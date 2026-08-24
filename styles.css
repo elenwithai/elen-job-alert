@@ -886,3 +886,52 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
 /* 자체 확인창 */
 .confirm-panel { border-radius: 14px 14px 0 0; }
 .confirm-panel .sync-body { margin-bottom: 14px; }
+
+/* 수집 전용 실행 안내 */
+.notice {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--band-pend);
+  border-left-width: 3px;
+  border-radius: var(--radius);
+  background: var(--card);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+.notice[hidden] { display: none; }
+
+/* ── 마감일 배지 ─────────────────────────────────────────── */
+
+.dday {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 2px 7px;
+  border-radius: 5px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.dday.d-urgent { color: #fff; background: var(--urgent); border-color: var(--urgent); }
+.dday.d-soon   { color: var(--band-pend); }
+.dday.d-far    { color: var(--ink-3); }
+.dday.d-open   { color: var(--band-fit); }
+.dday.d-none   { color: var(--ink-3); border-style: dashed; }
+.dday.d-over   { color: var(--ink-3); border-style: dashed; }
+
+/* 카드 우측 상단 삭제 버튼 */
+.act-btn.card-del {
+  width: 30px;
+  height: 30px;
+  margin: -4px -4px -4px 2px;
+  color: var(--ink-3);
+}
+.act-btn.card-del svg { width: 14px; height: 14px; }
+
+.card-top { align-items: center; }
+
+/* 마감 섹션의 카드는 흐리게 */
+#expList .card { opacity: 0.72; }

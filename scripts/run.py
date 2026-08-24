@@ -9,6 +9,7 @@
 """
 
 import os
+import re
 import sys
 import json
 import argparse
@@ -32,10 +33,37 @@ DATA_DIR = os.path.join(ROOT, "data")
 MAX_AI_CALLS = int(os.environ.get("MAX_AI_CALLS", "40"))
 # 마지막으로 발견된 지 이 일수가 지난 공고는 정리
 RETENTION_DAYS = int(os.environ.get("RETENTION_DAYS", "45"))
+# 마감일을 못 읽은 공고는 발견 후 이 일수가 지나면 '마감'으로 간주
+STALE_DAYS = int(os.environ.get("STALE_DAYS", "30"))
 
 
 def now_kst():
     return datetime.now(KST)
+
+
+def parse_ymd(value):
+    """'2026-09-30' 형태만 날짜로 인정한다. '상시', 'MM-DD' 등은 None."""
+    if not value:
+        return None
+    m = re.match(r"^(\d{4})-(\d{2})-(\d{2})$", str(value).strip())
+    if not m:
+        return None
+    try:
+        return datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=KST)
+    except ValueError:
+        return None
+
+
+def is_expired(job, today):
+    """마감 여부. 마감일을 읽었으면 그 날짜 기준,
+    못 읽었으면 발견일로부터 STALE_DAYS 경과 여부로 판단한다."""
+    dl = parse_ymd(job.get("deadline") or job.get("deadline_guess"))
+    if dl:
+        return dl.date() < today.date()
+    first = parse_ymd(job.get("first_seen"))
+    if first:
+        return (today.date() - first.date()).days > STALE_DAYS
+    return False
 
 
 def load_json(path, default):
@@ -266,15 +294,22 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--diagnose", action="store_true",
                         help="링크 0건인 소스의 HTML 앞부분을 리포트에 저장")
-    parser.add_argument("--dry-run", action="store_true",
-                        help="AI 호출 없이 크롤링만 수행")
+    parser.add_argument("--dry-run", "--crawl-only", dest="dry_run",
+                        action="store_true",
+                        help="AI 호출 없이 크롤링만 수행 (API 키 없이도 동작)")
     args = parser.parse_args()
 
     sources_cfg = load_json(os.path.join(CONFIG_DIR, "sources.json"), {"sources": []})
     profile = load_json(os.path.join(CONFIG_DIR, "profile.json"), {})
     state = load_json(os.path.join(DATA_DIR, "jobs.json"), {"jobs": []})
+    # 아직 AI 판단을 못 받은 공고의 상세 본문 보관소.
+    # jobs.json 은 휴대폰이 내려받는 파일이라 본문을 넣으면 너무 커진다.
+    bodies = load_json(os.path.join(DATA_DIR, "pending_bodies.json"), {})
 
     existing = {j["id"]: j for j in state.get("jobs", []) if j.get("id")}
+    for jid, body in bodies.items():
+        if jid in existing:
+            existing[jid]["detail_text"] = body
     known_ids = set(existing.keys())
 
     sources = [s for s in sources_cfg.get("sources", []) if s.get("enabled", True)]
@@ -317,22 +352,44 @@ def main():
     print(f"[i] 신규 공고 {len(all_new)}건")
 
     # 이전에 판단 보류된 건도 재시도 대상에 포함
-    retry = [j for j in existing.values() if j.get("ai_status") == "error"]
+    retry = [j for j in existing.values()
+             if j.get("ai_status") in ("error", "skipped")]
     if retry:
         print(f"[i] 이전 판단 보류 {len(retry)}건 재시도 대상")
 
     api_key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
-    if not api_key and not args.dry_run:
-        print("[!] ANTHROPIC_API_KEY 없음 — 모든 신규 공고는 '판단 보류' 처리됩니다.", file=sys.stderr)
+    crawl_only = args.dry_run or not api_key
+    if crawl_only:
+        why = "--dry-run 지정" if args.dry_run else "ANTHROPIC_API_KEY 미설정"
+        print(f"[i] 수집 전용 모드 ({why}) — AI 판단을 건너뜁니다. "
+              "수집된 공고는 화면의 'AI 판단 전' 섹션에 그대로 표시됩니다.")
 
     queue = all_new + retry
     calls = 0
     ai_errors = 0
 
+    skipped_expired = 0
     for job in queue:
-        if args.dry_run:
-            verdict = {"status": "error", "fit": "pending", "reason": "dry-run",
-                       "role": "", "deadline": "", "confidence": "low"}
+        # ── 마감된 공고는 AI 판단 대상에서 제외 (API 비용 절감) ──
+        if is_expired(job, today):
+            job["fit"] = "expired"
+            job["reason"] = "마감일 경과 — AI 판단을 생략했습니다"
+            job["role"] = job.get("role", "")
+            job["confidence"] = "low"
+            job["ai_status"] = "skipped_expired"
+            job["deadline"] = job.get("deadline") or job.get("deadline_guess", "")
+            job.setdefault("first_seen", today.strftime("%Y-%m-%d"))
+            job["last_seen"] = today.strftime("%Y-%m-%d")
+            skipped_expired += 1
+            continue
+
+        if crawl_only:
+            verdict = {
+                "status": "skipped", "fit": "unjudged",
+                "reason": ("AI 판단 전 — " +
+                           ("수집 전용 실행" if args.dry_run else "API 키를 등록하면 다음 실행에서 판단합니다")),
+                "role": "", "deadline": "", "confidence": "low",
+            }
         elif calls >= MAX_AI_CALLS:
             verdict = {"status": "error", "fit": "pending",
                        "reason": "판단 보류 — 이번 실행 AI 호출 한도 초과, 다음 실행에서 재시도",
@@ -354,6 +411,8 @@ def main():
         job["last_seen"] = today.strftime("%Y-%m-%d")
 
     print(f"[i] AI 호출 {calls}회 (실패 {ai_errors}회)")
+    if skipped_expired:
+        print(f"[i] 마감된 공고 {skipped_expired}건은 AI 판단을 생략했습니다 (비용 절감)")
 
     # 병합
     for job in all_new:
@@ -362,6 +421,7 @@ def main():
     # 오래된 공고 정리 + 프런트엔드에 불필요한 본문 제거
     cutoff = today - timedelta(days=RETENTION_DAYS)
     output_jobs = []
+    new_bodies = {}
     for j in existing.values():
         try:
             last = datetime.strptime(j.get("last_seen", "1970-01-01"), "%Y-%m-%d").replace(tzinfo=KST)
@@ -372,11 +432,18 @@ def main():
         slim = {k: v for k, v in j.items() if k not in ("detail_text",)}
         slim["has_detail"] = j.get("detail_status") == "ok"
         output_jobs.append(slim)
+        # 아직 판단을 못 받은 공고는 본문을 보관해 둔다.
+        # 그래야 나중에 API 키를 넣었을 때 제목이 아닌 본문으로 판단할 수 있다.
+        if (j.get("ai_status") in ("error", "skipped")
+                and not is_expired(j, today) and j.get("detail_text")):
+            new_bodies[j["id"]] = j["detail_text"]
 
     output_jobs.sort(key=lambda j: (j.get("first_seen", ""), j.get("company", "")), reverse=True)
 
     fit_yes = sum(1 for j in output_jobs if j.get("fit") == "yes")
     pending = sum(1 for j in output_jobs if j.get("fit") == "pending")
+    unjudged = sum(1 for j in output_jobs if j.get("fit") == "unjudged")
+    expired = sum(1 for j in output_jobs if is_expired(j, today))
 
     payload = {
         "updated_at": today.strftime("%Y-%m-%d %H:%M"),
@@ -385,6 +452,11 @@ def main():
             "total": len(output_jobs),
             "fit_yes": fit_yes,
             "pending": pending,
+            "unjudged": unjudged,
+            "expired": expired,
+            "ai_skipped_expired": skipped_expired,
+            "stale_days": STALE_DAYS,
+            "crawl_only": crawl_only,
             "new_this_run": len(all_new),
             "ai_calls": calls,
             "ai_errors": ai_errors,
@@ -407,12 +479,17 @@ def main():
     }
 
     save_json(os.path.join(DATA_DIR, "jobs.json"), payload)
+    save_json(os.path.join(DATA_DIR, "pending_bodies.json"), new_bodies)
     save_json(os.path.join(DATA_DIR, "crawl_report.json"), {
         "generated_at": today.strftime("%Y-%m-%d %H:%M"),
         "sources": report,
     })
 
-    print(f"[✓] 완료 — 전체 {len(output_jobs)}건 / 추천 {fit_yes}건 / 보류 {pending}건")
+    print(f"[✓] 완료 — 전체 {len(output_jobs)}건 / 추천 {fit_yes}건 / "
+          f"보류 {pending}건 / AI 판단 전 {unjudged}건 / 마감 {expired}건")
+    if crawl_only and unjudged:
+        print("    ANTHROPIC_API_KEY 를 등록하고 다시 실행하면 "
+              f"{unjudged}건을 저장된 본문으로 판단합니다.")
     return 0
 
 

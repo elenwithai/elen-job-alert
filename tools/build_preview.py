@@ -12,6 +12,10 @@ import os
 import re
 import sys
 
+# 인자로 샘플 파일과 출력 파일을 바꿀 수 있다
+SAMPLE = sys.argv[1] if len(sys.argv) > 1 else "sample-jobs.json"
+OUTNAME = sys.argv[2] if len(sys.argv) > 2 else "preview.html"
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -24,7 +28,7 @@ def main():
     html = read("index.html")
     css = read("styles.css")
     js = read("app.js")
-    data = json.loads(read("data", "sample-jobs.json"))
+    data = json.loads(read("data", SAMPLE))
     data.pop("_readme", None)
 
     # 외부 참조 제거 후 인라인
@@ -52,10 +56,10 @@ def main():
     html = html.replace("<title>채용공고 모니터</title>",
                         "<title>채용공고 모니터 — 화면 미리보기</title>")
 
-    out = os.path.join(ROOT, "preview.html")
+    out = os.path.join(ROOT, OUTNAME)
     with io.open(out, "w", encoding="utf-8") as f:
         f.write(html)
-    print("preview.html 생성 (%d bytes)" % os.path.getsize(out))
+    print("%s 생성 (%d bytes)" % (OUTNAME, os.path.getsize(out)))
     return 0
 
 

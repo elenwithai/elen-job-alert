@@ -11,6 +11,10 @@
   var K_FILTER = "eja_filter_v1";
   var K_SRC = "eja_srcpatch_v1";
   var K_TAB = "eja_tab_v1";
+  var K_DELETED = "eja_deleted_v1";
+
+  // 마감일을 못 읽은 공고는 발견 후 이 일수가 지나면 '마감'으로 본다 (서버와 동일 기준)
+  var STALE_DAYS = 30;
 
   var DEBUG = /[?&]debug=1/.test(location.search);
 
@@ -20,6 +24,7 @@
     filter: "unseen",
     seen: loadSet(K_SEEN),
     hidden: loadSet(K_HIDDEN),
+    deleted: loadSet(K_DELETED),
     patch: loadPatch(),
     editingKey: null
   };
@@ -138,11 +143,76 @@
     setTimeout(function () { ok.focus(); }, 40);
   }
 
-  function daysUntil(dateStr) {
+  function staleDays() {
+    var s = state.data && state.data.stats;
+    return (s && s.stale_days) || STALE_DAYS;
+  }
+
+  /* 한국시간 기준 '오늘'. 휴대폰 시간대가 무엇이든 KST 날짜로 맞춘다. */
+  function kstTodayUTC() {
+    var now = new Date();
+    var k = new Date(now.getTime() + (9 * 60 + now.getTimezoneOffset()) * 60000);
+    return Date.UTC(k.getFullYear(), k.getMonth(), k.getDate());
+  }
+
+  function ymdToUTC(dateStr) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr || "")) return null;
-    var d = new Date(dateStr + "T23:59:59+09:00");
-    if (isNaN(d.getTime())) return null;
-    return Math.ceil((d - new Date()) / 86400000);
+    var p = dateStr.split("-");
+    var t = Date.UTC(+p[0], +p[1] - 1, +p[2]);
+    return isNaN(t) ? null : t;
+  }
+
+  function daysSince(dateStr) {
+    var t = ymdToUTC(dateStr);
+    if (t === null) return null;
+    return Math.round((kstTodayUTC() - t) / 86400000);
+  }
+
+  /* 마감 여부. 마감일을 읽었으면 그 날짜로, 못 읽었으면
+     발견일로부터 staleDays 경과 여부로 판단한다. (서버 로직과 동일) */
+  function isExpired(job) {
+    var left = daysUntil(job.deadline);
+    if (left !== null) return left < 0;
+    var since = daysSince(job.first_seen);
+    return since !== null && since > staleDays();
+  }
+
+  /* 카드 상단 배지에 쓸 남은 일수 라벨 */
+  function deadlineBadge(job) {
+    var left = daysUntil(job.deadline);
+    if (left !== null) {
+      if (left < 0) return { text: "마감", cls: "d-over" };
+      if (left === 0) return { text: "D-DAY", cls: "d-urgent" };
+      if (left <= 3) return { text: "D-" + left, cls: "d-urgent" };
+      if (left <= 7) return { text: "D-" + left, cls: "d-soon" };
+      return { text: "D-" + left, cls: "d-far" };
+    }
+    if (/상시|수시|채용시/.test(job.deadline || "")) {
+      return { text: "상시", cls: "d-open" };
+    }
+    var since = daysSince(job.first_seen);
+    if (since !== null && since > staleDays()) return { text: "기한 경과", cls: "d-over" };
+    return { text: "마감일 미확인", cls: "d-none" };
+  }
+
+  /* 마감 임박순 → 같으면 최신 발견순 */
+  function sortJobs(list) {
+    return list.slice().sort(function (a, b) {
+      var la = daysUntil(a.deadline);
+      var lb = daysUntil(b.deadline);
+      if (la === null && lb !== null) return 1;
+      if (lb === null && la !== null) return -1;
+      if (la !== null && lb !== null && la !== lb) return la - lb;
+      return String(b.first_seen || "").localeCompare(String(a.first_seen || ""));
+    });
+  }
+
+  /* 남은 일수를 '달력 날짜 차이'로 계산한다.
+     밀리초 차이로 재면 마감 당일 자정을 넘긴 공고가 하루 더 D-DAY로 남는다. */
+  function daysUntil(dateStr) {
+    var t = ymdToUTC(dateStr);
+    if (t === null) return null;
+    return Math.round((t - kstTodayUTC()) / 86400000);
   }
 
   /* 공고 URL이 모니터링 목록의 회사 URL과 같으면 잘못 매핑된 것이다.
@@ -161,7 +231,7 @@
 
   function gradeOf(job) {
     if (job.fit === "yes") return "fit";
-    if (job.fit === "pending") return "pend";
+    if (job.fit === "pending" || job.fit === "unjudged") return "pend";
     return "rej";
   }
 
@@ -249,6 +319,21 @@
 
     var top = el("div", "card-top");
     top.appendChild(el("span", "company", job.company || "―"));
+    top.appendChild(el("span", "spacer"));
+
+    var badge = deadlineBadge(job);
+    top.appendChild(el("span", "dday " + badge.cls, badge.text));
+
+    var delBtn = iconBtn("del", (job.title || "이 공고") + " 삭제");
+    delBtn.className = "act-btn card-del";
+    delBtn.addEventListener("click", function (ev) {
+      ev.preventDefault(); ev.stopPropagation();
+      askConfirm("이 공고를 삭제할까요?",
+        (job.title || "") + "\n\n목록에서 완전히 사라지며, 내일 다시 수집되더라도 " +
+        "이 공고는 다시 나타나지 않습니다.",
+        "삭제", function () { deleteJob(job.id); });
+    });
+    top.appendChild(delBtn);
     card.appendChild(top);
 
     var link = el("a", "job-title", job.title || "(제목 없음)");
@@ -261,18 +346,17 @@
 
     var meta = el("div", "meta");
     if (job.role) meta.appendChild(el("span", null, job.role));
-    var left = daysUntil(job.deadline);
-    if (job.deadline) {
-      meta.appendChild(el("span", left !== null && left <= 7 ? "urgent" : null,
-        "마감 " + job.deadline + (left !== null && left >= 0 ? " (D-" + left + ")" : "")));
-    }
+    if (job.deadline) meta.appendChild(el("span", null, "마감 " + job.deadline));
     if (job.first_seen) meta.appendChild(el("span", null, "발견 " + job.first_seen));
     if (meta.childNodes.length) card.appendChild(meta);
 
     if (job.reason) card.appendChild(el("p", "reason", job.reason));
 
     var chips = el("div", "chips");
-    if (job.has_detail === false && job.fit !== "pending") {
+    if (job.fit === "unjudged" && job.has_detail) {
+      chips.appendChild(el("span", "chip read", "본문 수집 완료"));
+    }
+    if (job.has_detail === false && job.fit !== "pending" && job.fit !== "unjudged") {
       chips.appendChild(el("span", "chip warn", "목록 정보만으로 판단"));
     }
     if (job.confidence === "low" && job.fit === "yes") {
@@ -297,6 +381,20 @@
 
   /* 링크를 누른 즉시 읽음 처리하되, 읽는 도중 카드가 사라지지 않도록
      목록에서 바로 빼지 않고 흐리게만 표시한다. */
+  function deleteJob(id) {
+    state.deleted.add(id);
+    saveSet(K_DELETED, state.deleted);
+    render();
+    toast("공고를 삭제했습니다", {
+      actionLabel: "실행취소", ms: 5000,
+      onAction: function () {
+        state.deleted.delete(id);
+        saveSet(K_DELETED, state.deleted);
+        render();
+      }
+    });
+  }
+
   function markSeen(id, card) {
     if (state.seen.has(id)) return;
     state.seen.add(id);
@@ -313,12 +411,24 @@
 
   function visibleJobs(fitValue) {
     if (!state.data) return [];
-    return (state.data.jobs || []).filter(function (j) {
+    return sortJobs((state.data.jobs || []).filter(function (j) {
+      if (state.deleted.has(j.id)) return false;   // 삭제는 전체 보기에서도 제외
       if (state.hidden.has(j.id)) return false;
+      if (isExpired(j)) return false;              // 마감 건은 마감 섹션으로
       if (j.fit !== fitValue) return false;
       if (fitValue === "yes" && state.filter === "unseen" && state.seen.has(j.id)) return false;
       return true;
-    });
+    }));
+  }
+
+  /* 마감된 공고 — 지워지지 않고 접힌 섹션에 남는다 */
+  function expiredJobs() {
+    if (!state.data) return [];
+    return sortJobs((state.data.jobs || []).filter(function (j) {
+      if (state.deleted.has(j.id)) return false;
+      if (!isExpired(j)) return false;
+      return j.fit !== "no";
+    }));
   }
 
   function fillList(node, jobs, emptyText) {
@@ -332,7 +442,9 @@
 
   function updateCounts() {
     if (!state.data) return;
-    var all = (state.data.jobs || []).filter(function (j) { return !state.hidden.has(j.id); });
+    var all = (state.data.jobs || []).filter(function (j) {
+      return !state.hidden.has(j.id) && !state.deleted.has(j.id) && !isExpired(j);
+    });
     var yes = all.filter(function (j) { return j.fit === "yes"; });
     var unseenYes = yes.filter(function (j) { return !state.seen.has(j.id); });
     byId("recCount").textContent = state.filter === "unseen"
@@ -350,15 +462,47 @@
 
     byId("updatedAt").textContent = "마지막 업데이트: " + (d.updated_at || "―") + " KST";
 
-    var emptyMsg = state.filter === "unseen"
-      ? "안 본 추천 공고가 없습니다. '전체'를 눌러 지난 공고를 볼 수 있습니다."
-      : "AI가 적합하다고 판단한 공고가 아직 없습니다.";
+    var emptyMsg;
+    if (d.stats && d.stats.crawl_only) {
+      emptyMsg = "아직 AI 판단을 하지 않아 추천 공고가 없습니다. 아래 'AI 판단 전' 섹션을 보세요.";
+    } else {
+      emptyMsg = state.filter === "unseen"
+        ? "안 본 추천 공고가 없습니다. '전체'를 눌러 지난 공고를 볼 수 있습니다."
+        : "AI가 적합하다고 판단한 공고가 아직 없습니다.";
+    }
     fillList(byId("recList"), visibleJobs("yes"), emptyMsg);
+
+    var unjudged = visibleJobs("unjudged");
+    byId("unjudgedSection").hidden = unjudged.length === 0;
+    byId("unjCount").textContent = unjudged.length + "건";
+    if (unjudged.length) {
+      byId("unjNote").textContent = (d.stats && d.stats.crawl_only)
+        ? "수집은 끝났지만 아직 AI 판단을 하지 않은 공고입니다. 상세 본문까지 받아두었으므로, "
+          + "ANTHROPIC_API_KEY 를 등록하고 다시 실행하면 이 본문 그대로 판단합니다."
+        : "AI 호출 한도를 넘겨 다음 실행으로 넘긴 공고입니다.";
+      fillList(byId("unjList"), unjudged, "");
+    }
+
+    var notice = byId("crawlOnlyNotice");
+    if (d.stats && d.stats.crawl_only) {
+      notice.hidden = false;
+      notice.textContent = "수집 전용으로 실행된 결과입니다 — API 키가 없어 AI 판단을 건너뛰었습니다. "
+        + "수집된 공고는 아래 'AI 판단 전'에서 확인할 수 있습니다.";
+    } else {
+      notice.hidden = true;
+    }
 
     var pending = visibleJobs("pending");
     byId("pendingSection").hidden = pending.length === 0;
     byId("pendCount").textContent = pending.length + "건";
     if (pending.length) fillList(byId("pendList"), pending, "");
+
+    var expired = expiredJobs();
+    byId("expCount").textContent = expired.length;
+    byId("expNote").textContent =
+      "마감일이 지났거나, 마감일을 못 읽은 채 발견 후 " + staleDays() +
+      "일이 지난 공고입니다. 삭제되지 않고 여기 남습니다.";
+    fillList(byId("expList"), expired, "마감된 공고가 없습니다.");
 
     var rejected = visibleJobs("no");
     byId("rejCount").textContent = rejected.length;
@@ -368,9 +512,10 @@
     renderHealth(d.source_health || []);
 
     var hiddenLine = byId("hiddenLine");
+    hiddenLine.textContent = "";
+    var anyLine = false;
     if (state.hidden.size) {
-      hiddenLine.hidden = false;
-      hiddenLine.textContent = "";
+      anyLine = true;
       hiddenLine.appendChild(document.createTextNode("숨긴 공고 " + state.hidden.size + "건 · "));
       var restore = el("button", "link-btn", "모두 복구");
       restore.type = "button";
@@ -380,14 +525,28 @@
         render();
       });
       hiddenLine.appendChild(restore);
-    } else {
-      hiddenLine.hidden = true;
     }
+    if (state.deleted.size) {
+      if (anyLine) hiddenLine.appendChild(el("br"));
+      anyLine = true;
+      hiddenLine.appendChild(document.createTextNode("삭제한 공고 " + state.deleted.size + "건 · "));
+      var undel = el("button", "link-btn", "모두 복구");
+      undel.type = "button";
+      undel.addEventListener("click", function () {
+        state.deleted.clear();
+        saveSet(K_DELETED, state.deleted);
+        render();
+        toast("삭제한 공고를 모두 복구했습니다");
+      });
+      hiddenLine.appendChild(undel);
+    }
+    hiddenLine.hidden = !anyLine;
 
     var s = d.stats || {};
     byId("footMeta").textContent =
       "수집 " + (s.total || 0) + "건 · 이번 실행 신규 " + (s.new_this_run || 0) +
       "건 · AI 호출 " + (s.ai_calls || 0) + "회" +
+      (s.unjudged ? " · 판단 전 " + s.unjudged + "건" : "") +
       (s.browser_pages ? " · 브라우저 " + s.browser_pages + "p" : "");
 
     updateCounts();
@@ -678,6 +837,8 @@
       ["현재 탭", state.tab, true],
       ["localStorage", storageOk ? "사용 가능" : "차단됨(설정 저장 안 됨)", storageOk],
       ["공고 수", ((state.data && state.data.jobs) || []).length, true],
+      ["마감 처리", expiredJobs().length + "건", true],
+      ["삭제됨", state.deleted.size + "건", true],
       ["초과 요소", offenders.length + "개", offenders.length === 0],
       ["목록URL이 걸린 카드", document.querySelectorAll('[data-list-url="1"]').length + "건",
         document.querySelectorAll('[data-list-url="1"]').length === 0]
@@ -712,7 +873,9 @@
   /* ── 데이터 로드 ────────────────────────────────────── */
 
   function dataFile() {
-    return /[?&]demo=1/.test(location.search) ? "data/sample-jobs.json" : "data/jobs.json";
+    if (/[?&]demo=crawl/.test(location.search)) return "data/sample-crawl.json";
+    if (/[?&]demo=1/.test(location.search)) return "data/sample-jobs.json";
+    return "data/jobs.json";
   }
 
   function load() {

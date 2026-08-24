@@ -12,7 +12,7 @@ on:
         type: boolean
         default: false
       dry_run:
-        description: 'AI 호출 없이 크롤링만 (비용 0)'
+        description: '수집만 하고 AI 판단은 건너뛰기 (API 키 없어도 됨 / 비용 0원)'
         type: boolean
         default: false
 
@@ -56,6 +56,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MAX_AI_CALLS: '40'
+          STALE_DAYS: '30'      # 마감일을 못 읽은 공고를 마감 처리할 기준 일수
         run: |
           ARGS=""
           if [ "${{ inputs.diagnose }}" = "true" ]; then ARGS="$ARGS --diagnose"; fi
@@ -66,7 +67,7 @@ jobs:
         run: |
           git config user.name  "job-monitor-bot"
           git config user.email "actions@github.com"
-          git add data/jobs.json data/crawl_report.json
+          git add data/jobs.json data/crawl_report.json data/pending_bodies.json
           if git diff --staged --quiet; then
             echo "변경 없음 — 커밋 생략"
           else
