@@ -1485,6 +1485,9 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
     if (job.reason) card.appendChild(el("p", "reason", job.reason));
 
     var chips = el("div", "chips");
+    if (job.ai_status === "prefilter") {
+      chips.appendChild(el("span", "chip", "자동 제외"));
+    }
     if (job.fit === "unjudged" && job.has_detail) {
       chips.appendChild(el("span", "chip read", "본문 수집 완료"));
     }

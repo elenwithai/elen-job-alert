@@ -6,6 +6,8 @@ from urllib.parse import urljoin, urlparse, urldefrag
 
 from bs4 import BeautifulSoup
 
+import deadline
+
 # 상세 본문에서 잘라낼 최대 길이 (AI 입력 비용 통제)
 MAX_DETAIL_CHARS = 6000
 
@@ -164,31 +166,7 @@ def extract_detail(html):
     return {"title": page_title, "text": text, "truncated": truncated}
 
 
-DEADLINE_PATTERNS = [
-    r"(20\d{2})[.\-/년]\s*(\d{1,2})[.\-/월]\s*(\d{1,2})\s*일?",
-    r"(\d{1,2})[.\-/월]\s*(\d{1,2})\s*일?\s*(?:까지|마감)",
-]
-
-
-def guess_deadline(text):
-    """본문에서 마감일로 보이는 날짜를 추정한다 (best effort)."""
-    if not text:
-        return ""
-    window = ""
-    for kw in ("마감", "접수기간", "지원기간", "모집기간", "까지", "Deadline", "Closing"):
-        idx = text.find(kw)
-        if idx != -1:
-            window = text[max(0, idx - 80): idx + 80]
-            break
-    target = window or text[:600]
-    for pat in DEADLINE_PATTERNS:
-        m = re.search(pat, target)
-        if m:
-            g = m.groups()
-            if len(g) == 3:
-                return f"{g[0]}-{int(g[1]):02d}-{int(g[2]):02d}"
-            if len(g) == 2:
-                return f"{int(g[0]):02d}-{int(g[1]):02d}"
-    if re.search(r"상시\s*채용|채용\s*시\s*마감|수시\s*채용", target):
-        return "상시/채용시 마감"
-    return ""
+def guess_deadline(text, title="", extra_patterns=None):
+    """본문에서 마감일을 추정한다. 실제 파싱은 deadline 모듈이 담당한다."""
+    value, _why = deadline.find_deadline(text, title, extra_patterns=extra_patterns)
+    return value

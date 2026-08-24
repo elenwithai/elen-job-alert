@@ -20,6 +20,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import fetcher
 import extract
+import deadline as deadline_mod
+import prefilter
 import ai_judge
 import browser_fetch
 
@@ -57,7 +59,11 @@ def parse_ymd(value):
 def is_expired(job, today):
     """마감 여부. 마감일을 읽었으면 그 날짜 기준,
     못 읽었으면 발견일로부터 STALE_DAYS 경과 여부로 판단한다."""
-    dl = parse_ymd(job.get("deadline") or job.get("deadline_guess"))
+    raw = str(job.get("deadline") or job.get("deadline_guess") or "")
+    # 본문에 '접수마감' 류 문구가 있었던 경우 (날짜 파싱 실패 시 안전장치)
+    if "마감" in raw and "상시" not in raw and not parse_ymd(raw):
+        return True
+    dl = parse_ymd(raw)
     if dl:
         return dl.date() < today.date()
     first = parse_ymd(job.get("first_seen"))
@@ -260,7 +266,14 @@ def crawl_source(session, source, known_ids, report, renderer, diagnose=False):
                         entry["detail_ok"] += 1
                     job["detail_title"] = parsed["title"]
                     job["detail_text"] = parsed["text"]
-                    job["deadline_guess"] = extract.guess_deadline(parsed["text"])
+                    job["deadline_guess"] = extract.guess_deadline(
+                        parsed["text"], parsed["title"] or job["title"],
+                        source.get("deadline_patterns"))
+                    closed, marker = deadline_mod.is_closed_text(parsed["text"])
+                    if closed and not job["deadline_guess"]:
+                        # 날짜 파싱에 실패해도 '마감되었습니다' 문구가 있으면 마감으로 본다
+                        job["deadline_guess"] = "마감"
+                        job["closed_marker"] = marker
                 except Exception:  # noqa: BLE001
                     job["detail_status"] = "parse_error"
                     entry["detail_failed"] += 1
@@ -369,7 +382,22 @@ def main():
     ai_errors = 0
 
     skipped_expired = 0
+    skipped_filter = 0
     for job in queue:
+        # ── ① 채용공고가 아니거나 지원 대상이 아닌 고용형태는 AI에 안 보낸다 ──
+        drop, why = prefilter.check(job, profile)
+        if drop:
+            job["fit"] = "no"
+            job["reason"] = why
+            job["role"] = ""
+            job["confidence"] = "high"
+            job["ai_status"] = "prefilter"
+            job["deadline"] = job.get("deadline") or job.get("deadline_guess", "")
+            job.setdefault("first_seen", today.strftime("%Y-%m-%d"))
+            job["last_seen"] = today.strftime("%Y-%m-%d")
+            skipped_filter += 1
+            continue
+
         # ── 마감된 공고는 AI 판단 대상에서 제외 (API 비용 절감) ──
         if is_expired(job, today):
             job["fit"] = "expired"
@@ -411,6 +439,8 @@ def main():
         job["last_seen"] = today.strftime("%Y-%m-%d")
 
     print(f"[i] AI 호출 {calls}회 (실패 {ai_errors}회)")
+    if skipped_filter:
+        print(f"[i] 사전 필터로 {skipped_filter}건 제외 (채용공고 아님·계약직·신입·인턴 등)")
     if skipped_expired:
         print(f"[i] 마감된 공고 {skipped_expired}건은 AI 판단을 생략했습니다 (비용 절감)")
 
@@ -455,6 +485,7 @@ def main():
             "unjudged": unjudged,
             "expired": expired,
             "ai_skipped_expired": skipped_expired,
+            "ai_skipped_filter": skipped_filter,
             "stale_days": STALE_DAYS,
             "crawl_only": crawl_only,
             "new_this_run": len(all_new),
