@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24 21:07",
+ "generated_at": "2026-08-25 08:49",
  "sources": [
   {
    "key": "samsungcareers",
@@ -23,8 +23,8 @@
    "key": "hanwhain",
    "company": "한화생명/한화손보",
    "url": "https://www.hanwhain.com/portal/apply/recruit",
-   "list_ok": true,
-   "method": "requests",
+   "list_ok": false,
+   "method": "browser",
    "fallback_used": false,
    "links_found": 0,
    "new_found": 0,
@@ -34,8 +34,8 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "error": "타임아웃",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
   },
   {
    "key": "career_kyobo",
@@ -63,15 +63,15 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 10,
-   "new_found": 6,
-   "detail_ok": 6,
+   "new_found": 4,
+   "detail_ok": 4,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 4,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 4건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": ""
   },
   {
    "key": "idbins",
@@ -85,11 +85,11 @@
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 52,
+   "deferred": 46,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 52건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 46건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "dbgroup",
@@ -99,15 +99,15 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 8,
-   "new_found": 6,
-   "detail_ok": 6,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 2,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 2건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": ""
   },
   {
    "key": "recruit_meritzfire",
@@ -153,15 +153,15 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 10,
-   "new_found": 6,
+   "new_found": 4,
    "detail_ok": 0,
-   "detail_failed": 6,
+   "detail_failed": 4,
    "detail_fetch_enabled": true,
-   "deferred": 4,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 4건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. 상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다."
+   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다."
   },
   {
    "key": "careers_kbfg",
@@ -171,33 +171,33 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 7,
-   "new_found": 6,
-   "detail_ok": 6,
-   "detail_failed": 0,
-   "detail_fetch_enabled": true,
-   "deferred": 1,
-   "manual_only": false,
-   "self_links_skipped": 0,
-   "error": "",
-   "note": "신규 1건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
-  },
-  {
-   "key": "woorifg",
-   "company": "우리금융지주",
-   "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?",
-   "list_ok": false,
-   "method": "browser",
-   "fallback_used": false,
-   "links_found": 0,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)')))",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
+   "error": "",
+   "note": ""
+  },
+  {
+   "key": "woorifg",
+   "company": "우리금융지주",
+   "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?",
+   "list_ok": true,
+   "method": "browser",
+   "fallback_used": true,
+   "links_found": 36,
+   "new_found": 6,
+   "detail_ok": 6,
+   "detail_failed": 0,
+   "detail_fetch_enabled": true,
+   "deferred": 30,
+   "manual_only": false,
+   "self_links_skipped": 0,
+   "error": "",
+   "note": "신규 30건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "pwc",
@@ -211,11 +211,11 @@
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 30,
+   "deferred": 24,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 30건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 24건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "career_kpmg",
@@ -243,15 +243,15 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 10,
-   "new_found": 6,
-   "detail_ok": 6,
+   "new_found": 5,
+   "detail_ok": 5,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 4,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 4건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": ""
   },
   {
    "key": "join_deloitte",
@@ -297,8 +297,8 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 6,
-   "new_found": 6,
-   "detail_ok": 6,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -387,15 +387,15 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 2,
-   "new_found": 2,
+   "new_found": 0,
    "detail_ok": 0,
-   "detail_failed": 2,
+   "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다."
+   "note": ""
   },
   {
    "key": "abl_recruiter",
@@ -405,15 +405,15 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 8,
-   "new_found": 6,
-   "detail_ok": 6,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 2,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 2건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": ""
   }
  ]
 }
