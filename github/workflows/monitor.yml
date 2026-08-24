@@ -1,0 +1,80 @@
+name: 채용공고 모니터링
+
+on:
+  schedule:
+    # cron은 UTC 기준. 23:00 UTC = 한국시간 다음날 08:00.
+    # 하루 1회, 한국시간 오전 8시에만 실행됩니다.
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+    inputs:
+      diagnose:
+        description: '링크를 못 찾은 사이트의 HTML 앞부분을 리포트에 저장'
+        type: boolean
+        default: false
+      dry_run:
+        description: '수집만 하고 AI 판단은 건너뛰기 (API 키 없어도 됨 / 비용 0원)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: job-monitor
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: 저장소 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 파이썬 설치
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 의존성 설치
+        run: pip install -r scripts/requirements.txt
+
+      # JS로 목록을 그리는 채용포털(삼성·한화 등) 대응용 헤드리스 브라우저.
+      # 캐시가 있으면 다운로드를 건너뛰어 실행 시간이 줄어듭니다.
+      - name: 브라우저 캐시 복원
+        id: pwcache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-${{ hashFiles('scripts/requirements.txt') }}
+
+      - name: 헤드리스 브라우저 설치
+        run: python -m playwright install --with-deps chromium
+
+      - name: 크롤링 + AI 판단 실행
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MAX_AI_CALLS: '40'
+          STALE_DAYS: '30'      # 마감일을 못 읽은 공고를 마감 처리할 기준 일수
+        run: |
+          ARGS=""
+          if [ "${{ inputs.diagnose }}" = "true" ]; then ARGS="$ARGS --diagnose"; fi
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS="$ARGS --dry-run"; fi
+          python scripts/run.py $ARGS
+
+      - name: 결과 커밋
+        run: |
+          git config user.name  "job-monitor-bot"
+          git config user.email "actions@github.com"
+          git add data/jobs.json data/crawl_report.json data/pending_bodies.json
+          if git diff --staged --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "공고 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M KST')"
+            git push
+          fi
+
+      - name: 요약 출력
+        if: always()
+        run: python tools/summary.py >> "$GITHUB_STEP_SUMMARY"
