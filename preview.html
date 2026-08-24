@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>채용공고 모니터 — 화면 미리보기</title>
+<meta name="description" content="등록한 채용 페이지의 신규 공고를 AI가 프로필과 대조해 걸러줍니다.">
+<meta name="theme-color" content="#12212b">
+<meta name="color-scheme" content="light dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   채용공고 모니터 — 언더라이팅 심사표를 모티프로 한 화면
+   모바일 안전 규칙:
+     · 100dvh 사용 (100vh는 폴백으로만)
+     · html/body 에 overflow-x:hidden 명시
+     · position:sticky 미사용. fixed는 하단 탭바/시트/토스트에만 쓰며
+       모두 body 바로 아래 형제이고, 조상 어디에도 transform·filter·
+       perspective·will-change 를 걸지 않는다 (전체 파일에서 미사용)
+     · 텍스트가 들어가는 모든 행은 flex-wrap
+   ───────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --bg:        #f2f5f7;
+  --card:      #ffffff;
+  --ink:       #14202a;
+  --ink-2:     #55677a;
+  --ink-3:     #7b8b99;
+  --line:      #dae2e8;
+  --line-soft: #e8eef2;
+  --band-fit:  #0e6e63;
+  --band-pend: #a9711f;
+  --band-rej:  #9aa8b3;
+  --urgent:    #b23a32;
+  --header:    #12212b;
+  --header-ink:#eaf1f5;
+  --header-dim:#8ba3b3;
+
+  --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont,
+          "Apple SD Gothic Neo", "Segoe UI", "Malgun Gothic", system-ui, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+          "Liberation Mono", monospace;
+
+  --radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #0d1620;
+    --card:      #14212c;
+    --ink:       #e6edf2;
+    --ink-2:     #98aab8;
+    --ink-3:     #71879a;
+    --line:      #223442;
+    --line-soft: #1b2b37;
+    --band-fit:  #3fb3a1;
+    --band-pend: #d3a05a;
+    --band-rej:  #4a5d6c;
+    --urgent:    #e0736a;
+    --header:    #0a121a;
+    --header-ink:#e6edf2;
+    --header-dim:#7d95a6;
+  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom));
+}
+
+img, svg { max-width: 100%; height: auto; }
+
+.wrap {
+  width: 100%;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* ── 헤더 ───────────────────────────────────────────────── */
+
+.topbar {
+  background: var(--header);
+  color: var(--header-ink);
+  padding-top: calc(14px + env(safe-area-inset-top));
+  padding-bottom: 12px;
+}
+
+.topbar-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.brand {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  overflow-wrap: anywhere;
+}
+
+.icon-btn {
+  flex: none;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: var(--header-ink);
+  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+.icon-btn:active { background: rgba(255, 255, 255, 0.12); }
+.icon-btn.is-spinning { opacity: 0.5; }
+
+.stamp {
+  margin: 8px 0 0;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  color: var(--header-dim);
+  overflow-wrap: anywhere;
+}
+
+/* 회계 장부의 합계 이중 괘선 */
+.rule-double {
+  margin-top: 12px;
+  height: 3px;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+/* ── 섹션 ───────────────────────────────────────────────── */
+
+.section { margin-top: 26px; }
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.count {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.section-note {
+  margin: 0 0 10px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+/* ── 세그먼트 토글 ──────────────────────────────────────── */
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 3px;
+  background: var(--line-soft);
+  border-radius: 9px;
+  margin: 10px 0 14px;
+}
+
+.seg {
+  flex: 1 1 auto;
+  min-width: 90px;
+  border: 0;
+  background: transparent;
+  color: var(--ink-2);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 550;
+  padding: 7px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.seg.is-active {
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* ── 공고 카드 ──────────────────────────────────────────── */
+
+.cards { display: flex; flex-direction: column; gap: 10px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--band-rej);
+  border-radius: var(--radius);
+  padding: 12px 13px;
+  transition: opacity 0.25s ease, background 0.2s ease;
+}
+
+.card.grade-fit  { border-left-color: var(--band-fit); }
+.card.grade-pend { border-left-color: var(--band-pend); }
+.card.grade-rej  { border-left-color: var(--band-rej); }
+
+.card.is-read { opacity: 0.55; }
+
+.card-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 8px;
+  margin-bottom: 4px;
+}
+
+.company {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--band-fit);
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+.card.grade-pend .company { color: var(--band-pend); }
+.card.grade-rej  .company { color: var(--ink-3); }
+
+.job-title {
+  display: block;
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.job-title:hover { text-decoration: underline; }
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+.meta .urgent { color: var(--urgent); font-weight: 600; }
+
+/* AI 판단 메모 — 심사 코멘트처럼 */
+.reason {
+  margin: 9px 0 0;
+  padding-left: 9px;
+  border-left: 2px solid var(--line);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 9px;
+  align-items: center;
+}
+
+.chip {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.02em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.chip.warn { color: var(--band-pend); border-color: var(--band-pend); }
+.chip.read { color: var(--band-fit); border-color: var(--band-fit); }
+
+.spacer { flex: 1 1 auto; min-width: 0; }
+
+.ghost-btn {
+  flex: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+  font-family: inherit;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.ghost-btn:active { background: var(--line-soft); }
+
+.cards-compact .card { padding: 9px 11px; }
+.cards-compact .job-title { font-size: 14px; }
+
+/* ── 모니터링 페이지 목록 ───────────────────────────────── */
+
+.src-list { list-style: none; margin: 0; padding: 0; }
+
+.src-item {
+  border-bottom: 1px solid var(--line-soft);
+}
+.src-item:last-child { border-bottom: 0; }
+
+.src-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  padding: 11px 2px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.src-name { font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+.src-memo {
+  flex: 1 1 100%;
+  font-size: 12px;
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+.src-arrow { flex: none; color: var(--ink-3); font-size: 13px; }
+
+/* ── 수집 상태 ──────────────────────────────────────────── */
+
+.disclosure {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 550;
+  color: var(--ink-2);
+  padding: 8px 0;
+  list-style: none;
+}
+.disclosure::-webkit-details-marker { display: none; }
+.disclosure::before { content: "▸ "; color: var(--ink-3); }
+details[open] > .disclosure::before { content: "▾ "; }
+
+.health { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+
+.health-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: baseline;
+  padding: 9px 11px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 12.5px;
+}
+.health-name { font-weight: 600; overflow-wrap: anywhere; }
+.health-nums { font-family: var(--mono); font-size: 11.5px; color: var(--ink-3); }
+.health-note {
+  flex: 1 1 100%;
+  font-size: 12px;
+  color: var(--band-pend);
+  overflow-wrap: anywhere;
+}
+.health-ok { color: var(--band-fit); }
+.health-bad { color: var(--urgent); }
+
+/* ── 상태/푸터 ──────────────────────────────────────────── */
+
+.loading, .empty {
+  margin: 0;
+  padding: 18px 14px;
+  background: var(--card);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+.foot {
+  margin-top: 34px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.foot-line { margin: 0 0 8px; font-size: 12.5px; color: var(--ink-2); overflow-wrap: anywhere; }
+
+.link-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.foot-meta {
+  margin: 12px 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+
+/* ── 접근성 ─────────────────────────────────────────────── */
+
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 2px solid var(--band-fit);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* 아주 좁은 화면(320px대) 대비 */
+@media (max-width: 360px) {
+  body { font-size: 14.5px; }
+  .job-title { font-size: 15px; }
+  .seg { min-width: 0; }
+}
+
+.health-dim { color: var(--ink-3); }
+.src-link .chip { flex: none; }
+
+/* ═══════════════════════════════════════════════════════════
+   탭 / 편집 / 자가진단  (2차 개편)
+   ═══════════════════════════════════════════════════════════ */
+
+/* 하단 탭바 만큼 본문 아래 여백 확보 */
+body {
+  padding-bottom: calc(66px + env(safe-area-inset-bottom));
+}
+
+.tabpanel { display: block; }
+.tabpanel[hidden] { display: none; }
+
+/* ── 하단 탭바 ──────────────────────────────────────────── */
+/* body 바로 아래 형제로 배치. 조상 어디에도 transform/filter/
+   perspective/will-change 를 걸지 않는다 (걸면 fixed가 깨짐). */
+.tabbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  background: var(--card);
+  border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.tabbtn {
+  position: relative;
+  flex: 1 1 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 9px 4px 10px;
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.tabbtn.is-active { color: var(--band-fit); }
+
+.tabicon { font-size: 17px; line-height: 1; }
+
+.tablabel {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tabbadge {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  margin-left: 8px;
+  min-width: 17px;
+  padding: 0 4px;
+  border-radius: 9px;
+  background: var(--band-fit);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.tabdot {
+  position: absolute;
+  top: 9px;
+  left: 50%;
+  margin-left: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--band-pend);
+}
+
+/* ── 모니터링 목록: 이동 영역과 조작 버튼 분리 ──────────── */
+
+.src-item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 2px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.src-link {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+  padding: 12px 4px 12px 2px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.src-actions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.act-btn {
+  width: 38px;
+  height: 38px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
+  color: var(--ink-2);
+  line-height: 1;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.act-btn svg { display: block; }
+.act-btn:active { background: var(--line-soft); color: var(--ink); }
+
+.src-flag {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+.src-flag.added   { color: var(--band-fit); }
+.src-flag.edited  { color: var(--band-pend); }
+
+.add-btn {
+  flex: none;
+  border: 1px solid var(--band-fit);
+  background: transparent;
+  color: var(--band-fit);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.add-btn:active { background: var(--line-soft); }
+
+/* ── 동기화 안내 배너 ───────────────────────────────────── */
+
+.sync-banner {
+  background: var(--card);
+  border: 1px solid var(--band-pend);
+  border-left-width: 3px;
+  border-radius: var(--radius);
+  padding: 11px 12px;
+  margin-bottom: 14px;
+}
+
+.sync-title {
+  margin: 0 0 5px;
+  font-size: 12.5px;
+  font-weight: 650;
+  color: var(--band-pend);
+  overflow-wrap: anywhere;
+}
+
+.sync-body {
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+.sync-body code {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  overflow-wrap: anywhere;
+}
+
+.sync-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.cfg-out {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 10px;
+  min-height: 120px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink-2);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.45;
+  resize: vertical;
+}
+
+/* ── 버튼 ───────────────────────────────────────────────── */
+
+.primary-btn {
+  flex: none;
+  border: 1px solid var(--band-fit);
+  background: var(--band-fit);
+  color: #fff;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.primary-btn:active { opacity: 0.85; }
+
+.danger-btn {
+  flex: none;
+  border: 1px solid var(--urgent);
+  background: transparent;
+  color: var(--urgent);
+  font-family: inherit;
+  font-size: 12.5px;
+  padding: 6px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+a.ghost-btn { text-decoration: none; display: inline-block; }
+
+/* ── 추가/편집 시트 ─────────────────────────────────────── */
+
+.sheet {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.sheet[hidden] { display: none; }
+
+.sheet-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 16, 22, 0.55);
+}
+
+.sheet-panel {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 92dvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--card);
+  border-radius: 14px 14px 0 0;
+  border-top: 1px solid var(--line);
+  padding: 16px 16px calc(18px + env(safe-area-inset-bottom));
+}
+
+.sheet-title {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.field { display: block; margin-bottom: 13px; }
+
+.field-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink-2);
+  margin-bottom: 5px;
+}
+.field-label .opt { font-weight: 400; color: var(--ink-3); }
+
+.input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 16px; /* iOS 자동 확대 방지 */
+  line-height: 1.4;
+}
+.input:focus { outline: 2px solid var(--band-fit); outline-offset: 1px; }
+
+.field-help {
+  display: block;
+  margin-top: 5px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+}
+
+.check {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 4px 0 14px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
+.check input { flex: none; width: 18px; height: 18px; margin: 0; }
+.check span { flex: 1 1 0; min-width: 0; overflow-wrap: anywhere; }
+
+.sheet-error {
+  margin: 0 0 10px;
+  font-size: 12.5px;
+  color: var(--urgent);
+  overflow-wrap: anywhere;
+}
+
+.sheet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── 토스트 ─────────────────────────────────────────────── */
+
+.toast {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  bottom: calc(78px + env(safe-area-inset-bottom));
+  z-index: 70;
+  max-width: 536px;
+  margin: 0 auto;
+  padding: 10px 13px;
+  border-radius: 9px;
+  background: var(--header);
+  color: var(--header-ink);
+  font-size: 12.5px;
+  line-height: 1.45;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.toast[hidden] { display: none; }
+
+/* ── 자가진단 패널 (?debug=1) ───────────────────────────── */
+
+.debug {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 90;
+  max-height: 45dvh;
+  overflow: auto;
+  padding: 8px 10px;
+  background: #10181f;
+  color: #d8ffe6;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  line-height: 1.5;
+  border-bottom: 2px solid #2f8f6f;
+  overflow-wrap: anywhere;
+}
+.debug[hidden] { display: none; }
+.debug .bad { color: #ff9d92; }
+.debug .ok { color: #7fe3b8; }
+.debug h3 { margin: 0 0 4px; font-size: 11px; color: #fff; }
+.debug ul { margin: 4px 0 0; padding-left: 16px; }
+
+@media (max-width: 360px) {
+  .tablabel { font-size: 11px; }
+  .sync-actions .primary-btn,
+  .sync-actions .ghost-btn { font-size: 12px; padding: 6px 10px; }
+}
+
+/* No. 컬럼 */
+.src-no {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  min-width: 20px;
+  padding-top: 13px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-3);
+  text-align: right;
+}
+
+/* 목록 URL이 잘못 걸린 카드는 눈에 띄게 표시 */
+.card[data-list-url="1"] .job-title::after {
+  content: " ⚠ 목록 페이지 링크";
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--urgent);
+  white-space: nowrap;
+}
+
+/* 토스트 안 실행취소 버튼 */
+.toast {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px 12px;
+}
+.toast-msg { flex: 1 1 auto; min-width: 0; text-align: left; }
+.toast-action {
+  flex: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: var(--header-ink);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.toast-action:active { background: rgba(255, 255, 255, 0.14); }
+
+/* 자체 확인창 */
+.confirm-panel { border-radius: 14px 14px 0 0; }
+.confirm-panel .sync-body { margin-bottom: 14px; }
+
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="topbar-row">
+      <h1 class="brand" id="brandTitle">AI 추천 공고</h1>
+      <button id="refreshBtn" class="icon-btn" type="button" aria-label="새로고침">↻</button>
+    </div>
+    <p class="stamp" id="updatedAt">불러오는 중…</p>
+    <div class="rule-double" aria-hidden="true"></div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── 탭 1: AI 추천 공고 ─────────────────────────── -->
+  <div class="tabpanel wrap" id="panel-jobs" role="tabpanel" aria-labelledby="tab-jobs">
+
+    <section class="section" aria-labelledby="recTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="recTitle">AI 추천 공고</h2>
+        <span class="count" id="recCount">–</span>
+      </div>
+
+      <div class="segmented" role="group" aria-label="공고 표시 범위">
+        <button type="button" class="seg is-active" data-filter="unseen" aria-pressed="true">안 본 공고</button>
+        <button type="button" class="seg" data-filter="all" aria-pressed="false">전체</button>
+      </div>
+
+      <div id="recList" class="cards">
+        <p class="loading">공고를 불러오는 중…</p>
+      </div>
+    </section>
+
+    <section class="section" id="pendingSection" hidden aria-labelledby="pendTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="pendTitle">판단 보류</h2>
+        <span class="count" id="pendCount">0</span>
+      </div>
+      <p class="section-note">AI 호출이 실패해 아직 판정하지 못한 공고입니다. 다음 실행에서 자동으로 다시 판단합니다.</p>
+      <div id="pendList" class="cards"></div>
+    </section>
+
+    <section class="section">
+      <details id="rejectedBox">
+        <summary class="disclosure">AI가 제외한 공고 <span id="rejCount">0</span>건 보기</summary>
+        <div id="rejList" class="cards cards-compact"></div>
+      </details>
+    </section>
+
+    <footer class="foot">
+      <p id="hiddenLine" class="foot-line" hidden></p>
+      <button type="button" id="resetSeen" class="link-btn">읽음 기록 지우기</button>
+      <p class="foot-meta" id="footMeta"></p>
+    </footer>
+  </div>
+
+  <!-- ── 탭 2: 모니터링 페이지 ──────────────────────── -->
+  <div class="tabpanel wrap" id="panel-sources" role="tabpanel" aria-labelledby="tab-sources" hidden>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">모니터링 페이지</h2>
+        <span class="count" id="srcCount">–</span>
+        <span class="spacer"></span>
+        <button type="button" id="addSrcBtn" class="add-btn">+ 추가</button>
+      </div>
+      <p class="section-note">회사명을 누르면 채용 페이지로 바로 이동합니다. 오른쪽 아이콘으로 수정·삭제할 수 있습니다.</p>
+
+      <div id="syncBanner" class="sync-banner" hidden>
+        <p class="sync-title" id="syncTitle"></p>
+        <p class="sync-body">화면에서 고친 내용은 이 휴대폰에만 저장됩니다. 자동 수집에도 반영하려면
+          아래 내용을 <code>config/sources.json</code>에 붙여넣어야 합니다.</p>
+        <div class="sync-actions">
+          <button type="button" id="copyCfgBtn" class="primary-btn">sources.json 복사</button>
+          <a id="ghEditLink" class="ghost-btn" target="_blank" rel="noopener noreferrer" hidden>GitHub에서 붙여넣기 ↗</a>
+          <button type="button" id="revertBtn" class="ghost-btn">변경 되돌리기</button>
+        </div>
+        <textarea id="cfgOut" class="cfg-out" readonly hidden aria-label="sources.json 내용"></textarea>
+      </div>
+
+      <ul id="srcList" class="src-list"></ul>
+    </section>
+
+    <section class="section">
+      <details id="healthBox">
+        <summary class="disclosure">수집 상태 확인</summary>
+        <div id="healthList" class="health"></div>
+      </details>
+    </section>
+  </div>
+
+</main>
+
+<!-- 하단 탭바 — body 바로 아래 배치. 조상에 transform/filter/will-change 없음 -->
+<nav class="tabbar" role="tablist" aria-label="화면 전환">
+  <button type="button" class="tabbtn is-active" id="tab-jobs" data-tab="jobs"
+          role="tab" aria-selected="true" aria-controls="panel-jobs">
+    <span class="tabicon" aria-hidden="true">◧</span>
+    <span class="tablabel">AI 추천 공고</span>
+    <span class="tabbadge" id="tabBadge" hidden>0</span>
+  </button>
+  <button type="button" class="tabbtn" id="tab-sources" data-tab="sources"
+          role="tab" aria-selected="false" aria-controls="panel-sources">
+    <span class="tabicon" aria-hidden="true">☰</span>
+    <span class="tablabel">모니터링 페이지</span>
+    <span class="tabdot" id="tabDot" hidden></span>
+  </button>
+</nav>
+
+<!-- 추가/편집 시트 -->
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet-backdrop" id="sheetBackdrop"></div>
+  <div class="sheet-panel" role="document">
+    <h2 class="sheet-title" id="sheetTitle">채용 페이지 추가</h2>
+
+    <label class="field">
+      <span class="field-label">회사명</span>
+      <input type="text" id="fCompany" class="input" placeholder="예: KB라이프생명" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span class="field-label">공고 목록 페이지 주소</span>
+      <input type="url" id="fUrl" class="input" placeholder="https://…" inputmode="url" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span class="field-label">메모 <span class="opt">선택</span></span>
+      <input type="text" id="fMemo" class="input" placeholder="예: 경영전략 직무 위주" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span class="field-label">공고 링크 조각 <span class="opt">선택</span></span>
+      <input type="text" id="fPattern" class="input" placeholder="예: /recruit/view" autocomplete="off">
+      <span class="field-help">공고 하나를 열었을 때 주소에 공통으로 들어가는 부분입니다.
+        비워두면 자동 추정하지만, 넣어주면 정확도가 크게 올라갑니다.</span>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" id="fManual">
+      <span>수동 확인 전용 (수집·AI 판단 없이 목록에만 표시)</span>
+    </label>
+
+    <p class="sheet-error" id="sheetError" hidden></p>
+
+    <div class="sheet-actions">
+      <button type="button" id="sheetSave" class="primary-btn">저장</button>
+      <button type="button" id="sheetCancel" class="ghost-btn">취소</button>
+      <span class="spacer"></span>
+      <button type="button" id="sheetDelete" class="danger-btn" hidden>삭제</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<!-- 자가진단: 주소 끝에 ?debug=1 을 붙이면 켜집니다 -->
+<div class="debug" id="debugPanel" hidden></div>
+
+<script>window.__EJA_PREVIEW_DATA__ = {"updated_at": "2026-08-24 08:12", "updated_at_iso": "2026-08-24T08:12:00+09:00", "stats": {"total": 6, "fit_yes": 3, "pending": 1, "new_this_run": 4, "ai_calls": 4, "ai_errors": 1, "browser_pages": 9}, "sources": [{"key": "samsungcareers", "company": "삼성생명/삼성화재", "url": "https://www.samsungcareers.com/hr/", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "hanwhain", "company": "한화생명/한화손보", "url": "https://www.hanwhain.com/portal/apply/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "career_kyobo", "company": "교보생명", "url": "https://career.kyobo.co.kr/home", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "shinhan_life", "company": "신한라이프", "url": "https://shinhan-life.recruiter.co.kr/career/job", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "idbins", "company": "DB손보", "url": "https://www.idbins.com/FWCOMV1751.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "dbgroup", "company": "DB그룹", "url": "https://dbgroup.recruiter.co.kr/career/apply1", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "recruit_meritzfire", "company": "메리츠화재", "url": "https://recruit.meritzfire.com/new/job/noticeList.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "hi_recruiter", "company": "현대해상", "url": "https://hi.recruiter.co.kr/career/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "kbinsure", "company": "KB손보", "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/list", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "careers_kbfg", "company": "KB금융지주", "url": "https://careers.kbfg.com/APPLY/apply", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "manual_only": false}, {"key": "woorifg", "company": "우리금융지주", "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "manual_only": false}, {"key": "pwc", "company": "PwC삼일", "url": "https://www.pwc.com/kr/ko/career/experienced.html", "memo": "Big4 1순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "career_kpmg", "company": "KPMG삼정", "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr", "memo": "Big4 2순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "eycareers_kr", "company": "EY한영", "url": "https://eycareers-kr.recruiter.co.kr/career/career", "memo": "Big4 3순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "join_deloitte", "company": "Deloitte안진", "url": "https://join.deloitte.co.kr/", "memo": "Big4 4순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "aia", "company": "AIA생명", "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "metlifecareers", "company": "메트라이프", "url": "https://www.metlifecareers.com/ko_KR/ml/SearchJobs?12310=116497&listFilterMode=1", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "miraeassetlife", "company": "미래에셋생명", "url": "https://miraeassetlife.ninehire.site/", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "kblife_recruiting", "company": "KB라이프", "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "myangel", "company": "동양생명", "url": "https://www.myangel.co.kr/Company/Recruit/CoAdpLst", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "hanainsure", "company": "하나손보", "url": "https://www.hanainsure.co.kr/recruit/notify/jobList", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "hanalife", "company": "하나생명", "url": "https://hanalife.careerlink.kr/jobs", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "abl_recruiter", "company": "ABL생명", "url": "https://abl.recruiter.co.kr/career/apply", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}], "sources_config": {"_readme": ["이 파일만 수정하면 모니터링 대상 페이지를 추가/삭제할 수 있습니다. 개수 제한 없음.", "필수 항목: key(영문 고유값), company(회사명), url(공고 '목록' 페이지), memo(메모)", "선택 항목:", "  enabled             : false면 화면에서도 사라짐 (기본 true)", "  manual_only         : true면 수집·AI 판단을 하지 않고 [모니터링 페이지 목록]에만 표시", "                        (로그인 필요 / 크롤링 불가 사이트를 여기로 옮기세요)", "  detail_fetch        : false면 상세 페이지를 안 열고 목록 제목만으로 판단 (기본 true)", "  link_include        : 상세 공고 링크로 인정할 URL 조각 목록 (하나라도 포함되면 채택)", "  link_exclude        : 제외할 URL 조각 목록", "  min_title_len       : 링크 텍스트 최소 길이 (기본 4)", "  max_new_details     : 한 번 실행에서 새로 방문할 상세 페이지 최대 수 (기본 15)", "  same_host_only      : true면 목록 페이지와 같은 도메인 링크만 채택 (기본 true)", "  render_mode         : 'auto'(기본) 일반 요청 먼저, 링크가 부족하면 헤드리스 브라우저로 재시도", "                        'always' 처음부터 브라우저 렌더링 / 'never' 일반 요청만", "  min_expected_links  : 이 건수보다 적게 잡히면 브라우저 렌더링으로 재시도 (기본 1)", "  render_wait_selector: 브라우저 렌더링 시 이 요소가 나타날 때까지 대기 (예: '.job-list li')", "  render_wait_ms      : 렌더링 후 추가 대기 시간 (기본 2500)", "  no                  : 화면의 No. 표시 순서 (없으면 파일 순서대로 번호가 매겨집니다)"], "sources": [{"key": "samsungcareers", "no": 1, "company": "삼성생명/삼성화재", "url": "https://www.samsungcareers.com/hr/", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://www.samsungcareers.com/hr/?no="], "link_exclude": [], "max_new_details": 6}, {"key": "hanwhain", "no": 2, "company": "한화생명/한화손보", "url": "https://www.hanwhain.com/portal/apply/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="], "link_exclude": [], "max_new_details": 6}, {"key": "career_kyobo", "no": 3, "company": "교보생명", "url": "https://career.kyobo.co.kr/home", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "shinhan_life", "no": 4, "company": "신한라이프", "url": "https://shinhan-life.recruiter.co.kr/career/job", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://shinhan-life.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "idbins", "no": 5, "company": "DB손보", "url": "https://www.idbins.com/FWCOMV1751.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "dbgroup", "no": 6, "company": "DB그룹", "url": "https://dbgroup.recruiter.co.kr/career/apply1", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://dbgroup.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "recruit_meritzfire", "no": 7, "company": "메리츠화재", "url": "https://recruit.meritzfire.com/new/job/noticeList.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://recruit.meritzfire.com/new/job/noticeView.do"], "link_exclude": [], "max_new_details": 6}, {"key": "hi_recruiter", "no": 8, "company": "현대해상", "url": "https://hi.recruiter.co.kr/career/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://hi.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "kbinsure", "no": 9, "company": "KB손보", "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/list", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn="], "link_exclude": [], "max_new_details": 6}, {"key": "careers_kbfg", "no": 10, "company": "KB금융지주", "url": "https://careers.kbfg.com/APPLY/apply", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://careers.kbfg.com/apply/"], "link_exclude": [], "max_new_details": 6}, {"key": "woorifg", "no": 11, "company": "우리금융지주", "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "pwc", "no": 12, "company": "PwC삼일", "url": "https://www.pwc.com/kr/ko/career/experienced.html", "memo": "Big4 1순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.pwc.com/kr/ko/career/experienced/"], "link_exclude": [], "max_new_details": 6}, {"key": "career_kpmg", "no": 13, "company": "KPMG삼정", "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr", "memo": "Big4 2순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"], "link_exclude": [], "max_new_details": 6}, {"key": "eycareers_kr", "no": 14, "company": "EY한영", "url": "https://eycareers-kr.recruiter.co.kr/career/career", "memo": "Big4 3순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://eycareers-kr.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "join_deloitte", "no": 15, "company": "Deloitte안진", "url": "https://join.deloitte.co.kr/", "memo": "Big4 4순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "aia", "no": 16, "company": "AIA생명", "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://aia.wd3.myworkdayjobs.com/ko-KR/External/details/"], "link_exclude": [], "max_new_details": 6}, {"key": "metlifecareers", "no": 17, "company": "메트라이프", "url": "https://www.metlifecareers.com/ko_KR/ml/SearchJobs?12310=116497&listFilterMode=1", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://www.metlifecareers.com/ko_KR/ml/JobDetail/"], "link_exclude": [], "max_new_details": 6}, {"key": "miraeassetlife", "no": 18, "company": "미래에셋생명", "url": "https://miraeassetlife.ninehire.site/", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://miraeassetlife.ninehire.site/job_posting/"], "link_exclude": [], "max_new_details": 6}, {"key": "kblife_recruiting", "no": 19, "company": "KB라이프", "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "myangel", "no": 20, "company": "동양생명", "url": "https://www.myangel.co.kr/Company/Recruit/CoAdpLst", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "hanainsure", "no": 21, "company": "하나손보", "url": "https://www.hanainsure.co.kr/recruit/notify/jobList", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="], "link_exclude": [], "max_new_details": 6}, {"key": "hanalife", "no": 22, "company": "하나생명", "url": "https://hanalife.careerlink.kr/jobs", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://hanalife.careerlink.kr/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "abl_recruiter", "no": 23, "company": "ABL생명", "url": "https://abl.recruiter.co.kr/career/apply", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://abl.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}]}, "source_health": [{"key": "hanwhain", "company": "한화생명/한화손보", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 24, "new_found": 2, "detail_ok": 2, "detail_failed": 0, "manual_only": false, "self_links_skipped": 2, "error": "", "note": "목록·페이지네이션 링크 2건은 공고가 아니므로 제외했습니다."}, {"key": "eycareers_kr", "company": "EY한영", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 11, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "일반 요청 0건 → 브라우저 렌더링으로 11건 수집했습니다."}, {"key": "samsungcareers", "company": "삼성생명/삼성화재", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 8, "new_found": 1, "detail_ok": 0, "detail_failed": 1, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다."}, {"key": "career_kyobo", "company": "교보생명", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 0, "new_found": 0, "detail_ok": 0, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "링크 0건. 공고 링크 조각을 넣으면 해결될 가능성이 높습니다."}, {"key": "recruit_meritzfire", "company": "메리츠화재", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 16, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": ""}, {"key": "aia", "company": "AIA생명", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 9, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": ""}, {"key": "careers_kbfg", "company": "KB금융지주", "list_ok": false, "method": "requests", "fallback_used": false, "links_found": 0, "new_found": 0, "detail_ok": 0, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "타임아웃", "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."}], "jobs": [{"id": "a1b2c3d4e5f60001", "source_key": "hanwhain", "company": "한화생명/한화손보", "title": "[샘플] 경영기획팀 경력직 채용 (전략기획·중기계획)", "url": "https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq=20486", "role": "경영기획 전략기획 매니저", "fit": "yes", "reason": "보험사 경영전략·중기계획 수립 직무로 14년 경력과 직접 맞닿습니다.", "confidence": "high", "ai_status": "ok", "deadline": "2026-09-12", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true}, {"id": "a1b2c3d4e5f60002", "source_key": "eycareers_kr", "company": "EY한영", "title": "[샘플] Financial Services Risk Management – Senior Manager", "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/8841", "role": "FSI 리스크 컨설팅 시니어매니저", "fit": "yes", "reason": "K-ICS·IFRS17 자문 경험을 명시적으로 요구해 언더라이팅·리스크 경력과 정확히 일치합니다.", "confidence": "high", "ai_status": "ok", "deadline": "2026-09-30", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true}, {"id": "a1b2c3d4e5f60003", "source_key": "samsungcareers", "company": "삼성생명/삼성화재", "title": "[샘플] 경영관리 신사업기획 경력채용", "url": "https://www.samsungcareers.com/hr/?no=5512", "role": "신사업기획", "fit": "yes", "reason": "신사업 기획 직무이나 요구 연차가 명시되지 않아 레벨 적합성은 확인이 필요합니다.", "confidence": "low", "ai_status": "ok", "deadline": "상시/채용시 마감", "first_seen": "2026-08-23", "last_seen": "2026-08-24", "has_detail": false}, {"id": "a1b2c3d4e5f60004", "source_key": "recruit_meritzfire", "company": "메리츠화재", "title": "[샘플] 리스크관리팀 경력사원 모집", "url": "https://recruit.meritzfire.com/new/job/noticeView.do?noticeSn=31207", "role": "", "fit": "pending", "reason": "판단 보류 — API 529 (일시적)", "confidence": "low", "ai_status": "error", "deadline": "", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true}, {"id": "a1b2c3d4e5f60005", "source_key": "careers_kbfg", "company": "KB금융지주", "title": "[샘플] 디지털 플랫폼 백엔드 개발자", "url": "https://careers.kbfg.com/apply/2026-0433", "role": "백엔드 개발", "fit": "no", "reason": "IT 개발 직무로 보험·전략 경력과 접점이 없습니다.", "confidence": "high", "ai_status": "ok", "deadline": "", "first_seen": "2026-08-22", "last_seen": "2026-08-24", "has_detail": true}, {"id": "a1b2c3d4e5f60006", "source_key": "aia", "company": "AIA생명", "title": "[샘플] 2026 하반기 신입사원 공개채용", "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/details/Graduate-Program_JR-24118", "role": "신입 공채", "fit": "no", "reason": "신입 공채로 경력직 지원 대상이 아닙니다.", "confidence": "high", "ai_status": "ok", "deadline": "2026-08-29", "first_seen": "2026-08-21", "last_seen": "2026-08-24", "has_detail": true}]};</script>
+<script>
+/* 채용공고 모니터 — 클라이언트 로직
+   읽음/숨김/모니터링 페이지 편집 내용은 이 브라우저의 localStorage에만
+   저장됩니다. 서버 자동수집(GitHub Actions)은 config/sources.json 을 보므로,
+   편집 후에는 "sources.json 복사" 로 파일에 반영해야 수집에도 적용됩니다. */
+
+(function () {
+  "use strict";
+
+  var K_SEEN = "eja_seen_v1";
+  var K_HIDDEN = "eja_hidden_v1";
+  var K_FILTER = "eja_filter_v1";
+  var K_SRC = "eja_srcpatch_v1";
+  var K_TAB = "eja_tab_v1";
+
+  var DEBUG = /[?&]debug=1/.test(location.search);
+
+  var state = {
+    data: null,
+    tab: "jobs",
+    filter: "unseen",
+    seen: loadSet(K_SEEN),
+    hidden: loadSet(K_HIDDEN),
+    patch: loadPatch(),
+    editingKey: null
+  };
+
+  /* ── 저장소 ─────────────────────────────────────────── */
+
+  function loadSet(key) {
+    try {
+      var raw = localStorage.getItem(key);
+      return raw ? new Set(JSON.parse(raw)) : new Set();
+    } catch (e) { return new Set(); }
+  }
+
+  function saveSet(key, set) {
+    try { localStorage.setItem(key, JSON.stringify(Array.from(set))); } catch (e) { /* 무시 */ }
+  }
+
+  function emptyPatch() { return { add: [], edit: {}, del: [] }; }
+
+  function loadPatch() {
+    try {
+      var raw = localStorage.getItem(K_SRC);
+      if (!raw) return emptyPatch();
+      var p = JSON.parse(raw);
+      return {
+        add: Array.isArray(p.add) ? p.add : [],
+        edit: p.edit && typeof p.edit === "object" ? p.edit : {},
+        del: Array.isArray(p.del) ? p.del : []
+      };
+    } catch (e) { return emptyPatch(); }
+  }
+
+  function savePatch() {
+    try { localStorage.setItem(K_SRC, JSON.stringify(state.patch)); } catch (e) { /* 무시 */ }
+  }
+
+  function patchCount() {
+    return state.patch.add.length + Object.keys(state.patch.edit).length + state.patch.del.length;
+  }
+
+  /* ── 유틸 ───────────────────────────────────────────── */
+
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  }
+
+  function byId(id) { return document.getElementById(id); }
+
+  var ICONS = {
+    edit: '<path d="M12.5 2.6a1.6 1.6 0 0 1 2.3 2.3l-.9.9-2.3-2.3.9-.9Z"/>' +
+          '<path d="M10.6 4.5 3.2 11.9 2.4 15l3.1-.8 7.4-7.4-2.3-2.3Z"/>',
+    del:  '<path d="M4.2 4.2 13.8 13.8M13.8 4.2 4.2 13.8" stroke="currentColor" ' +
+          'stroke-width="1.9" stroke-linecap="round" fill="none"/>'
+  };
+
+  function iconBtn(kind, label) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "act-btn";
+    b.title = label;
+    b.setAttribute("aria-label", label);
+    b.innerHTML = '<svg viewBox="0 0 18 18" width="17" height="17" aria-hidden="true" ' +
+                  'fill="currentColor">' + ICONS[kind] + '</svg>';
+    return b;
+  }
+
+  function toast(msg, opts) {
+    opts = opts || {};
+    var t = byId("toast");
+    t.textContent = "";
+    t.appendChild(el("span", "toast-msg", msg));
+    if (opts.actionLabel) {
+      var a = el("button", "toast-action", opts.actionLabel);
+      a.type = "button";
+      a.addEventListener("click", function () {
+        t.hidden = true;
+        clearTimeout(toast._t);
+        if (opts.onAction) opts.onAction();
+      });
+      t.appendChild(a);
+    }
+    t.hidden = false;
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function () { t.hidden = true; }, opts.ms || 3200);
+  }
+
+  /* 네이티브 confirm()은 아이프레임·일부 모바일 환경에서 차단되면
+     자동으로 '취소'가 되어 동작이 통째로 무시된다. 직접 만든 확인창을 쓴다. */
+  function askConfirm(title, body, okLabel, onOk) {
+    var wrap = el("div", "sheet");
+    var bd = el("div", "sheet-backdrop");
+    var panel = el("div", "sheet-panel confirm-panel");
+    panel.appendChild(el("h2", "sheet-title", title));
+    if (body) panel.appendChild(el("p", "sync-body", body));
+
+    var acts = el("div", "sheet-actions");
+    var ok = el("button", "danger-btn", okLabel || "확인");
+    ok.type = "button";
+    var cancel = el("button", "ghost-btn", "취소");
+    cancel.type = "button";
+    acts.appendChild(ok);
+    acts.appendChild(cancel);
+    panel.appendChild(acts);
+
+    wrap.appendChild(bd);
+    wrap.appendChild(panel);
+    document.body.appendChild(wrap);
+
+    function close() { if (wrap.parentNode) document.body.removeChild(wrap); }
+    ok.addEventListener("click", function () { close(); onOk(); });
+    cancel.addEventListener("click", close);
+    bd.addEventListener("click", close);
+    setTimeout(function () { ok.focus(); }, 40);
+  }
+
+  function daysUntil(dateStr) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr || "")) return null;
+    var d = new Date(dateStr + "T23:59:59+09:00");
+    if (isNaN(d.getTime())) return null;
+    return Math.ceil((d - new Date()) / 86400000);
+  }
+
+  /* 공고 URL이 모니터링 목록의 회사 URL과 같으면 잘못 매핑된 것이다.
+     정상이라면 항상 개별 상세 페이지 URL이어야 한다. */
+  function isListUrl(u) {
+    if (!u) return false;
+    var norm = String(u).replace(/#.*$/, "").replace(/\/+$/, "");
+    var d = state.data || {};
+    var list = (d.sources || []).concat(
+      (d.sources_config && d.sources_config.sources) || []);
+    for (var i = 0; i < list.length; i++) {
+      if (String(list[i].url || "").replace(/#.*$/, "").replace(/\/+$/, "") === norm) return true;
+    }
+    return false;
+  }
+
+  function gradeOf(job) {
+    if (job.fit === "yes") return "fit";
+    if (job.fit === "pending") return "pend";
+    return "rej";
+  }
+
+  function slugKey(company) {
+    var base = (company || "src").toLowerCase()
+      .replace(/[^a-z0-9가-힣]+/g, "_").replace(/^_|_$/g, "").slice(0, 20);
+    if (!/^[a-z0-9_]+$/.test(base)) base = "src";
+    return base + "_" + Date.now().toString(36).slice(-5);
+  }
+
+  /* ── 모니터링 페이지: 서버 설정 + 로컬 편집 병합 ────── */
+
+  var NEW_SOURCE_DEFAULTS = {
+    enabled: true,
+    manual_only: false,
+    detail_fetch: true,
+    render_mode: "auto",
+    min_expected_links: 1,
+    link_include: [],
+    link_exclude: [],
+    max_new_details: 15
+  };
+
+  function baseConfig() {
+    var d = state.data || {};
+    if (d.sources_config && Array.isArray(d.sources_config.sources)) return d.sources_config;
+    return { sources: (d.sources || []).map(function (s) {
+      var o = {}; for (var k in NEW_SOURCE_DEFAULTS) o[k] = NEW_SOURCE_DEFAULTS[k];
+      o.key = s.key; o.company = s.company; o.url = s.url; o.memo = s.memo || "";
+      o.manual_only = !!s.manual_only;
+      return o;
+    }) };
+  }
+
+  /* 화면·내보내기 양쪽이 쓰는 최종 목록 */
+  function mergedSources() {
+    var cfg = baseConfig();
+    var out = [];
+    (cfg.sources || []).forEach(function (s) {
+      if (state.patch.del.indexOf(s.key) !== -1) return;
+      var patch = state.patch.edit[s.key];
+      var merged = {};
+      for (var k in s) merged[k] = s[k];
+      if (patch) {
+        for (var p in patch) merged[p] = patch[p];
+        merged._flag = "edited";
+      }
+      out.push(merged);
+    });
+    state.patch.add.forEach(function (s) {
+      var copy = {};
+      for (var k in s) copy[k] = s[k];
+      copy._flag = "added";
+      out.push(copy);
+    });
+    return out;
+  }
+
+  function exportConfig() {
+    var cfg = baseConfig();
+    var out = {};
+    for (var k in cfg) if (k !== "sources") out[k] = cfg[k];
+    out.sources = mergedSources().map(function (s) {
+      var c = {};
+      for (var k in s) if (k !== "_flag") c[k] = s[k];
+      return c;
+    });
+    return JSON.stringify(out, null, 2) + "\n";
+  }
+
+  function ghEditUrl() {
+    var m = location.hostname.match(/^([^.]+)\.github\.io$/);
+    if (!m) return "";
+    var seg = location.pathname.split("/").filter(Boolean);
+    var repo = seg.length ? seg[0] : (m[1] + ".github.io");
+    return "https://github.com/" + m[1] + "/" + repo + "/edit/main/config/sources.json";
+  }
+
+  /* ── 공고 카드 ──────────────────────────────────────── */
+
+  function buildCard(job) {
+    var card = el("article", "card grade-" + gradeOf(job));
+    card.dataset.id = job.id;
+    if (state.seen.has(job.id)) card.classList.add("is-read");
+
+    var top = el("div", "card-top");
+    top.appendChild(el("span", "company", job.company || "―"));
+    card.appendChild(top);
+
+    var link = el("a", "job-title", job.title || "(제목 없음)");
+    link.href = job.url || "#";
+    if (isListUrl(job.url)) card.dataset.listUrl = "1";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.addEventListener("click", function () { markSeen(job.id, card); });
+    card.appendChild(link);
+
+    var meta = el("div", "meta");
+    if (job.role) meta.appendChild(el("span", null, job.role));
+    var left = daysUntil(job.deadline);
+    if (job.deadline) {
+      meta.appendChild(el("span", left !== null && left <= 7 ? "urgent" : null,
+        "마감 " + job.deadline + (left !== null && left >= 0 ? " (D-" + left + ")" : "")));
+    }
+    if (job.first_seen) meta.appendChild(el("span", null, "발견 " + job.first_seen));
+    if (meta.childNodes.length) card.appendChild(meta);
+
+    if (job.reason) card.appendChild(el("p", "reason", job.reason));
+
+    var chips = el("div", "chips");
+    if (job.has_detail === false && job.fit !== "pending") {
+      chips.appendChild(el("span", "chip warn", "목록 정보만으로 판단"));
+    }
+    if (job.confidence === "low" && job.fit === "yes") {
+      chips.appendChild(el("span", "chip warn", "확신 낮음"));
+    }
+    var readChip = el("span", "chip read", "읽음");
+    readChip.hidden = !state.seen.has(job.id);
+    chips.appendChild(readChip);
+    chips.appendChild(el("span", "spacer"));
+
+    var hideBtn = el("button", "ghost-btn", "숨기기");
+    hideBtn.type = "button";
+    hideBtn.addEventListener("click", function () {
+      state.hidden.add(job.id);
+      saveSet(K_HIDDEN, state.hidden);
+      render();
+    });
+    chips.appendChild(hideBtn);
+    card.appendChild(chips);
+    return card;
+  }
+
+  /* 링크를 누른 즉시 읽음 처리하되, 읽는 도중 카드가 사라지지 않도록
+     목록에서 바로 빼지 않고 흐리게만 표시한다. */
+  function markSeen(id, card) {
+    if (state.seen.has(id)) return;
+    state.seen.add(id);
+    saveSet(K_SEEN, state.seen);
+    if (card) {
+      card.classList.add("is-read");
+      var chip = card.querySelector(".chip.read");
+      if (chip) chip.hidden = false;
+    }
+    updateCounts();
+  }
+
+  /* ── 렌더 ───────────────────────────────────────────── */
+
+  function visibleJobs(fitValue) {
+    if (!state.data) return [];
+    return (state.data.jobs || []).filter(function (j) {
+      if (state.hidden.has(j.id)) return false;
+      if (j.fit !== fitValue) return false;
+      if (fitValue === "yes" && state.filter === "unseen" && state.seen.has(j.id)) return false;
+      return true;
+    });
+  }
+
+  function fillList(node, jobs, emptyText) {
+    node.textContent = "";
+    if (!jobs.length) {
+      node.appendChild(el("p", "empty", emptyText));
+      return;
+    }
+    jobs.forEach(function (j) { node.appendChild(buildCard(j)); });
+  }
+
+  function updateCounts() {
+    if (!state.data) return;
+    var all = (state.data.jobs || []).filter(function (j) { return !state.hidden.has(j.id); });
+    var yes = all.filter(function (j) { return j.fit === "yes"; });
+    var unseenYes = yes.filter(function (j) { return !state.seen.has(j.id); });
+    byId("recCount").textContent = state.filter === "unseen"
+      ? unseenYes.length + "건"
+      : unseenYes.length + " / " + yes.length + "건";
+
+    var badge = byId("tabBadge");
+    badge.textContent = unseenYes.length > 99 ? "99+" : String(unseenYes.length);
+    badge.hidden = unseenYes.length === 0;
+  }
+
+  function render() {
+    var d = state.data;
+    if (!d) return;
+
+    byId("updatedAt").textContent = "마지막 업데이트: " + (d.updated_at || "―") + " KST";
+
+    var emptyMsg = state.filter === "unseen"
+      ? "안 본 추천 공고가 없습니다. '전체'를 눌러 지난 공고를 볼 수 있습니다."
+      : "AI가 적합하다고 판단한 공고가 아직 없습니다.";
+    fillList(byId("recList"), visibleJobs("yes"), emptyMsg);
+
+    var pending = visibleJobs("pending");
+    byId("pendingSection").hidden = pending.length === 0;
+    byId("pendCount").textContent = pending.length + "건";
+    if (pending.length) fillList(byId("pendList"), pending, "");
+
+    var rejected = visibleJobs("no");
+    byId("rejCount").textContent = rejected.length;
+    fillList(byId("rejList"), rejected, "제외된 공고가 없습니다.");
+
+    renderSources();
+    renderHealth(d.source_health || []);
+
+    var hiddenLine = byId("hiddenLine");
+    if (state.hidden.size) {
+      hiddenLine.hidden = false;
+      hiddenLine.textContent = "";
+      hiddenLine.appendChild(document.createTextNode("숨긴 공고 " + state.hidden.size + "건 · "));
+      var restore = el("button", "link-btn", "모두 복구");
+      restore.type = "button";
+      restore.addEventListener("click", function () {
+        state.hidden.clear();
+        saveSet(K_HIDDEN, state.hidden);
+        render();
+      });
+      hiddenLine.appendChild(restore);
+    } else {
+      hiddenLine.hidden = true;
+    }
+
+    var s = d.stats || {};
+    byId("footMeta").textContent =
+      "수집 " + (s.total || 0) + "건 · 이번 실행 신규 " + (s.new_this_run || 0) +
+      "건 · AI 호출 " + (s.ai_calls || 0) + "회" +
+      (s.browser_pages ? " · 브라우저 " + s.browser_pages + "p" : "");
+
+    updateCounts();
+    runDebug();
+  }
+
+  function renderSources() {
+    var list = byId("srcList");
+    var sources = mergedSources().filter(function (s) { return s.enabled !== false; });
+    list.textContent = "";
+    byId("srcCount").textContent = sources.length + "곳";
+
+    if (!sources.length) {
+      list.appendChild(el("p", "empty", "등록된 채용 페이지가 없습니다. '+ 추가'로 등록하세요."));
+    }
+
+    sources.forEach(function (s, idx) {
+      var li = el("li", "src-item");
+
+      // No. — 배열 순서로 매번 다시 계산하므로 추가/삭제 후 자동 재정렬된다
+      li.appendChild(el("span", "src-no", String(idx + 1)));
+
+      // 이동 영역: 한 번 누르면 곧바로 새 탭으로 이동
+      var a = el("a", "src-link");
+      a.href = s.url;
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.appendChild(el("span", "src-name", s.company));
+      if (s.manual_only) a.appendChild(el("span", "chip warn", "수동 확인 전용"));
+      if (s._flag === "added") a.appendChild(el("span", "src-flag added", "추가됨"));
+      if (s._flag === "edited") a.appendChild(el("span", "src-flag edited", "수정됨"));
+      a.appendChild(el("span", "src-arrow", "↗"));
+      if (s.memo) a.appendChild(el("span", "src-memo", s.memo));
+      li.appendChild(a);
+
+      // 조작 영역: 이동 영역과 겹치지 않는 별도 버튼
+      var acts = el("div", "src-actions");
+
+      var edit = iconBtn("edit", s.company + " 수정");
+      edit.addEventListener("click", function (ev) {
+        ev.preventDefault(); ev.stopPropagation();
+        openSheet(s);
+      });
+      acts.appendChild(edit);
+
+      var del = iconBtn("del", s.company + " 삭제");
+      del.addEventListener("click", function (ev) {
+        ev.preventDefault(); ev.stopPropagation();
+        removeSource(s.key, s.company);
+      });
+      acts.appendChild(del);
+
+      li.appendChild(acts);
+      list.appendChild(li);
+    });
+
+    renderSyncBanner();
+  }
+
+  function renderSyncBanner() {
+    var n = patchCount();
+    var banner = byId("syncBanner");
+    byId("tabDot").hidden = n === 0;
+    if (!n) {
+      banner.hidden = true;
+      byId("cfgOut").hidden = true;
+      return;
+    }
+    banner.hidden = false;
+    byId("syncTitle").textContent =
+      "이 휴대폰에서만 반영된 변경 " + n + "건 — 자동 수집에는 아직 적용되지 않았습니다";
+
+    var link = byId("ghEditLink");
+    var url = ghEditUrl();
+    if (url) { link.href = url; link.hidden = false; } else { link.hidden = true; }
+  }
+
+  function renderHealth(rows) {
+    var box = byId("healthList");
+    box.textContent = "";
+    rows.forEach(function (h) {
+      var row = el("div", "health-row");
+      row.appendChild(el("span", "health-name", h.company));
+      if (h.manual_only) {
+        row.appendChild(el("span", "health-dim", "수동 확인 전용"));
+      } else {
+        row.appendChild(el("span", h.list_ok ? "health-ok" : "health-bad",
+          h.list_ok ? "접속 OK" : "접속 실패"));
+        if (h.method === "browser") {
+          row.appendChild(el("span", "chip warn",
+            h.fallback_used ? "브라우저 폴백" : "브라우저 렌더링"));
+        }
+        row.appendChild(el("span", "health-nums",
+          "링크 " + h.links_found + " · 신규 " + h.new_found +
+          " · 본문 " + h.detail_ok + "/" + (h.detail_ok + h.detail_failed)));
+      }
+      var note = [h.error, h.note].filter(Boolean).join(" ");
+      if (note) row.appendChild(el("span", "health-note", note));
+      box.appendChild(row);
+    });
+    if (!rows.length) box.appendChild(el("p", "empty", "아직 수집 기록이 없습니다."));
+  }
+
+  /* ── 모니터링 페이지 편집 ───────────────────────────── */
+
+  function openSheet(source) {
+    state.editingKey = source ? source.key : null;
+    byId("sheetTitle").textContent = source ? "채용 페이지 수정" : "채용 페이지 추가";
+    byId("fCompany").value = source ? (source.company || "") : "";
+    byId("fUrl").value = source ? (source.url || "") : "";
+    byId("fMemo").value = source ? (source.memo || "") : "";
+    byId("fPattern").value = source && source.link_include ? source.link_include.join(", ") : "";
+    byId("fManual").checked = source ? !!source.manual_only : false;
+    byId("sheetDelete").hidden = !source;
+    byId("sheetError").hidden = true;
+    byId("sheet").hidden = false;
+    setTimeout(function () { byId("fCompany").focus(); }, 50);
+  }
+
+  function closeSheet() {
+    byId("sheet").hidden = true;
+    state.editingKey = null;
+  }
+
+  function saveSheet() {
+    var company = byId("fCompany").value.trim();
+    var url = byId("fUrl").value.trim();
+    var memo = byId("fMemo").value.trim();
+    var pattern = byId("fPattern").value.trim();
+    var manual = byId("fManual").checked;
+    var err = byId("sheetError");
+
+    if (!company) { err.textContent = "회사명을 입력하세요."; err.hidden = false; return; }
+    if (!/^https?:\/\/.+/i.test(url)) {
+      err.textContent = "주소는 http:// 또는 https:// 로 시작해야 합니다.";
+      err.hidden = false; return;
+    }
+
+    var includes = pattern ? pattern.split(",").map(function (x) { return x.trim(); })
+      .filter(Boolean) : [];
+
+    var fields = {
+      company: company, url: url, memo: memo,
+      manual_only: manual, link_include: includes
+    };
+
+    if (state.editingKey) {
+      var addIdx = -1;
+      state.patch.add.forEach(function (a, i) { if (a.key === state.editingKey) addIdx = i; });
+      if (addIdx >= 0) {
+        for (var k in fields) state.patch.add[addIdx][k] = fields[k];
+      } else {
+        state.patch.edit[state.editingKey] = fields;
+      }
+      toast(company + " 수정됨");
+    } else {
+      var item = {};
+      for (var d in NEW_SOURCE_DEFAULTS) item[d] = NEW_SOURCE_DEFAULTS[d];
+      item.key = slugKey(company);
+      for (var f in fields) item[f] = fields[f];
+      state.patch.add.push(item);
+      toast(company + " 추가됨");
+    }
+
+    savePatch();
+    closeSheet();
+    renderSources();
+    runDebug();
+  }
+
+  function removeSource(key, label) {
+    var addIdx = -1;
+    state.patch.add.forEach(function (a, i) { if (a.key === key) addIdx = i; });
+
+    var undo;
+    if (addIdx >= 0) {
+      var removed = state.patch.add[addIdx];
+      state.patch.add.splice(addIdx, 1);
+      undo = function () { state.patch.add.splice(addIdx, 0, removed); };
+    } else {
+      var hadEdit = state.patch.edit[key];
+      var wasDeleted = state.patch.del.indexOf(key) !== -1;
+      if (!wasDeleted) state.patch.del.push(key);
+      delete state.patch.edit[key];
+      undo = function () {
+        var i = state.patch.del.indexOf(key);
+        if (i !== -1 && !wasDeleted) state.patch.del.splice(i, 1);
+        if (hadEdit) state.patch.edit[key] = hadEdit;
+      };
+    }
+
+    savePatch();
+    renderSources();
+    runDebug();
+    toast((label ? label + " 삭제됨" : "삭제됨"), {
+      actionLabel: "실행취소",
+      ms: 5000,
+      onAction: function () {
+        undo();
+        savePatch();
+        renderSources();
+        runDebug();
+        toast("삭제를 취소했습니다");
+      }
+    });
+  }
+
+  function copyConfig() {
+    var text = exportConfig();
+    var out = byId("cfgOut");
+    out.value = text;
+
+    function fallback() {
+      out.hidden = false;
+      out.focus();
+      out.setSelectionRange(0, out.value.length);
+      toast("자동 복사가 막혀 있습니다. 아래 상자의 내용을 길게 눌러 복사하세요.", 5000);
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        toast("sources.json 내용을 복사했습니다. GitHub에서 파일 전체를 지우고 붙여넣으세요.", 4200);
+      }).catch(fallback);
+    } else {
+      fallback();
+    }
+  }
+
+  /* ── 탭 전환 ────────────────────────────────────────── */
+
+  var TAB_TITLE = { jobs: "AI 추천 공고", sources: "모니터링 페이지" };
+
+  function setTab(name) {
+    state.tab = name;
+    try { localStorage.setItem(K_TAB, name); } catch (e) { /* 무시 */ }
+
+    byId("panel-jobs").hidden = name !== "jobs";
+    byId("panel-sources").hidden = name !== "sources";
+    byId("brandTitle").textContent = TAB_TITLE[name] || "채용공고 모니터";
+
+    Array.prototype.forEach.call(document.querySelectorAll(".tabbtn"), function (b) {
+      var on = b.dataset.tab === name;
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-selected", String(on));
+    });
+
+    window.scrollTo(0, 0);
+    runDebug();
+  }
+
+  /* ── 자가진단 (?debug=1) ────────────────────────────── */
+
+  function runDebug() {
+    if (!DEBUG) return;
+    var panel = byId("debugPanel");
+    panel.hidden = false;
+
+    var de = document.documentElement;
+    var vw = de.clientWidth;
+    var offenders = [];
+    var nodes = document.querySelectorAll("body *");
+    for (var i = 0; i < nodes.length; i++) {
+      var n = nodes[i];
+      if (n.closest && n.closest("#debugPanel")) continue;
+      var r = n.getBoundingClientRect();
+      if (r.width === 0 && r.height === 0) continue;
+      if (r.right > vw + 1 || r.left < -1) {
+        offenders.push("<" + n.tagName.toLowerCase() + " class=\"" +
+          ((n.className && n.className.toString()) || "") + "\"> " +
+          Math.round(r.left) + "→" + Math.round(r.right));
+      }
+      if (offenders.length >= 10) break;
+    }
+
+    var overflow = de.scrollWidth - de.clientWidth;
+    var storageOk = true;
+    try { localStorage.setItem("__t", "1"); localStorage.removeItem("__t"); }
+    catch (e) { storageOk = false; }
+
+    panel.textContent = "";
+    panel.appendChild(el("h3", null, "자가진단 (?debug=1 로 켜짐)"));
+
+    var lines = [
+      ["scrollWidth / clientWidth", de.scrollWidth + " / " + de.clientWidth,
+        overflow <= 0],
+      ["가로 초과", overflow + "px", overflow <= 0],
+      ["화면 폭 · DPR", window.innerWidth + "px · " + (window.devicePixelRatio || 1), true],
+      ["현재 탭", state.tab, true],
+      ["localStorage", storageOk ? "사용 가능" : "차단됨(설정 저장 안 됨)", storageOk],
+      ["공고 수", ((state.data && state.data.jobs) || []).length, true],
+      ["초과 요소", offenders.length + "개", offenders.length === 0],
+      ["목록URL이 걸린 카드", document.querySelectorAll('[data-list-url="1"]').length + "건",
+        document.querySelectorAll('[data-list-url="1"]').length === 0]
+    ];
+
+    var hrefs = [];
+    Array.prototype.forEach.call(document.querySelectorAll(".job-title"), function (a) {
+      hrefs.push(a.getAttribute("href"));
+    });
+
+    lines.forEach(function (l) {
+      var p = el("div", l[2] ? "ok" : "bad", l[0] + ": " + l[1]);
+      panel.appendChild(p);
+    });
+
+    if (offenders.length) {
+      var ul = el("ul", "bad");
+      offenders.forEach(function (o) { ul.appendChild(el("li", null, o)); });
+      panel.appendChild(ul);
+    }
+
+    if (hrefs.length) {
+      panel.appendChild(el("div", null, "카드 링크 " + hrefs.length + "건:"));
+      var ul2 = el("ul", null);
+      hrefs.slice(0, 8).forEach(function (h) {
+        ul2.appendChild(el("li", isListUrl(h) ? "bad" : "ok", h));
+      });
+      panel.appendChild(ul2);
+    }
+  }
+
+  /* ── 데이터 로드 ────────────────────────────────────── */
+
+  function dataFile() {
+    return /[?&]demo=1/.test(location.search) ? "data/sample-jobs.json" : "data/jobs.json";
+  }
+
+  function load() {
+    var btn = byId("refreshBtn");
+
+    // 미리보기(preview.html)에서는 네트워크 없이 내장 데이터를 씁니다.
+    if (window.__EJA_PREVIEW_DATA__) {
+      state.data = window.__EJA_PREVIEW_DATA__;
+      state.data.jobs = state.data.jobs || [];
+      render();
+      return;
+    }
+
+    btn.classList.add("is-spinning");
+    fetch(dataFile() + "?t=" + Date.now(), { cache: "no-store" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
+      .then(function (json) {
+        json.jobs = Array.isArray(json.jobs) ? json.jobs : [];
+        state.data = json;
+        render();
+      })
+      .catch(function (err) {
+        state.data = state.data || { jobs: [], sources: [], source_health: [], stats: {} };
+        byId("recList").textContent = "";
+        byId("recList").appendChild(el("p", "empty",
+          "공고 데이터를 불러오지 못했습니다 (" + err.message + "). " +
+          "GitHub의 Actions 탭에서 '채용공고 모니터링'을 한 번 실행하면 data/jobs.json이 만들어집니다."));
+        byId("updatedAt").textContent = "데이터 없음";
+        renderSources();
+        runDebug();
+      })
+      .then(function () { btn.classList.remove("is-spinning"); });
+  }
+
+  /* ── 초기화 ─────────────────────────────────────────── */
+
+  function init() {
+    try {
+      var sf = localStorage.getItem(K_FILTER);
+      if (sf === "all" || sf === "unseen") state.filter = sf;
+      var st = localStorage.getItem(K_TAB);
+      if (st === "jobs" || st === "sources") state.tab = st;
+    } catch (e) { /* 무시 */ }
+
+    Array.prototype.forEach.call(document.querySelectorAll(".seg"), function (b) {
+      var active = b.dataset.filter === state.filter;
+      b.classList.toggle("is-active", active);
+      b.setAttribute("aria-pressed", String(active));
+      b.addEventListener("click", function () {
+        state.filter = b.dataset.filter;
+        try { localStorage.setItem(K_FILTER, state.filter); } catch (e) { /* 무시 */ }
+        Array.prototype.forEach.call(document.querySelectorAll(".seg"), function (o) {
+          var on = o.dataset.filter === state.filter;
+          o.classList.toggle("is-active", on);
+          o.setAttribute("aria-pressed", String(on));
+        });
+        render();
+      });
+    });
+
+    Array.prototype.forEach.call(document.querySelectorAll(".tabbtn"), function (b) {
+      b.addEventListener("click", function () { setTab(b.dataset.tab); });
+    });
+
+    byId("refreshBtn").addEventListener("click", load);
+
+    byId("resetSeen").addEventListener("click", function () {
+      askConfirm("읽음 기록 지우기",
+        "읽음 표시를 모두 지웁니다. 숨긴 공고와 모니터링 페이지 설정은 그대로 유지됩니다.",
+        "지우기", function () {
+          state.seen.clear();
+          saveSet(K_SEEN, state.seen);
+          render();
+          toast("읽음 기록을 지웠습니다");
+        });
+    });
+
+    byId("addSrcBtn").addEventListener("click", function () { openSheet(null); });
+    byId("sheetCancel").addEventListener("click", closeSheet);
+    byId("sheetBackdrop").addEventListener("click", closeSheet);
+    byId("sheetSave").addEventListener("click", saveSheet);
+    byId("sheetDelete").addEventListener("click", function () {
+      var key = state.editingKey;
+      if (!key) return;
+      var label = byId("fCompany").value.trim();
+      closeSheet();
+      removeSource(key, label);
+    });
+    byId("copyCfgBtn").addEventListener("click", copyConfig);
+    byId("revertBtn").addEventListener("click", function () {
+      askConfirm("변경 되돌리기",
+        "화면에서 추가·수정·삭제한 내용을 모두 되돌려 config/sources.json 상태로 되돌립니다.",
+        "되돌리기", function () {
+          state.patch = emptyPatch();
+          savePatch();
+          renderSources();
+          runDebug();
+          toast("변경을 되돌렸습니다");
+        });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !byId("sheet").hidden) closeSheet();
+    });
+
+    window.addEventListener("resize", runDebug);
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible" && state.data && !window.__EJA_PREVIEW_DATA__) load();
+    });
+
+    setTab(state.tab);
+    load();
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        Promise.resolve().catch(function () { /* 무시 */ });
+      });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+
+</script>
+</body>
+</html>

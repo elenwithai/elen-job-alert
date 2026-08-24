@@ -1,0 +1,17 @@
+{
+  "name": "채용공고 모니터",
+  "short_name": "공고모니터",
+  "description": "등록한 채용 페이지의 신규 공고를 AI가 프로필과 대조해 걸러줍니다.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#12212b",
+  "theme_color": "#12212b",
+  "lang": "ko",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

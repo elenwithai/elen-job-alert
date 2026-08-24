@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>채용공고 모니터</title>
+<meta name="description" content="등록한 채용 페이지의 신규 공고를 AI가 프로필과 대조해 걸러줍니다.">
+<meta name="theme-color" content="#12212b">
+<meta name="color-scheme" content="light dark">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="topbar-row">
+      <h1 class="brand" id="brandTitle">AI 추천 공고</h1>
+      <button id="refreshBtn" class="icon-btn" type="button" aria-label="새로고침">↻</button>
+    </div>
+    <p class="stamp" id="updatedAt">불러오는 중…</p>
+    <div class="rule-double" aria-hidden="true"></div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ── 탭 1: AI 추천 공고 ─────────────────────────── -->
+  <div class="tabpanel wrap" id="panel-jobs" role="tabpanel" aria-labelledby="tab-jobs">
+
+    <section class="section" aria-labelledby="recTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="recTitle">AI 추천 공고</h2>
+        <span class="count" id="recCount">–</span>
+      </div>
+
+      <div class="segmented" role="group" aria-label="공고 표시 범위">
+        <button type="button" class="seg is-active" data-filter="unseen" aria-pressed="true">안 본 공고</button>
+        <button type="button" class="seg" data-filter="all" aria-pressed="false">전체</button>
+      </div>
+
+      <div id="recList" class="cards">
+        <p class="loading">공고를 불러오는 중…</p>
+      </div>
+    </section>
+
+    <section class="section" id="pendingSection" hidden aria-labelledby="pendTitle">
+      <div class="section-head">
+        <h2 class="section-title" id="pendTitle">판단 보류</h2>
+        <span class="count" id="pendCount">0</span>
+      </div>
+      <p class="section-note">AI 호출이 실패해 아직 판정하지 못한 공고입니다. 다음 실행에서 자동으로 다시 판단합니다.</p>
+      <div id="pendList" class="cards"></div>
+    </section>
+
+    <section class="section">
+      <details id="rejectedBox">
+        <summary class="disclosure">AI가 제외한 공고 <span id="rejCount">0</span>건 보기</summary>
+        <div id="rejList" class="cards cards-compact"></div>
+      </details>
+    </section>
+
+    <footer class="foot">
+      <p id="hiddenLine" class="foot-line" hidden></p>
+      <button type="button" id="resetSeen" class="link-btn">읽음 기록 지우기</button>
+      <p class="foot-meta" id="footMeta"></p>
+    </footer>
+  </div>
+
+  <!-- ── 탭 2: 모니터링 페이지 ──────────────────────── -->
+  <div class="tabpanel wrap" id="panel-sources" role="tabpanel" aria-labelledby="tab-sources" hidden>
+
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">모니터링 페이지</h2>
+        <span class="count" id="srcCount">–</span>
+        <span class="spacer"></span>
+        <button type="button" id="addSrcBtn" class="add-btn">+ 추가</button>
+      </div>
+      <p class="section-note">회사명을 누르면 채용 페이지로 바로 이동합니다. 오른쪽 아이콘으로 수정·삭제할 수 있습니다.</p>
+
+      <div id="syncBanner" class="sync-banner" hidden>
+        <p class="sync-title" id="syncTitle"></p>
+        <p class="sync-body">화면에서 고친 내용은 이 휴대폰에만 저장됩니다. 자동 수집에도 반영하려면
+          아래 내용을 <code>config/sources.json</code>에 붙여넣어야 합니다.</p>
+        <div class="sync-actions">
+          <button type="button" id="copyCfgBtn" class="primary-btn">sources.json 복사</button>
+          <a id="ghEditLink" class="ghost-btn" target="_blank" rel="noopener noreferrer" hidden>GitHub에서 붙여넣기 ↗</a>
+          <button type="button" id="revertBtn" class="ghost-btn">변경 되돌리기</button>
+        </div>
+        <textarea id="cfgOut" class="cfg-out" readonly hidden aria-label="sources.json 내용"></textarea>
+      </div>
+
+      <ul id="srcList" class="src-list"></ul>
+    </section>
+
+    <section class="section">
+      <details id="healthBox">
+        <summary class="disclosure">수집 상태 확인</summary>
+        <div id="healthList" class="health"></div>
+      </details>
+    </section>
+  </div>
+
+</main>
+
+<!-- 하단 탭바 — body 바로 아래 배치. 조상에 transform/filter/will-change 없음 -->
+<nav class="tabbar" role="tablist" aria-label="화면 전환">
+  <button type="button" class="tabbtn is-active" id="tab-jobs" data-tab="jobs"
+          role="tab" aria-selected="true" aria-controls="panel-jobs">
+    <span class="tabicon" aria-hidden="true">◧</span>
+    <span class="tablabel">AI 추천 공고</span>
+    <span class="tabbadge" id="tabBadge" hidden>0</span>
+  </button>
+  <button type="button" class="tabbtn" id="tab-sources" data-tab="sources"
+          role="tab" aria-selected="false" aria-controls="panel-sources">
+    <span class="tabicon" aria-hidden="true">☰</span>
+    <span class="tablabel">모니터링 페이지</span>
+    <span class="tabdot" id="tabDot" hidden></span>
+  </button>
+</nav>
+
+<!-- 추가/편집 시트 -->
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet-backdrop" id="sheetBackdrop"></div>
+  <div class="sheet-panel" role="document">
+    <h2 class="sheet-title" id="sheetTitle">채용 페이지 추가</h2>
+
+    <label class="field">
+      <span class="field-label">회사명</span>
+      <input type="text" id="fCompany" class="input" placeholder="예: KB라이프생명" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span class="field-label">공고 목록 페이지 주소</span>
+      <input type="url" id="fUrl" class="input" placeholder="https://…" inputmode="url" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span class="field-label">메모 <span class="opt">선택</span></span>
+      <input type="text" id="fMemo" class="input" placeholder="예: 경영전략 직무 위주" autocomplete="off">
+    </label>
+
+    <label class="field">
+      <span class="field-label">공고 링크 조각 <span class="opt">선택</span></span>
+      <input type="text" id="fPattern" class="input" placeholder="예: /recruit/view" autocomplete="off">
+      <span class="field-help">공고 하나를 열었을 때 주소에 공통으로 들어가는 부분입니다.
+        비워두면 자동 추정하지만, 넣어주면 정확도가 크게 올라갑니다.</span>
+    </label>
+
+    <label class="check">
+      <input type="checkbox" id="fManual">
+      <span>수동 확인 전용 (수집·AI 판단 없이 목록에만 표시)</span>
+    </label>
+
+    <p class="sheet-error" id="sheetError" hidden></p>
+
+    <div class="sheet-actions">
+      <button type="button" id="sheetSave" class="primary-btn">저장</button>
+      <button type="button" id="sheetCancel" class="ghost-btn">취소</button>
+      <span class="spacer"></span>
+      <button type="button" id="sheetDelete" class="danger-btn" hidden>삭제</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" hidden></div>
+
+<!-- 자가진단: 주소 끝에 ?debug=1 을 붙이면 켜집니다 -->
+<div class="debug" id="debugPanel" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>
