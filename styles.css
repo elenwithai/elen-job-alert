@@ -935,3 +935,147 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
 
 /* 마감 섹션의 카드는 흐리게 */
 #expList .card { opacity: 0.72; }
+
+/* ── 전체 리포트 탭 ─────────────────────────────────────── */
+
+.tally {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tally-cell {
+  flex: 1 1 88px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.tally-num { font-family: var(--mono); font-size: 16px; font-weight: 650; }
+.tally-label {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.chipbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.fchip {
+  flex: none;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  font-family: inherit;
+  font-size: 11.5px;
+  padding: 5px 9px;
+  border-radius: 14px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.fchip.is-active {
+  background: var(--band-fit);
+  border-color: var(--band-fit);
+  color: #fff;
+  font-weight: 600;
+}
+
+.rep-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+
+.rep-row {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: 9px;
+  padding: 10px 11px;
+}
+
+.rep-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 7px;
+  margin-bottom: 3px;
+}
+
+.rep-no { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.rep-company { font-size: 11.5px; font-weight: 600; color: var(--ink-2); overflow-wrap: anywhere; }
+
+.rep-status {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.rep-status.ok   { color: #fff; background: var(--band-fit); }
+.rep-status.wait { color: #fff; background: var(--band-pend); }
+.rep-status.out  { color: var(--ink-3); border: 1px solid var(--line); }
+
+.rep-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.rep-title:hover { text-decoration: underline; }
+
+.rep-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 8px;
+  margin-top: 5px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+.rep-stage { color: var(--band-pend); }
+
+.rep-reason {
+  margin: 6px 0 0;
+  padding-left: 8px;
+  border-left: 2px solid var(--line);
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+.rep-url {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.rep-row:has(.rep-status.ok)   { border-left-color: var(--band-fit); }
+.rep-row:has(.rep-status.wait) { border-left-color: var(--band-pend); }
+
+/* 탭 3개 대응 */
+.tabbtn { flex: 1 1 33.333%; }
+@media (max-width: 360px) {
+  .tablabel { font-size: 10.5px; }
+  .tally-cell { flex: 1 1 72px; }
+}

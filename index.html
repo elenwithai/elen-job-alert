@@ -117,9 +117,27 @@
       <ul id="srcList" class="src-list"></ul>
     </section>
 
+  </div>
+
+  <!-- ── 탭 3: 전체 리포트 ─────────────────────────── -->
+  <div class="tabpanel wrap" id="panel-report" role="tabpanel" aria-labelledby="tab-report" hidden>
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">전체 리포트</h2>
+        <span class="count" id="repCount">–</span>
+      </div>
+      <p class="section-note">필터를 거치기 전의 <strong>수집된 모든 공고</strong>입니다.
+        각 공고가 어느 단계에서 왜 걸러졌는지 그대로 보여줍니다.
+        제목을 누르면 원문과 대조할 수 있습니다.</p>
+
+      <div class="tally" id="repTally"></div>
+      <div class="chipbar" id="repFilters" role="group" aria-label="상태별 보기"></div>
+      <ul id="repList" class="rep-list"></ul>
+    </section>
+
     <section class="section">
       <details id="healthBox">
-        <summary class="disclosure">수집 상태 확인</summary>
+        <summary class="disclosure">사이트별 수집 상태</summary>
         <div id="healthList" class="health"></div>
       </details>
     </section>
@@ -132,14 +150,19 @@
   <button type="button" class="tabbtn is-active" id="tab-jobs" data-tab="jobs"
           role="tab" aria-selected="true" aria-controls="panel-jobs">
     <span class="tabicon" aria-hidden="true">◧</span>
-    <span class="tablabel">AI 추천 공고</span>
+    <span class="tablabel">추천 공고</span>
     <span class="tabbadge" id="tabBadge" hidden>0</span>
   </button>
   <button type="button" class="tabbtn" id="tab-sources" data-tab="sources"
           role="tab" aria-selected="false" aria-controls="panel-sources">
     <span class="tabicon" aria-hidden="true">☰</span>
-    <span class="tablabel">모니터링 페이지</span>
+    <span class="tablabel">모니터링</span>
     <span class="tabdot" id="tabDot" hidden></span>
+  </button>
+  <button type="button" class="tabbtn" id="tab-report" data-tab="report"
+          role="tab" aria-selected="false" aria-controls="panel-report">
+    <span class="tabicon" aria-hidden="true">▤</span>
+    <span class="tablabel">전체 리포트</span>
   </button>
 </nav>
 

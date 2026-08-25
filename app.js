@@ -22,6 +22,7 @@
     data: null,
     tab: "jobs",
     filter: "unseen",
+    repFilter: "all",
     seen: loadSet(K_SEEN),
     hidden: loadSet(K_HIDDEN),
     deleted: loadSet(K_DELETED),
@@ -512,6 +513,7 @@
     fillList(byId("rejList"), rejected, "제외된 공고가 없습니다.");
 
     renderSources();
+    renderReport();
     renderHealth(d.source_health || []);
 
     var hiddenLine = byId("hiddenLine");
@@ -625,6 +627,147 @@
     var link = byId("ghEditLink");
     var url = ghEditUrl();
     if (url) { link.href = url; link.hidden = false; } else { link.hidden = true; }
+  }
+
+  /* ── 전체 리포트 ─────────────────────────────────── */
+
+  var STAGES = [
+    { key: "all",        label: "전체" },
+    { key: "pass",       label: "통과" },
+    { key: "wait",       label: "판단 대기" },
+    { key: "expired",    label: "마감 제외" },
+    { key: "employment", label: "고용형태 제외" },
+    { key: "notjob",     label: "채용공고 아님" },
+    { key: "ai",         label: "AI 부적합" }
+  ];
+
+  var STAGE_NAME = {
+    crawl: "1단계 크롤링",
+    notjob: "2단계 채용공고 여부",
+    employment: "3단계 고용형태",
+    expired: "4단계 마감일",
+    ai: "5단계 AI 적합도",
+    pending: "5단계 AI 적합도(보류)",
+    unjudged: "5단계 AI 적합도(미실행)"
+  };
+
+  /* 저장된 stage 가 없는 옛 데이터도 화면에서 다시 분류한다 */
+  function jobStage(job) {
+    if (job.stage) return job.stage;
+    if (job.ai_status === "prefilter") return "notjob";
+    if (job.ai_status === "skipped_expired" || isExpired(job)) return "expired";
+    if (job.fit === "unjudged") return "unjudged";
+    if (job.fit === "pending") return "pending";
+    return "ai";
+  }
+
+  function jobStatus(job) {
+    if (job.status) return job.status;
+    if (job.fit === "yes" && !isExpired(job)) return "통과";
+    if (job.fit === "unjudged" || job.fit === "pending") return "대기";
+    return "제외";
+  }
+
+  function bucketOf(job) {
+    var st = jobStatus(job);
+    if (st === "통과") return "pass";
+    if (st === "대기") return "wait";
+    var stage = jobStage(job);
+    if (stage === "expired") return "expired";
+    if (stage === "employment") return "employment";
+    if (stage === "notjob") return "notjob";
+    return "ai";
+  }
+
+  function renderReport() {
+    var jobs = (state.data && state.data.jobs) || [];
+    var counts = { all: jobs.length };
+    jobs.forEach(function (j) {
+      var b = bucketOf(j);
+      counts[b] = (counts[b] || 0) + 1;
+    });
+
+    // 요약 숫자판
+    var tally = byId("repTally");
+    tally.textContent = "";
+    STAGES.forEach(function (s2) {
+      if (s2.key === "all") return;
+      var cell = el("div", "tally-cell");
+      cell.appendChild(el("span", "tally-num", String(counts[s2.key] || 0)));
+      cell.appendChild(el("span", "tally-label", s2.label));
+      tally.appendChild(cell);
+    });
+
+    // 상태별 보기 칩
+    var bar = byId("repFilters");
+    bar.textContent = "";
+    STAGES.forEach(function (s2) {
+      var btn = el("button", "fchip" + (state.repFilter === s2.key ? " is-active" : ""),
+        s2.label + " " + (counts[s2.key] || 0));
+      btn.type = "button";
+      btn.setAttribute("aria-pressed", String(state.repFilter === s2.key));
+      btn.addEventListener("click", function () {
+        state.repFilter = s2.key;
+        renderReport();
+      });
+      bar.appendChild(btn);
+    });
+
+    var shown = jobs.filter(function (j) {
+      return state.repFilter === "all" || bucketOf(j) === state.repFilter;
+    });
+    shown.sort(function (a, b) {
+      var oa = jobStatus(a) === "통과" ? 0 : (jobStatus(a) === "대기" ? 1 : 2);
+      var ob = jobStatus(b) === "통과" ? 0 : (jobStatus(b) === "대기" ? 1 : 2);
+      if (oa !== ob) return oa - ob;
+      return String(a.company || "").localeCompare(String(b.company || ""));
+    });
+
+    byId("repCount").textContent = shown.length + " / " + jobs.length + "건";
+
+    var list = byId("repList");
+    list.textContent = "";
+    if (!shown.length) {
+      list.appendChild(el("p", "empty",
+        jobs.length ? "이 상태에 해당하는 공고가 없습니다."
+                    : "아직 수집된 공고가 없습니다. Actions에서 워크플로를 실행하세요."));
+      return;
+    }
+
+    shown.forEach(function (j, i) {
+      var st = jobStatus(j);
+      var li = el("li", "rep-row");
+
+      var head = el("div", "rep-head");
+      head.appendChild(el("span", "rep-no", String(i + 1)));
+      head.appendChild(el("span", "rep-company", j.company || "―"));
+      head.appendChild(el("span", "spacer"));
+      var cls = st === "통과" ? "ok" : (st === "대기" ? "wait" : "out");
+      head.appendChild(el("span", "rep-status " + cls, st));
+      li.appendChild(head);
+
+      var a = el("a", "rep-title", j.title || "(제목 없음)");
+      a.href = j.url || "#";
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      li.appendChild(a);
+
+      var meta = el("div", "rep-meta");
+      meta.appendChild(el("span", "rep-stage", STAGE_NAME[jobStage(j)] || jobStage(j)));
+      if (j.deadline) meta.appendChild(el("span", null, "마감 " + j.deadline));
+      if (j.has_detail === false) meta.appendChild(el("span", null, "본문 없음"));
+      li.appendChild(meta);
+
+      if (j.reason) li.appendChild(el("p", "rep-reason", j.reason));
+
+      var link = el("a", "rep-url", (j.url || "").replace(/^https?:\/\//, ""));
+      link.href = j.url || "#";
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      li.appendChild(link);
+
+      list.appendChild(li);
+    });
   }
 
   function renderHealth(rows) {
@@ -780,7 +923,7 @@
 
   /* ── 탭 전환 ────────────────────────────────────────── */
 
-  var TAB_TITLE = { jobs: "AI 추천 공고", sources: "모니터링 페이지" };
+  var TAB_TITLE = { jobs: "AI 추천 공고", sources: "모니터링 페이지", report: "전체 리포트" };
 
   function setTab(name) {
     state.tab = name;
@@ -788,6 +931,7 @@
 
     byId("panel-jobs").hidden = name !== "jobs";
     byId("panel-sources").hidden = name !== "sources";
+    byId("panel-report").hidden = name !== "report";
     byId("brandTitle").textContent = TAB_TITLE[name] || "채용공고 모니터";
 
     Array.prototype.forEach.call(document.querySelectorAll(".tabbtn"), function (b) {
@@ -923,7 +1067,7 @@
       var sf = localStorage.getItem(K_FILTER);
       if (sf === "all" || sf === "unseen") state.filter = sf;
       var st = localStorage.getItem(K_TAB);
-      if (st === "jobs" || st === "sources") state.tab = st;
+      if (st === "jobs" || st === "sources" || st === "report") state.tab = st;
     } catch (e) { /* 무시 */ }
 
     Array.prototype.forEach.call(document.querySelectorAll(".seg"), function (b) {

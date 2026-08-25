@@ -533,7 +533,8 @@ scripts/deadline.py            마감일 파싱 (사이트별 표기 대응)
 scripts/prefilter.py           채용공고 여부·고용형태 1차 필터
 scripts/ai_judge.py            Claude API 호출
 data/jobs.json                 수집 결과 (Actions가 자동으로 갱신)
-data/crawl_report.json         진단용 상세 기록
+data/crawl_report.json         공고별 판정 이력 + 사이트별 수집 상태
+필터링_기준.md                  5단계 필터 판정 기준 전체 설명
 data/pending_bodies.json       판단 대기 공고의 상세 본문 보관 (앱은 받지 않음)
 data/sample-jobs.json          ?demo=1 로 볼 화면 확인용 샘플
 data/sample-crawl.json         ?demo=crawl 로 볼 '수집 전용' 화면 샘플
@@ -549,7 +550,27 @@ workflow-monitor-yml.txt       .github/workflows/monitor.yml 붙여넣기용 사
 
 ---
 
-## 10. 화면이 이상할 때 — 자가진단
+## 10. 전체 리포트 — 판단이 맞는지 검증하기
+
+앱의 세 번째 탭 **전체 리포트**에서 필터를 거치지 않은 **수집된 모든 공고**를
+볼 수 있습니다. 공고마다 이렇게 표시됩니다.
+
+- 회사 / 제목(누르면 원문으로 이동) / 최종 상태(통과·대기·제외)
+- 걸러진 단계와 구체적 사유 — 예: `3단계 고용형태 — 제목에서 '계약직' 발견`
+- 원본 URL 전체
+
+상단 칩으로 **전체 / 통과 / 판단 대기 / 마감 제외 / 고용형태 제외 /
+채용공고 아님 / AI 부적합** 별로 걸러 볼 수 있습니다.
+
+같은 내용이 `data/crawl_report.json`의 `summary`와 `decisions`에도 저장되고,
+Actions 실행 결과 표에는 사이트별로 필터별 제외 건수(`아님`/`고용`/`마감`)가
+추가로 나옵니다.
+
+각 단계의 판정 기준은 **`필터링_기준.md`** 에 정리돼 있습니다.
+
+---
+
+## 11. 화면이 이상할 때 — 자가진단
 
 주소 끝에 **`?debug=1`** 을 붙이면 화면 위에 진단 패널이 뜹니다.
 

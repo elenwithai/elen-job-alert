@@ -948,6 +948,150 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
 /* 마감 섹션의 카드는 흐리게 */
 #expList .card { opacity: 0.72; }
 
+/* ── 전체 리포트 탭 ─────────────────────────────────────── */
+
+.tally {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tally-cell {
+  flex: 1 1 88px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.tally-num { font-family: var(--mono); font-size: 16px; font-weight: 650; }
+.tally-label {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.chipbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 12px;
+}
+
+.fchip {
+  flex: none;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink-2);
+  font-family: inherit;
+  font-size: 11.5px;
+  padding: 5px 9px;
+  border-radius: 14px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+.fchip.is-active {
+  background: var(--band-fit);
+  border-color: var(--band-fit);
+  color: #fff;
+  font-weight: 600;
+}
+
+.rep-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+
+.rep-row {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: 9px;
+  padding: 10px 11px;
+}
+
+.rep-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 7px;
+  margin-bottom: 3px;
+}
+
+.rep-no { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+.rep-company { font-size: 11.5px; font-weight: 600; color: var(--ink-2); overflow-wrap: anywhere; }
+
+.rep-status {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.rep-status.ok   { color: #fff; background: var(--band-fit); }
+.rep-status.wait { color: #fff; background: var(--band-pend); }
+.rep-status.out  { color: var(--ink-3); border: 1px solid var(--line); }
+
+.rep-title {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.rep-title:hover { text-decoration: underline; }
+
+.rep-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 8px;
+  margin-top: 5px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+.rep-stage { color: var(--band-pend); }
+
+.rep-reason {
+  margin: 6px 0 0;
+  padding-left: 8px;
+  border-left: 2px solid var(--line);
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ink-2);
+  overflow-wrap: anywhere;
+}
+
+.rep-url {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  color: var(--ink-3);
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+.rep-row:has(.rep-status.ok)   { border-left-color: var(--band-fit); }
+.rep-row:has(.rep-status.wait) { border-left-color: var(--band-pend); }
+
+/* 탭 3개 대응 */
+.tabbtn { flex: 1 1 33.333%; }
+@media (max-width: 360px) {
+  .tablabel { font-size: 10.5px; }
+  .tally-cell { flex: 1 1 72px; }
+}
+
 </style>
 </head>
 <body>
@@ -1053,9 +1197,27 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
       <ul id="srcList" class="src-list"></ul>
     </section>
 
+  </div>
+
+  <!-- ── 탭 3: 전체 리포트 ─────────────────────────── -->
+  <div class="tabpanel wrap" id="panel-report" role="tabpanel" aria-labelledby="tab-report" hidden>
+    <section class="section">
+      <div class="section-head">
+        <h2 class="section-title">전체 리포트</h2>
+        <span class="count" id="repCount">–</span>
+      </div>
+      <p class="section-note">필터를 거치기 전의 <strong>수집된 모든 공고</strong>입니다.
+        각 공고가 어느 단계에서 왜 걸러졌는지 그대로 보여줍니다.
+        제목을 누르면 원문과 대조할 수 있습니다.</p>
+
+      <div class="tally" id="repTally"></div>
+      <div class="chipbar" id="repFilters" role="group" aria-label="상태별 보기"></div>
+      <ul id="repList" class="rep-list"></ul>
+    </section>
+
     <section class="section">
       <details id="healthBox">
-        <summary class="disclosure">수집 상태 확인</summary>
+        <summary class="disclosure">사이트별 수집 상태</summary>
         <div id="healthList" class="health"></div>
       </details>
     </section>
@@ -1068,14 +1230,19 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
   <button type="button" class="tabbtn is-active" id="tab-jobs" data-tab="jobs"
           role="tab" aria-selected="true" aria-controls="panel-jobs">
     <span class="tabicon" aria-hidden="true">◧</span>
-    <span class="tablabel">AI 추천 공고</span>
+    <span class="tablabel">추천 공고</span>
     <span class="tabbadge" id="tabBadge" hidden>0</span>
   </button>
   <button type="button" class="tabbtn" id="tab-sources" data-tab="sources"
           role="tab" aria-selected="false" aria-controls="panel-sources">
     <span class="tabicon" aria-hidden="true">☰</span>
-    <span class="tablabel">모니터링 페이지</span>
+    <span class="tablabel">모니터링</span>
     <span class="tabdot" id="tabDot" hidden></span>
+  </button>
+  <button type="button" class="tabbtn" id="tab-report" data-tab="report"
+          role="tab" aria-selected="false" aria-controls="panel-report">
+    <span class="tabicon" aria-hidden="true">▤</span>
+    <span class="tablabel">전체 리포트</span>
   </button>
 </nav>
 
@@ -1128,7 +1295,7 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
 <!-- 자가진단: 주소 끝에 ?debug=1 을 붙이면 켜집니다 -->
 <div class="debug" id="debugPanel" hidden></div>
 
-<script>window.__EJA_PREVIEW_DATA__ = {"updated_at": "2026-08-24 08:12", "updated_at_iso": "2026-08-24T08:12:00+09:00", "stats": {"total": 5, "fit_yes": 0, "pending": 0, "unjudged": 5, "crawl_only": true, "new_this_run": 5, "ai_calls": 0, "ai_errors": 0, "browser_pages": 3, "expired": 0, "ai_skipped_expired": 0, "stale_days": 30}, "sources": [{"key": "samsungcareers", "company": "삼성생명/삼성화재", "url": "https://www.samsungcareers.com/hr/", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "hanwhain", "company": "한화생명/한화손보", "url": "https://www.hanwhain.com/portal/apply/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "career_kyobo", "company": "교보생명", "url": "https://career.kyobo.co.kr/home", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "shinhan_life", "company": "신한라이프", "url": "https://shinhan-life.recruiter.co.kr/career/job", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "idbins", "company": "DB손보", "url": "https://www.idbins.com/FWCOMV1751.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "dbgroup", "company": "DB그룹", "url": "https://dbgroup.recruiter.co.kr/career/apply1", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "recruit_meritzfire", "company": "메리츠화재", "url": "https://recruit.meritzfire.com/new/job/noticeList.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "hi_recruiter", "company": "현대해상", "url": "https://hi.recruiter.co.kr/career/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "kbinsure", "company": "KB손보", "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/list", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "careers_kbfg", "company": "KB금융지주", "url": "https://careers.kbfg.com/APPLY/apply", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "manual_only": false}, {"key": "woorifg", "company": "우리금융지주", "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "manual_only": false}, {"key": "pwc", "company": "PwC삼일", "url": "https://www.pwc.com/kr/ko/career/experienced.html", "memo": "Big4 1순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "career_kpmg", "company": "KPMG삼정", "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr", "memo": "Big4 2순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "eycareers_kr", "company": "EY한영", "url": "https://eycareers-kr.recruiter.co.kr/career/career", "memo": "Big4 3순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "join_deloitte", "company": "Deloitte안진", "url": "https://join.deloitte.co.kr/", "memo": "Big4 4순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "aia", "company": "AIA생명", "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "metlifecareers", "company": "메트라이프", "url": "https://www.metlifecareers.com/ko_KR/ml/SearchJobs?12310=116497&listFilterMode=1", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "miraeassetlife", "company": "미래에셋생명", "url": "https://miraeassetlife.ninehire.site/", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "kblife_recruiting", "company": "KB라이프", "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "myangel", "company": "동양생명", "url": "https://www.myangel.co.kr/Company/Recruit/CoAdpLst", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "hanainsure", "company": "하나손보", "url": "https://www.hanainsure.co.kr/recruit/notify/jobList", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "hanalife", "company": "하나생명", "url": "https://hanalife.careerlink.kr/jobs", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "abl_recruiter", "company": "ABL생명", "url": "https://abl.recruiter.co.kr/career/apply", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}], "sources_config": {"_readme": ["이 파일만 수정하면 모니터링 대상 페이지를 추가/삭제할 수 있습니다. 개수 제한 없음.", "필수 항목: key(영문 고유값), company(회사명), url(공고 '목록' 페이지), memo(메모)", "선택 항목:", "  enabled             : false면 화면에서도 사라짐 (기본 true)", "  manual_only         : true면 수집·AI 판단을 하지 않고 [모니터링 페이지 목록]에만 표시", "                        (로그인 필요 / 크롤링 불가 사이트를 여기로 옮기세요)", "  detail_fetch        : false면 상세 페이지를 안 열고 목록 제목만으로 판단 (기본 true)", "  link_include        : 상세 공고 링크로 인정할 URL 조각 목록 (하나라도 포함되면 채택)", "  link_exclude        : 제외할 URL 조각 목록", "  min_title_len       : 링크 텍스트 최소 길이 (기본 4)", "  max_new_details     : 한 번 실행에서 새로 방문할 상세 페이지 최대 수 (기본 15)", "  same_host_only      : true면 목록 페이지와 같은 도메인 링크만 채택 (기본 true)", "  render_mode         : 'auto'(기본) 일반 요청 먼저, 링크가 부족하면 헤드리스 브라우저로 재시도", "                        'always' 처음부터 브라우저 렌더링 / 'never' 일반 요청만", "  min_expected_links  : 이 건수보다 적게 잡히면 브라우저 렌더링으로 재시도 (기본 1)", "  render_wait_selector: 브라우저 렌더링 시 이 요소가 나타날 때까지 대기 (예: '.job-list li')", "  render_wait_ms      : 렌더링 후 추가 대기 시간 (기본 2500)", "  no                  : 화면의 No. 표시 순서 (없으면 파일 순서대로 번호가 매겨집니다)"], "sources": [{"key": "samsungcareers", "no": 1, "company": "삼성생명/삼성화재", "url": "https://www.samsungcareers.com/hr/", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://www.samsungcareers.com/hr/?no="], "link_exclude": [], "max_new_details": 6}, {"key": "hanwhain", "no": 2, "company": "한화생명/한화손보", "url": "https://www.hanwhain.com/portal/apply/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="], "link_exclude": [], "max_new_details": 6}, {"key": "career_kyobo", "no": 3, "company": "교보생명", "url": "https://career.kyobo.co.kr/home", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "shinhan_life", "no": 4, "company": "신한라이프", "url": "https://shinhan-life.recruiter.co.kr/career/job", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://shinhan-life.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "idbins", "no": 5, "company": "DB손보", "url": "https://www.idbins.com/FWCOMV1751.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "dbgroup", "no": 6, "company": "DB그룹", "url": "https://dbgroup.recruiter.co.kr/career/apply1", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://dbgroup.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "recruit_meritzfire", "no": 7, "company": "메리츠화재", "url": "https://recruit.meritzfire.com/new/job/noticeList.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://recruit.meritzfire.com/new/job/noticeView.do"], "link_exclude": [], "max_new_details": 6}, {"key": "hi_recruiter", "no": 8, "company": "현대해상", "url": "https://hi.recruiter.co.kr/career/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://hi.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "kbinsure", "no": 9, "company": "KB손보", "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/list", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn="], "link_exclude": [], "max_new_details": 6}, {"key": "careers_kbfg", "no": 10, "company": "KB금융지주", "url": "https://careers.kbfg.com/APPLY/apply", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://careers.kbfg.com/apply/"], "link_exclude": [], "max_new_details": 6}, {"key": "woorifg", "no": 11, "company": "우리금융지주", "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "pwc", "no": 12, "company": "PwC삼일", "url": "https://www.pwc.com/kr/ko/career/experienced.html", "memo": "Big4 1순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.pwc.com/kr/ko/career/experienced/"], "link_exclude": [], "max_new_details": 6}, {"key": "career_kpmg", "no": 13, "company": "KPMG삼정", "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr", "memo": "Big4 2순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"], "link_exclude": [], "max_new_details": 6}, {"key": "eycareers_kr", "no": 14, "company": "EY한영", "url": "https://eycareers-kr.recruiter.co.kr/career/career", "memo": "Big4 3순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://eycareers-kr.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "join_deloitte", "no": 15, "company": "Deloitte안진", "url": "https://join.deloitte.co.kr/", "memo": "Big4 4순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "aia", "no": 16, "company": "AIA생명", "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://aia.wd3.myworkdayjobs.com/ko-KR/External/details/"], "link_exclude": [], "max_new_details": 6}, {"key": "metlifecareers", "no": 17, "company": "메트라이프", "url": "https://www.metlifecareers.com/ko_KR/ml/SearchJobs?12310=116497&listFilterMode=1", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://www.metlifecareers.com/ko_KR/ml/JobDetail/"], "link_exclude": [], "max_new_details": 6}, {"key": "miraeassetlife", "no": 18, "company": "미래에셋생명", "url": "https://miraeassetlife.ninehire.site/", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://miraeassetlife.ninehire.site/job_posting/"], "link_exclude": [], "max_new_details": 6}, {"key": "kblife_recruiting", "no": 19, "company": "KB라이프", "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "myangel", "no": 20, "company": "동양생명", "url": "https://www.myangel.co.kr/Company/Recruit/CoAdpLst", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "hanainsure", "no": 21, "company": "하나손보", "url": "https://www.hanainsure.co.kr/recruit/notify/jobList", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="], "link_exclude": [], "max_new_details": 6}, {"key": "hanalife", "no": 22, "company": "하나생명", "url": "https://hanalife.careerlink.kr/jobs", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://hanalife.careerlink.kr/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "abl_recruiter", "no": 23, "company": "ABL생명", "url": "https://abl.recruiter.co.kr/career/apply", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://abl.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}]}, "source_health": [{"key": "hanwhain", "company": "한화생명/한화손보", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 24, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 2, "error": "", "note": "목록·페이지네이션 링크 2건은 공고가 아니므로 제외했습니다."}, {"key": "eycareers_kr", "company": "EY한영", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 11, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "일반 요청 0건 → 브라우저 렌더링으로 11건 수집했습니다."}, {"key": "recruit_meritzfire", "company": "메리츠화재", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 16, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": ""}, {"key": "samsungcareers", "company": "삼성생명/삼성화재", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 8, "new_found": 1, "detail_ok": 0, "detail_failed": 1, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "상세 본문을 못 가져와 목록 정보만 저장했습니다."}, {"key": "careers_kbfg", "company": "KB금융지주", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 12, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": ""}, {"key": "career_kyobo", "company": "교보생명", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 0, "new_found": 0, "detail_ok": 0, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "링크 0건. 공고 링크 조각을 넣으면 해결될 가능성이 높습니다."}, {"key": "woorifg", "company": "우리금융지주", "list_ok": false, "method": "requests", "fallback_used": false, "links_found": 0, "new_found": 0, "detail_ok": 0, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "타임아웃", "note": "URL이 바뀌었거나 차단됐을 수 있습니다."}], "jobs": [{"id": "crawl0001", "source_key": "hanwhain", "company": "한화생명/한화손보", "title": "경영기획팀 경력직 채용 (전략기획·중기계획)", "url": "https://example.com/sample/hanwhain/recruit/detail?rtSeq=20486", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true}, {"id": "crawl0002", "source_key": "eycareers_kr", "company": "EY한영", "title": "Financial Services Risk Management – Senior Manager", "url": "https://example.com/sample/eycareers/career/jobs/8841", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true}, {"id": "crawl0003", "source_key": "recruit_meritzfire", "company": "메리츠화재", "title": "리스크관리팀 경력사원 모집", "url": "https://example.com/sample/meritzfire/job/noticeView.do?noticeSn=31207", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true}, {"id": "crawl0004", "source_key": "samsungcareers", "company": "삼성생명/삼성화재", "title": "경영관리 신사업기획 경력채용", "url": "https://example.com/sample/samsungcareers/hr/?no=5512", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": false}, {"id": "crawl0005", "source_key": "careers_kbfg", "company": "KB금융지주", "title": "디지털 플랫폼 백엔드 개발자", "url": "https://example.com/sample/kbfg/apply/2026-0433", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true}]};</script>
+<script>window.__EJA_PREVIEW_DATA__ = {"updated_at": "2026-08-24 08:12", "updated_at_iso": "2026-08-24T08:12:00+09:00", "stats": {"total": 5, "fit_yes": 0, "pending": 0, "unjudged": 5, "crawl_only": true, "new_this_run": 5, "ai_calls": 0, "ai_errors": 0, "browser_pages": 3, "expired": 0, "ai_skipped_expired": 0, "stale_days": 30}, "sources": [{"key": "samsungcareers", "company": "삼성생명/삼성화재", "url": "https://www.samsungcareers.com/hr/", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "hanwhain", "company": "한화생명/한화손보", "url": "https://www.hanwhain.com/portal/apply/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "career_kyobo", "company": "교보생명", "url": "https://career.kyobo.co.kr/home", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "shinhan_life", "company": "신한라이프", "url": "https://shinhan-life.recruiter.co.kr/career/job", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "idbins", "company": "DB손보", "url": "https://www.idbins.com/FWCOMV1751.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "dbgroup", "company": "DB그룹", "url": "https://dbgroup.recruiter.co.kr/career/apply1", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "recruit_meritzfire", "company": "메리츠화재", "url": "https://recruit.meritzfire.com/new/job/noticeList.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "manual_only": false}, {"key": "hi_recruiter", "company": "현대해상", "url": "https://hi.recruiter.co.kr/career/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "kbinsure", "company": "KB손보", "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/list", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "careers_kbfg", "company": "KB금융지주", "url": "https://careers.kbfg.com/APPLY/apply", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "manual_only": false}, {"key": "woorifg", "company": "우리금융지주", "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "manual_only": false}, {"key": "pwc", "company": "PwC삼일", "url": "https://www.pwc.com/kr/ko/career/experienced.html", "memo": "Big4 1순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "career_kpmg", "company": "KPMG삼정", "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr", "memo": "Big4 2순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "eycareers_kr", "company": "EY한영", "url": "https://eycareers-kr.recruiter.co.kr/career/career", "memo": "Big4 3순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "join_deloitte", "company": "Deloitte안진", "url": "https://join.deloitte.co.kr/", "memo": "Big4 4순위 / FSI, Strategy, Financial Transformation 위주로 확인", "manual_only": false}, {"key": "aia", "company": "AIA생명", "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "metlifecareers", "company": "메트라이프", "url": "https://www.metlifecareers.com/ko_KR/ml/SearchJobs?12310=116497&listFilterMode=1", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "miraeassetlife", "company": "미래에셋생명", "url": "https://miraeassetlife.ninehire.site/", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "kblife_recruiting", "company": "KB라이프", "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "myangel", "company": "동양생명", "url": "https://www.myangel.co.kr/Company/Recruit/CoAdpLst", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "hanainsure", "company": "하나손보", "url": "https://www.hanainsure.co.kr/recruit/notify/jobList", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "hanalife", "company": "하나생명", "url": "https://hanalife.careerlink.kr/jobs", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}, {"key": "abl_recruiter", "company": "ABL생명", "url": "https://abl.recruiter.co.kr/career/apply", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "manual_only": false}], "sources_config": {"_readme": ["이 파일만 수정하면 모니터링 대상 페이지를 추가/삭제할 수 있습니다. 개수 제한 없음.", "필수 항목: key(영문 고유값), company(회사명), url(공고 '목록' 페이지), memo(메모)", "선택 항목:", "  enabled             : false면 화면에서도 사라짐 (기본 true)", "  manual_only         : true면 수집·AI 판단을 하지 않고 [모니터링 페이지 목록]에만 표시", "                        (로그인 필요 / 크롤링 불가 사이트를 여기로 옮기세요)", "  detail_fetch        : false면 상세 페이지를 안 열고 목록 제목만으로 판단 (기본 true)", "  link_include        : 상세 공고 링크로 인정할 URL 조각 목록 (하나라도 포함되면 채택)", "  link_exclude        : 제외할 URL 조각 목록", "  min_title_len       : 링크 텍스트 최소 길이 (기본 4)", "  max_new_details     : 한 번 실행에서 새로 방문할 상세 페이지 최대 수 (기본 15)", "  same_host_only      : true면 목록 페이지와 같은 도메인 링크만 채택 (기본 true)", "  render_mode         : 'auto'(기본) 일반 요청 먼저, 링크가 부족하면 헤드리스 브라우저로 재시도", "                        'always' 처음부터 브라우저 렌더링 / 'never' 일반 요청만", "  min_expected_links  : 이 건수보다 적게 잡히면 브라우저 렌더링으로 재시도 (기본 1)", "  render_wait_selector: 브라우저 렌더링 시 이 요소가 나타날 때까지 대기 (예: '.job-list li')", "  render_wait_ms      : 렌더링 후 추가 대기 시간 (기본 2500)", "  no                  : 화면의 No. 표시 순서 (없으면 파일 순서대로 번호가 매겨집니다)"], "sources": [{"key": "samsungcareers", "no": 1, "company": "삼성생명/삼성화재", "url": "https://www.samsungcareers.com/hr/", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://www.samsungcareers.com/hr/?no="], "link_exclude": [], "max_new_details": 6}, {"key": "hanwhain", "no": 2, "company": "한화생명/한화손보", "url": "https://www.hanwhain.com/portal/apply/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="], "link_exclude": [], "max_new_details": 6}, {"key": "career_kyobo", "no": 3, "company": "교보생명", "url": "https://career.kyobo.co.kr/home", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "shinhan_life", "no": 4, "company": "신한라이프", "url": "https://shinhan-life.recruiter.co.kr/career/job", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://shinhan-life.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "idbins", "no": 5, "company": "DB손보", "url": "https://www.idbins.com/FWCOMV1751.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "dbgroup", "no": 6, "company": "DB그룹", "url": "https://dbgroup.recruiter.co.kr/career/apply1", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://dbgroup.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "recruit_meritzfire", "no": 7, "company": "메리츠화재", "url": "https://recruit.meritzfire.com/new/job/noticeList.do", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석, 신사업 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://recruit.meritzfire.com/new/job/noticeView.do"], "link_exclude": [], "max_new_details": 6}, {"key": "hi_recruiter", "no": 8, "company": "현대해상", "url": "https://hi.recruiter.co.kr/career/recruit", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://hi.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "kbinsure", "no": 9, "company": "KB손보", "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/list", "memo": "보험사 1순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn="], "link_exclude": [], "max_new_details": 6}, {"key": "careers_kbfg", "no": 10, "company": "KB금융지주", "url": "https://careers.kbfg.com/APPLY/apply", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://careers.kbfg.com/apply/"], "link_exclude": [], "max_new_details": 6}, {"key": "woorifg", "no": 11, "company": "우리금융지주", "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?", "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "pwc", "no": 12, "company": "PwC삼일", "url": "https://www.pwc.com/kr/ko/career/experienced.html", "memo": "Big4 1순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.pwc.com/kr/ko/career/experienced/"], "link_exclude": [], "max_new_details": 6}, {"key": "career_kpmg", "no": 13, "company": "KPMG삼정", "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr", "memo": "Big4 2순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"], "link_exclude": [], "max_new_details": 6}, {"key": "eycareers_kr", "no": 14, "company": "EY한영", "url": "https://eycareers-kr.recruiter.co.kr/career/career", "memo": "Big4 3순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://eycareers-kr.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "join_deloitte", "no": 15, "company": "Deloitte안진", "url": "https://join.deloitte.co.kr/", "memo": "Big4 4순위 / FSI, Strategy, Financial Transformation 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "aia", "no": 16, "company": "AIA생명", "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://aia.wd3.myworkdayjobs.com/ko-KR/External/details/"], "link_exclude": [], "max_new_details": 6}, {"key": "metlifecareers", "no": 17, "company": "메트라이프", "url": "https://www.metlifecareers.com/ko_KR/ml/SearchJobs?12310=116497&listFilterMode=1", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://www.metlifecareers.com/ko_KR/ml/JobDetail/"], "link_exclude": [], "max_new_details": 6}, {"key": "miraeassetlife", "no": 18, "company": "미래에셋생명", "url": "https://miraeassetlife.ninehire.site/", "memo": "보험사(외국계) 차순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://miraeassetlife.ninehire.site/job_posting/"], "link_exclude": [], "max_new_details": 6}, {"key": "kblife_recruiting", "no": 19, "company": "KB라이프", "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "myangel", "no": 20, "company": "동양생명", "url": "https://www.myangel.co.kr/Company/Recruit/CoAdpLst", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": [], "link_exclude": [], "max_new_details": 6}, {"key": "hanainsure", "no": 21, "company": "하나손보", "url": "https://www.hanainsure.co.kr/recruit/notify/jobList", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 1, "render_wait_ms": 2500, "link_include": ["https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="], "link_exclude": [], "max_new_details": 6}, {"key": "hanalife", "no": 22, "company": "하나생명", "url": "https://hanalife.careerlink.kr/jobs", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://hanalife.careerlink.kr/jobs/"], "link_exclude": [], "max_new_details": 6}, {"key": "abl_recruiter", "no": 23, "company": "ABL생명", "url": "https://abl.recruiter.co.kr/career/apply", "memo": "지주계열 보험사 하순위 / 전략, 경영기획, 경영분석 위주로 확인", "enabled": true, "manual_only": false, "detail_fetch": true, "render_mode": "auto", "min_expected_links": 3, "render_wait_ms": 4000, "link_include": ["https://abl.recruiter.co.kr/career/jobs/"], "link_exclude": [], "max_new_details": 6}]}, "source_health": [{"key": "hanwhain", "company": "한화생명/한화손보", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 24, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 2, "error": "", "note": "목록·페이지네이션 링크 2건은 공고가 아니므로 제외했습니다."}, {"key": "eycareers_kr", "company": "EY한영", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 11, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "일반 요청 0건 → 브라우저 렌더링으로 11건 수집했습니다."}, {"key": "recruit_meritzfire", "company": "메리츠화재", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 16, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": ""}, {"key": "samsungcareers", "company": "삼성생명/삼성화재", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 8, "new_found": 1, "detail_ok": 0, "detail_failed": 1, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "상세 본문을 못 가져와 목록 정보만 저장했습니다."}, {"key": "careers_kbfg", "company": "KB금융지주", "list_ok": true, "method": "requests", "fallback_used": false, "links_found": 12, "new_found": 1, "detail_ok": 1, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": ""}, {"key": "career_kyobo", "company": "교보생명", "list_ok": true, "method": "browser", "fallback_used": true, "links_found": 0, "new_found": 0, "detail_ok": 0, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "", "note": "링크 0건. 공고 링크 조각을 넣으면 해결될 가능성이 높습니다."}, {"key": "woorifg", "company": "우리금융지주", "list_ok": false, "method": "requests", "fallback_used": false, "links_found": 0, "new_found": 0, "detail_ok": 0, "detail_failed": 0, "manual_only": false, "self_links_skipped": 0, "error": "타임아웃", "note": "URL이 바뀌었거나 차단됐을 수 있습니다."}], "jobs": [{"id": "crawl0001", "source_key": "hanwhain", "company": "한화생명/한화손보", "title": "경영기획팀 경력직 채용 (전략기획·중기계획)", "url": "https://example.com/sample/hanwhain/recruit/detail?rtSeq=20486", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true, "stage": "unjudged", "status": "대기"}, {"id": "crawl0002", "source_key": "eycareers_kr", "company": "EY한영", "title": "Financial Services Risk Management – Senior Manager", "url": "https://example.com/sample/eycareers/career/jobs/8841", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true, "stage": "unjudged", "status": "대기"}, {"id": "crawl0003", "source_key": "recruit_meritzfire", "company": "메리츠화재", "title": "리스크관리팀 경력사원 모집", "url": "https://example.com/sample/meritzfire/job/noticeView.do?noticeSn=31207", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true, "stage": "unjudged", "status": "대기"}, {"id": "crawl0004", "source_key": "samsungcareers", "company": "삼성생명/삼성화재", "title": "경영관리 신사업기획 경력채용", "url": "https://example.com/sample/samsungcareers/hr/?no=5512", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": false, "stage": "unjudged", "status": "대기"}, {"id": "crawl0005", "source_key": "careers_kbfg", "company": "KB금융지주", "title": "디지털 플랫폼 백엔드 개발자", "url": "https://example.com/sample/kbfg/apply/2026-0433", "role": "", "fit": "unjudged", "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다", "confidence": "low", "ai_status": "skipped", "deadline": "2026-09-13", "first_seen": "2026-08-24", "last_seen": "2026-08-24", "has_detail": true, "stage": "unjudged", "status": "대기"}]};</script>
 <script>
 /* 채용공고 모니터 — 클라이언트 로직
    읽음/숨김/모니터링 페이지 편집 내용은 이 브라우저의 localStorage에만
@@ -1154,6 +1321,7 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
     data: null,
     tab: "jobs",
     filter: "unseen",
+    repFilter: "all",
     seen: loadSet(K_SEEN),
     hidden: loadSet(K_HIDDEN),
     deleted: loadSet(K_DELETED),
@@ -1644,6 +1812,7 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
     fillList(byId("rejList"), rejected, "제외된 공고가 없습니다.");
 
     renderSources();
+    renderReport();
     renderHealth(d.source_health || []);
 
     var hiddenLine = byId("hiddenLine");
@@ -1757,6 +1926,147 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
     var link = byId("ghEditLink");
     var url = ghEditUrl();
     if (url) { link.href = url; link.hidden = false; } else { link.hidden = true; }
+  }
+
+  /* ── 전체 리포트 ─────────────────────────────────── */
+
+  var STAGES = [
+    { key: "all",        label: "전체" },
+    { key: "pass",       label: "통과" },
+    { key: "wait",       label: "판단 대기" },
+    { key: "expired",    label: "마감 제외" },
+    { key: "employment", label: "고용형태 제외" },
+    { key: "notjob",     label: "채용공고 아님" },
+    { key: "ai",         label: "AI 부적합" }
+  ];
+
+  var STAGE_NAME = {
+    crawl: "1단계 크롤링",
+    notjob: "2단계 채용공고 여부",
+    employment: "3단계 고용형태",
+    expired: "4단계 마감일",
+    ai: "5단계 AI 적합도",
+    pending: "5단계 AI 적합도(보류)",
+    unjudged: "5단계 AI 적합도(미실행)"
+  };
+
+  /* 저장된 stage 가 없는 옛 데이터도 화면에서 다시 분류한다 */
+  function jobStage(job) {
+    if (job.stage) return job.stage;
+    if (job.ai_status === "prefilter") return "notjob";
+    if (job.ai_status === "skipped_expired" || isExpired(job)) return "expired";
+    if (job.fit === "unjudged") return "unjudged";
+    if (job.fit === "pending") return "pending";
+    return "ai";
+  }
+
+  function jobStatus(job) {
+    if (job.status) return job.status;
+    if (job.fit === "yes" && !isExpired(job)) return "통과";
+    if (job.fit === "unjudged" || job.fit === "pending") return "대기";
+    return "제외";
+  }
+
+  function bucketOf(job) {
+    var st = jobStatus(job);
+    if (st === "통과") return "pass";
+    if (st === "대기") return "wait";
+    var stage = jobStage(job);
+    if (stage === "expired") return "expired";
+    if (stage === "employment") return "employment";
+    if (stage === "notjob") return "notjob";
+    return "ai";
+  }
+
+  function renderReport() {
+    var jobs = (state.data && state.data.jobs) || [];
+    var counts = { all: jobs.length };
+    jobs.forEach(function (j) {
+      var b = bucketOf(j);
+      counts[b] = (counts[b] || 0) + 1;
+    });
+
+    // 요약 숫자판
+    var tally = byId("repTally");
+    tally.textContent = "";
+    STAGES.forEach(function (s2) {
+      if (s2.key === "all") return;
+      var cell = el("div", "tally-cell");
+      cell.appendChild(el("span", "tally-num", String(counts[s2.key] || 0)));
+      cell.appendChild(el("span", "tally-label", s2.label));
+      tally.appendChild(cell);
+    });
+
+    // 상태별 보기 칩
+    var bar = byId("repFilters");
+    bar.textContent = "";
+    STAGES.forEach(function (s2) {
+      var btn = el("button", "fchip" + (state.repFilter === s2.key ? " is-active" : ""),
+        s2.label + " " + (counts[s2.key] || 0));
+      btn.type = "button";
+      btn.setAttribute("aria-pressed", String(state.repFilter === s2.key));
+      btn.addEventListener("click", function () {
+        state.repFilter = s2.key;
+        renderReport();
+      });
+      bar.appendChild(btn);
+    });
+
+    var shown = jobs.filter(function (j) {
+      return state.repFilter === "all" || bucketOf(j) === state.repFilter;
+    });
+    shown.sort(function (a, b) {
+      var oa = jobStatus(a) === "통과" ? 0 : (jobStatus(a) === "대기" ? 1 : 2);
+      var ob = jobStatus(b) === "통과" ? 0 : (jobStatus(b) === "대기" ? 1 : 2);
+      if (oa !== ob) return oa - ob;
+      return String(a.company || "").localeCompare(String(b.company || ""));
+    });
+
+    byId("repCount").textContent = shown.length + " / " + jobs.length + "건";
+
+    var list = byId("repList");
+    list.textContent = "";
+    if (!shown.length) {
+      list.appendChild(el("p", "empty",
+        jobs.length ? "이 상태에 해당하는 공고가 없습니다."
+                    : "아직 수집된 공고가 없습니다. Actions에서 워크플로를 실행하세요."));
+      return;
+    }
+
+    shown.forEach(function (j, i) {
+      var st = jobStatus(j);
+      var li = el("li", "rep-row");
+
+      var head = el("div", "rep-head");
+      head.appendChild(el("span", "rep-no", String(i + 1)));
+      head.appendChild(el("span", "rep-company", j.company || "―"));
+      head.appendChild(el("span", "spacer"));
+      var cls = st === "통과" ? "ok" : (st === "대기" ? "wait" : "out");
+      head.appendChild(el("span", "rep-status " + cls, st));
+      li.appendChild(head);
+
+      var a = el("a", "rep-title", j.title || "(제목 없음)");
+      a.href = j.url || "#";
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      li.appendChild(a);
+
+      var meta = el("div", "rep-meta");
+      meta.appendChild(el("span", "rep-stage", STAGE_NAME[jobStage(j)] || jobStage(j)));
+      if (j.deadline) meta.appendChild(el("span", null, "마감 " + j.deadline));
+      if (j.has_detail === false) meta.appendChild(el("span", null, "본문 없음"));
+      li.appendChild(meta);
+
+      if (j.reason) li.appendChild(el("p", "rep-reason", j.reason));
+
+      var link = el("a", "rep-url", (j.url || "").replace(/^https?:\/\//, ""));
+      link.href = j.url || "#";
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      li.appendChild(link);
+
+      list.appendChild(li);
+    });
   }
 
   function renderHealth(rows) {
@@ -1912,7 +2222,7 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
 
   /* ── 탭 전환 ────────────────────────────────────────── */
 
-  var TAB_TITLE = { jobs: "AI 추천 공고", sources: "모니터링 페이지" };
+  var TAB_TITLE = { jobs: "AI 추천 공고", sources: "모니터링 페이지", report: "전체 리포트" };
 
   function setTab(name) {
     state.tab = name;
@@ -1920,6 +2230,7 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
 
     byId("panel-jobs").hidden = name !== "jobs";
     byId("panel-sources").hidden = name !== "sources";
+    byId("panel-report").hidden = name !== "report";
     byId("brandTitle").textContent = TAB_TITLE[name] || "채용공고 모니터";
 
     Array.prototype.forEach.call(document.querySelectorAll(".tabbtn"), function (b) {
@@ -2055,7 +2366,7 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
       var sf = localStorage.getItem(K_FILTER);
       if (sf === "all" || sf === "unseen") state.filter = sf;
       var st = localStorage.getItem(K_TAB);
-      if (st === "jobs" || st === "sources") state.tab = st;
+      if (st === "jobs" || st === "sources" || st === "report") state.tab = st;
     } catch (e) { /* 무시 */ }
 
     Array.prototype.forEach.call(document.querySelectorAll(".seg"), function (b) {
