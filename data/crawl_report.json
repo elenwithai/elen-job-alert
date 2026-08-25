@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-25 22:19",
+ "generated_at": "2026-08-26 08:52",
  "sources": [
   {
    "key": "samsungcareers",
@@ -85,11 +85,11 @@
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 40,
+   "deferred": 34,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 40건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 34건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "dbgroup",
@@ -185,19 +185,19 @@
    "key": "woorifg",
    "company": "우리금융지주",
    "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?",
-   "list_ok": false,
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
-   "links_found": 0,
-   "new_found": 0,
-   "detail_ok": 0,
+   "fallback_used": true,
+   "links_found": 36,
+   "new_found": 6,
+   "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 0,
+   "deferred": 24,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "타임아웃",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
+   "error": "",
+   "note": "신규 24건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "pwc",
@@ -211,11 +211,11 @@
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 19,
+   "deferred": 13,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 19건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 13건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "career_kpmg",
@@ -243,8 +243,8 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
