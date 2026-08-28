@@ -1,20 +1,20 @@
 {
- "updated_at": "2026-08-26 08:52",
- "updated_at_iso": "2026-08-26T08:52:28.725919+09:00",
+ "updated_at": "2026-08-28 15:10",
+ "updated_at_iso": "2026-08-28T15:10:02.629867+09:00",
  "stats": {
-  "total": 123,
+  "total": 148,
   "fit_yes": 0,
   "pending": 0,
-  "unjudged": 23,
-  "expired": 52,
-  "ai_skipped_expired": 5,
-  "ai_skipped_filter": 13,
+  "unjudged": 25,
+  "expired": 65,
+  "ai_skipped_expired": 9,
+  "ai_skipped_filter": 14,
   "stale_days": 30,
   "crawl_only": true,
-  "new_this_run": 19,
+  "new_this_run": 25,
   "ai_calls": 0,
   "ai_errors": 0,
-  "browser_pages": 28
+  "browser_pages": 33
  },
  "sources": [
   {
@@ -714,11 +714,11 @@
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 34,
+   "deferred": 28,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 34건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 28건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "dbgroup",
@@ -728,8 +728,8 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 8,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -799,9 +799,9 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
-   "links_found": 7,
-   "new_found": 0,
-   "detail_ok": 0,
+   "links_found": 6,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -822,11 +822,11 @@
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 24,
+   "deferred": 18,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 24건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 18건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "pwc",
@@ -835,16 +835,16 @@
    "list_ok": true,
    "method": "requests",
    "fallback_used": false,
-   "links_found": 37,
+   "links_found": 32,
    "new_found": 6,
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 13,
+   "deferred": 5,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 13건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 5건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "career_kpmg",
@@ -872,9 +872,9 @@
    "method": "browser",
    "fallback_used": true,
    "links_found": 10,
-   "new_found": 1,
-   "detail_ok": 1,
-   "detail_failed": 0,
+   "new_found": 4,
+   "detail_ok": 3,
+   "detail_failed": 1,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
@@ -1047,6 +1047,486 @@
  ],
  "jobs": [
   {
+   "id": "49f4f24ec2c0f3a3",
+   "source_key": "woorifg",
+   "company": "우리금융지주",
+   "title": "ESG 거버넌스",
+   "url": "https://www.woorifg.com/kor/social-contribution/esg/contentsid/488/index.do",
+   "detail_title": "ESG 거버넌스 | 우리금융그룹",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "a03ed96398ee35ec",
+   "source_key": "woorifg",
+   "company": "우리금융지주",
+   "title": "ESG 원칙/정책",
+   "url": "https://www.woorifg.com/kor/social-contribution/esg-policy/contentsid/454/index.do",
+   "detail_title": "ESG 경영원칙 | 우리금융그룹",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "c06eda946d1ee7fd",
+   "source_key": "woorifg",
+   "company": "우리금융지주",
+   "title": "인권 원칙",
+   "url": "https://www.woorifg.com/kor/social-contribution/esg-policy/contentsid/456/index.do",
+   "detail_title": "인권 원칙 | 우리금융그룹",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "f89bae9dabfb1477",
+   "source_key": "woorifg",
+   "company": "우리금융지주",
+   "title": "세무정책",
+   "url": "https://www.woorifg.com/kor/social-contribution/esg-tax-policy/contentsid/458/index.do",
+   "detail_title": "세무정책 | 우리금융그룹",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "e6b5ab2abd17aca7",
+   "source_key": "woorifg",
+   "company": "우리금융지주",
+   "title": "포용금융 정책",
+   "url": "https://www.woorifg.com/kor/social-contribution/esg-policy/contentsid/632/index.do",
+   "detail_title": "포용금융 정책 | 우리금융그룹",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "0e8d779e89529453",
+   "source_key": "woorifg",
+   "company": "우리금융지주",
+   "title": "윤리경영",
+   "url": "https://www.woorifg.com/kor/social-contribution/ethic/doctrine/contentsid/503/index.do",
+   "detail_title": "그룹 윤리강령 | 우리금융그룹",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고가 아닌 게시물로 보입니다 ('윤리강령')",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "821a0ef55558c35c",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "AI Engineer 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260519.html",
+   "detail_title": "AI Engineer 채용",
+   "detail_status": "ok",
+   "deadline_guess": "마감",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped_expired",
+   "deadline": "마감",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "0c11ac2ae234df03",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "바이오플랫폼 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260511-3.html",
+   "detail_title": "바이오플랫폼 경력직 채용",
+   "detail_status": "ok",
+   "deadline_guess": "마감",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped_expired",
+   "deadline": "마감",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "f50db47033d2a3cf",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 SPA팀 보안전문가 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260428.html",
+   "detail_title": "Risk Assurance 본부 SPA팀 보안전문가 경력직 채용",
+   "detail_status": "ok",
+   "deadline_guess": "마감",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped_expired",
+   "deadline": "마감",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "2aadae26cc8998de",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "금융본부 LLM/Data Engineer 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260304.html",
+   "detail_title": "금융본부 LLM/Data Engineer 채용",
+   "detail_status": "ok",
+   "deadline_guess": "마감",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped_expired",
+   "deadline": "마감",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "d1b33d76dcd6b52a",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "컨설팅 프로젝트 경력직 컨설턴트 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260209.html",
+   "detail_title": "컨설팅 프로젝트 경력직 컨설턴트 채용",
+   "detail_status": "ok",
+   "deadline_guess": "마감",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped_expired",
+   "deadline": "마감",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "0cd145e7047f3c03",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 Trust팀 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260106.html",
+   "detail_title": "Risk Assurance 본부 Trust팀 경력직 채용",
+   "detail_status": "ok",
+   "deadline_guess": "마감",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped_expired",
+   "deadline": "마감",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "d084684125d8c88d",
+   "source_key": "careers_kbfg",
+   "company": "KB금융지주",
+   "title": "금융공학부 경력직(연봉계약직) 채용",
+   "url": "https://careers.kbfg.com/apply/886",
+   "detail_title": "KB Careers",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-08",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "deadline": "2026-09-08",
+   "judged_at": "2026-08-28 15:10",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "a144192b1863b8e5",
+   "source_key": "careers_kbfg",
+   "company": "KB금융지주",
+   "title": "연금지원부 법인연금지원팀 경력직(연봉계약직) 채용",
+   "url": "https://careers.kbfg.com/apply/885",
+   "detail_title": "KB Careers",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-06",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "deadline": "2026-09-06",
+   "judged_at": "2026-08-28 15:10",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "f9b0ef4288b78a97",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 제조영역 컨설턴트 경력직 D-5 2026.08.19 ~ 2026.09.02 00:00 수시 일반채용 신입",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/123597",
+   "detail_title": "EY한영 채용 | 컨설팅부문 제조영역 컨설턴트 경력직",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-02",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "deadline": "2026-09-02",
+   "judged_at": "2026-08-28 15:10",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "5fcb885374f3baf6",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-5 2026.08.19 ~ 2026.09.02 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888",
+   "detail_title": "",
+   "detail_status": "fetch_error(렌더링 실패: TimeoutError)",
+   "deadline_guess": "",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "deadline": "",
+   "judged_at": "2026-08-28 15:10",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": false
+  },
+  {
+   "id": "eec67c4fee104e4e",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 Cyber Security 경력직 컨설턴트 D-5 2026.08.19 ~ 2026.09.02 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/122256",
+   "detail_title": "EY한영 채용 | 컨설팅부문 Cyber Security 경력직 컨설턴트",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-02",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "deadline": "2026-09-02",
+   "judged_at": "2026-08-28 15:10",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "de1f18f690d3e850",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 Government Team 컨설팅 인턴 D-5 2026.08.26 ~ 2026.09.02 23:59 수시 일반채용 인턴",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126269",
+   "detail_title": "EY한영 채용 | 컨설팅부문 Government Team 컨설팅 인턴",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-02",
+   "fit": "no",
+   "reason": "자동 제외 — '인턴' 공고입니다",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "2026-09-02",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "6f6a741b3660a31c",
+   "source_key": "idbins",
+   "company": "DB손보",
+   "title": "색상규정",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/pr/FWCOMV5563.shtm",
+   "detail_title": "환영합니다. DB손해보험입니다.",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "b5fd35b7130823ed",
+   "source_key": "idbins",
+   "company": "DB손보",
+   "title": "브랜드광장",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/pr/FWCOMV1697.shtm",
+   "detail_title": "환영합니다. DB손해보험입니다.",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "c6a0a064de3295c5",
+   "source_key": "idbins",
+   "company": "DB손보",
+   "title": "프로미라이프",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/pr/FWCOMV5556.shtm",
+   "detail_title": "환영합니다. DB손해보험입니다.",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "1f93866af35999f9",
+   "source_key": "idbins",
+   "company": "DB손보",
+   "title": "프로미카",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/pr/FWCOMV5565.shtm",
+   "detail_title": "환영합니다. DB손해보험입니다.",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "0269085485fb70f3",
+   "source_key": "idbins",
+   "company": "DB손보",
+   "title": "인재양성",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1727.shtm",
+   "detail_title": "환영합니다. DB손해보험입니다.",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "21cc0bb0326b48fc",
+   "source_key": "idbins",
+   "company": "DB손보",
+   "title": "인사제도",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1731.shtm",
+   "detail_title": "환영합니다. DB손해보험입니다.",
+   "detail_status": "ok",
+   "deadline_guess": "",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
+   "id": "207db0abd98746bd",
+   "source_key": "dbgroup",
+   "company": "DB그룹",
+   "title": "접수중 [DB하이텍] 조직문화∙사회공헌 체험형 인턴 모집 D-9 2026.08.28 ~ 2026.09.06 23:59 인턴 일반채용 신입",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/126654",
+   "detail_title": "DB그룹 채용 | [DB하이텍] 조직문화∙사회공헌 체험형 인턴 모집",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-06",
+   "fit": "no",
+   "reason": "자동 제외 — 채용공고가 아닌 게시물로 보입니다 ('사회공헌')",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "deadline": "2026-09-06",
+   "first_seen": "2026-08-28",
+   "last_seen": "2026-08-28",
+   "has_detail": true
+  },
+  {
    "id": "a1e0caec0051ff68",
    "source_key": "woorifg",
    "company": "우리금융지주",
@@ -1062,7 +1542,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1081,7 +1561,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1100,7 +1580,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1119,7 +1599,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1138,7 +1618,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1157,7 +1637,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1176,7 +1656,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1194,9 +1674,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-30",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1253,7 +1733,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1272,7 +1752,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1291,7 +1771,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-09-01",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1310,7 +1790,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1329,7 +1809,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1348,7 +1828,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1367,7 +1847,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1386,7 +1866,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1405,7 +1885,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-26",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1424,7 +1904,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1443,7 +1923,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1462,7 +1942,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1481,7 +1961,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1500,7 +1980,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1519,7 +1999,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1538,7 +2018,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-06-14",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1557,7 +2037,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-06-03",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1576,7 +2056,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-06-07",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1595,7 +2075,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-06-02",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1614,7 +2094,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1652,7 +2132,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-08-14",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1671,7 +2151,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-21",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1690,7 +2170,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-08-21",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1709,7 +2189,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1728,7 +2208,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1747,7 +2227,7 @@
    "ai_status": "prefilter",
    "deadline": "마감",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1766,7 +2246,7 @@
    "ai_status": "prefilter",
    "deadline": "마감",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1785,7 +2265,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-08-17",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1804,7 +2284,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1823,7 +2303,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1842,7 +2322,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-01-31",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -1861,7 +2341,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2025-12-20",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -1880,7 +2360,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-03-08",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -1899,7 +2379,7 @@
    "ai_status": "prefilter",
    "deadline": "2025-10-12",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -1917,9 +2397,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-30",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1937,9 +2417,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-30",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1957,9 +2437,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-30",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1977,9 +2457,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-30",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -1997,9 +2477,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-30",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2017,9 +2497,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-09-01",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2038,7 +2518,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2057,7 +2537,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2076,7 +2556,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2095,7 +2575,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2114,7 +2594,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2133,7 +2613,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2152,7 +2632,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2171,7 +2651,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2190,7 +2670,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2209,7 +2689,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2228,7 +2708,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2247,7 +2727,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2266,7 +2746,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-07-19",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2304,7 +2784,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-02",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2323,7 +2803,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-07-13",
    "first_seen": "2026-08-25",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2341,9 +2821,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2361,9 +2841,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2382,7 +2862,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2025-12-31",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2400,9 +2880,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-11-16",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2421,7 +2901,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-23",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2440,7 +2920,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-07-24",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2459,7 +2939,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-07-03",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2478,7 +2958,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-06-11",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2497,7 +2977,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2515,9 +2995,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2536,7 +3016,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2555,7 +3035,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2573,9 +3053,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2593,9 +3073,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2614,7 +3094,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2632,9 +3112,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-12-31",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2653,7 +3133,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-08-20",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2672,7 +3152,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2691,7 +3171,7 @@
    "ai_status": "prefilter",
    "deadline": "마감",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2710,7 +3190,7 @@
    "ai_status": "skipped_expired",
    "deadline": "마감",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2728,9 +3208,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-31",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2749,7 +3229,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-07-26",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2768,7 +3248,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-05-10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2787,7 +3267,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-03-08",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2806,7 +3286,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-03-02",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2825,7 +3305,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-02-06",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": false
   },
   {
@@ -2844,7 +3324,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2863,7 +3343,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-09-06",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2882,7 +3362,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-09-03",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2894,15 +3374,15 @@
    "detail_title": "KB Careers",
    "detail_status": "ok",
    "deadline_guess": "2026-08-27",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
+   "ai_status": "skipped_expired",
    "deadline": "2026-08-27",
    "judged_at": "2026-08-26 08:52",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -2914,15 +3394,15 @@
    "detail_title": "KB Careers",
    "detail_status": "ok",
    "deadline_guess": "2026-08-27",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
+   "ai_status": "skipped_expired",
    "deadline": "2026-08-27",
    "judged_at": "2026-08-26 08:52",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3029,15 +3509,15 @@
    "detail_title": "EY한영 채용 | 전략·재무자문부문 Deal2 (가치평가팀) 경력직",
    "detail_status": "ok",
    "deadline_guess": "2026-08-27",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "fit": "expired",
+   "reason": "마감일 경과 — AI 판단을 생략했습니다",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
+   "ai_status": "skipped_expired",
    "deadline": "2026-08-27",
    "judged_at": "2026-08-26 08:52",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3075,7 +3555,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3094,7 +3574,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3113,7 +3593,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3132,7 +3612,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3151,7 +3631,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3170,7 +3650,7 @@
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3188,9 +3668,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-09-03",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3208,9 +3688,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-09-02",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3229,7 +3709,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-08-23",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3248,7 +3728,7 @@
    "ai_status": "prefilter",
    "deadline": "2026-08-18",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3267,7 +3747,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-11",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3286,7 +3766,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-02",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3304,9 +3784,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-09-03",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3324,9 +3804,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-08-31",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3344,9 +3824,9 @@
    "confidence": "low",
    "ai_status": "skipped",
    "deadline": "2026-09-08",
-   "judged_at": "2026-08-26 08:52",
+   "judged_at": "2026-08-28 15:10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3365,7 +3845,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-17",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3384,7 +3864,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-17",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   },
   {
@@ -3403,7 +3883,7 @@
    "ai_status": "skipped_expired",
    "deadline": "2026-08-10",
    "first_seen": "2026-08-24",
-   "last_seen": "2026-08-26",
+   "last_seen": "2026-08-28",
    "has_detail": true
   }
  ]
