@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-29 08:06",
+ "generated_at": "2026-08-30 08:06",
  "sources": [
   {
    "key": "samsungcareers",
@@ -23,8 +23,8 @@
    "key": "hanwhain",
    "company": "한화생명/한화손보",
    "url": "https://www.hanwhain.com/portal/apply/recruit",
-   "list_ok": true,
-   "method": "requests",
+   "list_ok": false,
+   "method": "browser",
    "fallback_used": false,
    "links_found": 0,
    "new_found": 0,
@@ -34,8 +34,8 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "error": "타임아웃",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
   },
   {
    "key": "career_kyobo",
@@ -85,11 +85,11 @@
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 22,
+   "deferred": 16,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 22건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "신규 16건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
   },
   {
    "key": "dbgroup",
@@ -185,19 +185,19 @@
    "key": "woorifg",
    "company": "우리금융지주",
    "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?",
-   "list_ok": true,
+   "list_ok": false,
    "method": "browser",
-   "fallback_used": true,
-   "links_found": 36,
-   "new_found": 6,
-   "detail_ok": 6,
+   "fallback_used": false,
+   "links_found": 0,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 12,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "신규 12건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "error": "SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)')))",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
   },
   {
    "key": "pwc",
@@ -207,8 +207,8 @@
    "method": "requests",
    "fallback_used": false,
    "links_found": 32,
-   "new_found": 5,
-   "detail_ok": 5,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
