@@ -789,8 +789,28 @@
           "링크 " + h.links_found + " · 신규 " + h.new_found +
           " · 본문 " + h.detail_ok + "/" + (h.detail_ok + h.detail_failed)));
       }
+      if (h.fallback_attempted && h.browser_links !== null && h.browser_links !== undefined) {
+        row.appendChild(el("span", "health-nums",
+          "브라우저 재시도 결과 " + h.browser_links + "건"));
+      }
       var note = [h.error, h.note].filter(Boolean).join(" ");
       if (note) row.appendChild(el("span", "health-note", note));
+
+      // 실제로 어떤 링크가 잡혔는지 — 패턴이 맞는지 눈으로 확인하는 용도
+      var samples = h.sample_links || [];
+      if (samples.length) {
+        var det = el("details", "health-samples");
+        det.appendChild(el("summary", "disclosure", "잡힌 링크 " + samples.length + "건 보기"));
+        samples.forEach(function (sl) {
+          var a = el("a", "rep-url", sl.url);
+          a.href = sl.url; a.target = "_blank"; a.rel = "noopener noreferrer";
+          var wrap2 = el("div", "sample-row");
+          wrap2.appendChild(el("div", "sample-title", sl.title || "(제목 없음)"));
+          wrap2.appendChild(a);
+          det.appendChild(wrap2);
+        });
+        row.appendChild(det);
+      }
       box.appendChild(row);
     });
     if (!rows.length) box.appendChild(el("p", "empty", "아직 수집 기록이 없습니다."));

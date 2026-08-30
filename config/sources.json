@@ -31,13 +31,13 @@
       "manual_only": false,
       "detail_fetch": true,
       "render_mode": "always",
-      "min_expected_links": 3,
-      "render_wait_ms": 4000,
+      "min_expected_links": 1,
+      "render_wait_ms": 7000,
       "link_include": [
         "https://www.samsungcareers.com/hr/?no="
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -49,14 +49,14 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [
         "https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -68,12 +68,12 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 3,
-      "render_wait_ms": 4000,
+      "render_wait_ms": 5000,
       "link_include": [],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -92,7 +92,7 @@
         "https://shinhan-life.recruiter.co.kr/career/jobs/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -104,12 +104,12 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -128,7 +128,7 @@
         "https://dbgroup.recruiter.co.kr/career/jobs/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -140,14 +140,14 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [
         "https://recruit.meritzfire.com/new/job/noticeView.do"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -160,13 +160,13 @@
       "manual_only": false,
       "detail_fetch": true,
       "render_mode": "always",
-      "min_expected_links": 3,
-      "render_wait_ms": 4000,
+      "min_expected_links": 1,
+      "render_wait_ms": 7000,
       "link_include": [
         "https://hi.recruiter.co.kr/career/jobs/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -185,7 +185,7 @@
         "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn="
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -204,24 +204,24 @@
         "https://careers.kbfg.com/apply/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
       "key": "woorifg",
       "no": 11,
       "company": "우리금융지주",
-      "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?",
+      "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do",
       "memo": "금융지주 선순위 / 전략, 경영기획, 경영분석, 계열사 관리 위주로 확인",
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -240,7 +240,7 @@
         "https://www.pwc.com/kr/ko/career/experienced/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -252,14 +252,14 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [
         "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -278,7 +278,7 @@
         "https://eycareers-kr.recruiter.co.kr/career/jobs/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -290,12 +290,12 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -308,13 +308,13 @@
       "manual_only": false,
       "detail_fetch": true,
       "render_mode": "always",
-      "min_expected_links": 3,
-      "render_wait_ms": 4000,
+      "min_expected_links": 1,
+      "render_wait_ms": 7000,
       "link_include": [
-        "https://aia.wd3.myworkdayjobs.com/ko-KR/External/details/"
+        "/external/job/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -333,7 +333,7 @@
         "https://www.metlifecareers.com/ko_KR/ml/JobDetail/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -346,13 +346,13 @@
       "manual_only": false,
       "detail_fetch": true,
       "render_mode": "always",
-      "min_expected_links": 3,
-      "render_wait_ms": 4000,
+      "min_expected_links": 1,
+      "render_wait_ms": 7000,
       "link_include": [
         "https://miraeassetlife.ninehire.site/job_posting/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -365,11 +365,11 @@
       "manual_only": false,
       "detail_fetch": true,
       "render_mode": "always",
-      "min_expected_links": 3,
-      "render_wait_ms": 4000,
+      "min_expected_links": 1,
+      "render_wait_ms": 7000,
       "link_include": [],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -381,12 +381,12 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -398,14 +398,14 @@
       "enabled": true,
       "manual_only": false,
       "detail_fetch": true,
-      "render_mode": "auto",
+      "render_mode": "always",
       "min_expected_links": 1,
-      "render_wait_ms": 2500,
+      "render_wait_ms": 5000,
       "link_include": [
         "https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -424,7 +424,7 @@
         "https://hanalife.careerlink.kr/jobs/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     },
     {
@@ -443,7 +443,7 @@
         "https://abl.recruiter.co.kr/career/jobs/"
       ],
       "link_exclude": [],
-      "max_new_details": 6,
+      "max_new_details": 30,
       "deadline_patterns": []
     }
   ]

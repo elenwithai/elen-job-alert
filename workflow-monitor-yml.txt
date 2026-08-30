@@ -55,7 +55,7 @@ jobs:
       - name: 크롤링 + AI 판단 실행
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          MAX_AI_CALLS: '40'
+          MAX_AI_CALLS: '80'
           STALE_DAYS: '30'      # 마감일을 못 읽은 공고를 마감 처리할 기준 일수
         run: |
           ARGS=""

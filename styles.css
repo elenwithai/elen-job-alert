@@ -1079,3 +1079,8 @@ a.ghost-btn { text-decoration: none; display: inline-block; }
   .tablabel { font-size: 10.5px; }
   .tally-cell { flex: 1 1 72px; }
 }
+
+.health-samples { flex: 1 1 100%; margin-top: 6px; }
+.health-samples .disclosure { font-size: 11.5px; padding: 4px 0; }
+.sample-row { padding: 4px 0 4px 10px; border-left: 2px solid var(--line); margin-bottom: 3px; }
+.sample-title { font-size: 11.5px; color: var(--ink-2); overflow-wrap: anywhere; }

@@ -15,7 +15,11 @@
   "ai_calls": 4,
   "ai_errors": 1,
   "browser_pages": 3,
-  "ai_skipped_filter": 3
+  "ai_skipped_filter": 3,
+  "excluded_notjob": 1,
+  "excluded_employment": 2,
+  "excluded_expired": 1,
+  "excluded_ai": 1
  },
  "sources": [
   {
@@ -728,7 +732,9 @@
    "deadline": "2026-08-26",
    "first_seen": "2026-08-21",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000002",
@@ -744,7 +750,9 @@
    "deadline": "2026-08-30",
    "first_seen": "2026-08-23",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000003",
@@ -760,7 +768,9 @@
    "deadline": "2026-08-24",
    "first_seen": "2026-08-19",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000004",
@@ -776,7 +786,9 @@
    "deadline": "2026-09-14",
    "first_seen": "2026-08-22",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000005",
@@ -792,7 +804,9 @@
    "deadline": "상시/채용시 마감",
    "first_seen": "2026-08-20",
    "last_seen": "2026-08-24",
-   "has_detail": false
+   "has_detail": false,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000006",
@@ -808,7 +822,9 @@
    "deadline": "2026-08-23",
    "first_seen": "2026-07-30",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000007",
@@ -824,7 +840,9 @@
    "deadline": "2026-08-15",
    "first_seen": "2026-07-25",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000008",
@@ -840,7 +858,9 @@
    "deadline": "",
    "first_seen": "2026-07-14",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "통과"
   },
   {
    "id": "s000000000000009",
@@ -856,7 +876,9 @@
    "deadline": "2026-09-07",
    "first_seen": "2026-08-18",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "ai",
+   "status": "제외"
   },
   {
    "id": "s000000000000010",
@@ -872,7 +894,9 @@
    "deadline": "2026-09-04",
    "first_seen": "2026-08-24",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "pending",
+   "status": "대기"
   },
   {
    "id": "s000000000000011",
@@ -882,13 +906,15 @@
    "url": "https://example.com/sample/woorifg/recruit/view.do?sn=204",
    "role": "",
    "fit": "no",
-   "reason": "자동 제외 — 채용공고가 아닌 게시물로 보입니다 ('가치체계')",
+   "reason": "채용공고 아님 — 제목에 '가치체계' 포함, 채용/모집 표현 없음",
    "confidence": "high",
    "ai_status": "prefilter",
    "deadline": "",
    "first_seen": "2026-08-23",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "notjob",
+   "status": "제외"
   },
   {
    "id": "s000000000000012",
@@ -898,13 +924,15 @@
    "url": "https://example.com/sample/shinhan-life/career/jobs/3402",
    "role": "",
    "fit": "no",
-   "reason": "자동 제외 — '신입' 공고입니다",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
    "confidence": "high",
    "ai_status": "prefilter",
    "deadline": "2026-09-05",
    "first_seen": "2026-08-22",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "employment",
+   "status": "제외"
   },
   {
    "id": "s000000000000013",
@@ -914,13 +942,15 @@
    "url": "https://example.com/sample/hanalife/jobs/RC20260819033417",
    "role": "",
    "fit": "no",
-   "reason": "자동 제외 — '계약직' 공고입니다",
+   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
    "confidence": "high",
    "ai_status": "prefilter",
    "deadline": "2026-09-01",
    "first_seen": "2026-08-23",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "employment",
+   "status": "제외"
   },
   {
    "id": "s000000000000014",
@@ -930,13 +960,15 @@
    "url": "https://example.com/sample/shinhan-life/career/jobs/3120",
    "role": "신담보기획",
    "fit": "expired",
-   "reason": "마감일 경과 — AI 판단을 생략했습니다",
+   "reason": "마감일 필터 — 2026-06-11 마감으로 오늘 기준 경과",
    "confidence": "low",
    "ai_status": "skipped_expired",
    "deadline": "2026-06-11",
    "first_seen": "2026-05-30",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "expired",
+   "status": "제외"
   }
  ]
 }

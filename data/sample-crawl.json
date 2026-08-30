@@ -727,7 +727,9 @@
    "deadline": "2026-09-13",
    "first_seen": "2026-08-24",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "unjudged",
+   "status": "대기"
   },
   {
    "id": "crawl0002",
@@ -743,7 +745,9 @@
    "deadline": "2026-09-13",
    "first_seen": "2026-08-24",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "unjudged",
+   "status": "대기"
   },
   {
    "id": "crawl0003",
@@ -759,7 +763,9 @@
    "deadline": "2026-09-13",
    "first_seen": "2026-08-24",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "unjudged",
+   "status": "대기"
   },
   {
    "id": "crawl0004",
@@ -775,7 +781,9 @@
    "deadline": "",
    "first_seen": "2026-08-24",
    "last_seen": "2026-08-24",
-   "has_detail": false
+   "has_detail": false,
+   "stage": "unjudged",
+   "status": "대기"
   },
   {
    "id": "crawl0005",
@@ -791,7 +799,9 @@
    "deadline": "2026-09-13",
    "first_seen": "2026-08-24",
    "last_seen": "2026-08-24",
-   "has_detail": true
+   "has_detail": true,
+   "stage": "unjudged",
+   "status": "대기"
   }
  ]
 }

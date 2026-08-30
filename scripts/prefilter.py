@@ -54,7 +54,9 @@ def _hit(haystack, words):
 
 
 def check(job, profile=None):
-    """반환: (제외할지, 사유). 제외하지 않으면 (False, "")."""
+    """반환: (제외할지, 사유, 단계).
+    단계는 'notjob'(채용공고 아님) 또는 'employment'(고용형태).
+    제외하지 않으면 (False, "", "")."""
     title = (job.get("title") or "").lower()
     detail_title = (job.get("detail_title") or "").lower()
     body = (job.get("detail_text") or "").lower()
@@ -69,21 +71,23 @@ def check(job, profile=None):
     # ── ① 채용공고가 맞는가 ──
     bad = _hit(head, non_job)
     if bad and not _hit(head, [s.lower() for s in JOB_SIGNALS_TITLE]):
-        return True, f"자동 제외 — 채용공고가 아닌 게시물로 보입니다 ('{bad}')"
+        return True, f"채용공고 아님 — 제목에 '{bad}' 포함, 채용/모집 표현 없음", "notjob"
 
     # 제목에도 본문에도 채용공고다운 신호가 전혀 없으면 제외
     if body:
         has_title_signal = bool(_hit(head, [s.lower() for s in JOB_SIGNALS_TITLE]))
         has_body_signal = bool(_hit(body, [s.lower() for s in JOB_SIGNALS_BODY]))
         if not has_title_signal and not has_body_signal:
-            return True, "자동 제외 — 채용공고 형식이 아닙니다 (담당업무·자격요건 등 없음)"
+            return True, ("채용공고 아님 — 제목에 채용/모집 표현이 없고 "
+                          "본문에도 담당업무·자격요건·접수기간이 없음"), "notjob"
         if bad and not has_body_signal:
-            return True, f"자동 제외 — 채용공고가 아닌 게시물로 보입니다 ('{bad}')"
+            return True, f"채용공고 아님 — 제목에 '{bad}' 포함, 본문에 채용 항목 없음", "notjob"
 
     # ── ② 지원 대상이 아닌 고용형태 ──
     kept = _hit(head, keep_if)
     emp = _hit(head, emp_bad) or _hit(body_head, emp_bad)
     if emp and not kept:
-        return True, f"자동 제외 — '{emp}' 공고입니다"
+        where = "제목" if _hit(head, emp_bad) else "본문 앞부분"
+        return True, f"고용형태 제외 — {where}에서 '{emp}' 발견 (경력/정규직 표현 없음)", "employment"
 
-    return False, ""
+    return False, "", ""

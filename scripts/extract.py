@@ -30,6 +30,12 @@ PAGING_KEYS = (
     "p=", "offset=", "start=", "pageunit=", "sort=", "order=",
 )
 
+# 패턴 미지정 사이트에서 '공고 같은 링크'를 가려낼 단서
+JOB_HINT = re.compile(
+    r"채용|모집|구인|공고|전형|경력|신입|영입|recruit|hiring|job|position|apply|career",
+    re.IGNORECASE,
+)
+
 MAIN_SELECTORS = [
     "main", "article", "[role=main]",
     "#content", "#contents", "#container", ".content", ".contents",
@@ -109,8 +115,13 @@ def extract_links(html, base_url, source):
             # ④ 패턴이 없으면 목록과 같은 경로는 전부 제외
             if path.rstrip("/") == list_path:
                 continue
-            # ⑤ 숫자 ID가 들어간 깊은 경로만 채택
-            if not re.search(r"\d{3,}", full) or path.count("/") < 2:
+            # ⑤ 숫자 ID가 들어간 경로만 채택
+            if not re.search(r"\d{3,}", full):
+                continue
+            # ⑥ 패턴이 없을 때는 링크 글자에 채용 신호가 있어야 채택한다.
+            #    (없으면 게시판의 온갖 링크가 다 잡혀 오탐이 폭증한다)
+            probe = clean_text(a.get_text(" ", strip=True))
+            if not JOB_HINT.search(probe):
                 continue
         title = clean_text(a.get_text(" ", strip=True))
         if len(title) < min_len:

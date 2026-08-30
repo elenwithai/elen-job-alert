@@ -26,14 +26,31 @@ print(f"- 전체 **{s.get('total')}건** / AI 추천 **{s.get('fit_yes')}건** /
       f"판단 보류 **{s.get('pending')}건** / AI 판단 전 **{s.get('unjudged', 0)}건**")
 print(f"- 이번 실행 신규 {s.get('new_this_run')}건, AI 호출 {s.get('ai_calls')}회 (실패 {s.get('ai_errors')}회)")
 print("")
-print("| 사이트 | 목록 | 방식 | 링크 | 신규 | 상세 성공 | 상세 실패 | 비고 |")
-print("|---|---|---|---|---|---|---|---|")
+print(f"- 필터 제외: 채용공고 아님 **{s.get('excluded_notjob', 0)}건** / "
+      f"고용형태 **{s.get('excluded_employment', 0)}건** / "
+      f"마감 **{s.get('excluded_expired', 0)}건** / "
+      f"AI 부적합 **{s.get('excluded_ai', 0)}건**")
+print("")
+print("| 사이트 | 목록 | 방식 | 링크 | 신규 | 상세 성공 | 상세 실패 | 아님 | 고용 | 마감 | 비고 |")
+print("|---|---|---|---|---|---|---|---|---|---|---|")
 for h in d.get("source_health", []):
     if h.get("manual_only"):
-        print(f"| {h.get('company')} | – | 수동 확인 전용 | – | – | – | – | 수집 대상 아님 |")
+        print(f"| {h.get('company')} | – | 수동 확인 전용 | – | – | – | – | – | – | – | 수집 대상 아님 |")
         continue
     ok = "✅" if h.get("list_ok") else "❌"
     how = "브라우저" if h.get("method") == "browser" else "일반"
+    f = h.get("filtered") or {}
     note = ((h.get("error") or "") + " " + (h.get("note") or "")).strip()
     print(f"| {h.get('company')} | {ok} | {how} | {h.get('links_found')} | {h.get('new_found')} "
-          f"| {h.get('detail_ok')} | {h.get('detail_failed')} | {note} |")
+          f"| {h.get('detail_ok')} | {h.get('detail_failed')} "
+          f"| {f.get('notjob', 0)} | {f.get('employment', 0)} | {f.get('expired', 0)} | {note} |")
+
+print("")
+print("### 사이트별로 실제 잡힌 링크 (앞 3건)")
+for h in d.get("source_health", []):
+    samples = h.get("sample_links") or []
+    if not samples:
+        continue
+    print(f"- **{h.get('company')}**")
+    for sl in samples[:3]:
+        print(f"  - {sl.get('title', '')[:50]} → `{sl.get('url', '')}`")

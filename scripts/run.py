@@ -39,6 +39,18 @@ RETENTION_DAYS = int(os.environ.get("RETENTION_DAYS", "45"))
 STALE_DAYS = int(os.environ.get("STALE_DAYS", "30"))
 
 
+# 각 공고가 어느 단계에서 어떻게 처리됐는지 표시할 이름
+STAGE_LABEL = {
+    "crawl": "1단계 크롤링",
+    "notjob": "2단계 채용공고 여부",
+    "employment": "3단계 고용형태",
+    "expired": "4단계 마감일",
+    "ai": "5단계 AI 적합도",
+    "pending": "5단계 AI 적합도(보류)",
+    "unjudged": "5단계 AI 적합도(미실행)",
+}
+
+
 def now_kst():
     return datetime.now(KST)
 
@@ -133,6 +145,8 @@ def crawl_source(session, source, known_ids, report, renderer, diagnose=False):
         "list_ok": False,
         "method": "",
         "fallback_used": False,
+        "fallback_attempted": False,
+        "browser_links": None,
         "links_found": 0,
         "new_found": 0,
         "detail_ok": 0,
@@ -174,6 +188,7 @@ def crawl_source(session, source, known_ids, report, renderer, diagnose=False):
     # 링크가 없거나 비정상적으로 적으면 브라우저로 한 번 더 시도
     if len(links) < min_links and method == "requests" and mode == "auto":
         print(f"    링크 {len(links)}건 — 브라우저 렌더링으로 재시도")
+        entry["fallback_attempted"] = True
         rendered, rerr = renderer.render(
             url,
             wait_selector=source.get("render_wait_selector"),
@@ -184,6 +199,7 @@ def crawl_source(session, source, known_ids, report, renderer, diagnose=False):
                 relinks = extract.extract_links(rendered, final_url, source)
             except Exception:  # noqa: BLE001
                 relinks = []
+            entry["browser_links"] = len(relinks)
             if len(relinks) > len(links):
                 links = relinks
                 html = rendered
@@ -195,11 +211,20 @@ def crawl_source(session, source, known_ids, report, renderer, diagnose=False):
             entry["note"] = f"브라우저 재시도 실패: {rerr}. "
 
     entry["links_found"] = len(links)
+    entry["sample_links"] = [
+        {"title": (l.get("title") or "")[:70], "url": l["url"]} for l in links[:8]
+    ]
     if not links:
-        entry["note"] += (
-            "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. "
-            "link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
-        )
+        if entry.get("fallback_attempted") or method == "browser":
+            entry["note"] += (
+                "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. "
+                "link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다."
+            )
+        else:
+            entry["note"] += (
+                "링크 0건 — 브라우저 렌더링을 시도하지 못했습니다. "
+                "render_mode 를 always 로 바꿔보세요."
+            )
         if diagnose:
             entry["sample_html_head"] = (html or "")[:3000]
         report.append(entry)
@@ -383,15 +408,23 @@ def main():
 
     skipped_expired = 0
     skipped_filter = 0
+    filter_counts = {}
+    src_counts = {}
     for job in queue:
         # ── ① 채용공고가 아니거나 지원 대상이 아닌 고용형태는 AI에 안 보낸다 ──
-        drop, why = prefilter.check(job, profile)
+        drop, why, stage = prefilter.check(job, profile)
         if drop:
             job["fit"] = "no"
             job["reason"] = why
             job["role"] = ""
             job["confidence"] = "high"
             job["ai_status"] = "prefilter"
+            job["stage"] = stage
+            job["status"] = "제외"
+            filter_counts[stage] = filter_counts.get(stage, 0) + 1
+            src_counts.setdefault(job.get("source_key"), {})
+            src_counts[job["source_key"]][stage] = \
+                src_counts[job["source_key"]].get(stage, 0) + 1
             job["deadline"] = job.get("deadline") or job.get("deadline_guess", "")
             job.setdefault("first_seen", today.strftime("%Y-%m-%d"))
             job["last_seen"] = today.strftime("%Y-%m-%d")
@@ -401,14 +434,28 @@ def main():
         # ── 마감된 공고는 AI 판단 대상에서 제외 (API 비용 절감) ──
         if is_expired(job, today):
             job["fit"] = "expired"
-            job["reason"] = "마감일 경과 — AI 판단을 생략했습니다"
             job["role"] = job.get("role", "")
             job["confidence"] = "low"
             job["ai_status"] = "skipped_expired"
-            job["deadline"] = job.get("deadline") or job.get("deadline_guess", "")
+            job["stage"] = "expired"
+            job["status"] = "제외"
+            raw_dl = job.get("deadline") or job.get("deadline_guess", "")
+            if parse_ymd(raw_dl):
+                job["reason"] = f"마감일 필터 — {raw_dl} 마감으로 오늘({today:%Y-%m-%d}) 기준 경과"
+            elif "마감" in str(raw_dl):
+                job["reason"] = ("마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단"
+                                 + (f" ('{job.get('closed_marker')}')" if job.get("closed_marker") else ""))
+            else:
+                job["reason"] = (f"마감일 필터 — 마감일을 읽지 못했고 발견일"
+                                 f"({job.get('first_seen', '?')})로부터 {STALE_DAYS}일 경과")
+            job["deadline"] = raw_dl
             job.setdefault("first_seen", today.strftime("%Y-%m-%d"))
             job["last_seen"] = today.strftime("%Y-%m-%d")
             skipped_expired += 1
+            filter_counts["expired"] = filter_counts.get("expired", 0) + 1
+            src_counts.setdefault(job.get("source_key"), {})
+            src_counts[job["source_key"]]["expired"] = \
+                src_counts[job["source_key"]].get("expired", 0) + 1
             continue
 
         if crawl_only:
@@ -433,6 +480,15 @@ def main():
         job["role"] = verdict["role"]
         job["confidence"] = verdict["confidence"]
         job["ai_status"] = verdict["status"]
+        if verdict["fit"] == "yes":
+            job["stage"] = "ai"; job["status"] = "통과"
+        elif verdict["fit"] == "no":
+            job["stage"] = "ai"; job["status"] = "제외"
+            filter_counts["ai"] = filter_counts.get("ai", 0) + 1
+        elif verdict["fit"] == "unjudged":
+            job["stage"] = "unjudged"; job["status"] = "대기"
+        else:
+            job["stage"] = "pending"; job["status"] = "대기"
         job["deadline"] = verdict["deadline"] or job.get("deadline_guess", "")
         job["judged_at"] = today.strftime("%Y-%m-%d %H:%M")
         job.setdefault("first_seen", today.strftime("%Y-%m-%d"))
@@ -440,7 +496,9 @@ def main():
 
     print(f"[i] AI 호출 {calls}회 (실패 {ai_errors}회)")
     if skipped_filter:
-        print(f"[i] 사전 필터로 {skipped_filter}건 제외 (채용공고 아님·계약직·신입·인턴 등)")
+        print(f"[i] 사전 필터 제외 {skipped_filter}건 "
+              f"(채용공고 아님 {filter_counts.get('notjob', 0)}건, "
+              f"고용형태 {filter_counts.get('employment', 0)}건)")
     if skipped_expired:
         print(f"[i] 마감된 공고 {skipped_expired}건은 AI 판단을 생략했습니다 (비용 절감)")
 
@@ -486,6 +544,10 @@ def main():
             "expired": expired,
             "ai_skipped_expired": skipped_expired,
             "ai_skipped_filter": skipped_filter,
+            "excluded_notjob": filter_counts.get("notjob", 0),
+            "excluded_employment": filter_counts.get("employment", 0),
+            "excluded_expired": filter_counts.get("expired", 0),
+            "excluded_ai": filter_counts.get("ai", 0),
             "stale_days": STALE_DAYS,
             "crawl_only": crawl_only,
             "new_this_run": len(all_new),
@@ -511,9 +573,47 @@ def main():
 
     save_json(os.path.join(DATA_DIR, "jobs.json"), payload)
     save_json(os.path.join(DATA_DIR, "pending_bodies.json"), new_bodies)
+    for entry in report:
+        counts = src_counts.get(entry.get("key"), {})
+        entry["filtered"] = {
+            "notjob": counts.get("notjob", 0),
+            "employment": counts.get("employment", 0),
+            "expired": counts.get("expired", 0),
+        }
+
+    # ── 공고 하나하나의 판정 이력 ──
+    decisions = []
+    for j in output_jobs:
+        stage = j.get("stage") or ("unjudged" if j.get("fit") == "unjudged" else "ai")
+        decisions.append({
+            "id": j.get("id"),
+            "company": j.get("company"),
+            "title": j.get("title"),
+            "url": j.get("url"),
+            "source_key": j.get("source_key"),
+            "status": j.get("status") or ("통과" if j.get("fit") == "yes" else "제외"),
+            "stage": stage,
+            "stage_label": STAGE_LABEL.get(stage, stage),
+            "reason": j.get("reason", ""),
+            "deadline": j.get("deadline", ""),
+            "has_detail": bool(j.get("has_detail")),
+            "first_seen": j.get("first_seen", ""),
+        })
+    decisions.sort(key=lambda x: (x["status"] != "통과", x["company"] or "", x["title"] or ""))
+
     save_json(os.path.join(DATA_DIR, "crawl_report.json"), {
         "generated_at": today.strftime("%Y-%m-%d %H:%M"),
+        "summary": {
+            "crawled_total": len(output_jobs),
+            "passed": sum(1 for d in decisions if d["status"] == "통과"),
+            "waiting": sum(1 for d in decisions if d["status"] == "대기"),
+            "excluded_notjob": filter_counts.get("notjob", 0),
+            "excluded_employment": filter_counts.get("employment", 0),
+            "excluded_expired": filter_counts.get("expired", 0),
+            "excluded_ai": filter_counts.get("ai", 0),
+        },
         "sources": report,
+        "decisions": decisions,
     })
 
     print(f"[✓] 완료 — 전체 {len(output_jobs)}건 / 추천 {fit_yes}건 / "
