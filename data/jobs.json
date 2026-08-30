@@ -1,24 +1,24 @@
 {
- "updated_at": "2026-08-30 16:38",
- "updated_at_iso": "2026-08-30T16:38:27.363121+09:00",
+ "updated_at": "2026-08-31 08:06",
+ "updated_at_iso": "2026-08-31T08:06:12.858392+09:00",
  "stats": {
-  "total": 116,
+  "total": 122,
   "fit_yes": 0,
   "pending": 0,
-  "unjudged": 64,
-  "expired": 35,
-  "ai_skipped_expired": 24,
-  "ai_skipped_filter": 28,
-  "excluded_notjob": 5,
-  "excluded_employment": 23,
-  "excluded_expired": 24,
+  "unjudged": 62,
+  "expired": 41,
+  "ai_skipped_expired": 6,
+  "ai_skipped_filter": 2,
+  "excluded_notjob": 0,
+  "excluded_employment": 2,
+  "excluded_expired": 6,
   "excluded_ai": 0,
   "stale_days": 30,
   "crawl_only": true,
-  "new_this_run": 116,
+  "new_this_run": 6,
   "ai_calls": 0,
   "ai_errors": 0,
-  "browser_pages": 119
+  "browser_pages": 35
  },
  "sources": [
   {
@@ -666,7 +666,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 68403,
+    "browser_html_len": 68404,
     "browser_anchor_count": 100,
     "unique_links_sample": [
      {
@@ -781,9 +781,9 @@
    "key": "hanwhain",
    "company": "한화생명/한화손보",
    "url": "https://www.hanwhain.com/portal/apply/recruit",
-   "list_ok": true,
+   "list_ok": false,
    "method": "browser",
-   "fallback_used": true,
+   "fallback_used": false,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -794,98 +794,8 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개",
-   "sample_links": [],
-   "probe": {
-    "requests_status": 200,
-    "requests_error": "",
-    "requests_html_len": 2489,
-    "requests_anchor_count": 0,
-    "browser_ok": true,
-    "browser_error": "",
-    "browser_html_len": 505630,
-    "browser_anchor_count": 28,
-    "unique_links_sample": [
-     {
-      "text": "",
-      "url": "https://www.hanwhain.com/portal"
-     },
-     {
-      "text": "걸어온 길",
-      "url": "https://www.hanwhain.com/portal/hanwha/history"
-     },
-     {
-      "text": "핵심가치",
-      "url": "https://www.hanwhain.com/portal/hanwha/key-value"
-     },
-     {
-      "text": "브랜드비전",
-      "url": "https://www.hanwhain.com/portal/hanwha/brand"
-     },
-     {
-      "text": "계열사 소개",
-      "url": "https://www.hanwhain.com/portal/subsidiary"
-     },
-     {
-      "text": "채용공고",
-      "url": "https://www.hanwhain.com/portal/apply/recruit"
-     },
-     {
-      "text": "인재 POOL",
-      "url": "https://www.hanwhain.com/portal/apply/pool"
-     },
-     {
-      "text": "자주하는 질문",
-      "url": "https://www.hanwhain.com/portal/inquiry/faq"
-     },
-     {
-      "text": "1:1문의",
-      "url": "https://www.hanwhain.com/portal/mypage/?rtn=qna"
-     },
-     {
-      "text": "로그인",
-      "url": "https://www.hanwhain.com/portal/login/login"
-     },
-     {
-      "text": "개인정보처리방침",
-      "url": "https://www.hanwhain.com/portal/policies/PrivacyPolicy"
-     },
-     {
-      "text": "이용약관",
-      "url": "https://www.hanwhain.com/portal/policies/TermsOfService"
-     },
-     {
-      "text": "한화 그룹",
-      "url": "https://www.hanwha.co.kr"
-     },
-     {
-      "text": "YouTube",
-      "url": "https://www.youtube.com/user/hanwhadays"
-     },
-     {
-      "text": "Instagram",
-      "url": "https://www.instagram.com/hanwhadays/"
-     },
-     {
-      "text": "facebook",
-      "url": "https://www.facebook.com/hanwhadays"
-     },
-     {
-      "text": "x",
-      "url": "https://x.com/hanwha_official"
-     },
-     {
-      "text": "blog",
-      "url": "https://blog.naver.com/hanwhadays"
-     }
-    ],
-    "matched_by_pattern": 0,
-    "link_include": [
-     "https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="
-    ],
-    "verdict": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개"
-   }
+   "error": "렌더링 실패: TimeoutError",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
   },
   {
    "key": "career_kyobo",
@@ -914,7 +824,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 33718,
+    "browser_html_len": 33719,
     "browser_anchor_count": 47,
     "unique_links_sample": [
      {
@@ -969,8 +879,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 10,
-   "detail_ok": 10,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1023,8 +933,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 11,
-   "new_found": 11,
-   "detail_ok": 11,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1077,8 +987,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 8,
-   "new_found": 8,
-   "detail_ok": 8,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1088,15 +998,15 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [DB하이텍] 조직문화∙사회공헌 체험형 인턴 모집 D-7 2026.08.28 ~ 2026.09.06 23:59 인턴 일",
+     "title": "접수중 [DB하이텍] 조직문화∙사회공헌 체험형 인턴 모집 D-6 2026.08.28 ~ 2026.09.06 23:59 인턴 일",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/126654"
     },
     {
-     "title": "접수중 [DB하이텍] 경력사원 공개채용 (8월) D-4 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 경",
+     "title": "접수중 [DB하이텍] 경력사원 공개채용 (8월) D-3 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 경",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125739"
     },
     {
-     "title": "접수중 [DB생명] 2026년 방카슈랑스 교육팀장(서울) 채용 D-3 2026.08.24 ~ 2026.09.02 23:59 수",
+     "title": "접수중 [DB생명] 2026년 방카슈랑스 교육팀장(서울) 채용 D-2 2026.08.24 ~ 2026.09.02 23:59 수",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125669"
     },
     {
@@ -1230,7 +1140,7 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 20332,
+    "requests_html_len": 20289,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
@@ -1303,15 +1213,15 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 10,
+   "new_found": 0,
    "detail_ok": 0,
-   "detail_failed": 10,
+   "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "note": "",
    "sample_links": [
     {
      "title": "[KB손해보험] 2026년 자동차SIU부 경력사원 공개채용",
@@ -1355,10 +1265,10 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 5,
-   "links_found": 5,
-   "new_found": 5,
-   "detail_ok": 5,
+   "browser_links": 4,
+   "links_found": 4,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1382,10 +1292,6 @@
     {
      "title": "WM자산관리 컨설팅 부문(연봉계약직) 채용",
      "url": "https://careers.kbfg.com/apply/882"
-    },
-    {
-     "title": "PE성장투자관리팀 펀드(조합) 관리업무 경력직 채용",
-     "url": "https://careers.kbfg.com/apply/875"
     }
    ]
   },
@@ -1434,15 +1340,15 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 32,
-   "new_found": 30,
-   "detail_ok": 30,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 2,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 2건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. ",
+   "note": "",
    "sample_links": [
     {
      "title": "Risk Assurance 본부 SAP 전문가 경력직 채용",
@@ -1505,7 +1411,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59177,
+    "browser_html_len": 59190,
     "browser_anchor_count": 122,
     "unique_links_sample": [
      {
@@ -1626,8 +1532,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 10,
-   "detail_ok": 10,
+   "new_found": 4,
+   "detail_ok": 4,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1637,36 +1543,36 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 금융컨설팅부문 AI · Technology · Security(AITS)팀 경력직 D-Day 2026.08.05 ~ 2",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124029"
-    },
-    {
-     "title": "접수중 EY Korea FS Strategy Team | Experienced Hires D-Day 2026.08.05 ~ 2",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124302"
-    },
-    {
-     "title": "접수중 감사부문 원가관리회계 및 재무 혁신 컨설턴트 [경력] D-Day 2026.08.12 ~ 2026.08.30 23:59 ",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124790"
-    },
-    {
-     "title": "접수중 전략·재무자문부문 M&A Solution Group 경력직 D-Day 2026.08.19 ~ 2026.08.30 23:",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125464"
-    },
-    {
-     "title": "접수중 컨설팅부문 Operation Transformation 경력직 D-2 2026.08.10 ~ 2026.09.01 23:",
+     "title": "접수중 컨설팅부문 Operation Transformation 경력직 D-1 2026.08.10 ~ 2026.09.01 23:",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124654"
     },
     {
-     "title": "접수중 컨설팅부문 Data Architect & Engineering 인턴 D-2 2026.08.20 ~ 2026.09.01 ",
+     "title": "접수중 컨설팅부문 Data Architect & Engineering 인턴 D-1 2026.08.20 ~ 2026.09.01 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125602"
     },
     {
-     "title": "접수중 컨설팅부문 제조영역 컨설턴트 경력직 D-3 2026.08.19 ~ 2026.09.02 00:00 수시 일반채용 신입",
+     "title": "접수중 컨설팅부문 제조영역 컨설턴트 경력직 D-2 2026.08.19 ~ 2026.09.02 00:00 수시 일반채용 신입",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/123597"
     },
     {
-     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-3 2026.08.19 ~ 2026.09.02 23:59 수시 일반채",
+     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-2 2026.08.19 ~ 2026.09.02 23:59 수시 일반채",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888"
+    },
+    {
+     "title": "접수중 컨설팅부문 Cyber Security 경력직 컨설턴트 D-2 2026.08.19 ~ 2026.09.02 23:59 수시",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/122256"
+    },
+    {
+     "title": "접수중 컨설팅부문 Government Team 컨설팅 인턴 D-2 2026.08.26 ~ 2026.09.02 23:59 수시 ",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126269"
+    },
+    {
+     "title": "접수중 금융컨설팅본부 금융 플랫폼 기획 인턴 D-2 2026.08.27 ~ 2026.09.02 23:59 수시 일반채용 인턴",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126556"
+    },
+    {
+     "title": "접수중 금융감사본부 Digital Audit, AI 및 리스크 계량 분석가 [경력] D-6 2026.08.20 ~ 2026.0",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125660"
     }
    ]
   },
@@ -1715,8 +1621,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 16,
-   "new_found": 16,
-   "detail_ok": 16,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1769,8 +1675,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 6,
-   "new_found": 6,
-   "detail_ok": 6,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1828,11 +1734,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 187520,
+    "requests_html_len": 187470,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181051,
+    "browser_html_len": 181069,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -2093,7 +1999,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46747,
+    "browser_html_len": 46746,
     "browser_anchor_count": 150,
     "unique_links_sample": [
      {
@@ -2214,15 +2120,15 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 2,
-   "new_found": 2,
+   "new_found": 0,
    "detail_ok": 0,
-   "detail_failed": 2,
+   "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "note": "",
    "sample_links": [
     {
      "title": "[하나생명] 내부감사인 경력사원 채용 경력 10년 이상 | 계약직 | 2026.08.19 ~ 2026.09.01 23:59 |",
@@ -2244,8 +2150,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 8,
-   "new_found": 8,
-   "detail_ok": 8,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -2255,15 +2161,15 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 디지털IT기획팀 경력직 채용 D-4 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 ",
+     "title": "접수중 [ABL생명] 디지털IT기획팀 경력직 채용 D-3 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 ",
      "url": "https://abl.recruiter.co.kr/career/jobs/125808"
     },
     {
-     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-1 2026.08.21 ~ 2026.08.31 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-Day 2026.08.21 ~ 2026.08.31 23:59 수시 일반채용 경",
      "url": "https://abl.recruiter.co.kr/career/jobs/125709"
     },
     {
-     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-9 2026.08.19 ~ 2026.09.08 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-8 2026.08.19 ~ 2026.09.08 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/125457"
     },
     {
@@ -2291,6 +2197,136 @@
  ],
  "jobs": [
   {
+   "id": "6829825b138084ae",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "Transaction Services Professional 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r250227.html",
+   "detail_title": "Transaction Services Professional 채용",
+   "detail_status": "ok",
+   "deadline_guess": "상시",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "stage": "unjudged",
+   "status": "대기",
+   "deadline": "상시",
+   "judged_at": "2026-08-31 08:06",
+   "first_seen": "2026-08-31",
+   "last_seen": "2026-08-31",
+   "has_detail": true
+  },
+  {
+   "id": "499615ecc12cfadd",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "ESG 컨설턴트 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r210203.html",
+   "detail_title": "ESG 컨설턴트 경력직 채용",
+   "detail_status": "ok",
+   "deadline_guess": "상시",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "stage": "unjudged",
+   "status": "대기",
+   "deadline": "상시",
+   "judged_at": "2026-08-31 08:06",
+   "first_seen": "2026-08-31",
+   "last_seen": "2026-08-31",
+   "has_detail": true
+  },
+  {
+   "id": "78151349bf971cdd",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 금융컨설팅본부 금융 플랫폼 기획 인턴 D-2 2026.08.27 ~ 2026.09.02 23:59 수시 일반채용 인턴",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126556",
+   "detail_title": "EY한영 채용 | 금융컨설팅본부 금융 플랫폼 기획 인턴",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-02",
+   "fit": "no",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "stage": "employment",
+   "status": "제외",
+   "deadline": "2026-09-02",
+   "first_seen": "2026-08-31",
+   "last_seen": "2026-08-31",
+   "has_detail": true
+  },
+  {
+   "id": "233fb809f6b70de2",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 금융감사본부 Digital Audit, AI 및 리스크 계량 분석가 [경력] D-6 2026.08.20 ~ 2026.09.06 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125660",
+   "detail_title": "EY한영 채용 | 금융감사본부 Digital Audit, AI 및 리스크 계량 분석가 [경력]",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-06",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "stage": "unjudged",
+   "status": "대기",
+   "deadline": "2026-09-06",
+   "judged_at": "2026-08-31 08:06",
+   "first_seen": "2026-08-31",
+   "last_seen": "2026-08-31",
+   "has_detail": true
+  },
+  {
+   "id": "3a1ac03cf2c8886f",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 EY Parthenon VCS 팀(Value Creation Strategy, 운영혁신전략) 컨설턴트 D-6 2026.08.21 ~ 2026.09.06 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125807",
+   "detail_title": "EY한영 채용 | EY Parthenon VCS 팀(Value Creation Strategy, 운영혁신전략) 컨설턴트",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-06",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "stage": "unjudged",
+   "status": "대기",
+   "deadline": "2026-09-06",
+   "judged_at": "2026-08-31 08:06",
+   "first_seen": "2026-08-31",
+   "last_seen": "2026-08-31",
+   "has_detail": true
+  },
+  {
+   "id": "50d6f9d371f705b2",
+   "source_key": "eycareers_kr",
+   "company": "EY한영",
+   "title": "접수중 EY Parthenon VCS팀(Value Creation Strategy, 운영혁신전략) 채용 전환형 인턴 D-6 2026.08.21 ~ 2026.09.06 23:59 수시 일반채용 인턴",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125812",
+   "detail_title": "EY한영 채용 | EY Parthenon VCS팀(Value Creation Strategy, 운영혁신전략) 채용 전환형 인턴",
+   "detail_status": "ok",
+   "deadline_guess": "2026-09-06",
+   "fit": "no",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "stage": "employment",
+   "status": "제외",
+   "deadline": "2026-09-06",
+   "first_seen": "2026-08-31",
+   "last_seen": "2026-08-31",
+   "has_detail": true
+  },
+  {
    "id": "0d6c610c7f19e9ba",
    "source_key": "hanalife",
    "company": "하나생명",
@@ -2300,16 +2336,16 @@
    "detail_status": "thin",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -2322,16 +2358,16 @@
    "detail_status": "thin",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -2352,7 +2388,7 @@
    "reason": "마감일 필터 — 2025-12-31 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2025-12-31",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2365,16 +2401,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-11-16",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-16",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2395,7 +2431,7 @@
    "reason": "마감일 필터 — 2026-08-23 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-23",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2416,7 +2452,7 @@
    "reason": "마감일 필터 — 2026-07-24 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-07-24",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2437,7 +2473,7 @@
    "reason": "마감일 필터 — 2026-07-03 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-07-03",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2458,7 +2494,7 @@
    "reason": "마감일 필터 — 2026-06-11 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-06-11",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2479,7 +2515,7 @@
    "reason": "마감일 필터 — 2026-06-14 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-06-14",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2500,7 +2536,7 @@
    "reason": "마감일 필터 — 2026-06-03 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-06-03",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2521,7 +2557,7 @@
    "reason": "마감일 필터 — 2026-06-07 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-06-07",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2542,7 +2578,7 @@
    "reason": "마감일 필터 — 2026-06-02 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-06-02",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2563,7 +2599,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2576,16 +2612,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2606,7 +2642,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2627,7 +2663,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2640,16 +2676,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2662,16 +2698,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2684,16 +2720,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2706,16 +2742,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2728,16 +2764,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-12-31",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-12-31",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2758,7 +2794,7 @@
    "status": "제외",
    "deadline": "2026-08-20",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2771,16 +2807,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2801,7 +2837,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2814,16 +2850,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2836,16 +2872,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2866,7 +2902,7 @@
    "status": "제외",
    "deadline": "2026-08-14",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2887,7 +2923,7 @@
    "reason": "마감일 필터 — 2026-08-21 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-21",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2908,7 +2944,7 @@
    "status": "제외",
    "deadline": "2026-08-21",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2921,16 +2957,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2951,7 +2987,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2972,7 +3008,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -2993,7 +3029,7 @@
    "status": "제외",
    "deadline": "2026-08-17",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3006,16 +3042,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3028,16 +3064,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3050,16 +3086,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3071,17 +3107,17 @@
    "detail_title": "Global Tax Services 경력직 채용",
    "detail_status": "ok",
    "deadline_guess": "2026-08-30",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "fit": "expired",
+   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
-   "stage": "unjudged",
-   "status": "대기",
+   "ai_status": "skipped_expired",
+   "stage": "expired",
+   "status": "제외",
    "deadline": "2026-08-30",
    "judged_at": "2026-08-30 16:38",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3094,16 +3130,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3116,16 +3152,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3138,16 +3174,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3160,16 +3196,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3182,16 +3218,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3204,16 +3240,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3226,16 +3262,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3248,16 +3284,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3270,16 +3306,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3292,16 +3328,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3314,16 +3350,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3336,16 +3372,16 @@
    "detail_status": "thin",
    "deadline_guess": "2026-08-31",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-08-31",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3366,7 +3402,7 @@
    "reason": "마감일 필터 — 2026-07-26 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-07-26",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3387,7 +3423,7 @@
    "reason": "마감일 필터 — 2026-05-10 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-05-10",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3408,7 +3444,7 @@
    "reason": "마감일 필터 — 2026-03-08 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-03-08",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3429,7 +3465,7 @@
    "status": "제외",
    "deadline": "2026-03-02",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3450,7 +3486,7 @@
    "reason": "마감일 필터 — 2026-02-06 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-02-06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3471,7 +3507,7 @@
    "reason": "마감일 필터 — 2026-01-31 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-01-31",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3492,7 +3528,7 @@
    "reason": "마감일 필터 — 2025-12-20 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2025-12-20",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3513,7 +3549,7 @@
    "reason": "마감일 필터 — 2026-03-08 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-03-08",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3534,7 +3570,7 @@
    "status": "제외",
    "deadline": "2025-10-12",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": false
   },
   {
@@ -3547,16 +3583,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-08",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-08",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3569,16 +3605,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-06",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-06",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3599,7 +3635,7 @@
    "status": "제외",
    "deadline": "2026-09-06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3620,7 +3656,7 @@
    "status": "제외",
    "deadline": "2026-09-03",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3632,17 +3668,17 @@
    "detail_title": "KB Careers",
    "detail_status": "ok",
    "deadline_guess": "2026-08-30",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "fit": "expired",
+   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
-   "stage": "unjudged",
-   "status": "대기",
+   "ai_status": "skipped_expired",
+   "stage": "expired",
+   "status": "제외",
    "deadline": "2026-08-30",
    "judged_at": "2026-08-30 16:38",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3654,17 +3690,17 @@
    "detail_title": "EY한영 채용 | 금융컨설팅부문 AI · Technology · Security(AITS)팀 경력직",
    "detail_status": "ok",
    "deadline_guess": "2026-08-30",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "fit": "expired",
+   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
-   "stage": "unjudged",
-   "status": "대기",
+   "ai_status": "skipped_expired",
+   "stage": "expired",
+   "status": "제외",
    "deadline": "2026-08-30",
    "judged_at": "2026-08-30 16:38",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3676,17 +3712,17 @@
    "detail_title": "EY한영 채용 | EY Korea FS Strategy Team | Experienced Hires",
    "detail_status": "ok",
    "deadline_guess": "2026-08-30",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "fit": "expired",
+   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
-   "stage": "unjudged",
-   "status": "대기",
+   "ai_status": "skipped_expired",
+   "stage": "expired",
+   "status": "제외",
    "deadline": "2026-08-30",
    "judged_at": "2026-08-30 16:38",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3698,17 +3734,17 @@
    "detail_title": "EY한영 채용 | 감사부문 원가관리회계 및 재무 혁신 컨설턴트 [경력]",
    "detail_status": "ok",
    "deadline_guess": "2026-08-30",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "fit": "expired",
+   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
-   "stage": "unjudged",
-   "status": "대기",
+   "ai_status": "skipped_expired",
+   "stage": "expired",
+   "status": "제외",
    "deadline": "2026-08-30",
    "judged_at": "2026-08-30 16:38",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3720,17 +3756,17 @@
    "detail_title": "EY한영 채용 | 전략·재무자문부문 M&A Solution Group 경력직",
    "detail_status": "ok",
    "deadline_guess": "2026-08-30",
-   "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "fit": "expired",
+   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
    "role": "",
    "confidence": "low",
-   "ai_status": "skipped",
-   "stage": "unjudged",
-   "status": "대기",
+   "ai_status": "skipped_expired",
+   "stage": "expired",
+   "status": "제외",
    "deadline": "2026-08-30",
    "judged_at": "2026-08-30 16:38",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3743,16 +3779,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-01",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-01",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3773,7 +3809,7 @@
    "status": "제외",
    "deadline": "2026-09-01",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3786,16 +3822,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-02",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-02",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3808,16 +3844,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-02",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-02",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3830,16 +3866,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-02",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-02",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3860,7 +3896,7 @@
    "status": "제외",
    "deadline": "2026-09-02",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3881,7 +3917,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3902,7 +3938,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3923,7 +3959,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3944,7 +3980,7 @@
    "status": "제외",
    "deadline": "2026-10-02",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3957,16 +3993,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -3987,7 +4023,7 @@
    "status": "제외",
    "deadline": "2026-04-05",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4008,7 +4044,7 @@
    "status": "제외",
    "deadline": "2025-04-27",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4029,7 +4065,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4042,16 +4078,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4072,7 +4108,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4085,16 +4121,16 @@
    "detail_status": "ok",
    "deadline_guess": "상시",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4115,7 +4151,7 @@
    "status": "제외",
    "deadline": "2026-09-06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4128,16 +4164,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-03",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-03",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4150,16 +4186,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-02",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-02",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4180,7 +4216,7 @@
    "status": "제외",
    "deadline": "2026-08-23",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4201,7 +4237,7 @@
    "status": "제외",
    "deadline": "2026-08-18",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4222,7 +4258,7 @@
    "reason": "마감일 필터 — 2026-08-11 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-11",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4243,7 +4279,7 @@
    "reason": "마감일 필터 — 2026-08-02 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-02",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4264,7 +4300,7 @@
    "status": "제외",
    "deadline": "2026-07-19",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4277,16 +4313,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4299,16 +4335,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4321,16 +4357,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4343,16 +4379,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4365,16 +4401,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4387,16 +4423,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4409,16 +4445,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4431,16 +4467,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4453,16 +4489,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4475,16 +4511,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4497,16 +4533,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4519,16 +4555,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4541,16 +4577,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4563,16 +4599,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4585,16 +4621,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4607,16 +4643,16 @@
    "detail_status": "ok",
    "deadline_guess": "",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4629,16 +4665,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-03",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-03",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4651,16 +4687,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-08-31",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-08-31",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4673,16 +4709,16 @@
    "detail_status": "ok",
    "deadline_guess": "2026-09-08",
    "fit": "unjudged",
-   "reason": "AI 판단 전 — 수집 전용 실행",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
    "role": "",
    "confidence": "low",
    "ai_status": "skipped",
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-09-08",
-   "judged_at": "2026-08-30 16:38",
+   "judged_at": "2026-08-31 08:06",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4703,7 +4739,7 @@
    "reason": "마감일 필터 — 2026-08-17 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-17",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4724,7 +4760,7 @@
    "reason": "마감일 필터 — 2026-08-17 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-17",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4745,7 +4781,7 @@
    "reason": "마감일 필터 — 2026-08-10 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-10",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4766,7 +4802,7 @@
    "reason": "마감일 필터 — 2026-08-02 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-08-02",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   },
   {
@@ -4787,7 +4823,7 @@
    "reason": "마감일 필터 — 2026-07-13 마감으로 오늘(2026-08-30) 기준 경과",
    "deadline": "2026-07-13",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-08-30",
+   "last_seen": "2026-08-31",
    "has_detail": true
   }
  ]
