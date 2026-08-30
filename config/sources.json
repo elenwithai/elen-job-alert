@@ -107,8 +107,13 @@
       "render_mode": "always",
       "min_expected_links": 1,
       "render_wait_ms": 5000,
-      "link_include": [],
-      "link_exclude": [],
+      "link_include": [
+        "/pc/bizxpress/cmy/adp/FWCOMV"
+      ],
+      "link_exclude": [
+        "FWCOMV1752",
+        "FWCUSV"
+      ],
       "max_new_details": 30,
       "deadline_patterns": []
     },

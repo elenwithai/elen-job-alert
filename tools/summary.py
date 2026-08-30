@@ -45,6 +45,29 @@ for h in d.get("source_health", []):
           f"| {h.get('detail_ok')} | {h.get('detail_failed')} "
           f"| {f.get('notjob', 0)} | {f.get('employment', 0)} | {f.get('expired', 0)} | {note} |")
 
+zero = [h for h in d.get("source_health", []) if h.get("probe")]
+if zero:
+    print("")
+    print("### 링크 0건 사이트 — 원인 진단")
+    print("")
+    print("| 사이트 | requests | 브라우저 | a태그 | 패턴매칭 | 판정 |")
+    print("|---|---|---|---|---|---|")
+    for h in zero:
+        p2 = h["probe"]
+        rq = p2.get("requests_status") or p2.get("requests_error") or "실패"
+        br = f"OK({p2.get('browser_html_len')}자)" if p2.get("browser_ok") else (p2.get("browser_error") or "실패")
+        print(f"| {h.get('company')} | {rq} | {br} | {p2.get('browser_anchor_count')} "
+              f"| {p2.get('matched_by_pattern')} | {p2.get('verdict')} |")
+    print("")
+    print("#### 각 사이트의 실제 링크 형태 (패턴 수정용)")
+    for h in zero:
+        links = (h["probe"].get("unique_links_sample") or [])[:10]
+        if not links:
+            continue
+        print(f"- **{h.get('company')}** (현재 패턴: `{h['probe'].get('link_include')}`)")
+        for l in links:
+            print(f"  - {l.get('text', '')[:40]} → `{l.get('url')}`")
+
 print("")
 print("### 사이트별로 실제 잡힌 링크 (앞 3건)")
 for h in d.get("source_health", []):

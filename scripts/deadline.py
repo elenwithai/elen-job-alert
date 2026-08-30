@@ -33,11 +33,15 @@ CONTEXT_KEYWORDS = [
 ]
 
 # 이 문구가 있으면 이미 끝난 공고로 본다
+# 짧은 라벨형 문구("접수마감", "모집마감" 등)는 넣지 않는다.
+# 실측 결과(PwC) "접수마감"은 상태 문구가 아니라 '마감일' 항목의 라벨이고,
+# 그 값이 "채용 시 마감"(상시채용)인 경우가 흔해 false positive를 냈다.
+# 여기에는 문장 형태로 뜻이 분명한 것만 남긴다.
 CLOSED_MARKERS = [
-    "접수마감", "접수 마감", "모집마감", "모집 마감", "채용마감", "채용 마감",
-    "마감되었습니다", "마감 되었습니다", "마감된 공고", "종료되었습니다",
-    "종료된 공고", "지원기간이 종료", "접수가 종료", "모집이 종료",
-    "마감된 채용", "지원이 마감", "closed", "no longer accepting",
+    "마감되었습니다", "마감 되었습니다", "마감된 공고입니다",
+    "종료되었습니다", "종료된 공고입니다", "지원기간이 종료",
+    "접수가 종료되었습니다", "모집이 종료되었습니다",
+    "지원이 마감되었습니다", "closed", "no longer accepting applications",
 ]
 
 # 기한이 따로 없는 상시 채용
@@ -206,15 +210,15 @@ def find_deadline(text, title="", today=None, extra_patterns=None):
         if dates:
             return dates[-1].strftime("%Y-%m-%d"), "마감 문구 주변 날짜"
 
-    # ④ 이미 끝났다는 문구
-    closed, marker = is_closed_text(blob)
-    if closed:
-        return "마감", f"'{marker}' 문구"
-
-    # ⑤ 상시 채용
+    # ④ 상시 채용 — "접수마감: 채용 시 마감"처럼 라벨+상시표현 조합이 흔해 먼저 확인한다
     low = blob.lower()
     for kw in ALWAYS_OPEN:
         if kw in low:
             return "상시", f"'{kw}' 표기"
+
+    # ⑤ 문장형으로 명확히 끝났다는 문구
+    closed, marker = is_closed_text(blob)
+    if closed:
+        return "마감", f"'{marker}' 문구"
 
     return "", ""

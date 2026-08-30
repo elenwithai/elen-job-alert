@@ -22,6 +22,7 @@ import fetcher
 import extract
 import deadline as deadline_mod
 import prefilter
+import diagnose as diagnose_mod
 import ai_judge
 import browser_fetch
 
@@ -225,6 +226,13 @@ def crawl_source(session, source, known_ids, report, renderer, diagnose=False):
                 "링크 0건 — 브라우저 렌더링을 시도하지 못했습니다. "
                 "render_mode 를 always 로 바꿔보세요."
             )
+        # 링크 0건은 반드시 원인을 남긴다 — 이게 없으면 진단이 불가능하다
+        try:
+            entry["probe"] = diagnose_mod.probe(session, source, renderer, url)
+            entry["note"] = entry["probe"]["verdict"]
+            print(f"    진단: {entry['probe']['verdict']}")
+        except Exception as e:  # noqa: BLE001
+            entry["probe_error"] = f"{type(e).__name__}: {e}"
         if diagnose:
             entry["sample_html_head"] = (html or "")[:3000]
         report.append(entry)

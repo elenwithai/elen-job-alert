@@ -89,6 +89,12 @@ def extract_links(html, base_url, source):
         parts = urlparse(full)
         if same_host_only and parts.netloc.lower() != base_host:
             continue
+
+        # 경로의 마지막 두 조각이 같으면(.../apply/apply, .../job/job 등)
+        # '지원하기' 버튼류 자기참조 링크로 보고 제외한다
+        segs = [p for p in parts.path.split("/") if p]
+        if len(segs) >= 2 and segs[-1].lower() == segs[-2].lower():
+            continue
         if any(e in full_low for e in exclude):
             continue
 
