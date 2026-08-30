@@ -1,5 +1,14 @@
 {
- "generated_at": "2026-08-30 08:06",
+ "generated_at": "2026-08-30 15:30",
+ "summary": {
+  "crawled_total": 112,
+  "passed": 0,
+  "waiting": 44,
+  "excluded_notjob": 1,
+  "excluded_employment": 23,
+  "excluded_expired": 44,
+  "excluded_ai": 0
+ },
  "sources": [
   {
    "key": "samsungcareers",
@@ -8,6 +17,8 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -17,7 +28,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "hanwhain",
@@ -26,6 +43,8 @@
    "list_ok": false,
    "method": "browser",
    "fallback_used": false,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -34,16 +53,23 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "타임아웃",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
+   "error": "렌더링 실패: TimeoutError",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "career_kyobo",
    "company": "교보생명",
    "url": "https://career.kyobo.co.kr/home",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
+   "method": "browser",
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -53,7 +79,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "shinhan_life",
@@ -62,34 +94,108 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 10,
+   "detail_ok": 10,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "",
+   "sample_links": [
+    {
+     "title": "접수마감 [신한라이프] 상시 인재 POOL 등록 상시채용 2024.05.30 ~ 2025.12.31 23:59 상시 상시채용 ",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/21953"
+    },
+    {
+     "title": "접수마감 디지털보안 담당자(경력) 2026.08.18 ~ 2026.08.28 23:59 수시 일반채용 경력",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/125192"
+    },
+    {
+     "title": "접수마감 보험리스크관리 담당자 (~8/23 연장) 2026.08.11 ~ 2026.08.23 23:59 수시 일반채용 경력",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/124675"
+    },
+    {
+     "title": "접수마감 ALM기획 및 관리 담당자(경력)(~7/24까지 연장) 2026.07.10 ~ 2026.07.24 23:59 수시 일",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/121503"
+    },
+    {
+     "title": "접수마감 음악/미술 문화예술직무 담당자 (장애인 단시간 근로직) 2026.06.26 ~ 2026.07.01 23:59 특별채용",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/119978"
+    },
+    {
+     "title": "접수마감 상품 신담보기획 담당자(경력) (~6/11 연장) 2026.06.02 ~ 2026.06.11 23:59 수시 일반채용",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/117593"
+    },
+    {
+     "title": "접수마감 상품기획 담당자(경력) (~6/14 연장) 2026.06.02 ~ 2026.06.14 23:59 수시 일반채용 경력",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/117589"
+    },
+    {
+     "title": "접수마감 보험금 전문의료심사 담당자(경력) 2026.05.26 ~ 2026.06.01 23:59 수시 일반채용 경력",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/114649"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 9
+   }
   },
   {
    "key": "idbins",
    "company": "DB손보",
    "url": "https://www.idbins.com/FWCOMV1751.do",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
-   "links_found": 58,
+   "method": "browser",
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
+   "links_found": 6,
    "new_found": 6,
    "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 16,
+   "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "신규 16건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. "
+   "note": "",
+   "sample_links": [
+    {
+     "title": "채용관 채용관홈 인재상 인재양성 인사제도 급여 및 복리후생 모집분야 대졸신입 경력사원 소액보상전담직 사무지원직 고객상담사 장애",
+     "url": "https://www.idbins.com/FWCOMV1725.do"
+    },
+    {
+     "title": "모집분야",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1733.shtm"
+    },
+    {
+     "title": "영업관리/보상관리 경력채용(상시) 모집",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5581.shtm"
+    },
+    {
+     "title": "비정기채용공고",
+     "url": "https://www.idbins.com/FWCOMV6572.do"
+    },
+    {
+     "title": "모집분야별 지원방법",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1752.shtm"
+    },
+    {
+     "title": "보험모집질서 신고센터안내",
+     "url": "https://www.idbins.com/pc/bizxpress/ct/rp/FWCUSV1314.shtm"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 3,
+    "expired": 0
+   }
   },
   {
    "key": "dbgroup",
@@ -98,24 +204,67 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 8,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 8,
+   "detail_ok": 8,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "",
+   "sample_links": [
+    {
+     "title": "접수중 [DB하이텍] 조직문화∙사회공헌 체험형 인턴 모집 D-7 2026.08.28 ~ 2026.09.06 23:59 인턴 일",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/126654"
+    },
+    {
+     "title": "접수중 [DB하이텍] 경력사원 공개채용 (8월) D-4 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 경",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/125739"
+    },
+    {
+     "title": "접수중 [DB생명] 2026년 방카슈랑스 교육팀장(서울) 채용 D-3 2026.08.24 ~ 2026.09.02 23:59 수",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/125669"
+    },
+    {
+     "title": "접수마감 [DB하이텍] 구매 계약직 채용 (육아휴직 대체/부천) 2026.08.13 ~ 2026.08.23 23:59 수시 일",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/124916"
+    },
+    {
+     "title": "접수마감 [DB증권] 2026년 대졸신입사원 채용연계형 인턴사원 모집 2026.08.07 ~ 2026.08.18 17:00 공",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/123652"
+    },
+    {
+     "title": "접수마감 [DB하이텍] 상우캠퍼스 제조MS 수시채용 2026.08.04 ~ 2026.08.11 23:59 수시 일반채용 신입/",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/124085"
+    },
+    {
+     "title": "접수마감 [DB하이텍] R&D 국책과제 운영 및 성과관리(부천/초대졸) 경력 2026.07.20 ~ 2026.08.02 23:",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/122447"
+    },
+    {
+     "title": "접수마감 [DB하이텍] Mask Design 엔지니어 채용(상우) - 전환형 계약직 2026.07.10 ~ 2026.07.19",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/121631"
+    }
+   ],
+   "filtered": {
+    "notjob": 1,
+    "employment": 3,
+    "expired": 2
+   }
   },
   {
    "key": "recruit_meritzfire",
    "company": "메리츠화재",
    "url": "https://recruit.meritzfire.com/new/job/noticeList.do",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
+   "method": "browser",
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -125,7 +274,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "hi_recruiter",
@@ -134,6 +289,8 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -143,7 +300,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "kbinsure",
@@ -152,16 +315,57 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
+   "new_found": 10,
    "detail_ok": 0,
-   "detail_failed": 0,
+   "detail_failed": 10,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "sample_links": [
+    {
+     "title": "[KB손해보험] 2026년 자동차SIU부 경력사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=262627"
+    },
+    {
+     "title": "[KB손해보험] 2026년 하반기 AI, 자동차상품 전문 경력사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=260475"
+    },
+    {
+     "title": "[KB손해보험] 2026년 자동차상품파트 경력사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=252767"
+    },
+    {
+     "title": "[KB손해보험] 2026년 AI디지털혁신 및 다이렉트마케팅 경력사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=245738"
+    },
+    {
+     "title": "[KB손해보험] 2026년 상반기 6급 신입사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=244508"
+    },
+    {
+     "title": "[KB손해보험] 2026년 정보보호파트 경력사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=242007"
+    },
+    {
+     "title": "[KB손해보험] 2025년 자동차SIU부 조사팀장 경력사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=237343"
+    },
+    {
+     "title": "[KB손해보험] 본사 CS강사 경력사원 공개채용",
+     "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=236246"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 2,
+    "expired": 7
+   }
   },
   {
    "key": "careers_kbfg",
@@ -170,24 +374,59 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": true,
+   "browser_links": 6,
    "links_found": 6,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 6,
+   "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "",
+   "sample_links": [
+    {
+     "title": "Apply",
+     "url": "https://careers.kbfg.com/apply/apply"
+    },
+    {
+     "title": "금융공학부 경력직(연봉계약직) 채용",
+     "url": "https://careers.kbfg.com/apply/886"
+    },
+    {
+     "title": "연금지원부 법인연금지원팀 경력직(연봉계약직) 채용",
+     "url": "https://careers.kbfg.com/apply/885"
+    },
+    {
+     "title": "「사내변호사」 전문직무직원 채용",
+     "url": "https://careers.kbfg.com/apply/883"
+    },
+    {
+     "title": "WM자산관리 컨설팅 부문(연봉계약직) 채용",
+     "url": "https://careers.kbfg.com/apply/882"
+    },
+    {
+     "title": "PE성장투자관리팀 펀드(조합) 관리업무 경력직 채용",
+     "url": "https://careers.kbfg.com/apply/875"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 3,
+    "expired": 0
+   }
   },
   {
    "key": "woorifg",
    "company": "우리금융지주",
-   "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?",
-   "list_ok": false,
+   "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do",
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -196,8 +435,14 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)')))",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
+   "error": "",
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "pwc",
@@ -206,24 +451,67 @@
    "list_ok": true,
    "method": "requests",
    "fallback_used": false,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 32,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 30,
+   "detail_ok": 30,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
-   "deferred": 0,
+   "deferred": 2,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "신규 2건은 상세 방문 한도를 넘겨 다음 실행으로 넘겼습니다 (제목만으로 판단하지 않습니다). max_new_details 를 올리면 한 번에 처리됩니다. ",
+   "sample_links": [
+    {
+     "title": "Risk Assurance 본부 SAP 전문가 경력직 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260428-3.html"
+    },
+    {
+     "title": "Risk Assurance 본부 SPA팀 IT감사/컨설팅 경력직 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260821.html"
+    },
+    {
+     "title": "Deals Cross-border CF팀 경력직 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260813-2.html"
+    },
+    {
+     "title": "FS&RS - TS 전환형 인턴 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260813.html"
+    },
+    {
+     "title": "PE Group Transaction Services Professional 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-4.html"
+    },
+    {
+     "title": "가치평가 서비스 업무혁신 신입인력 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-3.html"
+    },
+    {
+     "title": "Risk Assurance 본부 Trust팀 경력직 채용 - Cybersecurity",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-2.html"
+    },
+    {
+     "title": "Risk Assurance 본부 Trust팀 경력직 채용 - 내부감사",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-1.html"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 7,
+    "expired": 21
+   }
   },
   {
    "key": "career_kpmg",
    "company": "KPMG삼정",
    "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
+   "method": "browser",
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -233,7 +521,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "eycareers_kr",
@@ -242,24 +536,67 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 10,
+   "detail_ok": 10,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "",
+   "sample_links": [
+    {
+     "title": "접수중 금융컨설팅부문 AI · Technology · Security(AITS)팀 경력직 D-Day 2026.08.05 ~ 2",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124029"
+    },
+    {
+     "title": "접수중 EY Korea FS Strategy Team | Experienced Hires D-Day 2026.08.05 ~ 2",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124302"
+    },
+    {
+     "title": "접수중 감사부문 원가관리회계 및 재무 혁신 컨설턴트 [경력] D-Day 2026.08.12 ~ 2026.08.30 23:59 ",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124790"
+    },
+    {
+     "title": "접수중 전략·재무자문부문 M&A Solution Group 경력직 D-Day 2026.08.19 ~ 2026.08.30 23:",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125464"
+    },
+    {
+     "title": "접수중 컨설팅부문 Operation Transformation 경력직 D-2 2026.08.10 ~ 2026.09.01 23:",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124654"
+    },
+    {
+     "title": "접수중 컨설팅부문 Data Architect & Engineering 인턴 D-2 2026.08.20 ~ 2026.09.01 ",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125602"
+    },
+    {
+     "title": "접수중 컨설팅부문 제조영역 컨설턴트 경력직 D-3 2026.08.19 ~ 2026.09.02 00:00 수시 일반채용 신입",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/123597"
+    },
+    {
+     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-3 2026.08.19 ~ 2026.09.02 23:59 수시 일반채",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 2,
+    "expired": 0
+   }
   },
   {
    "key": "join_deloitte",
    "company": "Deloitte안진",
    "url": "https://join.deloitte.co.kr/",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
+   "method": "browser",
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -269,7 +606,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "aia",
@@ -278,16 +621,57 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
-   "links_found": 0,
-   "new_found": 0,
-   "detail_ok": 0,
+   "fallback_attempted": false,
+   "browser_links": null,
+   "links_found": 16,
+   "new_found": 16,
+   "detail_ok": 16,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "",
+   "sample_links": [
+    {
+     "title": "K-ICS 및 경제적 가정 담당자",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/K-ICS---Capital-Reporting_JR-69425?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "[AIAPP] Recruiting Support Manager",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Recruiting-Support-Manager_JR-68999?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "Generative AI Systems Developer",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Generative-AI-Systems-Developer_JR-68880?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "Local Financial Reporting Professional",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Local-Financial-Reporting-Professional_JR-68405?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "New Business Planning Specialist",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/New-Business-Planning-Specialist_JR-68828?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "건강 상품 개발 시니어 매니져",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/----_JR-68807?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "Pricing Validation & Reinsurance",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Pricing-Validation---Reinsurance_JR-67938?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "Product Strategy & Governance",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Product-Strategy---Governance_JR-67937?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "metlifecareers",
@@ -296,16 +680,49 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 6,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 6,
+   "detail_ok": 6,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "",
+   "sample_links": [
+    {
+     "title": "Accounting Professional(15-Month Contract)",
+     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Accounting-Professional/18816"
+    },
+    {
+     "title": "Actuarial Analyst",
+     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Actuarial-Analyst/18908"
+    },
+    {
+     "title": "CS Pro_부천근무 계약직",
+     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/CS-Pro/19948"
+    },
+    {
+     "title": "CS Pro_수원근무 계약직",
+     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/CS-Pro/19481"
+    },
+    {
+     "title": "Investment Accounting Professional",
+     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Investment-Accounting-Professional/19993"
+    },
+    {
+     "title": "Product Designer",
+     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Product-Designer/19505"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 3,
+    "expired": 0
+   }
   },
   {
    "key": "miraeassetlife",
@@ -314,6 +731,8 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -323,7 +742,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "kblife_recruiting",
@@ -332,6 +757,8 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -341,15 +768,23 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "myangel",
    "company": "동양생명",
    "url": "https://www.myangel.co.kr/Company/Recruit/CoAdpLst",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
+   "method": "browser",
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -359,15 +794,23 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "hanainsure",
    "company": "하나손보",
    "url": "https://www.hanainsure.co.kr/recruit/notify/jobList",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
+   "method": "browser",
+   "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
@@ -377,7 +820,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건. 일반 요청과 브라우저 렌더링 모두 실패했습니다. link_include 패턴이나 url을 확인하거나, manual_only: true 로 전환하세요."
+   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "sample_links": [],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "hanalife",
@@ -386,16 +835,33 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 2,
-   "new_found": 0,
+   "new_found": 2,
    "detail_ok": 0,
-   "detail_failed": 0,
+   "detail_failed": 2,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "sample_links": [
+    {
+     "title": "[하나생명] 내부감사인 경력사원 채용 경력 10년 이상 | 계약직 | 2026.08.19 ~ 2026.09.01 23:59 |",
+     "url": "https://hanalife.careerlink.kr/jobs/RC20260819033417"
+    },
+    {
+     "title": "[하나생명] 리스크관리부 감리역 경력사원 채용 경력 10년 이상 | 계약직 | 2026.08.19 ~ 2026.09.01 23",
+     "url": "https://hanalife.careerlink.kr/jobs/RC20260819033414"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 0
+   }
   },
   {
    "key": "abl_recruiter",
@@ -404,16 +870,1627 @@
    "list_ok": true,
    "method": "browser",
    "fallback_used": true,
+   "fallback_attempted": false,
+   "browser_links": null,
    "links_found": 8,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 8,
+   "detail_ok": 8,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": ""
+   "note": "",
+   "sample_links": [
+    {
+     "title": "접수중 [ABL생명] 디지털IT기획팀 경력직 채용 D-4 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 ",
+     "url": "https://abl.recruiter.co.kr/career/jobs/125808"
+    },
+    {
+     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-1 2026.08.21 ~ 2026.08.31 23:59 수시 일반채용 경력",
+     "url": "https://abl.recruiter.co.kr/career/jobs/125709"
+    },
+    {
+     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-9 2026.08.19 ~ 2026.09.08 23:59 수시 일반채용 경력",
+     "url": "https://abl.recruiter.co.kr/career/jobs/125457"
+    },
+    {
+     "title": "접수마감 [ABL생명] 디지털IT기획팀 경력직 채용 2026.08.04 ~ 2026.08.17 23:59 수시 일반채용 경력",
+     "url": "https://abl.recruiter.co.kr/career/jobs/124183"
+    },
+    {
+     "title": "접수마감 [ABL생명] 총무지원팀 계약직 채용 2026.08.04 ~ 2026.08.17 23:59 수시 일반채용 경력",
+     "url": "https://abl.recruiter.co.kr/career/jobs/124182"
+    },
+    {
+     "title": "접수마감 [ABL생명] 재무리스크관리직무 경력직 채용 2026.07.31 ~ 2026.08.10 23:59 수시 일반채용 경력",
+     "url": "https://abl.recruiter.co.kr/career/jobs/123843"
+    },
+    {
+     "title": "접수마감 [ABL생명] 총무지원팀 계약직 채용_서류접수기한 연장 ~8/2(일) 2026.07.15 ~ 2026.08.02 23",
+     "url": "https://abl.recruiter.co.kr/career/jobs/122181"
+    },
+    {
+     "title": "접수마감 [ABL생명] 디지털IT기획팀 경력직 채용 2026.07.06 ~ 2026.07.13 23:59 수시 일반채용 경력",
+     "url": "https://abl.recruiter.co.kr/career/jobs/121167"
+    }
+   ],
+   "filtered": {
+    "notjob": 0,
+    "employment": 0,
+    "expired": 5
+   }
+  }
+ ],
+ "decisions": [
+  {
+   "id": "e89d38b57b561aee",
+   "company": "ABL생명",
+   "title": "접수마감 [ABL생명] 디지털IT기획팀 경력직 채용 2026.07.06 ~ 2026.07.13 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/121167",
+   "source_key": "abl_recruiter",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-07-13 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-07-13",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "30e59179c7ba8492",
+   "company": "ABL생명",
+   "title": "접수마감 [ABL생명] 디지털IT기획팀 경력직 채용 2026.08.04 ~ 2026.08.17 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/124183",
+   "source_key": "abl_recruiter",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-17 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-17",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0948b6e2ff85ccf4",
+   "company": "ABL생명",
+   "title": "접수마감 [ABL생명] 재무리스크관리직무 경력직 채용 2026.07.31 ~ 2026.08.10 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/123843",
+   "source_key": "abl_recruiter",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-10 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-10",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "cc01fb1fe0bb7389",
+   "company": "ABL생명",
+   "title": "접수마감 [ABL생명] 총무지원팀 계약직 채용 2026.08.04 ~ 2026.08.17 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/124182",
+   "source_key": "abl_recruiter",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-17 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-17",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0e4c0207ad5ee355",
+   "company": "ABL생명",
+   "title": "접수마감 [ABL생명] 총무지원팀 계약직 채용_서류접수기한 연장 ~8/2(일) 2026.07.15 ~ 2026.08.02 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/122181",
+   "source_key": "abl_recruiter",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-02 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "1d581cfcea2fb843",
+   "company": "ABL생명",
+   "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-9 2026.08.19 ~ 2026.09.08 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/125457",
+   "source_key": "abl_recruiter",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-08",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "e85a7c230246f2a9",
+   "company": "ABL생명",
+   "title": "접수중 [ABL생명] 디지털IT기획팀 경력직 채용 D-4 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 신입",
+   "url": "https://abl.recruiter.co.kr/career/jobs/125808",
+   "source_key": "abl_recruiter",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-03",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "1f6976f34dcebb73",
+   "company": "ABL생명",
+   "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-1 2026.08.21 ~ 2026.08.31 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/125709",
+   "source_key": "abl_recruiter",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-31",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "e2cf58d54cafc4ce",
+   "company": "AIA생명",
+   "title": "DM & Banca Strategy Manager",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Distribution-Strategic-Planning_JR-67363?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "675172abcb6ef31a",
+   "company": "AIA생명",
+   "title": "Generative AI Systems Developer",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Generative-AI-Systems-Developer_JR-68880?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "dd3dda80f95b289d",
+   "company": "AIA생명",
+   "title": "K-ICS 및 경제적 가정 담당자",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/K-ICS---Capital-Reporting_JR-69425?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d115bcfef49248d6",
+   "company": "AIA생명",
+   "title": "Local Financial Reporting Professional",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Local-Financial-Reporting-Professional_JR-68405?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "ca8efb7dab8c7417",
+   "company": "AIA생명",
+   "title": "New Business Planning Specialist",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/New-Business-Planning-Specialist_JR-68828?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "7c8cf49ea1e51a7a",
+   "company": "AIA생명",
+   "title": "Pricing Validation & Reinsurance",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Pricing-Validation---Reinsurance_JR-67938?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0c1762a25329b276",
+   "company": "AIA생명",
+   "title": "Product Strategy & Governance",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Product-Strategy---Governance_JR-67937?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "872d674f0bf5dfdb",
+   "company": "AIA생명",
+   "title": "[AIAPP] Application Development Lead (IT 개발 리드)",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Application-Development-Lead--IT---_JR-66538?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "3f76fd105add7ac1",
+   "company": "AIA생명",
+   "title": "[AIAPP] Data & Security Analysis Manager",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Data---Security-Analysis-Manager_JR-66541?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "7e00eb62350fe3d0",
+   "company": "AIA생명",
+   "title": "[AIAPP] Product Strategy & Training Manager",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Product-Strategy---Training-Manager_JR-58455?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "abf87dc8f1e4f24c",
+   "company": "AIA생명",
+   "title": "[AIAPP] Recruiting Support Manager",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Recruiting-Support-Manager_JR-68999?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "472fbd74b2a96abf",
+   "company": "AIA생명",
+   "title": "[AIAPP] Sales Support (영업지원 담당)",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Sales-Support----_JR-66753?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "ad1aa78936b51b25",
+   "company": "AIA생명",
+   "title": "건강 상품 개발 시니어 매니져",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/----_JR-68807?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "df6c8b4ad50e6a16",
+   "company": "AIA생명",
+   "title": "상품 개정 담당자",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Pricing-Actuarial-Professional_JR-61892?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f59a75cdd94a4059",
+   "company": "AIA생명",
+   "title": "종신/연금/저축성 상품 개발 담당자",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/-----_JR-64169?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f3bc8caf21c061e9",
+   "company": "AIA생명",
+   "title": "종신/연금/저축성 상품 개발 시니어 매니져",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/------_JR-64174?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "ebceb02fc8a40488",
+   "company": "DB그룹",
+   "title": "접수마감 [DB증권] 2026년 대졸신입사원 채용연계형 인턴사원 모집 2026.08.07 ~ 2026.08.18 17:00 공채 일반채용 신입",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/123652",
+   "source_key": "dbgroup",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-08-18",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "3ec9a4ada5b3cf8c",
+   "company": "DB그룹",
+   "title": "접수마감 [DB하이텍] Mask Design 엔지니어 채용(상우) - 전환형 계약직 2026.07.10 ~ 2026.07.19 23:59 수시 일반채용 신입",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/121631",
+   "source_key": "dbgroup",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-07-19",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "ca262127ba35a775",
+   "company": "DB그룹",
+   "title": "접수마감 [DB하이텍] R&D 국책과제 운영 및 성과관리(부천/초대졸) 경력 2026.07.20 ~ 2026.08.02 23:59 수시 일반채용 경력",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/122447",
+   "source_key": "dbgroup",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-02 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "29d756548b809638",
+   "company": "DB그룹",
+   "title": "접수마감 [DB하이텍] 구매 계약직 채용 (육아휴직 대체/부천) 2026.08.13 ~ 2026.08.23 23:59 수시 일반채용 신입",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/124916",
+   "source_key": "dbgroup",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-08-23",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "259118aba4071dee",
+   "company": "DB그룹",
+   "title": "접수마감 [DB하이텍] 상우캠퍼스 제조MS 수시채용 2026.08.04 ~ 2026.08.11 23:59 수시 일반채용 신입/경력",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/124085",
+   "source_key": "dbgroup",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-11 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-11",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "7d022f84cc8e24b5",
+   "company": "DB그룹",
+   "title": "접수중 [DB생명] 2026년 방카슈랑스 교육팀장(서울) 채용 D-3 2026.08.24 ~ 2026.09.02 23:59 수시 일반채용 신입/경력",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/125669",
+   "source_key": "dbgroup",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "376e5c0580e4823c",
+   "company": "DB그룹",
+   "title": "접수중 [DB하이텍] 경력사원 공개채용 (8월) D-4 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 경력",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/125739",
+   "source_key": "dbgroup",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-03",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "207db0abd98746bd",
+   "company": "DB그룹",
+   "title": "접수중 [DB하이텍] 조직문화∙사회공헌 체험형 인턴 모집 D-7 2026.08.28 ~ 2026.09.06 23:59 인턴 일반채용 신입",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/126654",
+   "source_key": "dbgroup",
+   "status": "제외",
+   "stage": "notjob",
+   "stage_label": "2단계 채용공고 여부",
+   "reason": "채용공고 아님 — 제목에 '사회공헌' 포함, 본문에 채용 항목 없음",
+   "deadline": "2026-09-06",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d42c3c42915031a7",
+   "company": "DB손보",
+   "title": "모집분야",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1733.shtm",
+   "source_key": "idbins",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-10-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "da3272704063f154",
+   "company": "DB손보",
+   "title": "모집분야별 지원방법",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1752.shtm",
+   "source_key": "idbins",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "150e2740d8948391",
+   "company": "DB손보",
+   "title": "보험모집질서 신고센터안내",
+   "url": "https://www.idbins.com/pc/bizxpress/ct/rp/FWCUSV1314.shtm",
+   "source_key": "idbins",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "30ec9aaa8f7da2a8",
+   "company": "DB손보",
+   "title": "비정기채용공고",
+   "url": "https://www.idbins.com/FWCOMV6572.do",
+   "source_key": "idbins",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "5e321f3a950cc8f1",
+   "company": "DB손보",
+   "title": "영업관리/보상관리 경력채용(상시) 모집",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5581.shtm",
+   "source_key": "idbins",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "상시",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "7edc6d2b8c4457fc",
+   "company": "DB손보",
+   "title": "채용관 채용관홈 인재상 인재양성 인사제도 급여 및 복리후생 모집분야 대졸신입 경력사원 소액보상전담직 사무지원직 고객상담사 장애인상담원 텔레마케터 LD/TC지원 비정기채용공고 채용공고 모집분야별 지원방법",
+   "url": "https://www.idbins.com/FWCOMV1725.do",
+   "source_key": "idbins",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-06",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "ea039f6fe63022f4",
+   "company": "EY한영",
+   "title": "접수중 EY Korea FS Strategy Team | Experienced Hires D-Day 2026.08.05 ~ 2026.08.30 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124302",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-30",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "59e0351f8472689b",
+   "company": "EY한영",
+   "title": "접수중 감사부문 원가관리회계 및 재무 혁신 컨설턴트 [경력] D-Day 2026.08.12 ~ 2026.08.30 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124790",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-30",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "a0f16e775c1df5b6",
+   "company": "EY한영",
+   "title": "접수중 금융컨설팅부문 AI · Technology · Security(AITS)팀 경력직 D-Day 2026.08.05 ~ 2026.08.30 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124029",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-30",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "3a5de3c8b3fe0bea",
+   "company": "EY한영",
+   "title": "접수중 전략·재무자문부문 M&A Solution Group 경력직 D-Day 2026.08.19 ~ 2026.08.30 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125464",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-30",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "eec67c4fee104e4e",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 Cyber Security 경력직 컨설턴트 D-3 2026.08.19 ~ 2026.09.02 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/122256",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "eb2bc778c7429f8d",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 Data Architect & Engineering 인턴 D-2 2026.08.20 ~ 2026.09.01 23:59 수시 일반채용 인턴",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125602",
+   "source_key": "eycareers_kr",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-09-01",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "de1f18f690d3e850",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 Government Team 컨설팅 인턴 D-3 2026.08.26 ~ 2026.09.02 23:59 수시 일반채용 인턴",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126269",
+   "source_key": "eycareers_kr",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-09-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "5fcb885374f3baf6",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-3 2026.08.19 ~ 2026.09.02 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "04a74720db848d14",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 Operation Transformation 경력직 D-2 2026.08.10 ~ 2026.09.01 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124654",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-01",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f9b0ef4288b78a97",
+   "company": "EY한영",
+   "title": "접수중 컨설팅부문 제조영역 컨설턴트 경력직 D-3 2026.08.19 ~ 2026.09.02 00:00 수시 일반채용 신입",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/123597",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "e403d66b69d0e653",
+   "company": "KB금융지주",
+   "title": "Apply",
+   "url": "https://careers.kbfg.com/apply/apply",
+   "source_key": "careers_kbfg",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "fd772bc10cb02f7f",
+   "company": "KB금융지주",
+   "title": "PE성장투자관리팀 펀드(조합) 관리업무 경력직 채용",
+   "url": "https://careers.kbfg.com/apply/875",
+   "source_key": "careers_kbfg",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-30",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "841d0424a647f52f",
+   "company": "KB금융지주",
+   "title": "WM자산관리 컨설팅 부문(연봉계약직) 채용",
+   "url": "https://careers.kbfg.com/apply/882",
+   "source_key": "careers_kbfg",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-09-03",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f64547f5cd24be61",
+   "company": "KB금융지주",
+   "title": "「사내변호사」 전문직무직원 채용",
+   "url": "https://careers.kbfg.com/apply/883",
+   "source_key": "careers_kbfg",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-09-06",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d084684125d8c88d",
+   "company": "KB금융지주",
+   "title": "금융공학부 경력직(연봉계약직) 채용",
+   "url": "https://careers.kbfg.com/apply/886",
+   "source_key": "careers_kbfg",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-08",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "a144192b1863b8e5",
+   "company": "KB금융지주",
+   "title": "연금지원부 법인연금지원팀 경력직(연봉계약직) 채용",
+   "url": "https://careers.kbfg.com/apply/885",
+   "source_key": "careers_kbfg",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-06",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "207c83a018df6a11",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2025년 자동차SIU부 조사팀장 경력사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=237343",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-01-31 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-01-31",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "12609339b58bb05a",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2025년 하반기 6급 신입사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=230041",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2025-10-12",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "1ea18bc0259d249d",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2025년 하반기 장기보험보상본부 사의 공개 채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=234961",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-03-08 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-03-08",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d3a4199f2449a0c0",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2026년 AI디지털혁신 및 다이렉트마케팅 경력사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=245738",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-03-08 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-03-08",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "aeeb0fcb716b9fdf",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2026년 상반기 6급 신입사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=244508",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-03-02",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "c5b468ff0a3b69c0",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2026년 자동차SIU부 경력사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=262627",
+   "source_key": "kbinsure",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-31",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "a03da71a18eb06f2",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2026년 자동차상품파트 경력사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=252767",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-05-10 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-05-10",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "53c796a6e6788a15",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2026년 정보보호파트 경력사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=242007",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-02-06 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-02-06",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "4932e79e36f1255e",
+   "company": "KB손보",
+   "title": "[KB손해보험] 2026년 하반기 AI, 자동차상품 전문 경력사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=260475",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-07-26 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-07-26",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "bb16aaa1cfa03d6b",
+   "company": "KB손보",
+   "title": "[KB손해보험] 본사 CS강사 경력사원 공개채용",
+   "url": "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn=236246",
+   "source_key": "kbinsure",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2025-12-20 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2025-12-20",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "19e0eb8011bad7d6",
+   "company": "PwC삼일",
+   "title": "AI & 데이터 엔지니어 인턴 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260730-1.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "821a0ef55558c35c",
+   "company": "PwC삼일",
+   "title": "AI Engineer 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260519.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "be613e840fff77a3",
+   "company": "PwC삼일",
+   "title": "Deals Cross-border CF팀 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260813-2.html",
+   "source_key": "pwc",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-12-31",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "b2a80045c9374229",
+   "company": "PwC삼일",
+   "title": "Deals PMI / Strategy 전문팀 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r251016.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "bbf91204d203f1e5",
+   "company": "PwC삼일",
+   "title": "Energy Transition Team 에너지컨설팅 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260807.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-21 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-21",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0e595ed30dae458f",
+   "company": "PwC삼일",
+   "title": "FS&RS - TS 전환형 인턴 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260813.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-08-20",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "54f09354c877012e",
+   "company": "PwC삼일",
+   "title": "Global Tax Services 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260707-3.html",
+   "source_key": "pwc",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-08-30",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0c31a291b455e0b3",
+   "company": "PwC삼일",
+   "title": "IFRS 18호 SAP 영향 자문 컨설턴트 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260716.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "b7511b9488f16ad4",
+   "company": "PwC삼일",
+   "title": "LLMOps Engineer 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260519-2.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "7700997857d04bcb",
+   "company": "PwC삼일",
+   "title": "PE Group Transaction Services Professional 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-4.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "6591419ed66b228e",
+   "company": "PwC삼일",
+   "title": "PEF Tax Service팀 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r251201-2.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "abe554c419bb0d59",
+   "company": "PwC삼일",
+   "title": "PI/ERP Consultant 경력직 채용(계약직)",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260710-2.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "2cdef546e4bae81b",
+   "company": "PwC삼일",
+   "title": "PI/ERP Consultant 경력직 채용(정규직)",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260710-1.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0ac8017f4f8871f2",
+   "company": "PwC삼일",
+   "title": "Public Service 프로젝트 계약직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260810-2.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-08-14",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "873e877df2c1f3f6",
+   "company": "PwC삼일",
+   "title": "Public Service팀 컨설팅 인턴 채용(서울, 인천, 수원, 광주, 천안, 부산, 의성)",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260723.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-08-17",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "b049f61b94566259",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 SAP 전문가 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260428-3.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "534e1979e68ac9d3",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 SPA팀 IT감사/컨설팅 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260821.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f50db47033d2a3cf",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 SPA팀 보안전문가 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260428.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0cd145e7047f3c03",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 Trust팀 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260106.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "adb9a7d8a1c0aa2e",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 Trust팀 경력직 채용 - Cybersecurity",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-2.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "6b7dd0dd953e4912",
+   "company": "PwC삼일",
+   "title": "Risk Assurance 본부 Trust팀 경력직 채용 - 내부감사",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-1.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "8b36439feed5a686",
+   "company": "PwC삼일",
+   "title": "System Engineer 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260519-3.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "fe8ec9f29256f1f5",
+   "company": "PwC삼일",
+   "title": "가치평가 서비스 업무혁신 신입인력 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-3.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "78bdec5980835361",
+   "company": "PwC삼일",
+   "title": "공공부문 경력 컨설턴트 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r240913.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "9ea0c42987a5453b",
+   "company": "PwC삼일",
+   "title": "글로벌본부 Cross-Border IPO 및 컨설팅 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260804.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "2aadae26cc8998de",
+   "company": "PwC삼일",
+   "title": "금융본부 LLM/Data Engineer 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260304.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0c11ac2ae234df03",
+   "company": "PwC삼일",
+   "title": "바이오플랫폼 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260511-3.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "728e40d15ea9e2f1",
+   "company": "PwC삼일",
+   "title": "시스템 엔지니어 인턴 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260730-2.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d1b33d76dcd6b52a",
+   "company": "PwC삼일",
+   "title": "컨설팅 프로젝트 경력직 컨설턴트 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260209.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
+   "deadline": "마감",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "a4f48fe19ee1c81d",
+   "company": "PwC삼일",
+   "title": "홍보파트(M&C) 인턴 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r260805.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-08-21",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f7bf9afe9521cf15",
+   "company": "메트라이프",
+   "title": "Accounting Professional(15-Month Contract)",
+   "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Accounting-Professional/18816",
+   "source_key": "metlifecareers",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d2ee9dd35073b581",
+   "company": "메트라이프",
+   "title": "Actuarial Analyst",
+   "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Actuarial-Analyst/18908",
+   "source_key": "metlifecareers",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "49f4b1e336cdced4",
+   "company": "메트라이프",
+   "title": "CS Pro_부천근무 계약직",
+   "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/CS-Pro/19948",
+   "source_key": "metlifecareers",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d61618ef02e82c69",
+   "company": "메트라이프",
+   "title": "CS Pro_수원근무 계약직",
+   "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/CS-Pro/19481",
+   "source_key": "metlifecareers",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "8fa96efbe672c252",
+   "company": "메트라이프",
+   "title": "Investment Accounting Professional",
+   "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Investment-Accounting-Professional/19993",
+   "source_key": "metlifecareers",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "af1332a17a526c07",
+   "company": "메트라이프",
+   "title": "Product Designer",
+   "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Product-Designer/19505",
+   "source_key": "metlifecareers",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "5880c1670af640c9",
+   "company": "신한라이프",
+   "title": "접수마감 AI서비스 기획 및 운영 담당자(경력) 2026.05.12 ~ 2026.05.17 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/113236",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-06-02 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-06-02",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d7289c30ee8c0935",
+   "company": "신한라이프",
+   "title": "접수마감 ALM기획 및 관리 담당자(경력)(~7/24까지 연장) 2026.07.10 ~ 2026.07.24 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/121503",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-07-24 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-07-24",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "98aa15c106e7cdc7",
+   "company": "신한라이프",
+   "title": "접수마감 [신한라이프] 상시 인재 POOL 등록 상시채용 2024.05.30 ~ 2025.12.31 23:59 상시 상시채용 경력 무관",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/21953",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2025-12-31 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2025-12-31",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d7ddd5fb102fc529",
+   "company": "신한라이프",
+   "title": "접수마감 데이터 아키텍트 담당자(경력)(~6/7까지 연장) 2026.05.26 ~ 2026.06.07 23:59 수시 일반채용 신입",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/114577",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-06-07 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-06-07",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "c4f7e53f074bd667",
+   "company": "신한라이프",
+   "title": "접수마감 디지털보안 담당자(경력) 2026.08.18 ~ 2026.08.28 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/125192",
+   "source_key": "shinhan_life",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-11-16",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "e3252d0a45079f79",
+   "company": "신한라이프",
+   "title": "접수마감 보험금 전문의료심사 담당자(경력) 2026.05.26 ~ 2026.06.01 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/114649",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-06-03 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-06-03",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f70cd0ea4a08d186",
+   "company": "신한라이프",
+   "title": "접수마감 보험리스크관리 담당자 (~8/23 연장) 2026.08.11 ~ 2026.08.23 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/124675",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-08-23 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-08-23",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0a0cea0d69b67404",
+   "company": "신한라이프",
+   "title": "접수마감 상품 신담보기획 담당자(경력) (~6/11 연장) 2026.06.02 ~ 2026.06.11 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/117593",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-06-11 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-06-11",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "66aa2d670fb946bd",
+   "company": "신한라이프",
+   "title": "접수마감 상품기획 담당자(경력) (~6/14 연장) 2026.06.02 ~ 2026.06.14 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/117589",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-06-14 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-06-14",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "6b5c52d429c592ce",
+   "company": "신한라이프",
+   "title": "접수마감 음악/미술 문화예술직무 담당자 (장애인 단시간 근로직) 2026.06.26 ~ 2026.07.01 23:59 특별채용 일반채용 경력 무관",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/119978",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-07-03 마감으로 오늘(2026-08-30) 기준 경과",
+   "deadline": "2026-07-03",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0d6c610c7f19e9ba",
+   "company": "하나생명",
+   "title": "[하나생명] 내부감사인 경력사원 채용 경력 10년 이상 | 계약직 | 2026.08.19 ~ 2026.09.01 23:59 | D-2",
+   "url": "https://hanalife.careerlink.kr/jobs/RC20260819033417",
+   "source_key": "hanalife",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0f7a67ada4394461",
+   "company": "하나생명",
+   "title": "[하나생명] 리스크관리부 감리역 경력사원 채용 경력 10년 이상 | 계약직 | 2026.08.19 ~ 2026.09.01 23:59 | D-2",
+   "url": "https://hanalife.careerlink.kr/jobs/RC20260819033414",
+   "source_key": "hanalife",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": false,
+   "first_seen": "2026-08-30"
   }
  ]
 }
