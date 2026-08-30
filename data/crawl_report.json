@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-08-30 15:30",
+ "generated_at": "2026-08-30 16:38",
  "summary": {
-  "crawled_total": 112,
+  "crawled_total": 116,
   "passed": 0,
-  "waiting": 44,
-  "excluded_notjob": 1,
+  "waiting": 64,
+  "excluded_notjob": 5,
   "excluded_employment": 23,
-  "excluded_expired": 44,
+  "excluded_expired": 24,
   "excluded_ai": 0
  },
  "sources": [
@@ -28,8 +28,126 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 패턴 불일치 — 링크는 100개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 53194,
+    "requests_anchor_count": 92,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 68403,
+    "browser_anchor_count": 100,
+    "unique_links_sample": [
+     {
+      "text": "삼성",
+      "url": "https://www.samsungcareers.com/"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://www.samsungcareers.com/hr/"
+     },
+     {
+      "text": "관계사 소개",
+      "url": "https://www.samsungcareers.com/subsid/"
+     },
+     {
+      "text": "지원 가이드",
+      "url": "https://www.samsungcareers.com/guide/process"
+     },
+     {
+      "text": "전자",
+      "url": "https://www.samsungcareers.com/subsid/#a0"
+     },
+     {
+      "text": "삼성전자 DX부문",
+      "url": "https://www.samsungcareers.com/subsid/detail/C10CAA"
+     },
+     {
+      "text": "삼성전자 DS부문",
+      "url": "https://www.samsungcareers.com/subsid/detail/C10CAH"
+     },
+     {
+      "text": "전자계열",
+      "url": "https://www.samsungcareers.com/subsid/#a1"
+     },
+     {
+      "text": "삼성디스플레이",
+      "url": "https://www.samsungcareers.com/subsid/detail/C90"
+     },
+     {
+      "text": "삼성SDI",
+      "url": "https://www.samsungcareers.com/subsid/detail/C31"
+     },
+     {
+      "text": "삼성전기",
+      "url": "https://www.samsungcareers.com/subsid/detail/C40"
+     },
+     {
+      "text": "삼성SDS",
+      "url": "https://www.samsungcareers.com/subsid/detail/C60"
+     },
+     {
+      "text": "바이오",
+      "url": "https://www.samsungcareers.com/subsid/#a2"
+     },
+     {
+      "text": "삼성바이오로직스",
+      "url": "https://www.samsungcareers.com/subsid/detail/DA0"
+     },
+     {
+      "text": "삼성바이오에피스",
+      "url": "https://www.samsungcareers.com/subsid/detail/DB0"
+     },
+     {
+      "text": "금융",
+      "url": "https://www.samsungcareers.com/subsid/#a3"
+     },
+     {
+      "text": "삼성생명",
+      "url": "https://www.samsungcareers.com/subsid/detail/E11"
+     },
+     {
+      "text": "삼성화재",
+      "url": "https://www.samsungcareers.com/subsid/detail/E21"
+     },
+     {
+      "text": "삼성카드",
+      "url": "https://www.samsungcareers.com/subsid/detail/E31"
+     },
+     {
+      "text": "삼성증권",
+      "url": "https://www.samsungcareers.com/subsid/detail/E40"
+     },
+     {
+      "text": "삼성자산운용",
+      "url": "https://www.samsungcareers.com/subsid/detail/EF0"
+     },
+     {
+      "text": "건설/중공업",
+      "url": "https://www.samsungcareers.com/subsid/#a4"
+     },
+     {
+      "text": "삼성중공업",
+      "url": "https://www.samsungcareers.com/subsid/detail/D60"
+     },
+     {
+      "text": "삼성E&A",
+      "url": "https://www.samsungcareers.com/subsid/detail/D80"
+     },
+     {
+      "text": "삼성물산 건설부문",
+      "url": "https://www.samsungcareers.com/subsid/detail/B12"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://www.samsungcareers.com/hr/?no="
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 100개 있으나 패턴에 맞는 것 0개"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko-kr\"><head><meta http-equiv=\"origin-trial\" content=\"A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==\">\n<meta charset=\"UTF-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta http-equiv=\"Cache-Control\" content=\"no-cache\">\n<meta http-equiv=\"Pragma\" content=\"no-cache\">\n<meta http-equiv=\"Expires\" content=\"0\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\">\n<meta name=\"google\" value=\"notranslate\">\n<title>SAMSUNG CAREERS</title>\n<link rel=\"shortcut icon\" href=\"/assets/images/favicon.ico\">\n<link rel=\"stylesheet\" href=\"/assets/css/main.min.css?v=1.MT8B3YH7\">\n<link rel=\"stylesheet\" href=\"/assets/css/modules.css?v=1.MT8B3YH7\">\n<script type=\"text/javascript\" async=\"\" charset=\"utf-8\" src=\"https://www.gstatic.com/recaptcha/releases/ox8dsmiqR62P1bqhciWOn7Fg/recaptcha__ko.js\" crossorigin=\"anonymous\" integrity=\"sha384-0JmFMe7l74Gd3GaDMyR2LmfwyGnDywzkDncPH1Azu+GPERpPAoQgwwQ9lGEMwZml\"></script><script src=\"/assets/js/bundle.min.js?v=1.MT8B3YH7\"></script>\n\n<script>\n    // var isIE = !!window.MSInputMethodContext && !!document.documentMode;\n    //\n    // if (isIE) {\n    //     // Create Promise polyfill script tag\n    //     var promiseScript = document.createElement(\"script\");\n    //     promiseScript.type = \"text/javascript\";\n    //     promiseScript.src = \"/scripts/lib/polyfill.min.js\";\n    //     // Create Fetch polyfill script tag\n    //     var fetchScript = document.createElement(\"script\");\n    //     fetchScript.type = \"text/javascript\";\n    //     fetchScript.src = \"/scripts/lib/fetch.umd.min.js\";\n    //\n    //     // Add polyfills to head element\n    //     document.head.appendChild(promiseScript);\n    //     document.head.appendChild(fetchScript);\n    // }\n\n        // Wait for the polyfills to load and run the function.\n        // We could have done this differently,\n        // but I've found it to work well for my use-cases\n        // setTimeout(function () {\n        //     window\n        //         .fetch(\"https://path/to/api.endpoint\")\n        //         .then(handleResponse)\n        //         .catch(handleErrors);\n        // }, 1000);\n    // } else {\n    //     // If fetch is supported, just run the fetch function\n    //     fetch(\"https://path/to/api.endpoint\")\n    //         .then(handleResponse)\n    //         .catch(handleErrors);\n    // }\n</script>\n\n    </head>\n    <body class=\"kr notranslate\">\n        \n        <div id=\"headerBase\" class=\"wrapper\">\n\n             \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n            \n        ",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -40,9 +158,9 @@
    "key": "hanwhain",
    "company": "한화생명/한화손보",
    "url": "https://www.hanwhain.com/portal/apply/recruit",
-   "list_ok": false,
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
+   "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -53,8 +171,99 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "렌더링 실패: TimeoutError",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
+   "error": "",
+   "note": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개",
+   "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 2489,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 505630,
+    "browser_anchor_count": 28,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://www.hanwhain.com/portal"
+     },
+     {
+      "text": "걸어온 길",
+      "url": "https://www.hanwhain.com/portal/hanwha/history"
+     },
+     {
+      "text": "핵심가치",
+      "url": "https://www.hanwhain.com/portal/hanwha/key-value"
+     },
+     {
+      "text": "브랜드비전",
+      "url": "https://www.hanwhain.com/portal/hanwha/brand"
+     },
+     {
+      "text": "계열사 소개",
+      "url": "https://www.hanwhain.com/portal/subsidiary"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://www.hanwhain.com/portal/apply/recruit"
+     },
+     {
+      "text": "인재 POOL",
+      "url": "https://www.hanwhain.com/portal/apply/pool"
+     },
+     {
+      "text": "자주하는 질문",
+      "url": "https://www.hanwhain.com/portal/inquiry/faq"
+     },
+     {
+      "text": "1:1문의",
+      "url": "https://www.hanwhain.com/portal/mypage/?rtn=qna"
+     },
+     {
+      "text": "로그인",
+      "url": "https://www.hanwhain.com/portal/login/login"
+     },
+     {
+      "text": "개인정보처리방침",
+      "url": "https://www.hanwhain.com/portal/policies/PrivacyPolicy"
+     },
+     {
+      "text": "이용약관",
+      "url": "https://www.hanwhain.com/portal/policies/TermsOfService"
+     },
+     {
+      "text": "한화 그룹",
+      "url": "https://www.hanwha.co.kr"
+     },
+     {
+      "text": "YouTube",
+      "url": "https://www.youtube.com/user/hanwhadays"
+     },
+     {
+      "text": "Instagram",
+      "url": "https://www.instagram.com/hanwhadays/"
+     },
+     {
+      "text": "facebook",
+      "url": "https://www.facebook.com/hanwhadays"
+     },
+     {
+      "text": "x",
+      "url": "https://x.com/hanwha_official"
+     },
+     {
+      "text": "blog",
+      "url": "https://blog.naver.com/hanwhadays"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko\"><head><style>:root{--litepicker-container-months-color-bg: #fff;--litepicker-container-months-box-shadow-color: #ddd;--litepicker-footer-color-bg: #fafafa;--litepicker-footer-box-shadow-color: #ddd;--litepicker-tooltip-color-bg: #fff;--litepicker-month-header-color: #333;--litepicker-button-prev-month-color: #9e9e9e;--litepicker-button-next-month-color: #9e9e9e;--litepicker-button-prev-month-color-hover: #2196f3;--litepicker-button-next-month-color-hover: #2196f3;--litepicker-month-width: calc(var(--litepicker-day-width) * 7);--litepicker-month-weekday-color: #9e9e9e;--litepicker-month-week-number-color: #9e9e9e;--litepicker-day-width: 38px;--litepicker-day-color: #333;--litepicker-day-color-hover: #2196f3;--litepicker-is-today-color: #f44336;--litepicker-is-in-range-color: #bbdefb;--litepicker-is-locked-color: #9e9e9e;--litepicker-is-start-color: #fff;--litepicker-is-start-color-bg: #2196f3;--litepicker-is-end-color: #fff;--litepicker-is-end-color-bg: #2196f3;--litepicker-button-cancel-color: #fff;--litepicker-button-cancel-color-bg: #9e9e9e;--litepicker-button-apply-color: #fff;--litepicker-button-apply-color-bg: #2196f3;--litepicker-button-reset-color: #909090;--litepicker-button-reset-color-hover: #2196f3;--litepicker-highlighted-day-color: #333;--litepicker-highlighted-day-color-bg: #ffeb3b}.show-week-numbers{--litepicker-month-width: calc(var(--litepicker-day-width) * 8)}.litepicker{font-family:-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;font-size:0.8em;display:none}.litepicker button{border:none;background:none}.litepicker .container__main{display:-webkit-box;display:-ms-flexbox;display:flex}.litepicker .container__months{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;background-color:var(--litepicker-container-months-color-bg);border-radius:5px;-webkit-box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);box-shadow:0 0 5px var(--litepicker-container-months-box-shadow-color);width:calc(var(--litepicker-month-width) + 10px);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months.columns-2{width:calc((var(--litepicker-month-width) * 2) + 20px)}.litepicker .container__months.columns-3{width:calc((var(--litepicker-month-width) * 3) + 30px)}.litepicker .container__months.columns-4{width:calc((var(--litepicker-month-width) * 4) + 40px)}.litepicker .container__months.split-view .month-item-header .button-previous-month,.litepicker .container__months.split-view .month-item-header .button-next-month{visibility:visible}.litepicker .container__months .month-item{padding:5px;width:var(--litepicker-month-width);-webkit-box-sizing:content-box;box-sizing:content-box}.litepicker .container__months .month-item-header{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;font-weight:500;padding:10px 5px;text-align:center",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -79,8 +288,60 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 47개 중 공고로 인정된 것 없음",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 1161,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 33718,
+    "browser_anchor_count": 47,
+    "unique_links_sample": [
+     {
+      "text": "회사소개",
+      "url": "https://www.kyobo.com/dgt/web/company-introduction/main/"
+     },
+     {
+      "text": "유튜브",
+      "url": "https://www.youtube.com/channel/UCTXXn-qrL8GQtuHYJBuFznA"
+     },
+     {
+      "text": "뉴스룸",
+      "url": "https://news.kyobo.com/"
+     },
+     {
+      "text": "인사제도",
+      "url": "https://career.kyobo.co.kr/m_rem/telented_person.jsp"
+     },
+     {
+      "text": "KYOBO city 메타버스 엿보기",
+      "url": "https://zep.us/play/2XqgvY"
+     },
+     {
+      "text": "Inside KYOBO 교보생명 유튜브 엿보기",
+      "url": "https://www.youtube.com/@kyobo_official"
+     },
+     {
+      "text": "KYOBO 채용 콘텐츠 채용 콘텐츠 엿보기",
+      "url": "https://www.youtube.com/watch?v=ttfg0CQgfbI"
+     },
+     {
+      "text": "교보생명 홈페이지",
+      "url": "https://www.kyobo.com/"
+     },
+     {
+      "text": "교보생명 홈페이지",
+      "url": "https://www.kyobo.com"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 47개 중 공고로 인정된 것 없음"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko\"><head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\"> <!-- [D] 반응형위해 추가함 -->\n<title>교보생명 채용</title>\n<meta name=\"keywords\" content=\"교보생명 채용,교보생명,빅데이터,알고리즘,인공지능,플랫폼,어플리케이션 개발,서버 개발,플랫폼 개발\">\n<meta name=\"description\" content=\"교보생명 채용\">\n<meta property=\"og:title\" content=\"교보생명 채용\">\n<meta property=\"og:url\" content=\"https://career.kyobo.co.kr\">\n<meta property=\"og:description\" content=\"교보생명 채용사이트 입니다.\">\n<meta name=\"naver-site-verification\" content=\"d27c932553a66ba7c1f95f37b634a9d8f93bf12a\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\n<!-------------------[ s: 240821 ]------------------->\n   <meta name=\"og_image\" property=\"og:image\" content=\"https://career.kyobo.co.kr/rem/apply/common/images/fa_kyobo.jpg\">\n<link rel=\"icon\" href=\"https://career.kyobo.co.kr/rem/apply/common/images/favicon.ico\">\n<link rel=\"apple-touch-icon-precomposed\" href=\"https://career.kyobo.co.kr/rem/apply/common/images/favicon.ico\">\n<!-------------------[ e: 240821 ]------------------->\n\t\n\n <!-- <!DOCTYPE html>\n<html lang=\"ko\">\n<head>\n<meta charset=\"UTF-8\" />\n<title></title>\n<meta name=\"keywords\" content=\"\">\n<meta name=\"description\" content=\"\">\n<meta name=\"author\" content=\"webcss\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n -->\n<script type=\"text/javascript\">\nif ( window.Page == undefined )\n{\n  Page =\n  {\n    SKIN_CD: \"skin5\"\n  }\n}\nwindow.history.forward(1); \n</script>\n\n<script src=\"/rem/apply/common/js/jquery-1.12.3.min.js\"></script>\n<script src=\"/rem/apply/common/js/jquery-migrate-1.3.0.min.js\"></script>\n<script src=\"/rem/apply/common/js/jquery-ui.min.js\"></script>\n<script src=\"/rem/apply/common/js/jquery.protify-0.3.js\"></script>\n<script src=\"/rem/apply/common/js/jquery.paging.js\"></script>\n<script src=\"/rem/apply/common/js/jquery.bxslider.min.js\"></script>\n<script src=\"/rem/apply/common/js/classy.js\"></script>\n<script src=\"/rem/apply/common/js/util.js\"></script>\n<script src=\"/rem/apply/common/js/dom.js\"></script>\n<script src=\"/rem/apply/common/js/common.js\"></script>\n<script src=\"/rem/apply/common/js/apply_common.js\"></script>\n<script src=\"/rem/apply/common/js/validation.js\"></script>\n<script src=\"/rem/apply/common/js/message.js\"></script>\n\n\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/rem/apply/common/css/global.css\" media=\"all\">\n\n\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/rem/apply/common/css/lib/aos.css\"> <!-- [D] (신규) main에서만 import해주세요. -->\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/rem/apply/common/css/main.css?ver=20250701\"> <!-- [D] (수정) main에서만 import해주세요. -->\t\n<script type=\"text/javascript\" src=\"/rem/apply/common/js/lib/aos.js\"></script> <!-- [D] (신규) main에서만 import해주세요. -->\n<script type=\"text/javascript\" src=\"/rem/apply/common/js/main.js\"></script> <!-- [D] (수정) main에서만 import -->\n<script type=\"text/javascript\">\nvar page=0;\nvar reInfoCnt=0;\nwindow.name = 'ehrTopFrame';\n\nfunction LoadPage()\n{\n\t\n  doAction('init');\n  //tempChangeBg()",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -155,9 +416,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 6,
-   "new_found": 6,
-   "detail_ok": 6,
+   "links_found": 11,
+   "new_found": 11,
+   "detail_ok": 11,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -167,8 +428,16 @@
    "note": "",
    "sample_links": [
     {
-     "title": "채용관 채용관홈 인재상 인재양성 인사제도 급여 및 복리후생 모집분야 대졸신입 경력사원 소액보상전담직 사무지원직 고객상담사 장애",
-     "url": "https://www.idbins.com/FWCOMV1725.do"
+     "title": "인재양성",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1727.shtm"
+    },
+    {
+     "title": "인사제도",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1731.shtm"
+    },
+    {
+     "title": "급여 및 복리후생",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1732.shtm"
     },
     {
      "title": "모집분야",
@@ -179,20 +448,20 @@
      "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5581.shtm"
     },
     {
-     "title": "비정기채용공고",
-     "url": "https://www.idbins.com/FWCOMV6572.do"
+     "title": "소액보상전담직",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5582.shtm"
     },
     {
-     "title": "모집분야별 지원방법",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1752.shtm"
+     "title": "사무지원직",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5584(1).shtm"
     },
     {
-     "title": "보험모집질서 신고센터안내",
-     "url": "https://www.idbins.com/pc/bizxpress/ct/rp/FWCUSV1314.shtm"
+     "title": "고객상담사",
+     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5584.shtm"
     }
    ],
    "filtered": {
-    "notjob": 0,
+    "notjob": 5,
     "employment": 3,
     "expired": 0
    }
@@ -251,8 +520,8 @@
     }
    ],
    "filtered": {
-    "notjob": 1,
-    "employment": 3,
+    "notjob": 0,
+    "employment": 4,
     "expired": 2
    }
   },
@@ -274,8 +543,74 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 패턴 불일치 — 링크는 17개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 13529,
+    "requests_anchor_count": 17,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 15209,
+    "browser_anchor_count": 17,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://recruit.meritzfire.com/new/main.do"
+     },
+     {
+      "text": "성장스토리",
+      "url": "https://recruit.meritzfire.com/new/company/company01.do"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://recruit.meritzfire.com/new/company/company02.do"
+     },
+     {
+      "text": "오피스",
+      "url": "https://recruit.meritzfire.com/new/company/company03.do?idx=all"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://recruit.meritzfire.com/new/job/noticeList.do"
+     },
+     {
+      "text": "채용절차",
+      "url": "https://recruit.meritzfire.com/new/job/noticeProcess.do"
+     },
+     {
+      "text": "FAQ",
+      "url": "https://recruit.meritzfire.com/new/job/faq.do"
+     },
+     {
+      "text": "인터뷰",
+      "url": "https://recruit.meritzfire.com/new/people/interview.do"
+     },
+     {
+      "text": "기업문화",
+      "url": "https://recruit.meritzfire.com/new/culture/culture.do"
+     },
+     {
+      "text": "인재Pool",
+      "url": "https://recruit.meritzfire.com/new/job/poolWrite.do"
+     },
+     {
+      "text": "로그인",
+      "url": "https://recruit.meritzfire.com/new/common/login.do"
+     },
+     {
+      "text": "meritz_recruit@meritz.co.kr",
+      "url": "mailto:meritz_recruit@meritz.co.kr"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://recruit.meritzfire.com/new/job/noticeView.do"
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 17개 있으나 패턴에 맞는 것 0개"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"kr\" style=\"background-attachment: scroll;\"><head>\n<script type=\"text/javascript\" src=\"/_coconut_eum0.js\"></script>\n\t<meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width\">\n\t<link rel=\"icon\" href=\"/images/common/favicon.ico\"><!-- 2024-06-27 수정 -->\n\t<title>메리츠화재채용</title>\n\t<!-- 2024-06-26 메타 수정 -->\n\t<meta name=\"author\" content=\"메리츠금융그룹\">\n\t<meta name=\"keywords\" content=\"메리츠화재, 메리츠화재 채용, 메리츠화재 커리어, 메리츠화재 신입사원, 메리츠화재 경력, 메리츠화재 입사, 메리츠화재 합격자발표, 메리츠화재 복지, 메리츠화재 인재, 채용공고\">\n\t<meta name=\"description\" content=\"새로운 역사를 만들어가고 있는 메리츠화재가 놀라운 잠재력을 지닌 여러분을 기다립니다\">\n\t<meta name=\"google-site-verification\" content=\"8367nyf1D1yISqVXeM5zgUpq-uhELn-b5XpS8b9LgrI\">\n\t<!-- //2024-06-26 메타 수정 -->\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/new/reset.css\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/new/common.css\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/new/jquery-ui.min.css\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/new/aos.css\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/new/slick.css\">\n\t<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/new/style.css\">\n\n\t<script type=\"text/javascript\" src=\"/js/new/jquery-3.6.0.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/jquery-ui.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/jquery.ui.monthpicker.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/scrollSpeed.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/aos.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/slick.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/lottie.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/ui.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/new/common.js?ver=20251217\"></script>\n\t<script type=\"text/javascript\" src=\"/js/jquery.form.js\"></script>\n\t<script type=\"text/javascript\" src=\"/js/jsencrypt.min.js\"></script>\n\t\n<script>\n\nvar LOGIN_FNM = \"\";\n$(document).ready(function() {\n\t$(\"input\").attr(\"autocomplete\", \"off\");\n\t//header 채용공고 조회\n\tfn_headerNoticeList();\n\t\n});\n\n//채용공고조회\nfunction fn_headerNoticeList(){\n\tfn_Transaction(\"/json.smart\", \"f.cg.rc.nw.o.bc.NewNoticeServiceBc.getNoticeHeaderList\", {}, fn_getNoticeHeaderListCallback);\n}\n\n\n//callback\nfunction fn_getNoticeHeaderListCallback(data){\n\tvar noticeHeaderHtml = \"\";\n\t\n\tnoticeHeaderHtml += '<ul>';\n\t\n\tvar cnt = 0;\n\t$(data.body.resultList).each(function(i){\n\t\t\n\t\tvar DAY = data.body.resultList[i].DAY;\n\t\tvar TTL = data.body.resultList[i].TTL;\n\t\tvar RECU_SNO = data.body.resultList[i].RECU_SNO;\n\t\t\n\t\t\n\t\t\n\t\tnoticeHeaderHtml += '<li class=\"type-' + ((cnt%7) + 1) + '\">';\n\t\tnoticeHeaderHtml += '<a href=\"javascript:noticeView(\\'' + RECU_SNO + '\\')\">';\n\t\tnoticeHeaderHtml += '<span>D-' + DAY + '</span>';\n\t\tnoticeHeaderHtml += TTL;\n\t\tnoticeHeaderHtml += '<div class=\"notice__paging\">' + (cnt + 1) + '/' + data.body.resultList.length + '</div>';\n\t\tnoticeHeaderHtml += '</a>';\n\t\tnoticeHeaderHtml += '</li>';\n\t\n\t\t\n\t\tcnt++;\n\t});\n\tnoticeHeaderHtml += '</ul>'",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -300,8 +635,74 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 패턴 불일치 — 링크는 13개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 20332,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 42562,
+    "browser_anchor_count": 13,
+    "unique_links_sample": [
+     {
+      "text": "채용공고",
+      "url": "https://hi.recruiter.co.kr/career/recruit"
+     },
+     {
+      "text": "채용프로세스",
+      "url": "https://hi.recruiter.co.kr/career/process"
+     },
+     {
+      "text": "공지사항",
+      "url": "https://hi.recruiter.co.kr/career/notice"
+     },
+     {
+      "text": "채용 FAQ",
+      "url": "https://hi.recruiter.co.kr/career/faq"
+     },
+     {
+      "text": "채용 Q&A",
+      "url": "https://hi.recruiter.co.kr/career/https://hi.recruiter.co.kr/career?viewType=QnA"
+     },
+     {
+      "text": "직무소개",
+      "url": "https://hi.recruiter.co.kr/career/https://www.hi.co.kr/serviceAction.do?menuId=100002"
+     },
+     {
+      "text": "인재상",
+      "url": "https://hi.recruiter.co.kr/career/taleted"
+     },
+     {
+      "text": "인사제도",
+      "url": "https://hi.recruiter.co.kr/career/rule"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://hi.recruiter.co.kr/career/welfare"
+     },
+     {
+      "text": "회사소개↗",
+      "url": "https://hi.recruiter.co.kr/career/https://www.hi.co.kr/serviceAction.do?view=bin/KC/00/HHKC00000M"
+     },
+     {
+      "text": "지원서 수정",
+      "url": "https://hi.recruiter.co.kr/career/https://hi.recruiter.co.kr/v1/applicant/modify-resume/login?jobnoticeSn=260875&systemKindCode=MRS2"
+     },
+     {
+      "text": "안내 및 발표확인",
+      "url": "https://hi.recruiter.co.kr/career/https://hi.recruiter.co.kr/app/applicant/myPage/login"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://hi.recruiter.co.kr/career/jobs/"
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 13개 있으나 패턴에 맞는 것 0개"
+   },
+   "sample_html_head": "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><link rel=\"stylesheet\" href=\"/_next/static/css/a6e92e2162e16d2c.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/435c39c502393a00.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/eee1106a334d4632.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/bb03030b95157d43.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/73aaab8d428bbf08.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/10c19bca51a33dad.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/101ea2cd5338f720.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/73c6e569ace5c7bc.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/afbfca500b9d8e02.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/7fa911e38d1563bb.css\" data-precedence=\"next\"><link rel=\"stylesheet\" href=\"/_next/static/css/6b5950b14533d965.css\" data-precedence=\"next\"><link rel=\"preload\" as=\"script\" fetchpriority=\"low\" href=\"/_next/static/chunks/webpack-26a81c31e2412bba.js\"><script type=\"text/javascript\" async=\"\" src=\"https://cdn.channel.io/plugin/ch-plugin-web.js\"></script><script src=\"/_next/static/chunks/59c6eb5a-55902c5aeade9a3f.js\" async=\"\"></script><script src=\"/_next/static/chunks/87c73c54-01dadaed7d3cc324.js\" async=\"\"></script><script src=\"/_next/static/chunks/863-a8b7f3033b206b80.js\" async=\"\"></script><script src=\"/_next/static/chunks/main-app-da68f851b88cf7ef.js\" async=\"\"></script><link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"https://infra1-static.recruiter.co.kr/builder/2024/08/23/60b35e56-0d2b-492c-9650-8bf2ff75a7d6.ico\"><meta http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\"><meta http-equiv=\"Pragma\" content=\"no-cache\"><meta http-equiv=\"Expires\" content=\"0\"><title>현대해상 채용 | 채용공고</title><meta name=\"description\" content=\"현대해상의 채용공고를 소개하는 페이지입니다.\"><meta name=\"author\" content=\"현대해상\"><meta name=\"keywords\" content=\"현대해상,현대해상 채용,현대해상 대졸 신입사원 채용,현대해상 전문대졸 신입사원 채용,현대해상 대졸 채용,현대해상 전문대졸 채용,현대해상 4급채용,현대해상 6급채용,현대해상 경력직 채용,계리사 채용,손해사정사 채용,자산운용 채용,대졸채용,전문대졸채용,초대졸채용\"><meta name=\"robots\" content=\"index, follow\"><meta name=\"title\" content=\"현대해상 채용\"><meta name=\"subject\" content=\"현대해상 채용 홈페이지\"><link rel=\"canonical\" href=\"https://hi.recruiter.co.kr/career/recruit\"><link rel=\"alternate\" hreflang=\"ko\" href=\"https://hi.recruiter.co.kr/career/recruit\"><meta name=\"google-site-verification\" content=\"Z23TnIEfGdS5kmhAcNCrTvykXb-ebs34SpjZ2x0TeNg\"><meta name=\"naver-site-verification\" content=\"4671328ed8d4effc8c13785fba586583d3b2803d\"><meta property=\"og:title\" content=\"현대해상 채용\"><meta property=\"og:description\" content=\"현대해상의 채용홈페이지입니다. 현재 채용중인 포지션을 확인해보세요!\"><meta property=\"og:site_name\" content=\"현대해상 채용\"><meta property=\"og:type\" content=\"website\"><meta name=\"twitter:card\" content=\"summary\"><me",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -375,10 +776,10 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 6,
-   "links_found": 6,
-   "new_found": 6,
-   "detail_ok": 6,
+   "browser_links": 5,
+   "links_found": 5,
+   "new_found": 5,
+   "detail_ok": 5,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -387,10 +788,6 @@
    "error": "",
    "note": "",
    "sample_links": [
-    {
-     "title": "Apply",
-     "url": "https://careers.kbfg.com/apply/apply"
-    },
     {
      "title": "금융공학부 경력직(연봉계약직) 채용",
      "url": "https://careers.kbfg.com/apply/886"
@@ -414,7 +811,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 3,
+    "employment": 2,
     "expired": 0
    }
   },
@@ -436,8 +833,23 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "접속 실패 — requests SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)'))), 브라우저 렌더링 실패: Error",
    "sample_links": [],
+   "probe": {
+    "requests_status": null,
+    "requests_error": "SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)')))",
+    "requests_html_len": 0,
+    "requests_anchor_count": 0,
+    "browser_ok": false,
+    "browser_error": "렌더링 실패: Error",
+    "browser_html_len": 0,
+    "browser_anchor_count": 0,
+    "unique_links_sample": [],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "접속 실패 — requests SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)'))), 브라우저 렌더링 실패: Error"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko\"><head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>채용 | 우리금융그룹</title>\n\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t\t\n\t\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,target-densitydpi=medium-dpi\">\n\t\t<meta name=\"author\" content=\"https://www.woorifg.com\">\n\t\t<meta name=\"keywords\" content=\"우리금융그룹, 우리금융지주, 우리금융\">\n\t\t<meta name=\"title\" content=\"우리금융그룹, 우리금융지주, 우리금융\">\n\t\t<meta name=\"description\" content=\"오늘의 혁신으로 내일의 가치를 만드는 금융그룹 공식 사이트 입니다.\">\n\t\t<meta name=\"format-detection\" content=\"telephone=no\">\n\t\t\n\t\t<meta property=\"og:title\" id=\"ogTitle\" content=\"우리금융그룹 | 채용\">\n\t\t<meta property=\"og:description\" content=\"오늘의 혁신으로 내일의 가치를 만드는 금융그룹 공식 사이트 입니다.\">\n\t\t<meta property=\"og:image\" id=\"ogImage\" content=\"https://www.woorifg.com/common/images/pc_head_logo.png\">\n\t\t<meta property=\"og:url\" content=\"https://www.woorifg.com/kor/recruit/recruit-announcement/list.do?\">\n\t\t<meta property=\"og:type\" content=\"article\">\n\t\t<meta property=\"og:site_name\" content=\"우리금융그룹\">\n\t\t\n\t\n\t    <script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script><script type=\"text/javascript\" async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-XE6K92TC6V&amp;cx=c&amp;gtm=4e68q1\"></script><script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=UA-133437439-1\"></script>\n\t\t<script>\n\t\t  window.dataLayer = window.dataLayer || [];\n\t\t  function gtag(){dataLayer.push(arguments);}\n\t\t  gtag('js', new Date());\n\t\t\n\t\t  gtag('config', 'UA-133437439-1');\n\t\t</script> \n\n\t\t\n\t\t<link rel=\"shortcut icon\" href=\"/common/images/favicon.ico\" type=\"image/x-icon\">\n\t\t<link rel=\"canonical\" href=\"https://www.woorifg.com/kor/recruit/recruit-announcement/list.do\">\n\t\t<link rel=\"icon\" href=\"/common/images/favicon.ico\" type=\"image/x-icon\">\n\t\t<link rel=\"stylesheet\" href=\"/common/css/common.css\">\n\t\t<link rel=\"stylesheet\" href=\"/common/css/woori_style.css?v=2019021400\">\n\t\t<link rel=\"stylesheet\" href=\"/common/css/jquery.datetimepicker.css\">\n\t\t<link rel=\"stylesheet\" href=\"/common/js/lib/sweetalert/sweetalert.css\">\n\t\t<link rel=\"stylesheet\" href=\"/common/css/swiper.min.css\">\t\n\t\t<link rel=\"stylesheet\" href=\"/common/css/mCustomScrollbar.css\">\n\t\t<link rel=\"stylesheet\" href=\"/common/js/lib/slick/slick.css\">\n\t\t<link rel=\"stylesheet\" href=\"/common/js/lib/slick/slick-theme.css\">\n\t\t<link rel=\"stylesheet\" href=\"/common/js/lib/msdropdown/css/msdropdown/dd.css\">\n\t\t\n\t\t<script type=\"text/javascript\" src=\"/common/js/lib/jquery/jquery-1.8.2.min.js\"></script>\n\t\t<script type=\"text/javascript\" src=\"/common/js/lib/jquery/jquery-ui.js\"></script>\n\t\t<script type=\"text/javascript\" src=\"/common/js/lib/jquery/jquery.ui.datepicker-ko.js\"></script>\n\t\t<script type=\"text/javascript\" src=\"/common/js/lib/jquery/jquery.datetimepicker.full.min.js\"></script>\t\t\n\t\t<script type=\"text/javascript\" src=\"/common/js/lib/jquery/jquery.cookies.js\"></script>\t\t\n\t\t\n\t\t<script type=\"text/javascript\" src=\"/common/js/lib/ezValidat",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -500,7 +912,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 7,
-    "expired": 21
+    "expired": 1
    }
   },
   {
@@ -521,8 +933,126 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 55907,
+    "requests_anchor_count": 93,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 59177,
+    "browser_anchor_count": 122,
+    "unique_links_sample": [
+     {
+      "text": "KMPG careers",
+      "url": "https://career.kr.kpmg.com/"
+     },
+     {
+      "text": "RECRUIT",
+      "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/init.hr"
+     },
+     {
+      "text": "NOTICE",
+      "url": "https://career.kr.kpmg.com/hr/rec/recruit/recruitsys/controller/candidate/RecruitSys230WebController/init.hr"
+     },
+     {
+      "text": "FAQ",
+      "url": "https://career.kr.kpmg.com/hr/rec/recruit/recruitsys/controller/candidate/RecruitSys270WebController/init.hr"
+     },
+     {
+      "text": "나의 채용",
+      "url": "https://career.kr.kpmg.com/hr/rec/recruit/jobapp/controller/candidate/JobApp100WebController/init.hr"
+     },
+     {
+      "text": "면접 확인서 출력",
+      "url": "https://career.kr.kpmg.com/hr/rec/recruit/itvscr/controller/candidate/ItvScr110WebController/selectMyIntv.hr"
+     },
+     {
+      "text": "",
+      "url": "https://career.kr.kpmg.com/hr/rec/recruit/main/controller/candidate/MainRecruitWebController/init.hr"
+     },
+     {
+      "text": "Insights",
+      "url": "https://home.kpmg/kr/ko/home/insights.html"
+     },
+     {
+      "text": "K-SOX Newsletter",
+      "url": "https://home.kpmg/kr/ko/home/insights/2018/11/k-sox.html"
+     },
+     {
+      "text": "Tax Newsletter",
+      "url": "https://home.kpmg/kr/ko/home/insights/2016/06/tax-newsletter.html"
+     },
+     {
+      "text": "Samjong Insight",
+      "url": "https://home.kpmg/kr/ko/home/insights/2016/06/samjong-insight.html"
+     },
+     {
+      "text": "Issue Monitor",
+      "url": "https://home.kpmg/kr/ko/home/insights/2016/06/issue-monitor.html"
+     },
+     {
+      "text": "BusinessFocus",
+      "url": "https://home.kpmg/kr/ko/home/insights/2020/03/the-business-implications-of-coronavirus.html"
+     },
+     {
+      "text": "Industries",
+      "url": "https://home.kpmg/kr/ko/home/industries.html"
+     },
+     {
+      "text": "Consumer Markets",
+      "url": "https://home.kpmg/kr/ko/home/industries/consumer-markets.html"
+     },
+     {
+      "text": "Financial Service",
+      "url": "https://home.kpmg/kr/ko/home/industries/financial-services.html"
+     },
+     {
+      "text": "Industrial Markets",
+      "url": "https://home.kpmg/kr/ko/home/industries/industrial-markets.html"
+     },
+     {
+      "text": "Technology,Media & Telecommunication",
+      "url": "https://home.kpmg/kr/ko/home/industries/telecommunications.html"
+     },
+     {
+      "text": "Infrastructure, Government & Healthcare",
+      "url": "https://home.kpmg/kr/ko/home/industries/infrastructure.html"
+     },
+     {
+      "text": "Services",
+      "url": "https://home.kpmg/kr/ko/home/services.html"
+     },
+     {
+      "text": "Audit & Assurance",
+      "url": "https://home.kpmg/kr/ko/home/services/audit.html"
+     },
+     {
+      "text": "Special Service",
+      "url": "https://home.kpmg/kr/ko/home/services/special-service.html"
+     },
+     {
+      "text": "Tax",
+      "url": "https://home.kpmg/kr/ko/home/services/tax.html"
+     },
+     {
+      "text": "Audit Committee Institute",
+      "url": "https://home.kpmg/kr/ko/home/services/aci.html"
+     },
+     {
+      "text": "Advisory",
+      "url": "https://home.kpmg/kr/ko/home/services/advisory.html"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개"
+   },
+   "sample_html_head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"ko\" lang=\"ko\"><head><script type=\"text/javascript\" src=\"/js/common/jquery/jquery-1.7.2.min.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/common/jquery/jquery.validator-0.9.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/common/jquery/jquery.bgiframe-2.1.2.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/common/jquery/jquery-ui-1.8.21.custom.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n\n<!--script type=\"text/javascript\" src=\"/js/common/jquery/framework-2.2.2.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\" ></script-->\n<script type=\"text/javascript\" src=\"/js/common/jquery/jquery.deserialize.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/common/jquery/jquery.blockUI.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/common/jquery/jNotify.jquery.min.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n\n<script type=\"text/javascript\" src=\"/js/common/jquery/common.js.jsp;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/common/jquery/common.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n\n<script type=\"text/javascript\" src=\"/js/common/jquery/jquery-default-settings.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/recruit/common.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/recruit/lnb.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n<script type=\"text/javascript\" src=\"/js/common/jquery/jsval_mentalse.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script>\n\n<!-- <script type=\"text/javascript\" src=\"/crosseditor/js/namo_scripteditor.js;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\"></script> -->\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/swiper.min.css;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/jquery.fullPage.css;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/reset.css;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/font.css;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/animation.css;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\">\n<link rel=\"stylesheet\" type=\"text/css\" href=\"/css/style.css;jsessionid=6AEA3365FDF266831BA17E9048C09F31.ecareers1\">\n\n<link rel=\"styles",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -606,8 +1136,23 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 2438,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 2417,
+    "browser_anchor_count": 0,
+    "unique_links_sample": [],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
+   },
+   "sample_html_head": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ko\"><head>\n    <title>딜로이트 채용</title>\n    <meta charset=\"UTF-8\">\n\t<meta name=\"description\" content=\"안진회계법인, 컨설팅, 그 외 법인 채용정보 및 온라인 입사 지원서 작성 안내\">\n\t<meta name=\"naver-site-verification\" content=\"d275625bcb6e7f9afd6ee35018ad0c38514c75c4\">\n\t<meta name=\"viewport\" content=\"user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width\">\n    <link rel=\"icon\" type=\"image/vnd.microsoft.icon\" href=\"favicon.ico\">\n    <link rel=\"shortcut icon\" type=\"image/vnd.microsoft.icon\" href=\"favicon.ico\">\n    <script src=\"/WiseRecruit2/Common/Js/jquery-3.6.0.min.js\" type=\"text/javascript\"></script>\n    <script src=\"/WiseRecruit2/Common/Js/jquery-migrate-3.3.2.min.js\" type=\"text/javascript\"></script>\n    <script src=\"/WiseRecruit2/Common/Js/jquery-ui-1.12.1.min.js\" type=\"text/javascript\"></script>\n    <script type=\"text/javascript\">\n\tfunction create_iframe() {\n\t    //var wrapper = jQuery('#url-wrapper');\n\t    if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {\n\t\t//location.href = '/WiseRecruit2/';\n\t\tlocation.assign(location.origin + \"/WiseRecruit2/ComFiles/Deloitte/MainHome.aspx\");\n\t    } else {\n\t\tvar iframe = document.createElement('iframe');\n\t\tiframe.frameBorder=0;\n\t\tiframe.setAttribute(\"src\", \"/WiseRecruit2/\");\n\t\tdocument.getElementById(\"divframe\").appendChild(iframe);\n\t    }\n\t}\n    </script>\n    <style type=\"text/css\">\n        .scroll-wrapper {\n            -webkit-overflow-scrolling: touch;\n        }\n\n        .demo-iframe-holder {\n            position: fixed;\n            right: 0;\n            bottom: 0;\n            left: 0;\n            top: 0;\n            -webkit-overflow-scrolling: touch;\n        }\n\n\t\t.demo-iframe-holder iframe {\n\t\t\theight: 100%;\n\t\t\twidth: 100%;\n\t\t}\n    </style>\t\n</head>\n<body onload=\"create_iframe();\">\n    <div class=\"scroll-wrapper demo-iframe-holder\" id=\"divframe\">\n        <!--<iframe src=\"/WiseRecruit2/\" frameborder=\"0\"></iframe>-->\n    <iframe frameborder=\"0\" src=\"/WiseRecruit2/\"></iframe></div>\n\n\n</body><!--\n<frameset rows=\"*%, 100%\" border=\"0\">\n     <frame noresize scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\">\n     <frame src=\"/WiseRecruit2/\" name=\"main\" marginwidth=\"0\" marginheight=\"0\">\n     <noframes>\n     <body>\n     </body>\n     </noframes>\n</frameset>\n--></html>",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -742,8 +1287,25 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 187520,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 181051,
+    "browser_anchor_count": 0,
+    "unique_links_sample": [],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://miraeassetlife.ninehire.site/job_posting/"
+    ],
+    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko\" translate=\"no\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=0.1, maximum-scale=10\"><meta http-equiv=\"content-language\" content=\"ko\"><title>미래에셋생명 - 채용 홈페이지</title><meta name=\"robots\" content=\"index,follow\"><meta name=\"description\" content=\"미래에셋생명 채용 홈페이지입니다\"><link rel=\"alternate\" hreflang=\"x-default\" href=\"https://miraeassetlife.ninehire.site/\"><link rel=\"alternate\" hreflang=\"ko-kr\" href=\"https://miraeassetlife.ninehire.site/\"><link rel=\"alternate\" hreflang=\"ko\" href=\"https://miraeassetlife.ninehire.site/\"><meta property=\"og:title\" content=\"미래에셋생명 - 채용 홈페이지\"><meta property=\"og:description\" content=\"미래에셋생명 채용 홈페이지입니다\"><meta property=\"og:url\" content=\"https://miraeassetlife.ninehire.site/\"><meta property=\"og:type\" content=\"website\"><meta property=\"og:locale\" content=\"ko_KR\"><meta property=\"og:site_name\" content=\"미래에셋생명 - 채용 홈페이지\"><link rel=\"canonical\" href=\"https://miraeassetlife.ninehire.site/\"><link rel=\"icon\" type=\"image/svg+xml\" href=\"https://image.ninehire.com/homepage/b17db0b0-3129-11f0-8751-47347271bc78/image/02f92ff0-3b6b-11f0-b662-4ba6117b3729.svg\" sizes=\"32x32\"><link rel=\"apple-touch-icon\" href=\"https://image.ninehire.com/homepage/b17db0b0-3129-11f0-8751-47347271bc78/image/02f92ff0-3b6b-11f0-b662-4ba6117b3729.svg\" sizes=\"76x76\"><link rel=\"shortcut icon\" type=\"image/svg+xml\" href=\"https://image.ninehire.com/homepage/b17db0b0-3129-11f0-8751-47347271bc78/image/02f92ff0-3b6b-11f0-b662-4ba6117b3729.svg\" sizes=\"32x32\"><meta name=\"next-head-count\" content=\"19\"><link href=\"/css/global.css\" rel=\"stylesheet\"><link href=\"/css/antd.css\" rel=\"stylesheet\"><noscript data-n-css=\"\"></noscript><script defer=\"\" nomodule=\"\" src=\"/_next/static/chunks/polyfills-42372ed130431b0a.js\"></script><script src=\"/_next/static/chunks/webpack-a75076667882940e.js\" defer=\"\"></script><script src=\"/_next/static/chunks/framework-c6ee5607585ef091.js\" defer=\"\"></script><script src=\"/_next/static/chunks/main-5fa450a4840deaeb.js\" defer=\"\"></script><script src=\"/_next/static/chunks/pages/_app-2c01cd54974e2ca4.js\" defer=\"\"></script><script src=\"/_next/static/chunks/6658-49ca9e916a079cac.js\" defer=\"\"></script><script src=\"/_next/static/chunks/1664-5fc1789c392e956d.js\" defer=\"\"></script><script src=\"/_next/static/chunks/3170-ad1a61aee74d45f1.js\" defer=\"\"></script><script src=\"/_next/static/chunks/4362-d75c40cc880188d3.js\" defer=\"\"></script><script src=\"/_next/static/chunks/1822-1880d9515af77732.js\" defer=\"\"></script><script src=\"/_next/static/chunks/1653-3269e3a2c933e42a.js\" defer=\"\"></script><script src=\"/_next/static/chunks/5068-582b8fe87b8a73a5.js\" defer=\"\"></script><script src=\"/_next/static/chunks/7856-08e708b94951c4d6.js\" defer=\"\"></script><script src=\"/_next/static/chunks/4330-a8b0e5cca835253a.js\" defer=\"\"></script><script src=\"/_next/static/chunks/8471-ce7fff0153178ef5.js\" defer=\"\"></script><script src=\"/_next/static/chunks/6957-36ae80e186a0dcff.js\" defer=\"\"></script><script src=\"/",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -768,8 +1330,76 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 14개 중 공고로 인정된 것 없음",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 129813,
+    "requests_anchor_count": 15,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 102040,
+    "browser_anchor_count": 14,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://kblife-recruiting.career.greetinghr.com/ko"
+     },
+     {
+      "text": "About",
+      "url": "https://kblife-recruiting.career.greetinghr.com/ko/overview"
+     },
+     {
+      "text": "KB Life",
+      "url": "https://kblife-recruiting.career.greetinghr.com/ko/benefit"
+     },
+     {
+      "text": "Career",
+      "url": "https://kblife-recruiting.career.greetinghr.com/ko/career"
+     },
+     {
+      "text": "공고 바로가기",
+      "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4"
+     },
+     {
+      "text": "KB라이프생명 둘러보기",
+      "url": "https://www.kblife.co.kr/"
+     },
+     {
+      "text": "",
+      "url": "https://www.kblife.co.kr/customer-common/kbLifeStory.do"
+     },
+     {
+      "text": "",
+      "url": "https://careers.kbfg.com/life/story"
+     },
+     {
+      "text": "KB라이프생명 유튜브 둘러보기 ↗",
+      "url": "https://www.youtube.com/channel/UCrKJwnv6-psXk6AMDg5zX7A"
+     },
+     {
+      "text": "개인정보처리방침",
+      "url": "https://kblife-recruiting.career.greetinghr.com/privacy"
+     },
+     {
+      "text": "",
+      "url": "https://post.naver.com/kblifeinsurance2018"
+     },
+     {
+      "text": "",
+      "url": "https://www.facebook.com/KBlife.kr"
+     },
+     {
+      "text": "Greeting",
+      "url": "https://www.greetinghr.com/?utm_source=career_page&utm_medium=11093"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 14개 중 공고로 인정된 것 없음"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko\"><head><meta charset=\"utf-8\" data-next-head=\"\"><meta name=\"viewport\" content=\"width=device-width\" data-next-head=\"\"><script type=\"text/javascript\" id=\"www-widgetapi-script\" src=\"https://www.youtube.com/s/player/e937390a/www-widgetapi.vflset/www-widgetapi.js\" async=\"\"></script><script type=\"text/javascript\" async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=G-9PR0S0FHB6&amp;cx=c&amp;gtm=4e68q1\"></script><script async=\"\" src=\"https://connect.facebook.net/en_US/fbevents.js\"></script><script async=\"\" src=\"https://www.googletagmanager.com/gtag/js?id=추적 ID 넣는 공간\" data-next-head=\"\"></script><link href=\"https://profiles.greetinghr.com/group/c2181b1c-8054-4fb9-b9fd-091115247599\" rel=\"icon\" type=\"image/png\" data-next-head=\"\"><link href=\"https://profiles.greetinghr.com/group/c2181b1c-8054-4fb9-b9fd-091115247599\" rel=\"apple-touch-icon\" sizes=\"48x48\" data-next-head=\"\"><meta content=\"notranslate\" name=\"googlebot\" data-next-head=\"\"><link href=\"https://kblife-recruiting.career.greetinghr.com/ko/home\" rel=\"canonical\" data-next-head=\"\"><link href=\"https://kblife-recruiting.career.greetinghr.com/ko/home\" hreflang=\"ko\" rel=\"alternate\" data-next-head=\"\"><link href=\"https://kblife-recruiting.career.greetinghr.com/ko/home\" hreflang=\"ko-kr\" rel=\"alternate\" data-next-head=\"\"><link href=\"https://kblife-recruiting.career.greetinghr.com/ko/home\" hreflang=\"x-default\" rel=\"alternate\" data-next-head=\"\"><title data-next-head=\"\">KB라이프생명 채용</title><meta content=\"KB라이프생명 채용\" name=\"title\" data-next-head=\"\"><meta content=\"KB라이프생명의 채용 홈페이지입니다.\" name=\"description\" data-next-head=\"\"><meta content=\"KB라이프생명\" property=\"og:site_name\" data-next-head=\"\"><meta content=\"website\" property=\"og:type\" data-next-head=\"\"><meta content=\"https://kblife-recruiting.career.greetinghr.com/ko/home\" property=\"og:url\" data-next-head=\"\"><meta content=\"KB라이프생명 채용\" property=\"og:title\" data-next-head=\"\"><meta content=\"KB라이프생명의 채용 홈페이지입니다.\" property=\"og:description\" data-next-head=\"\"><meta content=\"https://profiles.greetinghr.com/group/c2181b1c-8054-4fb9-b9fd-091115247599\" property=\"og:image\" data-next-head=\"\"><meta content=\"ko_KR\" property=\"og:locale\" data-next-head=\"\"><meta content=\"summary_large_image\" property=\"twitter:card\" data-next-head=\"\"><meta content=\"https://kblife-recruiting.career.greetinghr.com/ko/home\" property=\"twitter:url\" data-next-head=\"\"><meta content=\"KB라이프생명 채용\" property=\"twitter:title\" data-next-head=\"\"><meta content=\"KB라이프생명의 채용 홈페이지입니다.\" property=\"twitter:description\" data-next-head=\"\"><meta content=\"https://profiles.greetinghr.com/group/c2181b1c-8054-4fb9-b9fd-091115247599\" property=\"twitter:image\" data-next-head=\"\"><meta name=\"keywords\" content=\"채용, recruit, 면접, 인터뷰, 지원, 스타트업, 대기업, 회사, 직군, 신입, 경력, 무관, 정규직, 계약직, 대규모 채용, 신입채용, 경력채용, 무관채용, 계약직채용, 정규직채용, 채용공고, 수시채용, 인터뷰, KB라이프생명채용, KB라이프생명\" data-next-head=\"\"><meta name=\"google-site-verification\" content=\"pUETCKIVGvMeLEsokiWpX1NPLxzswN0mcJxpsvGjPfM\" data-next-head=\"\"><meta name=\"naver-site-verification\" c",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -794,8 +1424,124 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 79개 중 공고로 인정된 것 없음",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 6297,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 30619,
+    "browser_anchor_count": 79,
+    "unique_links_sample": [
+     {
+      "text": "수호천사 동양생명",
+      "url": "https://www.myangel.co.kr/Mn"
+     },
+     {
+      "text": "회사소개",
+      "url": "https://www.myangel.co.kr/Company/CoMn"
+     },
+     {
+      "text": "CEO인사말",
+      "url": "https://www.myangel.co.kr/Company/Introduce/CoReprCeo"
+     },
+     {
+      "text": "연혁",
+      "url": "https://www.myangel.co.kr/Company/Introduce/CoHis"
+     },
+     {
+      "text": "비전",
+      "url": "https://www.myangel.co.kr/Company/Introduce/CoFv"
+     },
+     {
+      "text": "아이덴티티",
+      "url": "https://www.myangel.co.kr/Company/Introduce/CoBrnd"
+     },
+     {
+      "text": "브랜드",
+      "url": "https://www.myangel.co.kr/Company/Introduce/CoCha"
+     },
+     {
+      "text": "광고",
+      "url": "https://www.myangel.co.kr/Company/Introduce/CoAdvm"
+     },
+     {
+      "text": "ESG",
+      "url": "https://www.myangel.co.kr/Company/ESG/CoSusmEsg"
+     },
+     {
+      "text": "ESG경영원칙/전략",
+      "url": "https://www.myangel.co.kr/Company/ESG/CoSusmEsgPly"
+     },
+     {
+      "text": "지속가능경영 보고서",
+      "url": "https://www.myangel.co.kr/Company/ESG/CoSusmRpt"
+     },
+     {
+      "text": "사회공헌공시",
+      "url": "https://www.myangel.co.kr/Company/ESG/CoCtbPbAno"
+     },
+     {
+      "text": "수호천사봉사단",
+      "url": "https://www.myangel.co.kr/Company/ESG/CoCtbSvc"
+     },
+     {
+      "text": "윤리강령",
+      "url": "https://www.myangel.co.kr/Company/Ethics/CoCoe"
+     },
+     {
+      "text": "행동강령",
+      "url": "https://www.myangel.co.kr/Company/Ethics/CoCond"
+     },
+     {
+      "text": "부정비리제보",
+      "url": "https://www.myangel.co.kr/Company/Ethics/CoFradPrvd"
+     },
+     {
+      "text": "정보교류차단",
+      "url": "https://www.myangel.co.kr/Company/Ethics/CoInExBa"
+     },
+     {
+      "text": "공정거래자율준수",
+      "url": "https://www.myangel.co.kr/Company/Ethics/CoFvPgm"
+     },
+     {
+      "text": "당사현황",
+      "url": "https://www.myangel.co.kr/Company/Ethics/CoFvOpgrPcnd"
+     },
+     {
+      "text": "경영정보",
+      "url": "https://www.myangel.co.kr/Company/Ir/CoMgmtInf"
+     },
+     {
+      "text": "재무정보",
+      "url": "https://www.myangel.co.kr/Company/Ir/CoFnclInf"
+     },
+     {
+      "text": "신용등급",
+      "url": "https://www.myangel.co.kr/Company/Ir/CoCrGrdeDmst"
+     },
+     {
+      "text": "결산공고",
+      "url": "https://www.myangel.co.kr/Company/Ir/CoSetaLst"
+     },
+     {
+      "text": "공시정보",
+      "url": "https://www.myangel.co.kr/Company/Ir/CoPbAno"
+     },
+     {
+      "text": "IR자료실",
+      "url": "https://www.myangel.co.kr/Company/Ir/CoIrData"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 79개 중 공고로 인정된 것 없음"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko\" class=\"pc company\"><head>\n    <title>채용공고 - 수호천사 동양생명</title>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <!-- 01/22 웹접근성 대비 수정 - maximum-scale=1.0 삭제 -->\n\t<meta http-equiv=\"Filename\" content=\"index.html\">\n\t<meta http-equiv=\"Subject\" content=\"수호천사 동양생명\">\n    <meta http-equiv=\"Title\" content=\"수호천사 동양생명\">\n\t<!--<meta name=\"google-site-verification\" content=\"구글키\" />\n    <meta name=\"naver-site-verification\" content=\"네이버키\" />-->\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0\">\n    <meta name=\"format-detection\" content=\"telephone=no, address=no, email=no\">\n\t<meta name=\"apple-mobile-web-app-title\" content=\"수호천사 동양생명\">\n\t<!-- 검색에 사용할 키워드 -->\n\t<meta name=\"keywords\" content=\"수호천사 동양생명\">\n    <meta name=\"robots\" content=\"index, follow\">\n\t<!-- title -->\n\t<meta class=\"meta title\" property=\"og:title\" content=\"채용공고 - 수호천사 동양생명\">\n\t<!-- 상세설명 -->\n\t<meta class=\"meta description\" name=\"description\" content=\"채용공고 - 수호천사 동양생명\">\n\t<meta class=\"meta og description\" property=\"og:description\" content=\"채용공고 - 수호천사 동양생명\">\n\t<!-- 홈페이지 url -->\n\t<meta property=\"og:url\" content=\"운영주소\"><!-- 운영주소 입력 필요 -->\n\t<meta property=\"og:type\" content=\"website\">\n    <meta property=\"og:locale\" content=\"utf-8\">\n    <meta class=\"meta og image\" property=\"og:image\" content=\"/icon/ty_og.png\"><!-- ty_og.png -->\n\t<!-- <meta class=\"meta og image\" property=\"og:image\" content=\"/icon/tyli_og.png\" /> tyli_og.png -->\n\t<!-- <meta class=\"meta og image\" property=\"og:image\" content=\"/icon/android-chrome-192x192.png\" />운영도메인/경로로 수정 필요 -->\n    <meta class=\"meta og image_width\" property=\"og:image:width\" content=\"192\">\n    <meta class=\"meta og image_height\" property=\"og:image:height\" content=\"192\">\n    <meta name=\"twitter:image\" content=\"/icon/android-chrome-192x192.png\"><!-- 운영도메인/경로로 수정 필요 -->\n\t<link rel=\"canonical\" href=\"운영주소\"><!-- 운영주소 입력 필요 -->\n    <link rel=\"icon\" href=\"/icon/favicon.ico\"><!-- 운영도메인/경로로 수정 필요 -->\n\t<link rel=\"shortcut icon\" href=\"/icon/favicon.ico\"><!-- 운영도메인/경로로 수정 필요 -->\n    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/icon/favicon-32x32.png\"><!-- 운영도메인/경로로 수정 필요 -->\n    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/icon/favicon-16x16.png\"><!-- 운영도메인/경로로 수정 필요 -->\n    <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"/icon/android-chrome-192x192.png\"><!-- 운영도메인/경로로 수정 필요 -->\n    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/icon/apple-touch-icon.png\"><!-- 운영도메인/경로로 수정 필요 -->\n    <link rel=\"apple-touch-icon\" href=\"/icon/android-chrome-512x512.png\"><!-- 운영도메인/경로로 수정 필요 -->\n    <link rel=\"theme-color\" content=\"#ffffff\">\n\t<!-- No-Cache 설정 -->\n\t<meta http-equiv=\"Cache-Control\" content=\"no-cache, no-store, must-revalidate\">\n\t<meta http-equiv=\"Pragma\" content=\"no-cache\">\n\t<meta http-equiv=\"Expires\" content=\"0\">\n\n\t<!-- 키보드 보안 관련 리소스 -->\n\t<script async=\"\" src=\"https://loganlz.myangel.co.kr:17743/container_EKEip47R.js\"></script><script async=\"\" src=\"https://",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -820,8 +1566,126 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "링크 0건 — 페이지는 열렸으나 조건에 맞는 공고 링크가 없습니다. link_include 패턴이 실제 공고 주소와 다르거나, 목록 url이 잘못됐을 가능성이 큽니다.",
+   "note": "link_include 패턴 불일치 — 링크는 150개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 52662,
+    "requests_anchor_count": 58,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 46747,
+    "browser_anchor_count": 150,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://www.hanainsure.co.kr/recruit"
+     },
+     {
+      "text": "채용 FAQ",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/faq"
+     },
+     {
+      "text": "하나손해보험",
+      "url": "https://www.hanainsure.co.kr/"
+     },
+     {
+      "text": "하나손해보험소개",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/ceo"
+     },
+     {
+      "text": "인사제도",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/rightPeople"
+     },
+     {
+      "text": "채용정보",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/jobList"
+     },
+     {
+      "text": "회사개요",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/overview"
+     },
+     {
+      "text": "회사연혁",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/history"
+     },
+     {
+      "text": "위치안내",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/address"
+     },
+     {
+      "text": "인재육성",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/educate"
+     },
+     {
+      "text": "인사제도",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/system"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/reward"
+     },
+     {
+      "text": "직무소개",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/duty"
+     },
+     {
+      "text": "영업직",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/callreward"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/callduty"
+     },
+     {
+      "text": "근무환경",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/callmilieu"
+     },
+     {
+      "text": "영업직",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/jobListCall"
+     },
+     {
+      "text": "입사지원 및 수정",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/resumeApply"
+     },
+     {
+      "text": "지원결과확인",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/resultInquiry"
+     },
+     {
+      "text": "채용문의",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/question"
+     },
+     {
+      "text": "등록",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/resumeApplyStep"
+     },
+     {
+      "text": "하나금융그룹",
+      "url": "https://www.hanafn.com/main/index.do"
+     },
+     {
+      "text": "하나은행",
+      "url": "https://www.kebhana.com/"
+     },
+     {
+      "text": "하나증권",
+      "url": "https://www.hanaw.com/main/main/index.cmd"
+     },
+     {
+      "text": "하나카드",
+      "url": "https://www.hanacard.co.kr/index2.jsp"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 150개 있으나 패턴에 맞는 것 0개"
+   },
+   "sample_html_head": "<!DOCTYPE html><html lang=\"ko\"><head><script type=\"text/javascript\" async=\"\" src=\"https://www.google-analytics.com/analytics.js\"></script>\n\t<meta charset=\"UTF-8\">\n\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\">\n\t<meta name=\"format-detection\" content=\"telephone=no, address=no, email=no\">\n\t<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\n\t<meta name=\"Generator\" content=\"\">\n\t<meta name=\"Author\" content=\"\">\n\t<meta name=\"Keywords\" content=\"\">\n\t<meta name=\"Description\" content=\"\">\n\t\n\t<link rel=\"shortcut icon\" href=\"/static/resources/favicon.ico\" type=\"image/x-icon\">\n\t<link rel=\"icon\" href=\"/static/resources/favicon.ico\" type=\"image/x-icon\">\n\t\n\t<link rel=\"stylesheet\" href=\"/static/resources/recruit/css/reset.css?1788073200\">\n\t<link rel=\"stylesheet\" href=\"/static/resources/recruit/css/default.css?1788073200\">\n\t<link rel=\"stylesheet\" href=\"/static/resources/recruit/css/common.css?1788073200\">\n\t<link rel=\"stylesheet\" href=\"/static/resources/recruit/css/detail.css?1788073200\">\n\t<link rel=\"stylesheet\" href=\"/static/resources/recruit/css/font-awesome.css\">\n\t<link rel=\"stylesheet\" href=\"/static/resources/common/plugins/OwlCarousel2-2.3.4/owl.carousel.min.css\">\n\t\t\t\n\t<script type=\"text/javascript\" src=\"/config/env\"></script>\n\t<script type=\"text/javascript\" src=\"/static/resources/common/js/jquery-1.12.0.min.js\"></script>\n\t<script type=\"text/javascript\" src=\"/static/resources/common/js/macro.js?1788073200\"></script>\n\t\n\t<title> 채용공고  | 하나손해보험</title>\n<script type=\"text/javascript\" async=\"\" src=\"https://googleads.g.doubleclick.net/pagead/viewthroughconversion/870462807/?random=1788076666555&amp;cv=11&amp;fst=1788076666555&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45je68q1h1v9104813822za200zd9104813822xec&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385423&amp;u_w=1280&amp;u_h=1600&amp;url=https%3A%2F%2Fwww.hanainsure.co.kr%2Frecruit%2Fnotify%2FjobList&amp;rcb=11&amp;frm=0&amp;tiba=%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0%20%7C%20%ED%95%98%EB%82%98%EC%86%90%ED%95%B4%EB%B3%B4%ED%97%98&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1149087919.1788076667&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4\"></script></head>\n<body>\n\t\t<div id=\"wrap\">\n\t\n\t\t<header id=\"header\">\n\t<div class=\"head_box\">\n\t\t<h1 class=\"logo\">\n\t\t\t<a href=\"/recruit\">\n\t\t\t\t<img src=\"/static/resources/recruit/img/img_logo.png\" alt=\"하나손해보험 채용\">\n\t\t\t</a>\n\t\t</h1>\n\t\t<div>\n\t\t\t<h2 class=\"hidden\">서브 메뉴</h2>\n\t\t\t<ul class=\"sub_nav\">\n\t\t\t\t\t\t\t\t<li><a href=\"/recruit/notify/faq\">채용 FAQ</a></li>\t\n\t\t\t\t<li onclick=\"layerPopupFn.openFn('allmenu_box'); return false;\"><a href=\"javascript:void(0);\">사이트맵</a></li>\n\t\t\t\t<!-- 서버종류에 상관없이 해당서버의 하나손해보험 홈페이지로 이동 - 2020-07-09 : 시바오상 -->\n\t\t\t\t<li><a href=\"../../../\" target=\"_blank\">하나손해보험</a></li>\n\t\t\t\t<!-- <li><a href=\"https://www.hanainsu",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -1003,7 +1867,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-08",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1017,7 +1881,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-03",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1031,7 +1895,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-31",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1045,7 +1909,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1059,7 +1923,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1073,7 +1937,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1087,7 +1951,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1101,7 +1965,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1115,7 +1979,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1129,7 +1993,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1143,7 +2007,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1157,7 +2021,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1171,7 +2035,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1185,7 +2049,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1199,7 +2063,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1213,7 +2077,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1227,7 +2091,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1241,7 +2105,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1255,7 +2119,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1339,7 +2203,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-02",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1353,7 +2217,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-03",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1365,10 +2229,52 @@
    "url": "https://dbgroup.recruiter.co.kr/career/jobs/126654",
    "source_key": "dbgroup",
    "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-09-06",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "f266ac682c21f341",
+   "company": "DB손보",
+   "title": "LD/TC지원",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5587.shtm",
+   "source_key": "idbins",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "aba8e6ef77e3f1b2",
+   "company": "DB손보",
+   "title": "고객상담사",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5584.shtm",
+   "source_key": "idbins",
+   "status": "제외",
    "stage": "notjob",
    "stage_label": "2단계 채용공고 여부",
-   "reason": "채용공고 아님 — 제목에 '사회공헌' 포함, 본문에 채용 항목 없음",
-   "deadline": "2026-09-06",
+   "reason": "채용공고 아님 — 제목에 채용/모집 표현이 없고 본문에도 담당업무·자격요건·접수기간이 없음",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "b0e932f8e9f6a5a7",
+   "company": "DB손보",
+   "title": "급여 및 복리후생",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1732.shtm",
+   "source_key": "idbins",
+   "status": "제외",
+   "stage": "notjob",
+   "stage_label": "2단계 채용공고 여부",
+   "reason": "채용공고 아님 — 제목에 '복리후생' 포함, 채용/모집 표현 없음",
+   "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1387,44 +2293,30 @@
    "first_seen": "2026-08-30"
   },
   {
-   "id": "da3272704063f154",
+   "id": "c17c40d938a4446f",
    "company": "DB손보",
-   "title": "모집분야별 지원방법",
-   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1752.shtm",
+   "title": "사무지원직",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5584(1).shtm",
    "source_key": "idbins",
    "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 본문 앞부분에서 '신입' 발견 (경력/정규직 표현 없음)",
-   "deadline": "",
+   "stage": "notjob",
+   "stage_label": "2단계 채용공고 여부",
+   "reason": "채용공고 아님 — 제목에 채용/모집 표현이 없고 본문에도 담당업무·자격요건·접수기간이 없음",
+   "deadline": "2025-04-27",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
   {
-   "id": "150e2740d8948391",
+   "id": "abb5e1d656444ab6",
    "company": "DB손보",
-   "title": "보험모집질서 신고센터안내",
-   "url": "https://www.idbins.com/pc/bizxpress/ct/rp/FWCUSV1314.shtm",
-   "source_key": "idbins",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
-   "deadline": "",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
-  },
-  {
-   "id": "30ec9aaa8f7da2a8",
-   "company": "DB손보",
-   "title": "비정기채용공고",
-   "url": "https://www.idbins.com/FWCOMV6572.do",
+   "title": "소액보상전담직",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5582.shtm",
    "source_key": "idbins",
    "status": "제외",
    "stage": "employment",
    "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 본문 앞부분에서 '신입' 발견 (경력/정규직 표현 없음)",
-   "deadline": "",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-04-05",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1437,22 +2329,64 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
   {
-   "id": "7edc6d2b8c4457fc",
+   "id": "21cc0bb0326b48fc",
    "company": "DB손보",
-   "title": "채용관 채용관홈 인재상 인재양성 인사제도 급여 및 복리후생 모집분야 대졸신입 경력사원 소액보상전담직 사무지원직 고객상담사 장애인상담원 텔레마케터 LD/TC지원 비정기채용공고 채용공고 모집분야별 지원방법",
-   "url": "https://www.idbins.com/FWCOMV1725.do",
+   "title": "인사제도",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1731.shtm",
+   "source_key": "idbins",
+   "status": "제외",
+   "stage": "notjob",
+   "stage_label": "2단계 채용공고 여부",
+   "reason": "채용공고 아님 — 제목에 '인사제도' 포함, 안내/메뉴성 페이지로 추정",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "0269085485fb70f3",
+   "company": "DB손보",
+   "title": "인재양성",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1727.shtm",
+   "source_key": "idbins",
+   "status": "제외",
+   "stage": "notjob",
+   "stage_label": "2단계 채용공고 여부",
+   "reason": "채용공고 아님 — 제목에 채용/모집 표현이 없고 본문에도 담당업무·자격요건·접수기간이 없음",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "e61eaa18b78821fb",
+   "company": "DB손보",
+   "title": "장애인상담원",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5585.shtm",
    "source_key": "idbins",
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
-   "deadline": "2026-10-06",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-08-30"
+  },
+  {
+   "id": "52927211ab702080",
+   "company": "DB손보",
+   "title": "텔레마케터",
+   "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5586.shtm",
+   "source_key": "idbins",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1465,7 +2399,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-30",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1479,7 +2413,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-30",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1493,7 +2427,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-30",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1507,7 +2441,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-30",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1521,7 +2455,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-02",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1563,7 +2497,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-02",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1577,7 +2511,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-01",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1591,22 +2525,8 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-02",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
-  },
-  {
-   "id": "e403d66b69d0e653",
-   "company": "KB금융지주",
-   "title": "Apply",
-   "url": "https://careers.kbfg.com/apply/apply",
-   "source_key": "careers_kbfg",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 본문 앞부분에서 '계약직' 발견 (경력/정규직 표현 없음)",
-   "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1619,7 +2539,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-30",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1661,7 +2581,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-08",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1675,7 +2595,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-09-06",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1759,7 +2679,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-31",
    "has_detail": false,
    "first_seen": "2026-08-30"
@@ -1830,7 +2750,7 @@
    "stage": "employment",
    "stage_label": "3단계 고용형태",
    "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "마감",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1840,11 +2760,11 @@
    "title": "AI Engineer 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260519.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1857,7 +2777,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-12-31",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1868,11 +2788,11 @@
    "title": "Deals PMI / Strategy 전문팀 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r251016.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1913,7 +2833,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-08-30",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -1924,11 +2844,11 @@
    "title": "IFRS 18호 SAP 영향 자문 컨설턴트 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260716.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1938,11 +2858,11 @@
    "title": "LLMOps Engineer 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260519-2.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1952,11 +2872,11 @@
    "title": "PE Group Transaction Services Professional 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-4.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1966,11 +2886,11 @@
    "title": "PEF Tax Service팀 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r251201-2.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1980,11 +2900,11 @@
    "title": "PI/ERP Consultant 경력직 채용(계약직)",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260710-2.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -1994,11 +2914,11 @@
    "title": "PI/ERP Consultant 경력직 채용(정규직)",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260710-1.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2036,11 +2956,11 @@
    "title": "Risk Assurance 본부 SAP 전문가 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260428-3.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2050,11 +2970,11 @@
    "title": "Risk Assurance 본부 SPA팀 IT감사/컨설팅 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260821.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2064,11 +2984,11 @@
    "title": "Risk Assurance 본부 SPA팀 보안전문가 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260428.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2078,11 +2998,11 @@
    "title": "Risk Assurance 본부 Trust팀 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260106.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2092,11 +3012,11 @@
    "title": "Risk Assurance 본부 Trust팀 경력직 채용 - Cybersecurity",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-2.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2106,11 +3026,11 @@
    "title": "Risk Assurance 본부 Trust팀 경력직 채용 - 내부감사",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260812-1.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2120,11 +3040,11 @@
    "title": "System Engineer 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260519-3.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2138,7 +3058,7 @@
    "stage": "employment",
    "stage_label": "3단계 고용형태",
    "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
-   "deadline": "마감",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2148,11 +3068,11 @@
    "title": "공공부문 경력 컨설턴트 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r240913.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2162,11 +3082,11 @@
    "title": "글로벌본부 Cross-Border IPO 및 컨설팅 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260804.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2176,11 +3096,11 @@
    "title": "금융본부 LLM/Data Engineer 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260304.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2190,11 +3110,11 @@
    "title": "바이오플랫폼 경력직 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260511-3.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2208,7 +3128,7 @@
    "stage": "employment",
    "stage_label": "3단계 고용형태",
    "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "마감",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2218,11 +3138,11 @@
    "title": "컨설팅 프로젝트 경력직 컨설턴트 채용",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260209.html",
    "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 본문에 마감 문구가 있어 종료된 공고로 판단",
-   "deadline": "마감",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — 수집 전용 실행",
+   "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
   },
@@ -2263,7 +3183,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -2305,7 +3225,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -2319,7 +3239,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -2389,7 +3309,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "2026-11-16",
    "has_detail": true,
    "first_seen": "2026-08-30"
@@ -2473,7 +3393,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": false,
    "first_seen": "2026-08-30"
@@ -2487,7 +3407,7 @@
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "reason": "AI 판단 전 — 수집 전용 실행",
    "deadline": "",
    "has_detail": false,
    "first_seen": "2026-08-30"
