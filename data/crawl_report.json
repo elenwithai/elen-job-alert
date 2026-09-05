@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-09-05 08:10",
+ "generated_at": "2026-09-06 08:10",
  "summary": {
   "crawled_total": 151,
   "passed": 0,
   "waiting": 64,
   "excluded_notjob": 0,
-  "excluded_employment": 2,
+  "excluded_employment": 0,
   "excluded_expired": 0,
   "excluded_ai": 0
  },
@@ -157,9 +157,9 @@
    "key": "hanwhain",
    "company": "한화생명/한화손보",
    "url": "https://www.hanwhain.com/portal/apply/recruit",
-   "list_ok": true,
+   "list_ok": false,
    "method": "browser",
-   "fallback_used": true,
+   "fallback_used": false,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -170,98 +170,8 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개",
-   "sample_links": [],
-   "probe": {
-    "requests_status": 200,
-    "requests_error": "",
-    "requests_html_len": 2489,
-    "requests_anchor_count": 0,
-    "browser_ok": true,
-    "browser_error": "",
-    "browser_html_len": 510039,
-    "browser_anchor_count": 28,
-    "unique_links_sample": [
-     {
-      "text": "",
-      "url": "https://www.hanwhain.com/portal"
-     },
-     {
-      "text": "걸어온 길",
-      "url": "https://www.hanwhain.com/portal/hanwha/history"
-     },
-     {
-      "text": "핵심가치",
-      "url": "https://www.hanwhain.com/portal/hanwha/key-value"
-     },
-     {
-      "text": "브랜드비전",
-      "url": "https://www.hanwhain.com/portal/hanwha/brand"
-     },
-     {
-      "text": "계열사 소개",
-      "url": "https://www.hanwhain.com/portal/subsidiary"
-     },
-     {
-      "text": "채용공고",
-      "url": "https://www.hanwhain.com/portal/apply/recruit"
-     },
-     {
-      "text": "인재 POOL",
-      "url": "https://www.hanwhain.com/portal/apply/pool"
-     },
-     {
-      "text": "자주하는 질문",
-      "url": "https://www.hanwhain.com/portal/inquiry/faq"
-     },
-     {
-      "text": "1:1문의",
-      "url": "https://www.hanwhain.com/portal/mypage/?rtn=qna"
-     },
-     {
-      "text": "로그인",
-      "url": "https://www.hanwhain.com/portal/login/login"
-     },
-     {
-      "text": "개인정보처리방침",
-      "url": "https://www.hanwhain.com/portal/policies/PrivacyPolicy"
-     },
-     {
-      "text": "이용약관",
-      "url": "https://www.hanwhain.com/portal/policies/TermsOfService"
-     },
-     {
-      "text": "한화 그룹",
-      "url": "https://www.hanwha.co.kr"
-     },
-     {
-      "text": "YouTube",
-      "url": "https://www.youtube.com/user/hanwhadays"
-     },
-     {
-      "text": "Instagram",
-      "url": "https://www.instagram.com/hanwhadays/"
-     },
-     {
-      "text": "facebook",
-      "url": "https://www.facebook.com/hanwhadays"
-     },
-     {
-      "text": "x",
-      "url": "https://x.com/hanwha_official"
-     },
-     {
-      "text": "blog",
-      "url": "https://blog.naver.com/hanwhadays"
-     }
-    ],
-    "matched_by_pattern": 0,
-    "link_include": [
-     "https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="
-    ],
-    "verdict": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개"
-   },
+   "error": "렌더링 실패: TimeoutError",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -295,7 +205,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 33719,
+    "browser_html_len": 33718,
     "browser_anchor_count": 47,
     "unique_links_sample": [
      {
@@ -370,7 +280,7 @@
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/21953"
     },
     {
-     "title": "접수중 디지털보안 담당자(경력)(~9/10까지 연장) D-5 2026.08.18 ~ 2026.09.10 23:59 수시 일반채",
+     "title": "접수중 디지털보안 담당자(경력)(~9/10까지 연장) D-4 2026.08.18 ~ 2026.09.10 23:59 수시 일반채",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/125192"
     },
     {
@@ -484,35 +394,35 @@
    "note": "",
    "sample_links": [
     {
-     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125713"
     },
     {
-     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125752"
     },
     {
-     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125777"
     },
     {
-     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125772"
     },
     {
-     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125828"
     },
     {
-     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125801"
     },
     {
-     "title": "공채 일반채용 신입 [DB Inc.] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB Inc.] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125826"
     },
     {
-     "title": "공채 일반채용 신입 [DB하이텍] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-27",
+     "title": "공채 일반채용 신입 [DB하이텍] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-26",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125818"
     }
    ],
@@ -623,8 +533,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 3,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -634,11 +544,11 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026년 현대해상 대졸 신입사원 채용 D-16 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 신",
+     "title": "접수중 2026년 현대해상 대졸 신입사원 채용 D-15 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 신",
      "url": "https://hi.recruiter.co.kr/career/jobs/126918"
     },
     {
-     "title": "접수중 2026년 현대해상 하반기 경력직 채용 D-9 2026.09.03 ~ 2026.09.14 23:59 수시 일반채용 경력",
+     "title": "접수중 2026년 현대해상 하반기 경력직 채용 D-8 2026.09.03 ~ 2026.09.14 23:59 수시 일반채용 경력",
      "url": "https://hi.recruiter.co.kr/career/jobs/126532"
     },
     {
@@ -648,7 +558,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 1,
+    "employment": 0,
     "expired": 0
    }
   },
@@ -1057,7 +967,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59119,
+    "browser_html_len": 59123,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1194,35 +1104,35 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 금융감사본부 Digital Audit, AI 및 리스크 계량 분석가 [경력] D-1 2026.08.20 ~ 2026.0",
+     "title": "접수중 금융감사본부 Digital Audit, AI 및 리스크 계량 분석가 [경력] D-Day 2026.08.20 ~ 2026",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125660"
     },
     {
-     "title": "접수중 EY Parthenon VCS 팀(Value Creation Strategy, 운영혁신전략) 컨설턴트 D-1 2026.",
+     "title": "접수중 EY Parthenon VCS 팀(Value Creation Strategy, 운영혁신전략) 컨설턴트 D-Day 202",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125807"
     },
     {
-     "title": "접수중 EY Parthenon VCS팀(Value Creation Strategy, 운영혁신전략) 채용 전환형 인턴 D-1 2",
+     "title": "접수중 EY Parthenon VCS팀(Value Creation Strategy, 운영혁신전략) 채용 전환형 인턴 D-Day",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125812"
     },
     {
-     "title": "접수중 세무부문 세무IT 백앤드 개발자 채용 D-1 2026.08.26 ~ 2026.09.06 23:59 수시 일반채용 경력",
+     "title": "접수중 세무부문 세무IT 백앤드 개발자 채용 D-Day 2026.08.26 ~ 2026.09.06 23:59 수시 일반채용 경",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126334"
     },
     {
-     "title": "접수중 세무 국내조세1본부(TPC) 경력 D-1 2026.08.28 ~ 2026.09.06 23:59 수시 일반채용 경력",
+     "title": "접수중 세무 국내조세1본부(TPC) 경력 D-Day 2026.08.28 ~ 2026.09.06 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126702"
     },
     {
-     "title": "접수중 Talent팀 인사운영 인턴 D-1 2026.08.28 ~ 2026.09.06 23:59 수시 일반채용 인턴",
+     "title": "접수중 Talent팀 인사운영 인턴 D-Day 2026.08.28 ~ 2026.09.06 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126718"
     },
     {
-     "title": "접수중 컨설팅부문 SAP SuccessFactors 컨설턴트 인턴 D-1 2026.08.28 ~ 2026.09.06 23:59",
+     "title": "접수중 컨설팅부문 SAP SuccessFactors 컨설턴트 인턴 D-Day 2026.08.28 ~ 2026.09.06 23:",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126753"
     },
     {
-     "title": "접수중 컨설팅부문 자동차 산업 CRM 컨설팅 인턴 (일본어 가능자) D-2 2026.08.31 ~ 2026.09.07 23:5",
+     "title": "접수중 컨설팅부문 자동차 산업 CRM 컨설팅 인턴 (일본어 가능자) D-1 2026.08.31 ~ 2026.09.07 23:5",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124983"
     }
    ],
@@ -1282,8 +1192,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 17,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1327,7 +1237,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 1,
+    "employment": 0,
     "expired": 0
    }
   },
@@ -1409,7 +1319,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181143,
+    "browser_html_len": 181126,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -1623,7 +1533,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 47031,
+    "browser_html_len": 47052,
     "browser_anchor_count": 151,
     "unique_links_sample": [
      {
@@ -1795,7 +1705,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-23 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-22 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/126990"
     },
     {
@@ -1807,7 +1717,7 @@
      "url": "https://abl.recruiter.co.kr/career/jobs/125709"
     },
     {
-     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-3 2026.08.19 ~ 2026.09.08 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-2 2026.08.19 ~ 2026.09.08 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/125457"
     }
    ],
