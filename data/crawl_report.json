@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-09-12 08:10",
+ "generated_at": "2026-09-13 08:10",
  "summary": {
-  "crawled_total": 187,
+  "crawled_total": 189,
   "passed": 0,
-  "waiting": 75,
+  "waiting": 76,
   "excluded_notjob": 0,
   "excluded_employment": 1,
-  "excluded_expired": 1,
+  "excluded_expired": 0,
   "excluded_ai": 0
  },
  "sources": [
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 67283,
+    "browser_html_len": 67284,
     "browser_anchor_count": 100,
     "unique_links_sample": [
      {
@@ -157,9 +157,9 @@
    "key": "hanwhain",
    "company": "한화생명/한화손보",
    "url": "https://www.hanwhain.com/portal/apply/recruit",
-   "list_ok": false,
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
+   "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -170,8 +170,98 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "렌더링 실패: TimeoutError",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
+   "error": "",
+   "note": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개",
+   "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 2489,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 509976,
+    "browser_anchor_count": 28,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://www.hanwhain.com/portal"
+     },
+     {
+      "text": "걸어온 길",
+      "url": "https://www.hanwhain.com/portal/hanwha/history"
+     },
+     {
+      "text": "핵심가치",
+      "url": "https://www.hanwhain.com/portal/hanwha/key-value"
+     },
+     {
+      "text": "브랜드비전",
+      "url": "https://www.hanwhain.com/portal/hanwha/brand"
+     },
+     {
+      "text": "계열사 소개",
+      "url": "https://www.hanwhain.com/portal/subsidiary"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://www.hanwhain.com/portal/apply/recruit"
+     },
+     {
+      "text": "인재 POOL",
+      "url": "https://www.hanwhain.com/portal/apply/pool"
+     },
+     {
+      "text": "자주하는 질문",
+      "url": "https://www.hanwhain.com/portal/inquiry/faq"
+     },
+     {
+      "text": "1:1문의",
+      "url": "https://www.hanwhain.com/portal/mypage/?rtn=qna"
+     },
+     {
+      "text": "로그인",
+      "url": "https://www.hanwhain.com/portal/login/login"
+     },
+     {
+      "text": "개인정보처리방침",
+      "url": "https://www.hanwhain.com/portal/policies/PrivacyPolicy"
+     },
+     {
+      "text": "이용약관",
+      "url": "https://www.hanwhain.com/portal/policies/TermsOfService"
+     },
+     {
+      "text": "한화 그룹",
+      "url": "https://www.hanwha.co.kr"
+     },
+     {
+      "text": "YouTube",
+      "url": "https://www.youtube.com/user/hanwhadays"
+     },
+     {
+      "text": "Instagram",
+      "url": "https://www.instagram.com/hanwhadays/"
+     },
+     {
+      "text": "facebook",
+      "url": "https://www.facebook.com/hanwhadays"
+     },
+     {
+      "text": "x",
+      "url": "https://x.com/hanwha_official"
+     },
+     {
+      "text": "blog",
+      "url": "https://blog.naver.com/hanwhadays"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개"
+   },
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -205,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 33719,
+    "browser_html_len": 33716,
     "browser_anchor_count": 47,
     "unique_links_sample": [
      {
@@ -383,8 +473,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 2,
-   "detail_ok": 2,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -398,37 +488,37 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/128059"
     },
     {
-     "title": "수시 일반채용 경력 [DB하이텍] 인사기획 경력채용 수시 26.09.10~26.09.23 23:59 D-11",
+     "title": "수시 일반채용 경력 [DB하이텍] 인사기획 경력채용 수시 26.09.10~26.09.23 23:59 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/128169"
     },
     {
-     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-20",
+     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-19",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125713"
     },
     {
-     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-20",
+     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-19",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125752"
     },
     {
-     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-20",
+     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-19",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125777"
     },
     {
-     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-20",
+     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-19",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125772"
     },
     {
-     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-20",
+     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-19",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125828"
     },
     {
-     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-20",
+     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-19",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125801"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 1,
+    "employment": 0,
     "expired": 0
    }
   },
@@ -544,11 +634,11 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026년 현대해상 대졸 신입사원 채용 D-9 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 신입",
+     "title": "접수중 2026년 현대해상 대졸 신입사원 채용 D-8 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 신입",
      "url": "https://hi.recruiter.co.kr/career/jobs/126918"
     },
     {
-     "title": "접수중 2026년 현대해상 하반기 경력직 채용 D-2 2026.09.03 ~ 2026.09.14 23:59 수시 일반채용 경력",
+     "title": "접수중 2026년 현대해상 하반기 경력직 채용 D-1 2026.09.03 ~ 2026.09.14 23:59 수시 일반채용 경력",
      "url": "https://hi.recruiter.co.kr/career/jobs/126532"
     },
     {
@@ -668,9 +758,9 @@
    "key": "woorifg",
    "company": "우리금융지주",
    "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do",
-   "list_ok": false,
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
+   "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -681,8 +771,124 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "렌더링 실패: Error",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
+   "error": "",
+   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 165개 중 공고로 인정된 것 없음",
+   "sample_links": [],
+   "probe": {
+    "requests_status": null,
+    "requests_error": "SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)')))",
+    "requests_html_len": 0,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 38168,
+    "browser_anchor_count": 165,
+    "unique_links_sample": [
+     {
+      "text": "우리금융그룹 로고",
+      "url": "https://www.woorifg.com/"
+     },
+     {
+      "text": "ENG",
+      "url": "https://www.woorifg.com/eng/"
+     },
+     {
+      "text": "JPN",
+      "url": "https://www.woorifg.com/jpn/"
+     },
+     {
+      "text": "CHN",
+      "url": "https://www.woorifg.com/chn/"
+     },
+     {
+      "text": "그룹소개",
+      "url": "https://www.woorifg.com/kor/company/introduce/summary/contentsid/32/index.do"
+     },
+     {
+      "text": "현황",
+      "url": "https://www.woorifg.com/kor/company/network/domestic/contentsid/46/index.do"
+     },
+     {
+      "text": "조직도",
+      "url": "https://www.woorifg.com/kor/company/introduce/organization-chart/contentsid/220/index.do"
+     },
+     {
+      "text": "경영진",
+      "url": "https://www.woorifg.com/kor/company/introduce/management/contentsid/221/index.do"
+     },
+     {
+      "text": "연혁",
+      "url": "https://www.woorifg.com/kor/company/introduce/history/contentsid/219/index.do"
+     },
+     {
+      "text": "CEO 소개",
+      "url": "https://www.woorifg.com/kor/company/ceo/greeting/contentsid/43/index.do"
+     },
+     {
+      "text": "프로필",
+      "url": "https://www.woorifg.com/kor/company/ceo/profile/contentsid/44/index.do"
+     },
+     {
+      "text": "글로벌 네트워크",
+      "url": "https://www.woorifg.com/kor/company/network/global/contentsid/47/index.do"
+     },
+     {
+      "text": "기업 아이덴티티",
+      "url": "https://www.woorifg.com/kor/company/ci/ci/contentsid/48/index.do"
+     },
+     {
+      "text": "디자인 모티프",
+      "url": "https://www.woorifg.com/kor/company/ci/br/contentsid/448/index.do"
+     },
+     {
+      "text": "공식 서체",
+      "url": "https://www.woorifg.com/kor/company/ci/font/contentsid/581/index.do"
+     },
+     {
+      "text": "그룹 캐릭터",
+      "url": "https://www.woorifg.com/kor/company/ci/character/contentsid/621/index.do"
+     },
+     {
+      "text": "찾아오시는 길",
+      "url": "https://www.woorifg.com/kor/company/location/contentsid/49/index.do"
+     },
+     {
+      "text": "기업지배구조",
+      "url": "https://www.woorifg.com/kor/main/index.do?goDetail=Y&pageNumber=1&"
+     },
+     {
+      "text": "이사회",
+      "url": "https://www.woorifg.com/kor/corp-governance/board-of-directors/configuration-status/contentsid/58/index.do"
+     },
+     {
+      "text": "주요기능",
+      "url": "https://www.woorifg.com/kor/corp-governance/board-of-directors/key-function/contentsid/59/index.do"
+     },
+     {
+      "text": "이사회 공시",
+      "url": "https://www.woorifg.com/kor/corp-governance/governance-structure/list.do"
+     },
+     {
+      "text": "관련규정",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/articles-of-association/contentsid/64/index.do"
+     },
+     {
+      "text": "지배구조 내부규범",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/internal-norms/contentsid/65/index.do"
+     },
+     {
+      "text": "이사회 규정",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/regulation/contentsid/66/index.do"
+     },
+     {
+      "text": "사외이사 독립성 가이드라인",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/outside/contentsid/470/index.do"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 165개 중 공고로 인정된 것 없음"
+   },
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -775,7 +981,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59166,
+    "browser_html_len": 59170,
     "browser_anchor_count": 122,
     "unique_links_sample": [
      {
@@ -901,8 +1107,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -912,41 +1118,41 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 컨설팅부문 수요예측 모델 고도화 인턴 D-1 2026.09.04 ~ 2026.09.13 00:00 수시 일반채용 인턴",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127540"
-    },
-    {
-     "title": "접수중 컨설팅부문 고객 분석 및 추천모델 개발 인턴 D-1 2026.09.04 ~ 2026.09.13 00:00 수시 일반채용",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127544"
-    },
-    {
-     "title": "접수중 금융컨설팅부문 Global Finance Transformation팀 컨설턴트 D-1 2026.07.20 ~ 2026.",
+     "title": "접수중 금융컨설팅부문 Global Finance Transformation팀 컨설턴트 D-Day 2026.07.20 ~ 202",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/118639"
     },
     {
-     "title": "접수중 컨설팅부문 통신 컨설턴트 경력직 D-1 2026.07.24 ~ 2026.09.13 23:59 수시 일반채용 경력",
+     "title": "접수중 컨설팅부문 통신 컨설턴트 경력직 D-Day 2026.07.24 ~ 2026.09.13 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/123054"
     },
     {
-     "title": "접수중 금융컨설팅부문 Finance팀 컨설턴트 경력직 D-1 2026.07.30 ~ 2026.09.13 23:59 수시 일반채",
+     "title": "접수중 금융컨설팅부문 Finance팀 컨설턴트 경력직 D-Day 2026.07.30 ~ 2026.09.13 23:59 수시 일",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/123631"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 정규전환형 인턴 D-1 2026.08.31 ~ 2026.09.13 23:59 수",
+     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 정규전환형 인턴 D-Day 2026.08.31 ~ 2026.09.13 23:59",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126973"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-1 2026.09.01 ~ 2026.09.13 23:59 수시 일",
+     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-Day 2026.09.01 ~ 2026.09.13 23:59 수시",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127131"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A D-1 2026.09.01 ~ 2026.09.1",
+     "title": "접수중 전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A D-Day 2026.09.01 ~ 2026.09",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127135"
+    },
+    {
+     "title": "접수중 세무부문 Fullstack개발자 (경력) D-Day 2026.09.02 ~ 2026.09.13 23:59 수시 일반채용",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127222"
+    },
+    {
+     "title": "접수중 감사부문 PPT 디자이너 (신입/경력) D-1 2026.09.04 ~ 2026.09.14 08:00 수시 일반채용 신입",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127494"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 0,
+    "employment": 1,
     "expired": 0
    }
   },
@@ -954,9 +1160,9 @@
    "key": "join_deloitte",
    "company": "Deloitte안진",
    "url": "https://join.deloitte.co.kr/",
-   "list_ok": false,
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
+   "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -967,8 +1173,23 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "렌더링 실패: TimeoutError",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
+   "error": "",
+   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
+   "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 2438,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 2417,
+    "browser_anchor_count": 0,
+    "unique_links_sample": [],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
+   },
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -1112,7 +1333,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181145,
+    "browser_html_len": 181128,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -1217,7 +1438,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 1
+    "expired": 0
    }
   },
   {
@@ -1388,7 +1609,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 47076,
+    "browser_html_len": 47051,
     "browser_anchor_count": 151,
     "unique_links_sample": [
      {
@@ -1560,11 +1781,11 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-16 2026.09.10 ~ 2026.09.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-15 2026.09.10 ~ 2026.09.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/128154"
     },
     {
-     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-16 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-15 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/126990"
     },
     {
@@ -2567,6 +2788,34 @@
    "deadline": "2026-09-14",
    "has_detail": true,
    "first_seen": "2026-09-11"
+  },
+  {
+   "id": "f9c3bbe958ee56bf",
+   "company": "EY한영",
+   "title": "접수중 감사부문 디지털 감사 AI 리스크 분석 인턴 (전환형) D-1 2026.09.10 ~ 2026.09.14 09:00 수시 일반채용 신입",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128101",
+   "source_key": "eycareers_kr",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-09-14",
+   "has_detail": true,
+   "first_seen": "2026-09-13"
+  },
+  {
+   "id": "e7800d10c93cd687",
+   "company": "EY한영",
+   "title": "접수중 감사부문 영어 통번역 및 감사지원 (신입/경력) D-1 2026.09.04 ~ 2026.09.14 08:00 수시 일반채용 신입/경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127577",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-14",
+   "has_detail": true,
+   "first_seen": "2026-09-13"
   },
   {
    "id": "59e0351f8472689b",
