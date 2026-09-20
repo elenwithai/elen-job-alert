@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-09-20 08:10",
+ "generated_at": "2026-09-21 08:10",
  "summary": {
   "crawled_total": 219,
   "passed": 0,
-  "waiting": 90,
+  "waiting": 88,
   "excluded_notjob": 0,
   "excluded_employment": 0,
-  "excluded_expired": 0,
+  "excluded_expired": 2,
   "excluded_ai": 0
  },
  "sources": [
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 67774,
+    "browser_html_len": 67773,
     "browser_anchor_count": 100,
     "unique_links_sample": [
      {
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 510084,
+    "browser_html_len": 510114,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -295,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 33986,
+    "browser_html_len": 33985,
     "browser_anchor_count": 47,
     "unique_links_sample": [
      {
@@ -370,7 +370,7 @@
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/21953"
     },
     {
-     "title": "접수중 GA상품팀 디자이너(계약직) D-2 2026.09.17 ~ 2026.09.22 23:59 수시 일반채용 경력 무관",
+     "title": "접수중 GA상품팀 디자이너(계약직) D-1 2026.09.17 ~ 2026.09.22 23:59 수시 일반채용 경력 무관",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128622"
     },
     {
@@ -484,35 +484,35 @@
    "note": "",
    "sample_links": [
     {
-     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125713"
     },
     {
-     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125752"
     },
     {
-     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125777"
     },
     {
-     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125772"
     },
     {
-     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125828"
     },
     {
-     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125801"
     },
     {
-     "title": "공채 일반채용 신입 [DB Inc.] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB Inc.] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125826"
     },
     {
-     "title": "공채 일반채용 신입 [DB하이텍] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-12",
+     "title": "공채 일반채용 신입 [DB하이텍] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125818"
     }
    ],
@@ -634,7 +634,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026년 현대해상 대졸 신입사원 채용 D-1 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 신입",
+     "title": "접수중 2026년 현대해상 대졸 신입사원 채용 D-Day 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 ",
      "url": "https://hi.recruiter.co.kr/career/jobs/126918"
     },
     {
@@ -719,8 +719,8 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 5,
-   "links_found": 5,
+   "browser_links": 3,
+   "links_found": 3,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -736,16 +736,8 @@
      "url": "https://careers.kbfg.com/apply/917"
     },
     {
-     "title": "부동산운용본부 경력 채용 (육아휴직 대체)",
-     "url": "https://careers.kbfg.com/apply/914"
-    },
-    {
      "title": "준법추진부 자금세탁방지업무 경력직(연봉계약직) 채용",
      "url": "https://careers.kbfg.com/apply/897"
-    },
-    {
-     "title": "법무지원부 사내변호사 경력직(연봉계약직) 채용",
-     "url": "https://careers.kbfg.com/apply/896"
     },
     {
      "title": "투자자산관리팀 경력직(연봉계약직) 채용",
@@ -755,7 +747,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 2
    }
   },
   {
@@ -976,7 +968,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -985,8 +977,8 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59175,
-    "browser_anchor_count": 122,
+    "browser_html_len": 59146,
+    "browser_anchor_count": 121,
     "unique_links_sample": [
      {
       "text": "KMPG careers",
@@ -1093,7 +1085,7 @@
     "link_include": [
      "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -1122,35 +1114,35 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 세무부문 조세전략 및 자문 전문가 D-1 2026.09.01 ~ 2026.09.21 09:00 수시 일반채용 경력",
+     "title": "접수중 세무부문 조세전략 및 자문 전문가 D-Day 2026.09.01 ~ 2026.09.21 09:00 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128656"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-7 2026.09.15 ~ 2026.09.27 23:59 수시 일",
+     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-6 2026.09.15 ~ 2026.09.27 23:59 수시 일",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127131"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A D-7 2026.09.15 ~ 2026.09.2",
+     "title": "접수중 전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A D-6 2026.09.15 ~ 2026.09.2",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127135"
     },
     {
-     "title": "접수중 EY-Parthenon Strategy 팀 신입/경력직 컨설턴트 D-7 2026.09.14 ~ 2026.09.27 23",
+     "title": "접수중 EY-Parthenon Strategy 팀 신입/경력직 컨설턴트 D-6 2026.09.14 ~ 2026.09.27 23",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128418"
     },
     {
-     "title": "접수중 컨설팅부문 Digital & Emerging Tech 경력직 컨설턴트 D-10 2026.09.09 ~ 2026.09.3",
+     "title": "접수중 컨설팅부문 Digital & Emerging Tech 경력직 컨설턴트 D-9 2026.09.09 ~ 2026.09.30",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128016"
     },
     {
-     "title": "접수중 금융감사본부 보험계리 [경력] D-10 2026.09.15 ~ 2026.09.30 23:59 수시 일반채용 경력",
+     "title": "접수중 금융감사본부 보험계리 [경력] D-9 2026.09.15 ~ 2026.09.30 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128534"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal1 경력직 D-11 2026.09.16 ~ 2026.10.01 23:59 수시 일반채용 경력",
+     "title": "접수중 전략·재무자문부문 Deal1 경력직 D-10 2026.09.16 ~ 2026.10.01 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128666"
     },
     {
-     "title": "접수중 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] D-15 2026.09.17 ~ 2026.10.05 00:0",
+     "title": "접수중 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] D-14 2026.09.17 ~ 2026.10.05 00:0",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128728"
     }
    ],
@@ -1333,11 +1325,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 187545,
+    "requests_html_len": 187598,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181127,
+    "browser_html_len": 181129,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -1613,7 +1605,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 47082,
+    "browser_html_len": 47092,
     "browser_anchor_count": 151,
     "unique_links_sample": [
      {
@@ -1797,11 +1789,11 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-8 2026.09.10 ~ 2026.09.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-7 2026.09.10 ~ 2026.09.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/128154"
     },
     {
-     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-8 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-7 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/126990"
     },
     {
@@ -3623,10 +3615,10 @@
    "title": "법무지원부 사내변호사 경력직(연봉계약직) 채용",
    "url": "https://careers.kbfg.com/apply/896",
    "source_key": "careers_kbfg",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-09-20 마감으로 오늘(2026-09-21) 기준 경과",
    "deadline": "2026-09-20",
    "has_detail": true,
    "first_seen": "2026-09-11"
@@ -3637,10 +3629,10 @@
    "title": "부동산운용본부 경력 채용 (육아휴직 대체)",
    "url": "https://careers.kbfg.com/apply/914",
    "source_key": "careers_kbfg",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-09-20 마감으로 오늘(2026-09-21) 기준 경과",
    "deadline": "2026-09-20",
    "has_detail": true,
    "first_seen": "2026-09-15"
