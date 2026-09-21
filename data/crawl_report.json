@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-09-21 08:10",
+ "generated_at": "2026-09-22 08:11",
  "summary": {
-  "crawled_total": 219,
+  "crawled_total": 226,
   "passed": 0,
-  "waiting": 88,
+  "waiting": 91,
   "excluded_notjob": 0,
-  "excluded_employment": 0,
+  "excluded_employment": 2,
   "excluded_expired": 2,
   "excluded_ai": 0
  },
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 510114,
+    "browser_html_len": 506174,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -355,8 +355,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 3,
+   "detail_ok": 3,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -370,7 +370,19 @@
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/21953"
     },
     {
-     "title": "접수중 GA상품팀 디자이너(계약직) D-1 2026.09.17 ~ 2026.09.22 23:59 수시 일반채용 경력 무관",
+     "title": "접수중 TA(Technical Architect) 담당자(경력) D-10 2026.09.21 ~ 2026.10.02 23:59",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128912"
+    },
+    {
+     "title": "접수중 AI전략기획 담당자(경력) D-10 2026.09.21 ~ 2026.10.02 23:59 수시 일반채용 경력",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128897"
+    },
+    {
+     "title": "접수중 보험금지급시스템 개발 및 유지보수 담당자(경력) D-10 2026.09.21 ~ 2026.10.02 23:59 수시 일",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128878"
+    },
+    {
+     "title": "접수중 GA상품팀 디자이너(계약직) D-Day 2026.09.17 ~ 2026.09.22 23:59 수시 일반채용 경력 무관",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128622"
     },
     {
@@ -384,18 +396,6 @@
     {
      "title": "접수마감 ALM기획 및 관리 담당자(경력)(~7/24까지 연장) 2026.07.10 ~ 2026.07.24 23:59 수시 일",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/121503"
-    },
-    {
-     "title": "접수마감 음악/미술 문화예술직무 담당자 (장애인 단시간 근로직) 2026.06.26 ~ 2026.07.01 23:59 특별채용",
-     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/119978"
-    },
-    {
-     "title": "접수마감 상품 신담보기획 담당자(경력) (~6/11 연장) 2026.06.02 ~ 2026.06.11 23:59 수시 일반채용",
-     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/117593"
-    },
-    {
-     "title": "접수마감 상품기획 담당자(경력) (~6/14 연장) 2026.06.02 ~ 2026.06.14 23:59 수시 일반채용 경력",
-     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/117589"
     }
    ],
    "filtered": {
@@ -473,8 +473,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -484,42 +484,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
+     "title": "수시 일반채용 신입/경력 [DB하이텍] 상우캠퍼스 제조MS 수시채용 수시 26.09.21~26.09.27 23:59 D-5",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/129098"
+    },
+    {
+     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125713"
     },
     {
-     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
+     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125752"
     },
     {
-     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
+     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125777"
     },
     {
-     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
+     "title": "공채 일반채용 신입 [DB증권] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125772"
     },
     {
-     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
+     "title": "공채 일반채용 신입 [DB캐피탈] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125828"
     },
     {
-     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
+     "title": "공채 일반채용 신입 [DB저축은행] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125801"
     },
     {
-     "title": "공채 일반채용 신입 [DB Inc.] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
+     "title": "공채 일반채용 신입 [DB Inc.] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125826"
-    },
-    {
-     "title": "공채 일반채용 신입 [DB하이텍] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 D-11",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/125818"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 1
    }
   },
   {
@@ -634,7 +634,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026년 현대해상 대졸 신입사원 채용 D-Day 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 ",
+     "title": "접수마감 2026년 현대해상 대졸 신입사원 채용 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 신입",
      "url": "https://hi.recruiter.co.kr/career/jobs/126918"
     },
     {
@@ -719,10 +719,10 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 3,
-   "links_found": 3,
-   "new_found": 0,
-   "detail_ok": 0,
+   "browser_links": 6,
+   "links_found": 6,
+   "new_found": 3,
+   "detail_ok": 3,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -731,6 +731,18 @@
    "error": "",
    "note": "",
    "sample_links": [
+    {
+     "title": "「수출입금융 마케팅」 전문직무직원 채용",
+     "url": "https://careers.kbfg.com/apply/920"
+    },
+    {
+     "title": "디지털WM Biz부 경력직(연봉계약직) 채용",
+     "url": "https://careers.kbfg.com/apply/919"
+    },
+    {
+     "title": "IT기획부·인프라시스템부·총무부 보훈대상자 전용 채용",
+     "url": "https://careers.kbfg.com/apply/918"
+    },
     {
      "title": "리스크관리본부 경력 채용",
      "url": "https://careers.kbfg.com/apply/917"
@@ -746,17 +758,17 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 0,
-    "expired": 2
+    "employment": 2,
+    "expired": 0
    }
   },
   {
    "key": "woorifg",
    "company": "우리금융지주",
    "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do",
-   "list_ok": true,
+   "list_ok": false,
    "method": "browser",
-   "fallback_used": true,
+   "fallback_used": false,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -767,124 +779,8 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음",
-   "sample_links": [],
-   "probe": {
-    "requests_status": null,
-    "requests_error": "SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)')))",
-    "requests_html_len": 0,
-    "requests_anchor_count": 0,
-    "browser_ok": true,
-    "browser_error": "",
-    "browser_html_len": 40334,
-    "browser_anchor_count": 184,
-    "unique_links_sample": [
-     {
-      "text": "우리금융그룹 로고",
-      "url": "https://www.woorifg.com/"
-     },
-     {
-      "text": "ENG",
-      "url": "https://www.woorifg.com/eng/"
-     },
-     {
-      "text": "JPN",
-      "url": "https://www.woorifg.com/jpn/"
-     },
-     {
-      "text": "CHN",
-      "url": "https://www.woorifg.com/chn/"
-     },
-     {
-      "text": "그룹소개",
-      "url": "https://www.woorifg.com/kor/company/introduce/summary/contentsid/32/index.do"
-     },
-     {
-      "text": "현황",
-      "url": "https://www.woorifg.com/kor/company/network/domestic/contentsid/46/index.do"
-     },
-     {
-      "text": "조직도",
-      "url": "https://www.woorifg.com/kor/company/introduce/organization-chart/contentsid/220/index.do"
-     },
-     {
-      "text": "경영진",
-      "url": "https://www.woorifg.com/kor/company/introduce/management/contentsid/221/index.do"
-     },
-     {
-      "text": "연혁",
-      "url": "https://www.woorifg.com/kor/company/introduce/history/contentsid/219/index.do"
-     },
-     {
-      "text": "CEO 소개",
-      "url": "https://www.woorifg.com/kor/company/ceo/greeting/contentsid/43/index.do"
-     },
-     {
-      "text": "프로필",
-      "url": "https://www.woorifg.com/kor/company/ceo/profile/contentsid/44/index.do"
-     },
-     {
-      "text": "글로벌 네트워크",
-      "url": "https://www.woorifg.com/kor/company/network/global/contentsid/47/index.do"
-     },
-     {
-      "text": "기업 아이덴티티",
-      "url": "https://www.woorifg.com/kor/company/ci/ci/contentsid/48/index.do"
-     },
-     {
-      "text": "디자인 모티프",
-      "url": "https://www.woorifg.com/kor/company/ci/br/contentsid/448/index.do"
-     },
-     {
-      "text": "공식 서체",
-      "url": "https://www.woorifg.com/kor/company/ci/font/contentsid/581/index.do"
-     },
-     {
-      "text": "그룹 캐릭터",
-      "url": "https://www.woorifg.com/kor/company/ci/character/contentsid/621/index.do"
-     },
-     {
-      "text": "찾아오시는 길",
-      "url": "https://www.woorifg.com/kor/company/location/contentsid/49/index.do"
-     },
-     {
-      "text": "기업지배구조",
-      "url": "https://www.woorifg.com/kor/main/index.do?goDetail=Y&pageNumber=1&"
-     },
-     {
-      "text": "이사회",
-      "url": "https://www.woorifg.com/kor/corp-governance/board-of-directors/configuration-status/contentsid/58/index.do"
-     },
-     {
-      "text": "주요기능",
-      "url": "https://www.woorifg.com/kor/corp-governance/board-of-directors/key-function/contentsid/59/index.do"
-     },
-     {
-      "text": "이사회 공시",
-      "url": "https://www.woorifg.com/kor/corp-governance/governance-structure/list.do"
-     },
-     {
-      "text": "관련규정",
-      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/articles-of-association/contentsid/64/index.do"
-     },
-     {
-      "text": "지배구조 내부규범",
-      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/internal-norms/contentsid/65/index.do"
-     },
-     {
-      "text": "이사회 규정",
-      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/regulation/contentsid/66/index.do"
-     },
-     {
-      "text": "사외이사 독립성 가이드라인",
-      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/outside/contentsid/470/index.do"
-     }
-    ],
-    "matched_by_pattern": 0,
-    "link_include": [],
-    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음"
-   },
+   "error": "렌더링 실패: TimeoutError",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -896,8 +792,8 @@
    "company": "PwC삼일",
    "url": "https://www.pwc.com/kr/ko/career/experienced.html",
    "list_ok": true,
-   "method": "requests",
-   "fallback_used": false,
+   "method": "browser",
+   "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 33,
@@ -968,7 +864,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -977,8 +873,8 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59146,
-    "browser_anchor_count": 121,
+    "browser_html_len": 59175,
+    "browser_anchor_count": 122,
     "unique_links_sample": [
      {
       "text": "KMPG careers",
@@ -1085,7 +981,7 @@
     "link_include": [
      "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -1114,42 +1010,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 세무부문 조세전략 및 자문 전문가 D-Day 2026.09.01 ~ 2026.09.21 09:00 수시 일반채용 경력",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128656"
-    },
-    {
-     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-6 2026.09.15 ~ 2026.09.27 23:59 수시 일",
+     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-5 2026.09.15 ~ 2026.09.27 23:59 수시 일",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127131"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A D-6 2026.09.15 ~ 2026.09.2",
+     "title": "접수중 전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A D-5 2026.09.15 ~ 2026.09.2",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127135"
     },
     {
-     "title": "접수중 EY-Parthenon Strategy 팀 신입/경력직 컨설턴트 D-6 2026.09.14 ~ 2026.09.27 23",
+     "title": "접수중 EY-Parthenon Strategy 팀 신입/경력직 컨설턴트 D-5 2026.09.14 ~ 2026.09.27 23",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128418"
     },
     {
-     "title": "접수중 컨설팅부문 Digital & Emerging Tech 경력직 컨설턴트 D-9 2026.09.09 ~ 2026.09.30",
+     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-8 2026.08.19 ~ 2026.09.30 23:59 수시 일반채",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888"
+    },
+    {
+     "title": "접수중 컨설팅부문 Digital & Emerging Tech 경력직 컨설턴트 D-8 2026.09.09 ~ 2026.09.30",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128016"
     },
     {
-     "title": "접수중 금융감사본부 보험계리 [경력] D-9 2026.09.15 ~ 2026.09.30 23:59 수시 일반채용 경력",
+     "title": "접수중 금융감사본부 보험계리 [경력] D-8 2026.09.15 ~ 2026.09.30 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128534"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal1 경력직 D-10 2026.09.16 ~ 2026.10.01 23:59 수시 일반채용 경력",
+     "title": "접수중 전략·재무자문부문 Deal1 경력직 D-9 2026.09.16 ~ 2026.10.01 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128666"
     },
     {
-     "title": "접수중 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] D-14 2026.09.17 ~ 2026.10.05 00:0",
+     "title": "접수중 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] D-13 2026.09.17 ~ 2026.10.05 00:0",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128728"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 1
    }
   },
   {
@@ -1201,7 +1097,7 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 20,
+   "links_found": 19,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -1325,11 +1221,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 187598,
+    "requests_html_len": 187544,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181129,
+    "browser_html_len": 181143,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -1605,7 +1501,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 47092,
+    "browser_html_len": 47071,
     "browser_anchor_count": 151,
     "unique_links_sample": [
      {
@@ -1789,11 +1685,11 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-7 2026.09.10 ~ 2026.09.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 총무지원팀 계약직 채용 D-6 2026.09.10 ~ 2026.09.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/128154"
     },
     {
-     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-7 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 상품본부 경력직 채용 D-6 2026.09.01 ~ 2026.09.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/126990"
     },
     {
@@ -2397,10 +2293,10 @@
    "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (9월) 수시 26.09.08~26.09.21 23:59 D-12",
    "url": "https://dbgroup.recruiter.co.kr/career/jobs/127802",
    "source_key": "dbgroup",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-09-21 마감으로 오늘(2026-09-22) 기준 경과",
    "deadline": "2026-09-21",
    "has_detail": true,
    "first_seen": "2026-09-09"
@@ -2474,6 +2370,20 @@
    "deadline": "2026-09-20",
    "has_detail": true,
    "first_seen": "2026-09-12"
+  },
+  {
+   "id": "5aa6a9d3bcb8bf39",
+   "company": "DB그룹",
+   "title": "수시 일반채용 신입/경력 [DB하이텍] 상우캠퍼스 제조MS 수시채용 수시 26.09.21~26.09.27 23:59 D-5",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/129098",
+   "source_key": "dbgroup",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-09-27",
+   "has_detail": true,
+   "first_seen": "2026-09-22"
   },
   {
    "id": "fe4906a6197169be",
@@ -3111,10 +3021,10 @@
    "title": "접수중 세무부문 조세전략 및 자문 전문가 D-4 2026.09.01 ~ 2026.09.21 09:00 수시 일반채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128656",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-09-21 마감으로 오늘(2026-09-22) 기준 경과",
    "deadline": "2026-09-21",
    "has_detail": true,
    "first_seen": "2026-09-17"
@@ -3526,6 +3436,20 @@
    "first_seen": "2026-09-10"
   },
   {
+   "id": "ffcda6a40f831953",
+   "company": "KB금융지주",
+   "title": "IT기획부·인프라시스템부·총무부 보훈대상자 전용 채용",
+   "url": "https://careers.kbfg.com/apply/918",
+   "source_key": "careers_kbfg",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-10-05",
+   "has_detail": true,
+   "first_seen": "2026-09-22"
+  },
+  {
    "id": "fd772bc10cb02f7f",
    "company": "KB금융지주",
    "title": "PE성장투자관리팀 펀드(조합) 관리업무 경력직 채용",
@@ -3582,6 +3506,20 @@
    "first_seen": "2026-08-30"
   },
   {
+   "id": "c29206b74a093a3a",
+   "company": "KB금융지주",
+   "title": "「수출입금융 마케팅」 전문직무직원 채용",
+   "url": "https://careers.kbfg.com/apply/920",
+   "source_key": "careers_kbfg",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 본문 앞부분에서 '계약직' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-10-04",
+   "has_detail": true,
+   "first_seen": "2026-09-22"
+  },
+  {
    "id": "d084684125d8c88d",
    "company": "KB금융지주",
    "title": "금융공학부 경력직(연봉계약직) 채용",
@@ -3594,6 +3532,20 @@
    "deadline": "2026-09-08",
    "has_detail": true,
    "first_seen": "2026-08-30"
+  },
+  {
+   "id": "2dca75d0008fa76a",
+   "company": "KB금융지주",
+   "title": "디지털WM Biz부 경력직(연봉계약직) 채용",
+   "url": "https://careers.kbfg.com/apply/919",
+   "source_key": "careers_kbfg",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-11",
+   "has_detail": true,
+   "first_seen": "2026-09-22"
   },
   {
    "id": "1bca0aa6c550ea50",
@@ -4772,6 +4724,20 @@
    "first_seen": "2026-08-30"
   },
   {
+   "id": "668fc87e75916627",
+   "company": "신한라이프",
+   "title": "접수중 AI전략기획 담당자(경력) D-10 2026.09.21 ~ 2026.10.02 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128897",
+   "source_key": "shinhan_life",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-12-01",
+   "has_detail": true,
+   "first_seen": "2026-09-22"
+  },
+  {
    "id": "996c0a47be0294b8",
    "company": "신한라이프",
    "title": "접수중 GA상품팀 디자이너(계약직) D-4 2026.09.17 ~ 2026.09.22 23:59 수시 일반채용 경력 무관",
@@ -4784,6 +4750,34 @@
    "deadline": "2026-11-02",
    "has_detail": true,
    "first_seen": "2026-09-18"
+  },
+  {
+   "id": "fcf239147438b26a",
+   "company": "신한라이프",
+   "title": "접수중 TA(Technical Architect) 담당자(경력) D-10 2026.09.21 ~ 2026.10.02 23:59 수시 일반채용 경력",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128912",
+   "source_key": "shinhan_life",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-12-01",
+   "has_detail": true,
+   "first_seen": "2026-09-22"
+  },
+  {
+   "id": "d03b1782a0b4299a",
+   "company": "신한라이프",
+   "title": "접수중 보험금지급시스템 개발 및 유지보수 담당자(경력) D-10 2026.09.21 ~ 2026.10.02 23:59 수시 일반채용 신입",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128878",
+   "source_key": "shinhan_life",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-12-01",
+   "has_detail": true,
+   "first_seen": "2026-09-22"
   },
   {
    "id": "0d6c610c7f19e9ba",
