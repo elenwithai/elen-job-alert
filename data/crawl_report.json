@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-03 10:46",
+ "generated_at": "2026-10-04 11:26",
  "summary": {
   "crawled_total": 247,
   "passed": 0,
-  "waiting": 36,
+  "waiting": 35,
   "excluded_notjob": 0,
-  "excluded_employment": 1,
-  "excluded_expired": 2,
+  "excluded_employment": 0,
+  "excluded_expired": 1,
   "excluded_ai": 0
  },
  "sources": [
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 58481,
+    "browser_html_len": 58464,
     "browser_anchor_count": 95,
     "unique_links_sample": [
      {
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 507085,
+    "browser_html_len": 507086,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -295,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 33719,
+    "browser_html_len": 33718,
     "browser_anchor_count": 47,
     "unique_links_sample": [
      {
@@ -766,9 +766,9 @@
    "key": "woorifg",
    "company": "우리금융지주",
    "url": "https://www.woorifg.com/kor/recruit/recruit-announcement/list.do",
-   "list_ok": false,
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
+   "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -779,8 +779,124 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "렌더링 실패: TimeoutError",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
+   "error": "",
+   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음",
+   "sample_links": [],
+   "probe": {
+    "requests_status": null,
+    "requests_error": "SSL 오류: HTTPSConnectionPool(host='www.woorifg.com', port=443): Max retries exceeded with url: /kor/recruit/recruit-announcement/list.do (Caused by SSLError(SSLError(1, '[SSL: UNSAFE_LEGACY_RENEGOTIATION_DISABLED] unsafe legacy renegotiation disabled (_ssl.c:1016)')))",
+    "requests_html_len": 0,
+    "requests_anchor_count": 0,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 40371,
+    "browser_anchor_count": 184,
+    "unique_links_sample": [
+     {
+      "text": "우리금융그룹 로고",
+      "url": "https://www.woorifg.com/"
+     },
+     {
+      "text": "ENG",
+      "url": "https://www.woorifg.com/eng/"
+     },
+     {
+      "text": "JPN",
+      "url": "https://www.woorifg.com/jpn/"
+     },
+     {
+      "text": "CHN",
+      "url": "https://www.woorifg.com/chn/"
+     },
+     {
+      "text": "그룹소개",
+      "url": "https://www.woorifg.com/kor/company/introduce/summary/contentsid/32/index.do"
+     },
+     {
+      "text": "현황",
+      "url": "https://www.woorifg.com/kor/company/network/domestic/contentsid/46/index.do"
+     },
+     {
+      "text": "조직도",
+      "url": "https://www.woorifg.com/kor/company/introduce/organization-chart/contentsid/220/index.do"
+     },
+     {
+      "text": "경영진",
+      "url": "https://www.woorifg.com/kor/company/introduce/management/contentsid/221/index.do"
+     },
+     {
+      "text": "연혁",
+      "url": "https://www.woorifg.com/kor/company/introduce/history/contentsid/219/index.do"
+     },
+     {
+      "text": "CEO 소개",
+      "url": "https://www.woorifg.com/kor/company/ceo/greeting/contentsid/43/index.do"
+     },
+     {
+      "text": "프로필",
+      "url": "https://www.woorifg.com/kor/company/ceo/profile/contentsid/44/index.do"
+     },
+     {
+      "text": "글로벌 네트워크",
+      "url": "https://www.woorifg.com/kor/company/network/global/contentsid/47/index.do"
+     },
+     {
+      "text": "기업 아이덴티티",
+      "url": "https://www.woorifg.com/kor/company/ci/ci/contentsid/48/index.do"
+     },
+     {
+      "text": "디자인 모티프",
+      "url": "https://www.woorifg.com/kor/company/ci/br/contentsid/448/index.do"
+     },
+     {
+      "text": "공식 서체",
+      "url": "https://www.woorifg.com/kor/company/ci/font/contentsid/581/index.do"
+     },
+     {
+      "text": "그룹 캐릭터",
+      "url": "https://www.woorifg.com/kor/company/ci/character/contentsid/621/index.do"
+     },
+     {
+      "text": "찾아오시는 길",
+      "url": "https://www.woorifg.com/kor/company/location/contentsid/49/index.do"
+     },
+     {
+      "text": "기업지배구조",
+      "url": "https://www.woorifg.com/kor/main/index.do?goDetail=Y&pageNumber=1&"
+     },
+     {
+      "text": "이사회",
+      "url": "https://www.woorifg.com/kor/corp-governance/board-of-directors/configuration-status/contentsid/58/index.do"
+     },
+     {
+      "text": "주요기능",
+      "url": "https://www.woorifg.com/kor/corp-governance/board-of-directors/key-function/contentsid/59/index.do"
+     },
+     {
+      "text": "이사회 공시",
+      "url": "https://www.woorifg.com/kor/corp-governance/governance-structure/list.do"
+     },
+     {
+      "text": "관련규정",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/articles-of-association/contentsid/64/index.do"
+     },
+     {
+      "text": "지배구조 내부규범",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/internal-norms/contentsid/65/index.do"
+     },
+     {
+      "text": "이사회 규정",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/regulation/contentsid/66/index.do"
+     },
+     {
+      "text": "사외이사 독립성 가이드라인",
+      "url": "https://www.woorifg.com/kor/corp-governance/related-regulations/outside/contentsid/470/index.do"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [],
+    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음"
+   },
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -873,7 +989,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59133,
+    "browser_html_len": 59135,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -999,8 +1115,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 2,
-   "detail_ok": 2,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1010,31 +1126,31 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-9 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
+     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-8 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130308"
     },
     {
-     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-8 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
+     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-7 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130307"
     },
     {
-     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-4 2026.09.30 ~ 2026.10.07 23:",
+     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-3 2026.09.30 ~ 2026.10.07 23:",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129965"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-8 2026.09.30 ~",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-7 2026.09.30 ~",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129926"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-8 2026.09.29 ",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-7 2026.09.29 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129843"
     },
     {
-     "title": "접수중 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 D-2 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용 인",
+     "title": "접수중 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 D-1 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용 인",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129681"
     },
     {
-     "title": "접수중 세무부문 국내조세 1본부 경력 D-2 2026.09.21 ~ 2026.10.05 23:59 수시 일반채용 경력",
+     "title": "접수중 세무부문 국내조세 1본부 경력 D-1 2026.09.21 ~ 2026.10.05 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129318"
     },
     {
@@ -1044,7 +1160,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 1,
+    "employment": 0,
     "expired": 0
    }
   },
@@ -1144,7 +1260,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 1
    }
   },
   {
@@ -1195,7 +1311,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 2
+    "expired": 0
    }
   },
   {
@@ -1225,7 +1341,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 29922,
+    "browser_html_len": 29928,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1506,7 +1622,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46617,
+    "browser_html_len": 46577,
     "browser_anchor_count": 149,
     "unique_links_sample": [
      {
@@ -1632,15 +1748,15 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 4,
-   "new_found": 2,
+   "new_found": 0,
    "detail_ok": 0,
-   "detail_failed": 2,
+   "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "note": "",
    "sample_links": [
     {
      "title": "[하나생명] 콜센터 상담업무 지원 경력사원 채용 경력 3년 이상 | 정규직 | 2026.10.02 ~ 2026.10.15 23",
@@ -1968,10 +2084,10 @@
    "title": "Performance & Rewards Sr. Professional",
    "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Performance---Rewards-Sr-Professional_JR-69712-1?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
    "source_key": "aia",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-03)로부터 30일 경과",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-09-03"
