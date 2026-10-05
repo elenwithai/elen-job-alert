@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-04 11:26",
+ "generated_at": "2026-10-05 10:40",
  "summary": {
   "crawled_total": 247,
   "passed": 0,
   "waiting": 35,
   "excluded_notjob": 0,
   "excluded_employment": 0,
-  "excluded_expired": 1,
+  "excluded_expired": 0,
   "excluded_ai": 0
  },
  "sources": [
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 507086,
+    "browser_html_len": 505280,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -295,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 33718,
+    "browser_html_len": 33719,
     "browser_anchor_count": 47,
     "unique_links_sample": [
      {
@@ -540,72 +540,23 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개",
+   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 15797,
-    "requests_anchor_count": 17,
+    "requests_html_len": 346,
+    "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 17830,
-    "browser_anchor_count": 18,
-    "unique_links_sample": [
-     {
-      "text": "",
-      "url": "https://recruit.meritzfire.com/new/main.do"
-     },
-     {
-      "text": "성장스토리",
-      "url": "https://recruit.meritzfire.com/new/company/company01.do"
-     },
-     {
-      "text": "복리후생",
-      "url": "https://recruit.meritzfire.com/new/company/company02.do"
-     },
-     {
-      "text": "오피스",
-      "url": "https://recruit.meritzfire.com/new/company/company03.do?idx=all"
-     },
-     {
-      "text": "채용공고",
-      "url": "https://recruit.meritzfire.com/new/job/noticeList.do"
-     },
-     {
-      "text": "채용절차",
-      "url": "https://recruit.meritzfire.com/new/job/noticeProcess.do"
-     },
-     {
-      "text": "FAQ",
-      "url": "https://recruit.meritzfire.com/new/job/faq.do"
-     },
-     {
-      "text": "인터뷰",
-      "url": "https://recruit.meritzfire.com/new/people/interview.do"
-     },
-     {
-      "text": "기업문화",
-      "url": "https://recruit.meritzfire.com/new/culture/culture.do"
-     },
-     {
-      "text": "인재Pool",
-      "url": "https://recruit.meritzfire.com/new/job/poolWrite.do"
-     },
-     {
-      "text": "로그인",
-      "url": "https://recruit.meritzfire.com/new/common/login.do"
-     },
-     {
-      "text": "meritz_recruit@meritz.co.kr",
-      "url": "mailto:meritz_recruit@meritz.co.kr"
-     }
-    ],
+    "browser_html_len": 379,
+    "browser_anchor_count": 0,
+    "unique_links_sample": [],
     "matched_by_pattern": 0,
     "link_include": [
      "https://recruit.meritzfire.com/new/job/noticeView.do"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개"
+    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
    },
    "filtered": {
     "notjob": 0,
@@ -719,8 +670,8 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 6,
-   "links_found": 6,
+   "browser_links": 5,
+   "links_found": 5,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -742,10 +693,6 @@
     {
      "title": "「기업마케팅 전문가」 전문직무직원 채용",
      "url": "https://careers.kbfg.com/apply/921"
-    },
-    {
-     "title": "「수출입금융 마케팅」 전문직무직원 채용",
-     "url": "https://careers.kbfg.com/apply/920"
     },
     {
      "title": "디지털WM Biz부 경력직(연봉계약직) 채용",
@@ -789,7 +736,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40371,
+    "browser_html_len": 40270,
     "browser_anchor_count": 184,
     "unique_links_sample": [
      {
@@ -989,7 +936,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59135,
+    "browser_html_len": 59118,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1126,31 +1073,31 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-8 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
+     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-7 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130308"
     },
     {
-     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-7 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
+     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-6 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130307"
     },
     {
-     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-3 2026.09.30 ~ 2026.10.07 23:",
+     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-2 2026.09.30 ~ 2026.10.07 23:",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129965"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-7 2026.09.30 ~",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-6 2026.09.30 ~",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129926"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-7 2026.09.29 ",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-6 2026.09.29 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129843"
     },
     {
-     "title": "접수중 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 D-1 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용 인",
+     "title": "접수중 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 D-Day 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129681"
     },
     {
-     "title": "접수중 세무부문 국내조세 1본부 경력 D-1 2026.09.21 ~ 2026.10.05 23:59 수시 일반채용 경력",
+     "title": "접수중 세무부문 국내조세 1본부 경력 D-Day 2026.09.21 ~ 2026.10.05 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129318"
     },
     {
@@ -1260,7 +1207,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 1
+    "expired": 0
    }
   },
   {
@@ -1341,7 +1288,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 29928,
+    "browser_html_len": 29933,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1388,7 +1335,7 @@
     "requests_anchor_count": 15,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 85006,
+    "browser_html_len": 84957,
     "browser_anchor_count": 14,
     "unique_links_sample": [
      {
@@ -1622,7 +1569,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46577,
+    "browser_html_len": 46489,
     "browser_anchor_count": 149,
     "unique_links_sample": [
      {
