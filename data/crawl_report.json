@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-05 10:40",
+ "generated_at": "2026-10-06 11:43",
  "summary": {
-  "crawled_total": 247,
+  "crawled_total": 248,
   "passed": 0,
-  "waiting": 35,
+  "waiting": 32,
   "excluded_notjob": 0,
-  "excluded_employment": 0,
-  "excluded_expired": 0,
+  "excluded_employment": 1,
+  "excluded_expired": 3,
   "excluded_ai": 0
  },
  "sources": [
@@ -28,7 +28,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 95개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 96개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -37,8 +37,8 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 58464,
-    "browser_anchor_count": 95,
+    "browser_html_len": 59812,
+    "browser_anchor_count": 96,
     "unique_links_sample": [
      {
       "text": "삼성",
@@ -145,7 +145,7 @@
     "link_include": [
      "https://www.samsungcareers.com/hr/?no="
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 95개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 96개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 505280,
+    "browser_html_len": 480017,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -295,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 33719,
+    "browser_html_len": 33718,
     "browser_anchor_count": 47,
     "unique_links_sample": [
      {
@@ -484,6 +484,10 @@
    "note": "",
    "sample_links": [
     {
+     "title": "수시 일반채용 신입 [DB생명] IFRS 모델링 및 검증 단기계약직 모집 수시 26.10.02~26.10.11 23:59 D-",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/130112"
+    },
+    {
      "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 마감",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125713"
     },
@@ -510,16 +514,12 @@
     {
      "title": "공채 일반채용 신입 [DB Inc.] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 마감",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125826"
-    },
-    {
-     "title": "공채 일반채용 신입 [DB하이텍] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 마감",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/125818"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 1
    }
   },
   {
@@ -545,11 +545,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 346,
+    "requests_html_len": 345,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 379,
+    "browser_html_len": 378,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -573,9 +573,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 3,
-   "new_found": 0,
-   "detail_ok": 0,
+   "links_found": 4,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -584,6 +584,10 @@
    "error": "",
    "note": "",
    "sample_links": [
+    {
+     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용 D-8 2026.10.06 ~ 2026.10.14 18:00 수시 일반채용 ",
+     "url": "https://hi.recruiter.co.kr/career/jobs/130428"
+    },
     {
      "title": "접수마감 2026년 현대해상 대졸 신입사원 채용 2026.09.04 ~ 2026.09.21 18:00 공채 일반채용 신입",
      "url": "https://hi.recruiter.co.kr/career/jobs/126918"
@@ -599,7 +603,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 0,
+    "employment": 1,
     "expired": 0
    }
   },
@@ -670,8 +674,8 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 5,
-   "links_found": 5,
+   "browser_links": 3,
+   "links_found": 3,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -691,16 +695,8 @@
      "url": "https://careers.kbfg.com/apply/922"
     },
     {
-     "title": "「기업마케팅 전문가」 전문직무직원 채용",
-     "url": "https://careers.kbfg.com/apply/921"
-    },
-    {
      "title": "디지털WM Biz부 경력직(연봉계약직) 채용",
      "url": "https://careers.kbfg.com/apply/919"
-    },
-    {
-     "title": "IT기획부·인프라시스템부·총무부 보훈대상자 전용 채용",
-     "url": "https://careers.kbfg.com/apply/918"
     }
    ],
    "filtered": {
@@ -736,7 +732,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40270,
+    "browser_html_len": 40371,
     "browser_anchor_count": 184,
     "unique_links_sample": [
      {
@@ -936,7 +932,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59118,
+    "browser_html_len": 59100,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1073,42 +1069,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-7 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
+     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-6 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130308"
     },
     {
-     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-6 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
+     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-5 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130307"
     },
     {
-     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-2 2026.09.30 ~ 2026.10.07 23:",
+     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-1 2026.09.30 ~ 2026.10.07 23:",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129965"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-6 2026.09.30 ~",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-5 2026.09.30 ~",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129926"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-6 2026.09.29 ",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-5 2026.09.29 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129843"
     },
     {
-     "title": "접수중 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 D-Day 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용",
+     "title": "접수마감 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129681"
-    },
-    {
-     "title": "접수중 세무부문 국내조세 1본부 경력 D-Day 2026.09.21 ~ 2026.10.05 23:59 수시 일반채용 경력",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129318"
     },
     {
      "title": "접수마감 금융컨설팅본부 리스크 컨설팅 인턴 2026.09.22 ~ 2026.09.29 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129197"
+    },
+    {
+     "title": "접수마감 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] 2026.09.17 ~ 2026.10.05 00:00 수시",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128728"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 2
    }
   },
   {
@@ -1288,7 +1284,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 29933,
+    "browser_html_len": 29928,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1569,7 +1565,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46489,
+    "browser_html_len": 46597,
     "browser_anchor_count": 149,
     "unique_links_sample": [
      {
@@ -2381,10 +2377,10 @@
    "title": "수시 일반채용 경력 [DB생명] 2026년 언더라이팅(신계약 심사) 계약직 채용 수시 26.09.29~26.10.05 23:59 D-6",
    "url": "https://dbgroup.recruiter.co.kr/career/jobs/129707",
    "source_key": "dbgroup",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-10-05 마감으로 오늘(2026-10-06) 기준 경과",
    "deadline": "2026-10-05",
    "has_detail": true,
    "first_seen": "2026-09-29"
@@ -2843,10 +2839,10 @@
    "title": "접수중 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] D-17 2026.09.17 ~ 2026.10.05 00:00 수시 일반채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128728",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-10-05 마감으로 오늘(2026-10-06) 기준 경과",
    "deadline": "2026-10-05",
    "has_detail": true,
    "first_seen": "2026-09-18"
@@ -3151,10 +3147,10 @@
    "title": "접수중 세무부문 국내조세 1본부 경력 D-7 2026.09.21 ~ 2026.10.05 23:59 수시 일반채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129318",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-10-05 마감으로 오늘(2026-10-06) 기준 경과",
    "deadline": "2026-10-05",
    "has_detail": true,
    "first_seen": "2026-09-28"
@@ -5216,6 +5212,20 @@
    "deadline": "2026-09-21",
    "has_detail": true,
    "first_seen": "2026-09-05"
+  },
+  {
+   "id": "13f487381a8a3c10",
+   "company": "현대해상",
+   "title": "접수중 2026년 현대해상 산전후 대체업무직 채용 D-8 2026.10.06 ~ 2026.10.14 18:00 수시 일반채용 신입",
+   "url": "https://hi.recruiter.co.kr/career/jobs/130428",
+   "source_key": "hi_recruiter",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-10-14",
+   "has_detail": true,
+   "first_seen": "2026-10-06"
   },
   {
    "id": "86ed858202480efb",
