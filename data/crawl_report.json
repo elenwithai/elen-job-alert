@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-06 11:43",
+ "generated_at": "2026-10-07 11:09",
  "summary": {
-  "crawled_total": 248,
+  "crawled_total": 251,
   "passed": 0,
-  "waiting": 32,
+  "waiting": 34,
   "excluded_notjob": 0,
   "excluded_employment": 1,
-  "excluded_expired": 3,
+  "excluded_expired": 0,
   "excluded_ai": 0
  },
  "sources": [
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59812,
+    "browser_html_len": 59881,
     "browser_anchor_count": 96,
     "unique_links_sample": [
      {
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 480017,
+    "browser_html_len": 481879,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -355,8 +355,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -368,6 +368,10 @@
     {
      "title": "접수마감 [신한라이프] 상시 인재 POOL 등록 상시채용 2024.05.30 ~ 2025.12.31 23:59 상시 상시채용 ",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/21953"
+    },
+    {
+     "title": "접수중 2026 신한라이프 신입채용 D-9 2026.10.07 ~ 2026.10.16 17:00 공채 일반채용 신입",
+     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/129985"
     },
     {
      "title": "접수마감 TA(Technical Architect) 담당자(경력) 2026.09.21 ~ 2026.10.02 23:59 수시 ",
@@ -392,15 +396,11 @@
     {
      "title": "접수마감 보험리스크관리 담당자 (~8/23 연장) 2026.08.11 ~ 2026.08.23 23:59 수시 일반채용 경력",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/124675"
-    },
-    {
-     "title": "접수마감 ALM기획 및 관리 담당자(경력)(~7/24까지 연장) 2026.07.10 ~ 2026.07.24 23:59 수시 일",
-     "url": "https://shinhan-life.recruiter.co.kr/career/jobs/121503"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 0,
+    "employment": 1,
     "expired": 0
    }
   },
@@ -519,7 +519,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 1
+    "expired": 0
    }
   },
   {
@@ -545,11 +545,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 345,
+    "requests_html_len": 348,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 378,
+    "browser_html_len": 381,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -574,8 +574,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 4,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -585,7 +585,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용 D-8 2026.10.06 ~ 2026.10.14 18:00 수시 일반채용 ",
+     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용 D-7 2026.10.06 ~ 2026.10.14 18:00 수시 일반채용 ",
      "url": "https://hi.recruiter.co.kr/career/jobs/130428"
     },
     {
@@ -603,7 +603,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 1,
+    "employment": 0,
     "expired": 0
    }
   },
@@ -674,8 +674,8 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 3,
-   "links_found": 3,
+   "browser_links": 2,
+   "links_found": 2,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -686,10 +686,6 @@
    "error": "",
    "note": "",
    "sample_links": [
-    {
-     "title": "「AI개발자」 전문직무직원 채용",
-     "url": "https://careers.kbfg.com/apply/923"
-    },
     {
      "title": "디지털BK Biz부 경력직(연봉계약직) 채용",
      "url": "https://careers.kbfg.com/apply/922"
@@ -723,7 +719,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음",
+   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 165개 중 공고로 인정된 것 없음",
    "sample_links": [],
    "probe": {
     "requests_status": null,
@@ -732,8 +728,8 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40371,
-    "browser_anchor_count": 184,
+    "browser_html_len": 38202,
+    "browser_anchor_count": 165,
     "unique_links_sample": [
      {
       "text": "우리금융그룹 로고",
@@ -838,7 +834,7 @@
     ],
     "matched_by_pattern": 0,
     "link_include": [],
-    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음"
+    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 165개 중 공고로 인정된 것 없음"
    },
    "filtered": {
     "notjob": 0,
@@ -855,7 +851,7 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 34,
+   "links_found": 33,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -932,7 +928,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59100,
+    "browser_html_len": 59113,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1058,8 +1054,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1069,42 +1065,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-6 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
+     "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-11 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용 ",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130523"
+    },
+    {
+     "title": "접수중 세무부문 국내조세 경력(매니저~시니어매니저) D-5 2026.10.01 ~ 2026.10.12 09:00 수시 일반채용",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130308"
     },
     {
-     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-5 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
+     "title": "접수중 컨설팅부문 EMP팀 AI 인턴 D-4 2026.10.02 ~ 2026.10.11 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130307"
     },
     {
-     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-1 2026.09.30 ~ 2026.10.07 23:",
+     "title": "접수중 감사부문 Technology Assurance 파트타임 회계사 D-Day 2026.09.30 ~ 2026.10.07 2",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129965"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-5 2026.09.30 ~",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-4 2026.09.30 ~",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129926"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-5 2026.09.29 ",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-4 2026.09.29 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129843"
     },
     {
-     "title": "접수마감 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용 인턴",
+     "title": "접수마감 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 2026.09.28 ~ 2026.10.06 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129681"
     },
     {
      "title": "접수마감 금융컨설팅본부 리스크 컨설팅 인턴 2026.09.22 ~ 2026.09.29 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129197"
-    },
-    {
-     "title": "접수마감 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] 2026.09.17 ~ 2026.10.05 00:00 수시",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128728"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 2
+    "expired": 0
    }
   },
   {
@@ -1156,9 +1152,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 15,
-   "new_found": 0,
-   "detail_ok": 0,
+   "links_found": 16,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1167,6 +1163,14 @@
    "error": "",
    "note": "",
    "sample_links": [
+    {
+     "title": "[AIAPP] Product Strategy & Training Manager",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Product-Strategy---Training-Manager_JR-58455?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "건강 상품 개발 담당자",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/---_JR-70914-1?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
     {
      "title": "[AIAPP] Chief Consumer Protection Officer (금융소비자보호 총괄책임자)",
      "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Chief-Consumer-Protection-Officer----_JR-70681?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
@@ -1190,14 +1194,6 @@
     {
      "title": "K-ICS 및 경제적 가정 담당자",
      "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/K-ICS---Capital-Reporting_JR-69425?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
-    },
-    {
-     "title": "[AIAPP] Recruiting Support Manager",
-     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Recruiting-Support-Manager_JR-68999?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
-    },
-    {
-     "title": "Pricing Validation & Reinsurance",
-     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/Pricing-Validation---Reinsurance_JR-67938?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
     }
    ],
    "filtered": {
@@ -1284,7 +1280,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 29928,
+    "browser_html_len": 29932,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1331,7 +1327,7 @@
     "requests_anchor_count": 15,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 84957,
+    "browser_html_len": 84955,
     "browser_anchor_count": 14,
     "unique_links_sample": [
      {
@@ -1565,7 +1561,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46597,
+    "browser_html_len": 46607,
     "browser_anchor_count": 149,
     "unique_links_sample": [
      {
@@ -1690,7 +1686,7 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 4,
+   "links_found": 2,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -1708,14 +1704,6 @@
     {
      "title": "[하나생명] 리스크관리부 감리역 경력사원 채용 경력 10년 이상 | 계약직 | 2026.10.02 ~ 2026.10.15 23",
      "url": "https://hanalife.careerlink.kr/jobs/RC20261002036094"
-    },
-    {
-     "title": "[하나생명] 계약보전담당 경력사원 채용 경력 4년 이상 | 정규직 | 2026.09.22 ~ 2026.10.06 23:59 |",
-     "url": "https://hanalife.careerlink.kr/jobs/RC20260922035068"
-    },
-    {
-     "title": "[하나생명] 세무담당 경력사원 채용 경력 5년 이상 | 정규직 | 2026.09.22 ~ 2026.10.06 23:59 | D",
-     "url": "https://hanalife.careerlink.kr/jobs/RC20260922035081"
     }
    ],
    "filtered": {
@@ -2174,6 +2162,20 @@
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-08-30"
+  },
+  {
+   "id": "d6c60e4437402221",
+   "company": "AIA생명",
+   "title": "건강 상품 개발 담당자",
+   "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/---_JR-70914-1?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
+   "source_key": "aia",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-10-07"
   },
   {
    "id": "ad1aa78936b51b25",
@@ -3028,6 +3030,20 @@
    "deadline": "2026-09-30",
    "has_detail": true,
    "first_seen": "2026-09-16"
+  },
+  {
+   "id": "33a6ca8206a6b184",
+   "company": "EY한영",
+   "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-11 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용 신입/경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130523",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-18",
+   "has_detail": true,
+   "first_seen": "2026-10-07"
   },
   {
    "id": "6a27e0d40a065a54",
@@ -5016,6 +5032,20 @@
    "deadline": "2026-07-03",
    "has_detail": true,
    "first_seen": "2026-08-30"
+  },
+  {
+   "id": "11dbbfa8c9c23fce",
+   "company": "신한라이프",
+   "title": "접수중 2026 신한라이프 신입채용 D-9 2026.10.07 ~ 2026.10.16 17:00 공채 일반채용 신입",
+   "url": "https://shinhan-life.recruiter.co.kr/career/jobs/129985",
+   "source_key": "shinhan_life",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-10-16",
+   "has_detail": true,
+   "first_seen": "2026-10-07"
   },
   {
    "id": "668fc87e75916627",
