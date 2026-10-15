@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-14 10:38",
+ "generated_at": "2026-10-15 10:15",
  "summary": {
-  "crawled_total": 269,
+  "crawled_total": 265,
   "passed": 0,
-  "waiting": 31,
+  "waiting": 27,
   "excluded_notjob": 0,
-  "excluded_employment": 2,
-  "excluded_expired": 0,
+  "excluded_employment": 1,
+  "excluded_expired": 5,
   "excluded_ai": 0
  },
  "sources": [
@@ -28,7 +28,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 96개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 97개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -37,8 +37,8 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 60115,
-    "browser_anchor_count": 96,
+    "browser_html_len": 62715,
+    "browser_anchor_count": 97,
     "unique_links_sample": [
      {
       "text": "삼성",
@@ -145,7 +145,7 @@
     "link_include": [
      "https://www.samsungcareers.com/hr/?no="
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 96개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 97개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 509568,
+    "browser_html_len": 509229,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -366,7 +366,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026 신한라이프 신입채용 D-2 2026.10.07 ~ 2026.10.16 17:00 공채 일반채용 신입",
+     "title": "접수중 2026 신한라이프 신입채용 D-1 2026.10.07 ~ 2026.10.16 17:00 공채 일반채용 신입",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/129985"
     },
     {
@@ -536,72 +536,23 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개",
+   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 15797,
-    "requests_anchor_count": 17,
+    "requests_html_len": 346,
+    "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 17830,
-    "browser_anchor_count": 18,
-    "unique_links_sample": [
-     {
-      "text": "",
-      "url": "https://recruit.meritzfire.com/new/main.do"
-     },
-     {
-      "text": "성장스토리",
-      "url": "https://recruit.meritzfire.com/new/company/company01.do"
-     },
-     {
-      "text": "복리후생",
-      "url": "https://recruit.meritzfire.com/new/company/company02.do"
-     },
-     {
-      "text": "오피스",
-      "url": "https://recruit.meritzfire.com/new/company/company03.do?idx=all"
-     },
-     {
-      "text": "채용공고",
-      "url": "https://recruit.meritzfire.com/new/job/noticeList.do"
-     },
-     {
-      "text": "채용절차",
-      "url": "https://recruit.meritzfire.com/new/job/noticeProcess.do"
-     },
-     {
-      "text": "FAQ",
-      "url": "https://recruit.meritzfire.com/new/job/faq.do"
-     },
-     {
-      "text": "인터뷰",
-      "url": "https://recruit.meritzfire.com/new/people/interview.do"
-     },
-     {
-      "text": "기업문화",
-      "url": "https://recruit.meritzfire.com/new/culture/culture.do"
-     },
-     {
-      "text": "인재Pool",
-      "url": "https://recruit.meritzfire.com/new/job/poolWrite.do"
-     },
-     {
-      "text": "로그인",
-      "url": "https://recruit.meritzfire.com/new/common/login.do"
-     },
-     {
-      "text": "meritz_recruit@meritz.co.kr",
-      "url": "mailto:meritz_recruit@meritz.co.kr"
-     }
-    ],
+    "browser_html_len": 379,
+    "browser_anchor_count": 0,
+    "unique_links_sample": [],
     "matched_by_pattern": 0,
     "link_include": [
      "https://recruit.meritzfire.com/new/job/noticeView.do"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개"
+    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
    },
    "filtered": {
     "notjob": 0,
@@ -630,7 +581,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용 D-Day 2026.10.06 ~ 2026.10.14 18:00 수시 일반채",
+     "title": "접수마감 2026년 현대해상 산전후 대체업무직 채용 2026.10.06 ~ 2026.10.14 23:30 수시 일반채용 신입",
      "url": "https://hi.recruiter.co.kr/career/jobs/130428"
     },
     {
@@ -769,7 +720,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40231,
+    "browser_html_len": 40250,
     "browser_anchor_count": 184,
     "unique_links_sample": [
      {
@@ -893,8 +844,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 35,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -960,7 +911,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 97개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 120개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -969,8 +920,8 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 52813,
-    "browser_anchor_count": 97,
+    "browser_html_len": 59121,
+    "browser_anchor_count": 120,
     "unique_links_sample": [
      {
       "text": "KMPG careers",
@@ -1077,7 +1028,7 @@
     "link_include": [
      "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 97개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 120개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -1095,8 +1046,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 3,
-   "detail_ok": 3,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1106,42 +1057,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-4 2026.08.19 ~ 2026.10.18 23:59 수시 일반채",
+     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-3 2026.08.19 ~ 2026.10.18 23:59 수시 일반채",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888"
     },
     {
-     "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-4 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용 신",
+     "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-3 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용 신",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130523"
     },
     {
-     "title": "접수중 FP&A (Financial Planning & Analysis) [경력/리더급] D-4 2026.10.08 ~ 202",
+     "title": "접수중 FP&A (Financial Planning & Analysis) [경력/리더급] D-3 2026.10.08 ~ 202",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130786"
     },
     {
-     "title": "접수중 세무부문 통합세무팀 D-5 2026.10.07 ~ 2026.10.19 09:00 수시 일반채용 경력 무관",
+     "title": "접수중 세무부문 통합세무팀 D-4 2026.10.07 ~ 2026.10.19 09:00 수시 일반채용 경력 무관",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130610"
     },
     {
-     "title": "접수중 감사부문 포렌식팀 인턴(전환형) D-5 2026.10.13 ~ 2026.10.19 10:00 수시 일반채용 인턴",
+     "title": "접수중 감사부문 포렌식팀 인턴(전환형) D-4 2026.10.13 ~ 2026.10.19 10:00 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131142"
     },
     {
-     "title": "접수중 컨설팅부문 업무 혁신 프로젝트 인턴 D-5 2026.10.12 ~ 2026.10.19 23:59 수시 일반채용 인턴",
+     "title": "접수중 컨설팅부문 업무 혁신 프로젝트 인턴 D-4 2026.10.12 ~ 2026.10.19 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130990"
     },
     {
-     "title": "접수중 감사부문 Forensic & Integrity Services [경력] D-11 2026.10.12 ~ 2026.10.",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126676"
+     "title": "접수중 감사부문 Data Analytics – IT Specialist 인턴 D-7 2026.10.14 ~ 2026.10.22",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131232"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-11 2026.10.13",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129843"
+     "title": "접수중 금융컨설팅본부 Finance팀 컨설턴트 경력직 D-7 2026.10.14 ~ 2026.10.22 23:59 수시 일반채",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131251"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 2,
-    "expired": 0
+    "employment": 1,
+    "expired": 5
    }
   },
   {
@@ -1321,7 +1272,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 30166,
+    "browser_html_len": 30162,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1368,7 +1319,7 @@
     "requests_anchor_count": 15,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 85008,
+    "browser_html_len": 84955,
     "browser_anchor_count": 14,
     "unique_links_sample": [
      {
@@ -1593,7 +1544,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 149개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 151개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -1602,8 +1553,8 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46505,
-    "browser_anchor_count": 149,
+    "browser_html_len": 47021,
+    "browser_anchor_count": 151,
     "unique_links_sample": [
      {
       "text": "",
@@ -1710,7 +1661,7 @@
     "link_include": [
      "https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 149개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 151개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -1728,15 +1679,15 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 4,
-   "new_found": 2,
+   "new_found": 0,
    "detail_ok": 0,
-   "detail_failed": 2,
+   "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "note": "",
    "sample_links": [
     {
      "title": "[하나생명] 재무관리 경력사원 채용 경력 7년 이상 | 정규직 | 2026.10.13 ~ 2026.10.26 23:59 | D",
@@ -1782,7 +1733,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-14 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-13 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/130686"
     },
     {
@@ -2609,20 +2560,6 @@
    "first_seen": "2026-08-30"
   },
   {
-   "id": "3ec9a4ada5b3cf8c",
-   "company": "DB그룹",
-   "title": "접수마감 [DB하이텍] Mask Design 엔지니어 채용(상우) - 전환형 계약직 2026.07.10 ~ 2026.07.19 23:59 수시 일반채용 신입",
-   "url": "https://dbgroup.recruiter.co.kr/career/jobs/121631",
-   "source_key": "dbgroup",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '계약직' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-07-19",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
-  },
-  {
    "id": "ca262127ba35a775",
    "company": "DB그룹",
    "title": "접수마감 [DB하이텍] R&D 국책과제 운영 및 성과관리(부천/초대졸) 경력 2026.07.20 ~ 2026.08.02 23:59 수시 일반채용 경력",
@@ -2917,20 +2854,6 @@
    "first_seen": "2026-10-13"
   },
   {
-   "id": "ea039f6fe63022f4",
-   "company": "EY한영",
-   "title": "접수중 EY Korea FS Strategy Team | Experienced Hires D-Day 2026.08.05 ~ 2026.08.30 23:59 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124302",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
-   "deadline": "2026-08-30",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
-  },
-  {
    "id": "3a1ac03cf2c8886f",
    "company": "EY한영",
    "title": "접수중 EY Parthenon VCS 팀(Value Creation Strategy, 운영혁신전략) 컨설턴트 D-6 2026.08.21 ~ 2026.09.06 23:59 수시 일반채용 경력",
@@ -3043,6 +2966,20 @@
    "first_seen": "2026-09-18"
   },
   {
+   "id": "36e773bdb19ece53",
+   "company": "EY한영",
+   "title": "접수중 감사부문 Data Analytics – IT Specialist 인턴 D-7 2026.10.14 ~ 2026.10.22 23:59 수시 일반채용 인턴",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131232",
+   "source_key": "eycareers_kr",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-10-22",
+   "has_detail": true,
+   "first_seen": "2026-10-15"
+  },
+  {
    "id": "0eadd6324f614a98",
    "company": "EY한영",
    "title": "접수중 감사부문 Forensic & Integrity Services [경력] D-2 2026.08.28 ~ 2026.09.09 23:59 수시 일반채용 경력",
@@ -3104,10 +3041,10 @@
    "title": "접수중 감사부문 공인회계사(등록회계사, 경력) 상시채용 2026.07.14 ~ 영입 종료 시 상시 상시채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117352",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-14)로부터 30일 경과",
    "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-09-14"
@@ -3139,20 +3076,6 @@
    "deadline": "2026-09-14",
    "has_detail": true,
    "first_seen": "2026-09-13"
-  },
-  {
-   "id": "59e0351f8472689b",
-   "company": "EY한영",
-   "title": "접수중 감사부문 원가관리회계 및 재무 혁신 컨설턴트 [경력] D-Day 2026.08.12 ~ 2026.08.30 23:59 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124790",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
-   "deadline": "2026-08-30",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
   },
   {
    "id": "93d4d5db2dd67039",
@@ -3239,6 +3162,20 @@
    "first_seen": "2026-09-16"
   },
   {
+   "id": "31abdafa25cf1275",
+   "company": "EY한영",
+   "title": "접수중 금융컨설팅본부 Finance팀 컨설턴트 경력직 D-7 2026.10.14 ~ 2026.10.22 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131251",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-22",
+   "has_detail": true,
+   "first_seen": "2026-10-15"
+  },
+  {
    "id": "33a6ca8206a6b184",
    "company": "EY한영",
    "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-11 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용 신입/경력",
@@ -3293,20 +3230,6 @@
    "deadline": "2026-09-27",
    "has_detail": true,
    "first_seen": "2026-09-23"
-  },
-  {
-   "id": "a0f16e775c1df5b6",
-   "company": "EY한영",
-   "title": "접수중 금융컨설팅부문 AI · Technology · Security(AITS)팀 경력직 D-Day 2026.08.05 ~ 2026.08.30 23:59 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/124029",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
-   "deadline": "2026-08-30",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
   },
   {
    "id": "a81543fc6150fd0c",
@@ -3533,20 +3456,6 @@
    "first_seen": "2026-09-11"
   },
   {
-   "id": "3a5de3c8b3fe0bea",
-   "company": "EY한영",
-   "title": "접수중 전략·재무자문부문 M&A Solution Group 경력직 D-Day 2026.08.19 ~ 2026.08.30 23:59 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125464",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
-   "deadline": "2026-08-30",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
-  },
-  {
    "id": "a20c92b8d8fc01ba",
    "company": "EY한영",
    "title": "접수중 컨설팅부문 AID팀 인턴 D-3 2026.08.19 ~ 2026.09.10 23:59 수시 일반채용 인턴",
@@ -3566,10 +3475,10 @@
    "title": "접수중 컨설팅부문 Customer 팀 (Data Scientist, AI 서비스 기획/구현 컨설턴트) 컨설턴트 경력직 2026.06.26 ~ 영입 종료 시 수시 일반채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117879",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-14)로부터 30일 경과",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-09-14"
@@ -3664,10 +3573,10 @@
    "title": "접수중 컨설팅부문 Gen AI 서비스 및 애플리케이션 개발 컨설턴트 2026.07.24 ~ 영입 종료 시 수시 일반채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/118234",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-14)로부터 30일 경과",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-09-14"
@@ -3832,10 +3741,10 @@
    "title": "접수중 컨설팅부문 조직/인사전략 컨설턴트 경력직 2026.07.24 ~ 영입 종료 시 수시 일반채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/118589",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-14)로부터 30일 경과",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-09-14"
@@ -3874,10 +3783,10 @@
    "title": "접수중 컨설팅부문_인재 Pool 등록 상시채용 2026.06.05 ~ 영입 종료 시 상시 상시채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117865",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-14)로부터 30일 경과",
    "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-09-14"
@@ -3909,20 +3818,6 @@
    "deadline": "2026-10-05",
    "has_detail": true,
    "first_seen": "2026-09-22"
-  },
-  {
-   "id": "fd772bc10cb02f7f",
-   "company": "KB금융지주",
-   "title": "PE성장투자관리팀 펀드(조합) 관리업무 경력직 채용",
-   "url": "https://careers.kbfg.com/apply/875",
-   "source_key": "careers_kbfg",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-08-30 마감으로 오늘(2026-08-31) 기준 경과",
-   "deadline": "2026-08-30",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
   },
   {
    "id": "841d0424a647f52f",
