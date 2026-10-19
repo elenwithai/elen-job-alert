@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-18 09:41",
+ "generated_at": "2026-10-19 09:52",
  "summary": {
-  "crawled_total": 250,
+  "crawled_total": 253,
   "passed": 0,
   "waiting": 28,
   "excluded_notjob": 0,
   "excluded_employment": 0,
-  "excluded_expired": 0,
+  "excluded_expired": 4,
   "excluded_ai": 0
  },
  "sources": [
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 61847,
+    "browser_html_len": 61849,
     "browser_anchor_count": 96,
     "unique_links_sample": [
      {
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 509243,
+    "browser_html_len": 493581,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -295,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 518,
+    "browser_html_len": 517,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -447,7 +447,7 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131415"
     },
     {
-     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (10월) 수시 26.10.16~26.10.29 23:59 D-11",
+     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (10월) 수시 26.10.16~26.10.29 23:59 D-10",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131527"
     },
     {
@@ -732,7 +732,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40255,
+    "browser_html_len": 40257,
     "browser_anchor_count": 184,
     "unique_links_sample": [
      {
@@ -902,7 +902,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 2
    }
   },
   {
@@ -932,7 +932,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59163,
+    "browser_html_len": 59123,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1058,8 +1058,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 4,
+   "detail_ok": 4,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1069,42 +1069,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-Day 2026.08.19 ~ 2026.10.18 23:59 수시 일",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888"
-    },
-    {
-     "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-Day 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130523"
-    },
-    {
-     "title": "접수중 FP&A (Financial Planning & Analysis) [경력/리더급] D-Day 2026.10.08 ~ 2",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130786"
-    },
-    {
-     "title": "접수중 세무부문 통합세무팀 D-1 2026.10.07 ~ 2026.10.19 09:00 수시 일반채용 경력 무관",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130610"
-    },
-    {
-     "title": "접수중 감사부문 포렌식팀 인턴(전환형) D-1 2026.10.13 ~ 2026.10.19 10:00 수시 일반채용 인턴",
+     "title": "접수중 감사부문 포렌식팀 인턴(전환형) D-Day 2026.10.13 ~ 2026.10.19 10:00 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131142"
     },
     {
-     "title": "접수중 컨설팅부문 업무 혁신 프로젝트 인턴 D-1 2026.10.12 ~ 2026.10.19 23:59 수시 일반채용 인턴",
+     "title": "접수중 컨설팅부문 업무 혁신 프로젝트 인턴 D-Day 2026.10.12 ~ 2026.10.19 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130990"
     },
     {
-     "title": "접수중 감사부문 Data Analytics – IT Specialist 인턴 D-4 2026.10.14 ~ 2026.10.22",
+     "title": "접수중 감사부문 Data Analytics – IT Specialist 인턴 D-3 2026.10.14 ~ 2026.10.22",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131232"
     },
     {
-     "title": "접수중 금융컨설팅본부 Finance팀 컨설턴트 경력직 D-4 2026.10.14 ~ 2026.10.22 23:59 수시 일반채",
+     "title": "접수중 금융컨설팅본부 Finance팀 컨설턴트 경력직 D-3 2026.10.14 ~ 2026.10.22 23:59 수시 일반채",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131251"
+    },
+    {
+     "title": "접수중 감사부문 Forensic & Integrity Services [경력] D-6 2026.10.12 ~ 2026.10.2",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126676"
+    },
+    {
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-6 2026.10.13 ",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129843"
+    },
+    {
+     "title": "접수중 금융컨설팅본부 IT컨설팅 (AXIS팀) 경력직 D-6 2026.10.14 ~ 2026.10.25 23:59 수시 일반채",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131261"
+    },
+    {
+     "title": "접수중 세무부문 풀스택 개발자 (경력) D-6 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131267"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 2
    }
   },
   {
@@ -1284,7 +1284,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 30158,
+    "browser_html_len": 30162,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1331,7 +1331,7 @@
     "requests_anchor_count": 15,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 84955,
+    "browser_html_len": 85006,
     "browser_anchor_count": 14,
     "unique_links_sample": [
      {
@@ -1565,7 +1565,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 47008,
+    "browser_html_len": 47021,
     "browser_anchor_count": 151,
     "unique_links_sample": [
      {
@@ -1737,7 +1737,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-10 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-9 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/130686"
     },
     {
@@ -2508,20 +2508,6 @@
    "first_seen": "2026-09-03"
   },
   {
-   "id": "376e5c0580e4823c",
-   "company": "DB그룹",
-   "title": "접수중 [DB하이텍] 경력사원 공개채용 (8월) D-4 2026.08.21 ~ 2026.09.03 23:59 수시 일반채용 경력",
-   "url": "https://dbgroup.recruiter.co.kr/career/jobs/125739",
-   "source_key": "dbgroup",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-09-03 마감으로 오늘(2026-09-04) 기준 경과",
-   "deadline": "2026-09-03",
-   "has_detail": true,
-   "first_seen": "2026-08-30"
-  },
-  {
    "id": "f266ac682c21f341",
    "company": "DB손보",
    "title": "LD/TC지원",
@@ -2793,10 +2779,10 @@
    "title": "접수중 FP&A (Financial Planning & Analysis) [경력/리더급] D-9 2026.10.08 ~ 2026.10.18 23:59 수시 일반채용 경력",
    "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130786",
    "source_key": "eycareers_kr",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-10-18 마감으로 오늘(2026-10-19) 기준 경과",
    "deadline": "2026-10-18",
    "has_detail": true,
    "first_seen": "2026-10-09"
@@ -3054,15 +3040,29 @@
    "first_seen": "2026-10-15"
   },
   {
-   "id": "33a6ca8206a6b184",
+   "id": "e1abbd0f3c95abf6",
    "company": "EY한영",
-   "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-11 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용 신입/경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130523",
+   "title": "접수중 금융컨설팅본부 IT컨설팅 (AXIS팀) 경력직 D-6 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131261",
    "source_key": "eycareers_kr",
    "status": "대기",
    "stage": "unjudged",
    "stage_label": "5단계 AI 적합도(미실행)",
    "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-25",
+   "has_detail": true,
+   "first_seen": "2026-10-19"
+  },
+  {
+   "id": "33a6ca8206a6b184",
+   "company": "EY한영",
+   "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-11 2026.10.06 ~ 2026.10.18 23:59 수시 일반채용 신입/경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130523",
+   "source_key": "eycareers_kr",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-10-18 마감으로 오늘(2026-10-19) 기준 경과",
    "deadline": "2026-10-18",
    "has_detail": true,
    "first_seen": "2026-10-07"
@@ -3180,6 +3180,20 @@
    "first_seen": "2026-10-03"
   },
   {
+   "id": "c8917929757fd756",
+   "company": "EY한영",
+   "title": "접수중 세무부문 백앤드 개발자 (경력) D-6 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131273",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-25",
+   "has_detail": true,
+   "first_seen": "2026-10-19"
+  },
+  {
    "id": "4ccc5cb36b470321",
    "company": "EY한영",
    "title": "접수중 세무부문 세무IT 백앤드 개발자 채용 D-4 2026.08.26 ~ 2026.09.06 23:59 수시 일반채용 경력",
@@ -3220,6 +3234,34 @@
    "deadline": "2026-10-19",
    "has_detail": true,
    "first_seen": "2026-10-08"
+  },
+  {
+   "id": "7bbe71142d2b7e02",
+   "company": "EY한영",
+   "title": "접수중 세무부문 풀스택 개발자 (경력) D-6 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131267",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-25",
+   "has_detail": true,
+   "first_seen": "2026-10-19"
+  },
+  {
+   "id": "dce0efcdaaa4b790",
+   "company": "EY한영",
+   "title": "접수중 세무부문 프론트앤드 개발자 (경력) D-6 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131276",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-25",
+   "has_detail": true,
+   "first_seen": "2026-10-19"
   },
   {
    "id": "fddf5da906699e81",
@@ -4081,10 +4123,10 @@
    "title": "Deals, Real Assets 부동산 오피스 임차자문 경력직 모집",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260917-1.html",
    "source_key": "pwc",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-10-18 마감으로 오늘(2026-10-19) 기준 경과",
    "deadline": "2026-10-18",
    "has_detail": true,
    "first_seen": "2026-09-19"
@@ -4095,10 +4137,10 @@
    "title": "Deals, Real Assets 부동산 자문 경력직 모집",
    "url": "https://www.pwc.com/kr/ko/career/experienced/r260917-2.html",
    "source_key": "pwc",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-10-18 마감으로 오늘(2026-10-19) 기준 경과",
    "deadline": "2026-10-18",
    "has_detail": true,
    "first_seen": "2026-09-19"
