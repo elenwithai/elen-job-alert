@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-20 10:36",
+ "generated_at": "2026-10-21 10:21",
  "summary": {
-  "crawled_total": 259,
+  "crawled_total": 262,
   "passed": 0,
-  "waiting": 30,
+  "waiting": 35,
   "excluded_notjob": 0,
-  "excluded_employment": 3,
-  "excluded_expired": 1,
+  "excluded_employment": 1,
+  "excluded_expired": 0,
   "excluded_ai": 0
  },
  "sources": [
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 61763,
+    "browser_html_len": 61680,
     "browser_anchor_count": 96,
     "unique_links_sample": [
      {
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 497459,
+    "browser_html_len": 500274,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -295,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 519,
+    "browser_html_len": 518,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -318,8 +318,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 7,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -329,7 +329,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 GA상품팀 디자이너(계약직) D-5 2026.10.19 ~ 2026.10.25 23:59 수시 일반채용 경력",
+     "title": "접수중 GA상품팀 디자이너(계약직) D-4 2026.10.19 ~ 2026.10.25 23:59 수시 일반채용 경력",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/131621"
     },
     {
@@ -432,8 +432,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 2,
-   "detail_ok": 2,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -447,7 +447,7 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131415"
     },
     {
-     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (10월) 수시 26.10.16~26.10.29 23:59 D-9",
+     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (10월) 수시 26.10.16~26.10.29 23:59 D-8",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131527"
     },
     {
@@ -455,7 +455,7 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131590"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 계약직 채용 수시 26.10.19~26.11.01 23:59 D-12",
+     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 계약직 채용 수시 26.10.19~26.11.01 23:59 D-11",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
     },
     {
@@ -504,11 +504,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 347,
+    "requests_html_len": 346,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 380,
+    "browser_html_len": 379,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -683,7 +683,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40257,
+    "browser_html_len": 40258,
     "browser_anchor_count": 184,
     "unique_links_sample": [
      {
@@ -806,9 +806,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 32,
-   "new_found": 1,
-   "detail_ok": 1,
+   "links_found": 30,
+   "new_found": 3,
+   "detail_ok": 3,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -818,8 +818,20 @@
    "note": "",
    "sample_links": [
     {
+     "title": "Public Service팀 Consulting Intern 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261020-3.html"
+    },
+    {
      "title": "Public Service팀 프로젝트 (에너지) 인턴 채용",
      "url": "https://www.pwc.com/kr/ko/career/experienced/r261020.html"
+    },
+    {
+     "title": "데이터 엔지니어 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261020-1.html"
+    },
+    {
+     "title": "제조/공정 AX, DX 전문가 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261020-2.html"
     },
     {
      "title": "Global Sector Cross-Border Business 경력직 채용",
@@ -834,25 +846,13 @@
      "url": "https://www.pwc.com/kr/ko/career/experienced/r261012.html"
     },
     {
-     "title": "Deals 업무 인턴 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r261007.html"
-    },
-    {
      "title": "Middle Market Corporate Finance 부문 채용",
      "url": "https://www.pwc.com/kr/ko/career/experienced/r260928.html"
-    },
-    {
-     "title": "Public Service팀 컨설팅 인턴 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r260918-1.html"
-    },
-    {
-     "title": "조직문화 데이터 & 소통 플랫폼 지원 인턴 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r260918.html"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 1,
+    "employment": 0,
     "expired": 0
    }
   },
@@ -874,7 +874,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 120개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -883,8 +883,8 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59144,
-    "browser_anchor_count": 121,
+    "browser_html_len": 59111,
+    "browser_anchor_count": 120,
     "unique_links_sample": [
      {
       "text": "KMPG careers",
@@ -991,7 +991,7 @@
     "link_include": [
      "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 120개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -1009,8 +1009,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 2,
-   "detail_ok": 2,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1020,42 +1020,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 감사부문 Data Analytics – IT Specialist 인턴 D-2 2026.10.14 ~ 2026.10.22",
+     "title": "접수중 감사부문 Data Analytics – IT Specialist 인턴 D-1 2026.10.14 ~ 2026.10.22",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131232"
     },
     {
-     "title": "접수중 금융컨설팅본부 Finance팀 컨설턴트 경력직 D-2 2026.10.14 ~ 2026.10.22 23:59 수시 일반채",
+     "title": "접수중 금융컨설팅본부 Finance팀 컨설턴트 경력직 D-1 2026.10.14 ~ 2026.10.22 23:59 수시 일반채",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131251"
     },
     {
-     "title": "접수중 감사부문 Forensic & Integrity Services [경력] D-5 2026.10.12 ~ 2026.10.2",
+     "title": "접수중 감사부문 Forensic & Integrity Services [경력] D-4 2026.10.12 ~ 2026.10.2",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126676"
     },
     {
-     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-5 2026.10.13 ",
+     "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 경력직 D-4 2026.10.13 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129843"
     },
     {
-     "title": "접수중 금융컨설팅본부 IT컨설팅 (AXIS팀) 경력직 D-5 2026.10.14 ~ 2026.10.25 23:59 수시 일반채",
+     "title": "접수중 금융컨설팅본부 IT컨설팅 (AXIS팀) 경력직 D-4 2026.10.14 ~ 2026.10.25 23:59 수시 일반채",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131261"
     },
     {
-     "title": "접수중 세무부문 풀스택 개발자 (경력) D-5 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+     "title": "접수중 세무부문 풀스택 개발자 (경력) D-4 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131267"
     },
     {
-     "title": "접수중 세무부문 백앤드 개발자 (경력) D-5 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+     "title": "접수중 세무부문 백앤드 개발자 (경력) D-4 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131273"
     },
     {
-     "title": "접수중 세무부문 프론트앤드 개발자 (경력) D-5 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
+     "title": "접수중 세무부문 프론트앤드 개발자 (경력) D-4 2026.10.14 ~ 2026.10.25 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131276"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 2,
-    "expired": 1
+    "employment": 0,
+    "expired": 0
    }
   },
   {
@@ -1107,7 +1107,7 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 18,
+   "links_found": 17,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -1194,12 +1194,12 @@
      "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Corporate-Counsel/20567"
     },
     {
-     "title": "CS Pro_수원근무 계약직",
-     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/CS-Pro/19481"
-    },
-    {
      "title": "HR Business Partner (HRBP)",
      "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/HR-Business-Partner-HRBP/20473"
+    },
+    {
+     "title": "Procurement Specialist(12-Month Contract)",
+     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Procurement-Specialist-12-Month-Contract/20635"
     }
    ],
    "filtered": {
@@ -1235,7 +1235,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 30161,
+    "browser_html_len": 30163,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1516,7 +1516,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 47030,
+    "browser_html_len": 47018,
     "browser_anchor_count": 151,
     "unique_links_sample": [
      {
@@ -1676,9 +1676,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 5,
-   "new_found": 0,
-   "detail_ok": 0,
+   "links_found": 8,
+   "new_found": 3,
+   "detail_ok": 3,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1688,7 +1688,19 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-8 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 상품기획팀 신입직원 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 신",
+     "url": "https://abl.recruiter.co.kr/career/jobs/131817"
+    },
+    {
+     "title": "접수중 [ABL생명] 상품개발팀 경력직 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
+     "url": "https://abl.recruiter.co.kr/career/jobs/131814"
+    },
+    {
+     "title": "접수중 [ABL생명] 보험금심사팀 계약직 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경",
+     "url": "https://abl.recruiter.co.kr/career/jobs/131766"
+    },
+    {
+     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-7 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/130686"
     },
     {
@@ -1710,7 +1722,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 0,
+    "employment": 1,
     "expired": 0
    }
   }
@@ -1757,6 +1769,48 @@
    "deadline": "2026-09-03",
    "has_detail": true,
    "first_seen": "2026-08-30"
+  },
+  {
+   "id": "7f4d69f728b8679c",
+   "company": "ABL생명",
+   "title": "접수중 [ABL생명] 보험금심사팀 계약직 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/131766",
+   "source_key": "abl_recruiter",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-11-02",
+   "has_detail": true,
+   "first_seen": "2026-10-21"
+  },
+  {
+   "id": "412e7d001b923be7",
+   "company": "ABL생명",
+   "title": "접수중 [ABL생명] 상품개발팀 경력직 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
+   "url": "https://abl.recruiter.co.kr/career/jobs/131814",
+   "source_key": "abl_recruiter",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-11-02",
+   "has_detail": true,
+   "first_seen": "2026-10-21"
+  },
+  {
+   "id": "78b096dbb617bee2",
+   "company": "ABL생명",
+   "title": "접수중 [ABL생명] 상품기획팀 신입직원 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 신입",
+   "url": "https://abl.recruiter.co.kr/career/jobs/131817",
+   "source_key": "abl_recruiter",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-11-02",
+   "has_detail": true,
+   "first_seen": "2026-10-21"
   },
   {
    "id": "7270031befae613f",
@@ -2711,20 +2765,6 @@
    "first_seen": "2026-08-31"
   },
   {
-   "id": "50d6f9d371f705b2",
-   "company": "EY한영",
-   "title": "접수중 EY Parthenon VCS팀(Value Creation Strategy, 운영혁신전략) 채용 전환형 인턴 D-6 2026.08.21 ~ 2026.09.06 23:59 수시 일반채용 인턴",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/125812",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-09-06",
-   "has_detail": true,
-   "first_seen": "2026-08-31"
-  },
-  {
    "id": "0481efe50864d136",
    "company": "EY한영",
    "title": "접수중 EY-Parthenon Strategy 팀 신입/경력직 컨설턴트 D-12 2026.09.14 ~ 2026.09.27 23:59 수시 일반채용 분야별 상이",
@@ -2779,20 +2819,6 @@
    "deadline": "2026-10-26",
    "has_detail": true,
    "first_seen": "2026-10-14"
-  },
-  {
-   "id": "35bbdaae9754b803",
-   "company": "EY한영",
-   "title": "접수중 Talent팀 인사운영 인턴 D-4 2026.08.28 ~ 2026.09.06 23:59 수시 일반채용 인턴",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126718",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-09-06",
-   "has_detail": true,
-   "first_seen": "2026-09-02"
   },
   {
    "id": "ba4b1663a72f0b15",
@@ -3479,20 +3505,6 @@
    "deadline": "2026-09-02",
    "has_detail": true,
    "first_seen": "2026-08-30"
-  },
-  {
-   "id": "b10bf18d706d9b5d",
-   "company": "EY한영",
-   "title": "접수중 컨설팅부문 SAP SuccessFactors 컨설턴트 인턴 D-3 2026.08.28 ~ 2026.09.06 23:59 수시 일반채용 인턴",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126753",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-09-06",
-   "has_detail": true,
-   "first_seen": "2026-09-03"
   },
   {
    "id": "ed87395efd26a517",
@@ -4391,6 +4403,20 @@
    "first_seen": "2026-08-30"
   },
   {
+   "id": "dba24d67091bfd39",
+   "company": "PwC삼일",
+   "title": "Public Service팀 Consulting Intern 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261020-3.html",
+   "source_key": "pwc",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-27",
+   "has_detail": true,
+   "first_seen": "2026-10-21"
+  },
+  {
    "id": "e155a7fe3b9031f0",
    "company": "PwC삼일",
    "title": "Public Service팀 컨설팅 인턴 채용",
@@ -4629,6 +4655,20 @@
    "first_seen": "2026-08-30"
   },
   {
+   "id": "9c9b886acd42e0e5",
+   "company": "PwC삼일",
+   "title": "데이터 엔지니어 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261020-1.html",
+   "source_key": "pwc",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "상시",
+   "has_detail": true,
+   "first_seen": "2026-10-21"
+  },
+  {
    "id": "0c11ac2ae234df03",
    "company": "PwC삼일",
    "title": "바이오플랫폼 경력직 채용",
@@ -4683,6 +4723,20 @@
    "deadline": "2026-09-30",
    "has_detail": true,
    "first_seen": "2026-09-10"
+  },
+  {
+   "id": "c1dde59fcbbaca34",
+   "company": "PwC삼일",
+   "title": "제조/공정 AX, DX 전문가 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261020-2.html",
+   "source_key": "pwc",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "상시",
+   "has_detail": true,
+   "first_seen": "2026-10-21"
   },
   {
    "id": "660f78ddd7c00afc",
