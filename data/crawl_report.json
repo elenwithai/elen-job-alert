@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-10-23 10:16",
+ "generated_at": "2026-10-24 10:24",
  "summary": {
-  "crawled_total": 269,
+  "crawled_total": 275,
   "passed": 0,
-  "waiting": 44,
+  "waiting": 45,
   "excluded_notjob": 0,
-  "excluded_employment": 11,
-  "excluded_expired": 1,
+  "excluded_employment": 3,
+  "excluded_expired": 2,
   "excluded_ai": 0
  },
  "sources": [
@@ -28,7 +28,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 97개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 96개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -37,8 +37,8 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 63088,
-    "browser_anchor_count": 97,
+    "browser_html_len": 61334,
+    "browser_anchor_count": 96,
     "unique_links_sample": [
      {
       "text": "삼성",
@@ -145,7 +145,7 @@
     "link_include": [
      "https://www.samsungcareers.com/hr/?no="
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 97개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 96개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 508547,
+    "browser_html_len": 510072,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -295,7 +295,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 520,
+    "browser_html_len": 517,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -329,7 +329,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 GA상품팀 디자이너(계약직) D-2 2026.10.19 ~ 2026.10.25 23:59 수시 일반채용 경력",
+     "title": "접수중 GA상품팀 디자이너(계약직) D-1 2026.10.19 ~ 2026.10.25 23:59 수시 일반채용 경력",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/131621"
     },
     {
@@ -367,12 +367,12 @@
    "key": "idbins",
    "company": "DB손보",
    "url": "https://www.idbins.com/FWCOMV1751.do",
-   "list_ok": true,
+   "list_ok": false,
    "method": "browser",
-   "fallback_used": true,
+   "fallback_used": false,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 11,
+   "links_found": 0,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -380,42 +380,8 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "",
-   "sample_links": [
-    {
-     "title": "인재양성",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1727.shtm"
-    },
-    {
-     "title": "인사제도",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1731.shtm"
-    },
-    {
-     "title": "급여 및 복리후생",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1732.shtm"
-    },
-    {
-     "title": "모집분야",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV1733.shtm"
-    },
-    {
-     "title": "영업관리/보상관리 경력채용(상시) 모집",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5581.shtm"
-    },
-    {
-     "title": "소액보상전담직",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5582.shtm"
-    },
-    {
-     "title": "사무지원직",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5584(1).shtm"
-    },
-    {
-     "title": "고객상담사",
-     "url": "https://www.idbins.com/pc/bizxpress/cmy/adp/FWCOMV5584.shtm"
-    }
-   ],
+   "error": "렌더링 실패: Error",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -447,7 +413,7 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131415"
     },
     {
-     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (10월) 수시 26.10.16~26.10.29 23:59 D-6",
+     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (10월) 수시 26.10.16~26.10.29 23:59 D-5",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131527"
     },
     {
@@ -455,7 +421,7 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131590"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 계약직 채용 수시 26.10.19~26.11.01 23:59 D-9",
+     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 계약직 채용 수시 26.10.19~26.11.01 23:59 D-8",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
     },
     {
@@ -499,23 +465,72 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
+   "note": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 348,
-    "requests_anchor_count": 0,
+    "requests_html_len": 13630,
+    "requests_anchor_count": 17,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 381,
-    "browser_anchor_count": 0,
-    "unique_links_sample": [],
+    "browser_html_len": 15663,
+    "browser_anchor_count": 18,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://recruit.meritzfire.com/new/main.do"
+     },
+     {
+      "text": "성장스토리",
+      "url": "https://recruit.meritzfire.com/new/company/company01.do"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://recruit.meritzfire.com/new/company/company02.do"
+     },
+     {
+      "text": "오피스",
+      "url": "https://recruit.meritzfire.com/new/company/company03.do?idx=all"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://recruit.meritzfire.com/new/job/noticeList.do"
+     },
+     {
+      "text": "채용절차",
+      "url": "https://recruit.meritzfire.com/new/job/noticeProcess.do"
+     },
+     {
+      "text": "FAQ",
+      "url": "https://recruit.meritzfire.com/new/job/faq.do"
+     },
+     {
+      "text": "인터뷰",
+      "url": "https://recruit.meritzfire.com/new/people/interview.do"
+     },
+     {
+      "text": "기업문화",
+      "url": "https://recruit.meritzfire.com/new/culture/culture.do"
+     },
+     {
+      "text": "인재Pool",
+      "url": "https://recruit.meritzfire.com/new/job/poolWrite.do"
+     },
+     {
+      "text": "로그인",
+      "url": "https://recruit.meritzfire.com/new/common/login.do"
+     },
+     {
+      "text": "meritz_recruit@meritz.co.kr",
+      "url": "mailto:meritz_recruit@meritz.co.kr"
+     }
+    ],
     "matched_by_pattern": 0,
     "link_include": [
      "https://recruit.meritzfire.com/new/job/noticeView.do"
     ],
-    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
+    "verdict": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -533,8 +548,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 7,
-   "new_found": 3,
-   "detail_ok": 3,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -544,15 +559,15 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용(거제) D-4 2026.10.22 ~ 2026.10.27 18:00 수시 일",
+     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용(거제) D-3 2026.10.22 ~ 2026.10.27 18:00 수시 일",
      "url": "https://hi.recruiter.co.kr/career/jobs/131971"
     },
     {
-     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용(제천) D-4 2026.10.22 ~ 2026.10.27 18:00 수시 일",
+     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용(제천) D-3 2026.10.22 ~ 2026.10.27 18:00 수시 일",
      "url": "https://hi.recruiter.co.kr/career/jobs/131970"
     },
     {
-     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용(경주) D-4 2026.10.22 ~ 2026.10.27 18:00 수시 일",
+     "title": "접수중 2026년 현대해상 산전후 대체업무직 채용(경주) D-3 2026.10.22 ~ 2026.10.27 18:00 수시 일",
      "url": "https://hi.recruiter.co.kr/career/jobs/131969"
     },
     {
@@ -574,7 +589,7 @@
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 3,
+    "employment": 0,
     "expired": 0
    }
   },
@@ -605,7 +620,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 58341,
+    "browser_html_len": 58465,
     "browser_anchor_count": 25,
     "unique_links_sample": [
      {
@@ -665,6 +680,18 @@
       "url": "https://kbinsure.recruiter.co.kr/career/welfare"
      },
      {
+      "text": "접수중 [KB손해보험] 2026년 하반기 IT개발·자산운용·SIU부 경력사원 공개채용 D-22 2026.10",
+      "url": "https://kbinsure.recruiter.co.kr/career/jobs/132119"
+     },
+     {
+      "text": "접수중 [KB손해보험] 2026년 하반기 6급 신입사원 공개채용 D-8 2026.10.23 ~ 2026.11",
+      "url": "https://kbinsure.recruiter.co.kr/career/jobs/132046"
+     },
+     {
+      "text": "접수중 [KB손해보험] 2026년 하반기 4급 신입사원 공개채용 D-8 2026.10.23 ~ 2026.11",
+      "url": "https://kbinsure.recruiter.co.kr/career/jobs/132043"
+     },
+     {
       "text": "접수마감 [KB손해보험] 2026년 자동차SIU부 경력사원 공개채용 2026.08.07 ~ 2026.09.2",
       "url": "https://kbinsure.recruiter.co.kr/career/jobs/124500"
      },
@@ -691,18 +718,6 @@
      {
       "text": "접수마감 [KB손해보험] 2026년 상반기 지방권GA본부 프런티어지점 업무지원(총무) 채용공고 2026.01",
       "url": "https://kbinsure.recruiter.co.kr/career/jobs/97312"
-     },
-     {
-      "text": "접수마감 [KB손해보험] 2025년 자동차SIU부 조사팀장 경력사원 공개채용 2025.12.16 ~ 2026",
-      "url": "https://kbinsure.recruiter.co.kr/career/jobs/92790"
-     },
-     {
-      "text": "접수마감 [KB손해보험] 본사 CS강사 경력사원 공개채용 2025.12.05 ~ 2025.12.20 23:5",
-      "url": "https://kbinsure.recruiter.co.kr/career/jobs/91663"
-     },
-     {
-      "text": "접수마감 [KB손해보험] 2025년 하반기 장기보험보상본부 사의 공개 채용 2025.12.12 ~ 2026.",
-      "url": "https://kbinsure.recruiter.co.kr/career/jobs/90359"
      }
     ],
     "matched_by_pattern": 0,
@@ -725,10 +740,10 @@
    "method": "browser",
    "fallback_used": true,
    "fallback_attempted": true,
-   "browser_links": 6,
-   "links_found": 6,
-   "new_found": 4,
-   "detail_ok": 4,
+   "browser_links": 9,
+   "links_found": 9,
+   "new_found": 3,
+   "detail_ok": 3,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -737,6 +752,18 @@
    "error": "",
    "note": "",
    "sample_links": [
+    {
+     "title": "[KB손해보험] 2026년 하반기 6급 신입사원 공개채용",
+     "url": "https://careers.kbfg.com/apply/933"
+    },
+    {
+     "title": "[KB손해보험] 2026년 하반기 4급 신입사원 공개채용",
+     "url": "https://careers.kbfg.com/apply/932"
+    },
+    {
+     "title": "디지털영업본부 핀테크Biz팀 경력직(연봉계약직) 채용",
+     "url": "https://careers.kbfg.com/apply/931"
+    },
     {
      "title": "「시설지원(전기)」 전문직무직원 채용",
      "url": "https://careers.kbfg.com/apply/930"
@@ -756,15 +783,11 @@
     {
      "title": "IT본부 경력직 채용",
      "url": "https://careers.kbfg.com/apply/926"
-    },
-    {
-     "title": "2026 리서치본부 연구원(RA) 채용",
-     "url": "https://careers.kbfg.com/apply/925"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 3,
+    "employment": 2,
     "expired": 0
    }
   },
@@ -795,7 +818,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40260,
+    "browser_html_len": 40150,
     "browser_anchor_count": 184,
     "unique_links_sample": [
      {
@@ -919,8 +942,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 33,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -995,7 +1018,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59162,
+    "browser_html_len": 59161,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1121,8 +1144,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 9,
-   "detail_ok": 9,
+   "new_found": 3,
+   "detail_ok": 3,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1132,42 +1155,42 @@
    "note": "",
    "sample_links": [
     {
+     "title": "접수중 세무IT Project Leader 경력 D-5 2026.10.23 ~ 2026.10.29 23:59 수시 일반채용 신",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132176"
+    },
+    {
+     "title": "접수중 마켓부문 BMC 글로벌 사회공헌 프로그램 담당 계약직 [경력] D-12 2026.10.23 ~ 2026.11.05 23",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132178"
+    },
+    {
+     "title": "접수중 금융감사부문 컨설팅 인턴(전환형) D-3 2026.10.23 ~ 2026.10.27 09:00 수시 일반채용 인턴",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132216"
+    },
+    {
      "title": "접수중 컨설팅부문 Gen AI 서비스 및 애플리케이션 개발 컨설턴트 2026.07.24 ~ 영입 종료 시 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/118234"
     },
     {
-     "title": "접수중 컨설팅부문 데이터 분석 전문가 (Data Scientist) D-12 2026.10.21 ~ 2026.11.04 23:",
+     "title": "접수중 컨설팅부문 데이터 분석 전문가 (Data Scientist) D-11 2026.10.21 ~ 2026.11.04 23:",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131957"
     },
     {
-     "title": "접수중 세무부문 국내조세 전문가(시니어~매니저) D-6 2026.10.21 ~ 2026.10.29 23:59 수시 일반채용 경",
+     "title": "접수중 세무부문 국내조세 전문가(시니어~매니저) D-5 2026.10.21 ~ 2026.10.29 23:59 수시 일반채용 경",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131867"
     },
     {
-     "title": "접수중 금융감사부문 보험계리 전환형 인턴 D-16 2026.10.21 ~ 2026.11.08 23:59 수시 일반채용 인턴",
+     "title": "접수중 금융감사부문 보험계리 전환형 인턴 D-15 2026.10.21 ~ 2026.11.08 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131864"
     },
     {
-     "title": "접수중 감사부문 리스크관리 지원 단기 인턴(3개월) D-3 2026.10.20 ~ 2026.10.26 10:00 수시 일반채용",
+     "title": "접수중 감사부문 리스크관리 지원 단기 인턴(3개월) D-2 2026.10.20 ~ 2026.10.26 10:00 수시 일반채용",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131812"
-    },
-    {
-     "title": "접수중 경영지원본부 재무실 회계자금팀 단기 인턴 채용 D-3 2026.10.20 ~ 2026.10.26 23:55 수시 일반채",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131784"
-    },
-    {
-     "title": "접수중 금융컨설팅본부 AI&Data팀 컨설턴트 경력직 D-8 2026.10.20 ~ 2026.10.31 23:59 수시 일반채",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131757"
-    },
-    {
-     "title": "접수중 FP&A (Financial Planning & Analysis) [경력/리더급] D-2 2026.10.20 ~ 202",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131744"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 5,
-    "expired": 1
+    "employment": 1,
+    "expired": 0
    }
   },
   {
@@ -1278,9 +1301,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 6,
-   "new_found": 1,
-   "detail_ok": 1,
+   "links_found": 5,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1300,10 +1323,6 @@
     {
      "title": "Corporate Counsel",
      "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Corporate-Counsel/20567"
-    },
-    {
-     "title": "HR Business Partner (HRBP)",
-     "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/HR-Business-Partner-HRBP/20473"
     },
     {
      "title": "Procurement Specialist(12-Month Contract)",
@@ -1347,7 +1366,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 30157,
+    "browser_html_len": 30162,
     "browser_anchor_count": 1,
     "unique_links_sample": [
      {
@@ -1512,7 +1531,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46760,
+    "browser_html_len": 46771,
     "browser_anchor_count": 150,
     "unique_links_sample": [
      {
@@ -1664,7 +1683,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 2
    }
   },
   {
@@ -1688,19 +1707,19 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 상품기획팀 신입직원 채용 D-10 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 신",
+     "title": "접수중 [ABL생명] 상품기획팀 신입직원 채용 D-9 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 신입",
      "url": "https://abl.recruiter.co.kr/career/jobs/131817"
     },
     {
-     "title": "접수중 [ABL생명] 상품개발팀 경력직 채용 D-10 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 상품개발팀 경력직 채용 D-9 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/131814"
     },
     {
-     "title": "접수중 [ABL생명] 보험금심사팀 계약직 채용 D-10 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경",
+     "title": "접수중 [ABL생명] 보험금심사팀 계약직 채용 D-9 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/131766"
     },
     {
-     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-5 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 계리분석팀 경력직 채용 D-4 2026.10.07 ~ 2026.10.28 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/130686"
     },
     {
@@ -3073,6 +3092,20 @@
    "first_seen": "2026-10-23"
   },
   {
+   "id": "c0bcf6d6f6411104",
+   "company": "EY한영",
+   "title": "접수중 금융감사부문 컨설팅 인턴(전환형) D-3 2026.10.23 ~ 2026.10.27 09:00 수시 일반채용 인턴",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132216",
+   "source_key": "eycareers_kr",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-10-27",
+   "has_detail": true,
+   "first_seen": "2026-10-24"
+  },
+  {
    "id": "9b2fb4bf3318518c",
    "company": "EY한영",
    "title": "접수중 금융컨설팅본부 AI&Data팀 컨설턴트 경력직 D-8 2026.10.20 ~ 2026.10.31 23:59 수시 일반채용 경력",
@@ -3183,6 +3216,34 @@
    "deadline": "2026-09-13",
    "has_detail": true,
    "first_seen": "2026-09-09"
+  },
+  {
+   "id": "92662bd36597e565",
+   "company": "EY한영",
+   "title": "접수중 마켓부문 BMC 글로벌 사회공헌 프로그램 담당 계약직 [경력] D-12 2026.10.23 ~ 2026.11.05 23:59 수시 일반채용 신입",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132178",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-11-05",
+   "has_detail": true,
+   "first_seen": "2026-10-24"
+  },
+  {
+   "id": "8e1c958bf1783a2c",
+   "company": "EY한영",
+   "title": "접수중 세무IT Project Leader 경력 D-5 2026.10.23 ~ 2026.10.29 23:59 수시 일반채용 신입",
+   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132176",
+   "source_key": "eycareers_kr",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-10-29",
+   "has_detail": true,
+   "first_seen": "2026-10-24"
   },
   {
    "id": "7ff1ef2bbe6c501b",
@@ -3745,6 +3806,34 @@
    "first_seen": "2026-10-23"
   },
   {
+   "id": "b761e84bc39f1e18",
+   "company": "KB금융지주",
+   "title": "[KB손해보험] 2026년 하반기 4급 신입사원 공개채용",
+   "url": "https://careers.kbfg.com/apply/932",
+   "source_key": "careers_kbfg",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-10-24"
+  },
+  {
+   "id": "1303eb52841c83d6",
+   "company": "KB금융지주",
+   "title": "[KB손해보험] 2026년 하반기 6급 신입사원 공개채용",
+   "url": "https://careers.kbfg.com/apply/933",
+   "source_key": "careers_kbfg",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "deadline": "",
+   "has_detail": true,
+   "first_seen": "2026-10-24"
+  },
+  {
    "id": "5df9f88a6b2b2882",
    "company": "KB금융지주",
    "title": "「AI개발자」 전문직무직원 채용",
@@ -3883,6 +3972,20 @@
    "deadline": "2026-10-11",
    "has_detail": true,
    "first_seen": "2026-09-22"
+  },
+  {
+   "id": "25653d70d74ac046",
+   "company": "KB금융지주",
+   "title": "디지털영업본부 핀테크Biz팀 경력직(연봉계약직) 채용",
+   "url": "https://careers.kbfg.com/apply/931",
+   "source_key": "careers_kbfg",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-11-08",
+   "has_detail": true,
+   "first_seen": "2026-10-24"
   },
   {
    "id": "1bca0aa6c550ea50",
@@ -5248,10 +5351,10 @@
    "title": "[하나생명] 계약보전담당 경력사원 채용 경력 4년 이상 | 정규직 | 2026.09.22 ~ 2026.10.06 23:59 | D-14",
    "url": "https://hanalife.careerlink.kr/jobs/RC20260922035068",
    "source_key": "hanalife",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-23)로부터 30일 경과",
    "deadline": "",
    "has_detail": false,
    "first_seen": "2026-09-23"
@@ -5332,10 +5435,10 @@
    "title": "[하나생명] 세무담당 경력사원 채용 경력 5년 이상 | 정규직 | 2026.09.22 ~ 2026.10.06 23:59 | D-14",
    "url": "https://hanalife.careerlink.kr/jobs/RC20260922035081",
    "source_key": "hanalife",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-23)로부터 30일 경과",
    "deadline": "",
    "has_detail": false,
    "first_seen": "2026-09-23"
