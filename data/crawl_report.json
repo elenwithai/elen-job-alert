@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-02 11:08",
+ "generated_at": "2026-11-03 12:51",
  "summary": {
-  "crawled_total": 268,
+  "crawled_total": 271,
   "passed": 0,
-  "waiting": 38,
+  "waiting": 33,
   "excluded_notjob": 0,
-  "excluded_employment": 0,
+  "excluded_employment": 2,
   "excluded_expired": 6,
   "excluded_ai": 0
  },
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 60784,
+    "browser_html_len": 60767,
     "browser_anchor_count": 96,
     "unique_links_sample": [
      {
@@ -157,9 +157,9 @@
    "key": "hanwhain",
    "company": "한화생명/한화손보",
    "url": "https://www.hanwhain.com/portal/apply/recruit",
-   "list_ok": true,
+   "list_ok": false,
    "method": "browser",
-   "fallback_used": true,
+   "fallback_used": false,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -170,98 +170,8 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개",
-   "sample_links": [],
-   "probe": {
-    "requests_status": 200,
-    "requests_error": "",
-    "requests_html_len": 3001,
-    "requests_anchor_count": 0,
-    "browser_ok": true,
-    "browser_error": "",
-    "browser_html_len": 494121,
-    "browser_anchor_count": 28,
-    "unique_links_sample": [
-     {
-      "text": "",
-      "url": "https://www.hanwhain.com/portal"
-     },
-     {
-      "text": "걸어온 길",
-      "url": "https://www.hanwhain.com/portal/hanwha/history"
-     },
-     {
-      "text": "핵심가치",
-      "url": "https://www.hanwhain.com/portal/hanwha/key-value"
-     },
-     {
-      "text": "브랜드비전",
-      "url": "https://www.hanwhain.com/portal/hanwha/brand"
-     },
-     {
-      "text": "계열사 소개",
-      "url": "https://www.hanwhain.com/portal/subsidiary"
-     },
-     {
-      "text": "채용공고",
-      "url": "https://www.hanwhain.com/portal/apply/recruit"
-     },
-     {
-      "text": "인재 POOL",
-      "url": "https://www.hanwhain.com/portal/apply/pool"
-     },
-     {
-      "text": "자주하는 질문",
-      "url": "https://www.hanwhain.com/portal/inquiry/faq"
-     },
-     {
-      "text": "1:1문의",
-      "url": "https://www.hanwhain.com/portal/mypage?rtn=qna"
-     },
-     {
-      "text": "로그인",
-      "url": "https://www.hanwhain.com/portal/login/login"
-     },
-     {
-      "text": "개인정보처리방침",
-      "url": "https://www.hanwhain.com/portal/policies/PrivacyPolicy"
-     },
-     {
-      "text": "이용약관",
-      "url": "https://www.hanwhain.com/portal/policies/TermsOfService"
-     },
-     {
-      "text": "한화 그룹",
-      "url": "https://www.hanwha.co.kr"
-     },
-     {
-      "text": "YouTube",
-      "url": "https://www.youtube.com/user/hanwhadays"
-     },
-     {
-      "text": "Instagram",
-      "url": "https://www.instagram.com/hanwhadays/"
-     },
-     {
-      "text": "facebook",
-      "url": "https://www.facebook.com/hanwhadays"
-     },
-     {
-      "text": "x",
-      "url": "https://x.com/hanwha_official"
-     },
-     {
-      "text": "blog",
-      "url": "https://blog.naver.com/hanwhadays"
-     }
-    ],
-    "matched_by_pattern": 0,
-    "link_include": [
-     "https://www.hanwhain.com/portal/apply/recruit/detail?rtSeq="
-    ],
-    "verdict": "link_include 패턴 불일치 — 링크는 28개 있으나 패턴에 맞는 것 0개"
-   },
+   "error": "렌더링 실패: TimeoutError",
+   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요.",
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -295,7 +205,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 516,
+    "browser_html_len": 519,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -432,8 +342,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
-   "detail_ok": 0,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -459,6 +369,10 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
     },
     {
+     "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 D-13",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/133125"
+    },
+    {
      "title": "수시 일반채용 신입 [DB생명] IFRS 모델링 및 검증 단기계약직 모집 수시 26.10.02~26.10.11 23:59 마감",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/130112"
     },
@@ -469,16 +383,12 @@
     {
      "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 마감",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/125752"
-    },
-    {
-     "title": "공채 일반채용 신입 [DB자산운용] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 마감",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/125777"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 1
+    "expired": 0
    }
   },
   {
@@ -499,23 +409,72 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
+   "note": "link_include 패턴 불일치 — 링크는 26개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 344,
-    "requests_anchor_count": 0,
+    "requests_html_len": 15935,
+    "requests_anchor_count": 17,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 377,
-    "browser_anchor_count": 0,
-    "unique_links_sample": [],
+    "browser_html_len": 20897,
+    "browser_anchor_count": 26,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://recruit.meritzfire.com/new/main.do"
+     },
+     {
+      "text": "성장스토리",
+      "url": "https://recruit.meritzfire.com/new/company/company01.do"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://recruit.meritzfire.com/new/company/company02.do"
+     },
+     {
+      "text": "오피스",
+      "url": "https://recruit.meritzfire.com/new/company/company03.do?idx=all"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://recruit.meritzfire.com/new/job/noticeList.do"
+     },
+     {
+      "text": "채용절차",
+      "url": "https://recruit.meritzfire.com/new/job/noticeProcess.do"
+     },
+     {
+      "text": "FAQ",
+      "url": "https://recruit.meritzfire.com/new/job/faq.do"
+     },
+     {
+      "text": "인터뷰",
+      "url": "https://recruit.meritzfire.com/new/people/interview.do"
+     },
+     {
+      "text": "기업문화",
+      "url": "https://recruit.meritzfire.com/new/culture/culture.do"
+     },
+     {
+      "text": "인재Pool",
+      "url": "https://recruit.meritzfire.com/new/job/poolWrite.do"
+     },
+     {
+      "text": "로그인",
+      "url": "https://recruit.meritzfire.com/new/common/login.do"
+     },
+     {
+      "text": "meritz_recruit@meritz.co.kr",
+      "url": "mailto:meritz_recruit@meritz.co.kr"
+     }
+    ],
     "matched_by_pattern": 0,
     "link_include": [
      "https://recruit.meritzfire.com/new/job/noticeView.do"
     ],
-    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
+    "verdict": "link_include 패턴 불일치 — 링크는 26개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -605,7 +564,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 58432,
+    "browser_html_len": 58467,
     "browser_anchor_count": 25,
     "unique_links_sample": [
      {
@@ -665,7 +624,7 @@
       "url": "https://kbinsure.recruiter.co.kr/career/welfare"
      },
      {
-      "text": "접수중 [KB손해보험] 2026년 하반기 IT개발·자산운용·SIU부 경력사원 공개채용 D-13 2026.10",
+      "text": "접수중 [KB손해보험] 2026년 하반기 IT개발·자산운용·SIU부 경력사원 공개채용 D-12 2026.10",
       "url": "https://kbinsure.recruiter.co.kr/career/jobs/132119"
      },
      {
@@ -773,7 +732,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 1
+    "expired": 0
    }
   },
   {
@@ -794,7 +753,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음",
+   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 186개 중 공고로 인정된 것 없음",
    "sample_links": [],
    "probe": {
     "requests_status": null,
@@ -803,8 +762,8 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 40721,
-    "browser_anchor_count": 184,
+    "browser_html_len": 40988,
+    "browser_anchor_count": 186,
     "unique_links_sample": [
      {
       "text": "우리금융그룹 로고",
@@ -909,7 +868,7 @@
     ],
     "matched_by_pattern": 0,
     "link_include": [],
-    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 184개 중 공고로 인정된 것 없음"
+    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 186개 중 공고로 인정된 것 없음"
    },
    "filtered": {
     "notjob": 0,
@@ -926,9 +885,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 33,
-   "new_found": 0,
-   "detail_ok": 0,
+   "links_found": 32,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -938,12 +897,16 @@
    "note": "",
    "sample_links": [
     {
-     "title": "PEF Tax Service팀 경력직 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r251201-2.html"
+     "title": "AI 연구소: AI & 데이터 엔지니어 인턴 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261030-2.html"
     },
     {
-     "title": "Global Sector PE advisory 경력직 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r261022.html"
+     "title": "AI 연구소: 풀스택 엔지니어 인턴 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261030-1.html"
+    },
+    {
+     "title": "PEF Tax Service팀 경력직 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r251201-2.html"
     },
     {
      "title": "금융본부(FS BCM1&2) 경력직 회계사 채용",
@@ -964,15 +927,11 @@
     {
      "title": "Public Service팀 프로젝트 (에너지) 인턴 채용",
      "url": "https://www.pwc.com/kr/ko/career/experienced/r261020.html"
-    },
-    {
-     "title": "데이터 엔지니어 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r261020-1.html"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 0,
+    "employment": 2,
     "expired": 0
    }
   },
@@ -1003,7 +962,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59148,
+    "browser_html_len": 59094,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1129,8 +1088,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1140,42 +1099,42 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 컨설팅부문 MC-GT-BT 팀 컨설턴트 경력직 D-Day 2026.10.18 ~ 2026.11.02 23:59 수시 일",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/117888"
-    },
-    {
-     "title": "접수중 컨설팅부문 데이터 분석 전문가 (Data Scientist) D-2 2026.10.21 ~ 2026.11.04 23:5",
+     "title": "접수중 컨설팅부문 데이터 분석 전문가 (Data Scientist) D-1 2026.10.21 ~ 2026.11.04 23:5",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131957"
     },
     {
-     "title": "접수중 컨설팅부문 프로세스 혁신(PI) 프로젝트 인턴 D-3 2026.10.29 ~ 2026.11.05 23:59 수시 일반채",
+     "title": "접수중 컨설팅부문 프로세스 혁신(PI) 프로젝트 인턴 D-2 2026.10.29 ~ 2026.11.05 23:59 수시 일반채",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131665"
     },
     {
-     "title": "접수중 마켓부문 BMC 글로벌 사회공헌 프로그램 담당 계약직 [경력] D-3 2026.10.23 ~ 2026.11.05 23:",
+     "title": "접수중 마켓부문 BMC 글로벌 사회공헌 프로그램 담당 계약직 [경력] D-2 2026.10.23 ~ 2026.11.05 23:",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132178"
     },
     {
-     "title": "접수중 금융감사부문 컨설팅 인턴(전환형) D-3 2026.10.23 ~ 2026.11.05 23:59 수시 일반채용 인턴",
+     "title": "접수중 금융감사부문 컨설팅 인턴(전환형) D-2 2026.10.23 ~ 2026.11.05 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132216"
     },
     {
-     "title": "접수중 마켓부문 BMC(Brand, Marketing and Communications) 마케팅 인턴 D-3 2026.10.3",
+     "title": "접수중 마켓부문 BMC(Brand, Marketing and Communications) 마케팅 인턴 D-2 2026.10.3",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132870"
     },
     {
-     "title": "접수중 컨설팅부문 수요예측 데이터 분석 인턴 D-4 2026.10.30 ~ 2026.11.06 12:59 수시 일반채용 인턴",
+     "title": "접수중 컨설팅부문 수요예측 데이터 분석 인턴 D-3 2026.10.30 ~ 2026.11.06 12:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132864"
     },
     {
-     "title": "접수중 금융감사부문 보험계리 전환형 인턴 D-6 2026.10.21 ~ 2026.11.08 23:59 수시 일반채용 인턴",
+     "title": "접수중 금융감사부문 보험계리 전환형 인턴 D-5 2026.10.21 ~ 2026.11.08 23:59 수시 일반채용 인턴",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131864"
+    },
+    {
+     "title": "접수중 전략·재무자문부문 Deal2 경력직 D-5 2026.10.27 ~ 2026.11.08 23:59 수시 일반채용 경력",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132523"
     }
    ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 2
+    "expired": 0
    }
   },
   {
@@ -1227,7 +1186,7 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 16,
+   "links_found": 15,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -1251,10 +1210,6 @@
      "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Application-Development-Lead--IT---_JR-66538?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
     },
     {
-     "title": "CEO Office Intern",
-     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/CEO-Office-Intern_JR-70216?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
-    },
-    {
      "title": "[AIAPP] Campaign/Event/MDRT Operation (캠페인, 행사, MDRT 담당자)",
      "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Campaign-Event-MDRT-Operation------MDRT--_JR-71002?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
     },
@@ -1269,6 +1224,10 @@
     {
      "title": "[AIAPP] Chief Consumer Protection Officer (금융소비자보호 총괄책임자)",
      "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Chief-Consumer-Protection-Officer----_JR-70681?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
+    },
+    {
+     "title": "[AIAPP] Sales Planning (영업기획 담당)",
+     "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--Sales-Planning----_JR-69995?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da"
     }
    ],
    "filtered": {
@@ -1325,7 +1284,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 1
+    "expired": 0
    }
   },
   {
@@ -1465,7 +1424,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 1
    }
   },
   {
@@ -1511,7 +1470,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 150개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 151개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -1520,8 +1479,8 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46815,
-    "browser_anchor_count": 150,
+    "browser_html_len": 47054,
+    "browser_anchor_count": 151,
     "unique_links_sample": [
      {
       "text": "",
@@ -1628,7 +1587,7 @@
     "link_include": [
      "https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 150개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 151개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -1680,7 +1639,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 2
    }
   },
   {
@@ -1704,15 +1663,15 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 상품기획팀 신입직원 채용 D-Day 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 ",
+     "title": "접수마감 [ABL생명] 상품기획팀 신입직원 채용 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 신입",
      "url": "https://abl.recruiter.co.kr/career/jobs/131817"
     },
     {
-     "title": "접수중 [ABL생명] 상품개발팀 경력직 채용 D-Day 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경",
+     "title": "접수마감 [ABL생명] 상품개발팀 경력직 채용 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/131814"
     },
     {
-     "title": "접수중 [ABL생명] 보험금심사팀 계약직 채용 D-Day 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 ",
+     "title": "접수마감 [ABL생명] 보험금심사팀 계약직 채용 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/131766"
     },
     {
@@ -1739,7 +1698,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 2
    }
   }
  ],
@@ -1792,10 +1751,10 @@
    "title": "접수중 [ABL생명] 보험금심사팀 계약직 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
    "url": "https://abl.recruiter.co.kr/career/jobs/131766",
    "source_key": "abl_recruiter",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-11-02 마감으로 오늘(2026-11-03) 기준 경과",
    "deadline": "2026-11-02",
    "has_detail": true,
    "first_seen": "2026-10-21"
@@ -1806,10 +1765,10 @@
    "title": "접수중 [ABL생명] 상품개발팀 경력직 채용 D-12 2026.10.20 ~ 2026.11.02 23:59 수시 일반채용 경력",
    "url": "https://abl.recruiter.co.kr/career/jobs/131814",
    "source_key": "abl_recruiter",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-11-02 마감으로 오늘(2026-11-03) 기준 경과",
    "deadline": "2026-11-02",
    "has_detail": true,
    "first_seen": "2026-10-21"
@@ -2373,6 +2332,20 @@
    "deadline": "2026-11-01",
    "has_detail": true,
    "first_seen": "2026-10-20"
+  },
+  {
+   "id": "c3db07bd1a6a4f77",
+   "company": "DB그룹",
+   "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 D-13",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/133125",
+   "source_key": "dbgroup",
+   "status": "대기",
+   "stage": "unjudged",
+   "stage_label": "5단계 AI 적합도(미실행)",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "deadline": "2026-11-16",
+   "has_detail": true,
+   "first_seen": "2026-11-03"
   },
   {
    "id": "1e696dd1bf91e577",
@@ -3906,10 +3879,10 @@
    "title": "혁신상품파트 경력 정규직 채용 CPC 혁신상품파트 경력 3년 이상 정규직 서울 본사 2026. 11. 01, 14:59까지 D -6",
    "url": "https://kblife-recruiting.career.greetinghr.com/ko/o/241751",
    "source_key": "kblife_recruiting",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-11-02 마감으로 오늘(2026-11-03) 기준 경과",
    "deadline": "2026-11-02",
    "has_detail": true,
    "first_seen": "2026-10-26"
@@ -4067,6 +4040,34 @@
    "deadline": "상시",
    "has_detail": true,
    "first_seen": "2026-08-30"
+  },
+  {
+   "id": "aff3e555840d2f6c",
+   "company": "PwC삼일",
+   "title": "AI 연구소: AI & 데이터 엔지니어 인턴 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261030-2.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "상시",
+   "has_detail": true,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "d425bd04dd4ba5ea",
+   "company": "PwC삼일",
+   "title": "AI 연구소: 풀스택 엔지니어 인턴 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261030-1.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "상시",
+   "has_detail": true,
+   "first_seen": "2026-11-03"
   },
   {
    "id": "2c4c70ca3a4ad90e",
@@ -5138,10 +5139,10 @@
    "title": "접수중 GA상품팀 디자이너(계약직) D-4 2026.09.17 ~ 2026.09.22 23:59 수시 일반채용 경력 무관",
    "url": "https://shinhan-life.recruiter.co.kr/career/jobs/128622",
    "source_key": "shinhan_life",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 2026-11-02 마감으로 오늘(2026-11-03) 기준 경과",
    "deadline": "2026-11-02",
    "has_detail": true,
    "first_seen": "2026-09-18"
@@ -5292,10 +5293,10 @@
    "title": "[하나생명] 리스크관리부 감리역 경력사원 채용 경력 10년 이상 | 계약직 | 2026.10.02 ~ 2026.10.15 23:59 | D-12",
    "url": "https://hanalife.careerlink.kr/jobs/RC20261002036094",
    "source_key": "hanalife",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-10-03)로부터 30일 경과",
    "deadline": "",
    "has_detail": false,
    "first_seen": "2026-10-03"
@@ -5362,10 +5363,10 @@
    "title": "[하나생명] 콜센터 상담업무 지원 경력사원 채용 경력 3년 이상 | 정규직 | 2026.10.02 ~ 2026.10.15 23:59 | D-12",
    "url": "https://hanalife.careerlink.kr/jobs/RC20261002036099",
    "source_key": "hanalife",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-10-03)로부터 30일 경과",
    "deadline": "",
    "has_detail": false,
    "first_seen": "2026-10-03"
