@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-07 11:33",
+ "generated_at": "2026-11-08 11:05",
  "summary": {
-  "crawled_total": 272,
+  "crawled_total": 271,
   "passed": 0,
-  "waiting": 38,
+  "waiting": 37,
   "excluded_notjob": 0,
   "excluded_employment": 0,
   "excluded_expired": 1,
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 507742,
+    "browser_html_len": 507749,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -329,7 +329,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 디지털보안 담당자(경력) D-4 2026.11.04 ~ 2026.11.11 23:59 수시 일반채용 경력 (새 창)",
+     "title": "접수중 디지털보안 담당자(경력) D-3 2026.11.04 ~ 2026.11.11 23:59 수시 일반채용 경력 (새 창)",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/133314"
     },
     {
@@ -451,7 +451,7 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 D-9 (새 ",
+     "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 D-8 (새 ",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/133125"
     },
     {
@@ -593,11 +593,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 23320,
+    "requests_html_len": 23363,
     "requests_anchor_count": 1,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 62297,
+    "browser_html_len": 62340,
     "browser_anchor_count": 30,
     "unique_links_sample": [
      {
@@ -657,7 +657,7 @@
       "url": "https://kbinsure.recruiter.co.kr/career/welfare"
      },
      {
-      "text": "접수중 [KB손해보험] 2026년 하반기 IT개발·클라우드·자산운용·SIU·장기보상 경력사원 공개채용 D-8",
+      "text": "접수중 [KB손해보험] 2026년 하반기 IT개발·클라우드·자산운용·SIU·장기보상 경력사원 공개채용 D-7",
       "url": "https://kbinsure.recruiter.co.kr/career/jobs/132119"
      },
      {
@@ -983,7 +983,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59078,
+    "browser_html_len": 59080,
     "browser_anchor_count": 121,
     "unique_links_sample": [
      {
@@ -1120,35 +1120,35 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026 파트타임 회계사 채용 D-6 2026.11.04 ~ 2026.11.13 23:59 공채 일반채용 신입/경력 (",
+     "title": "접수중 2026 파트타임 회계사 채용 D-5 2026.11.04 ~ 2026.11.13 23:59 공채 일반채용 신입/경력 (",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/133380"
     },
     {
-     "title": "접수중 금융감사부문 보험계리 전환형 인턴 D-1 2026.10.21 ~ 2026.11.08 23:59 수시 일반채용 인턴 (새",
+     "title": "접수중 금융감사부문 보험계리 전환형 인턴 D-Day 2026.10.21 ~ 2026.11.08 23:59 수시 일반채용 인턴 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131864"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal2 경력직 D-1 2026.10.27 ~ 2026.11.08 23:59 수시 일반채용 경력 (",
+     "title": "접수중 전략·재무자문부문 Deal2 경력직 D-Day 2026.10.27 ~ 2026.11.08 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132523"
     },
     {
-     "title": "접수중 금융컨설팅본부 디지털 컨설팅 경력직 D-1 2026.10.30 ~ 2026.11.08 23:59 수시 일반채용 경력 (",
+     "title": "접수중 금융컨설팅본부 디지털 컨설팅 경력직 D-Day 2026.10.30 ~ 2026.11.08 23:59 수시 일반채용 경력",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132963"
     },
     {
-     "title": "접수중 세무부문 통합세무팀 D-2 2026.10.30 ~ 2026.11.09 09:00 수시 일반채용 신입/경력 (새 창)",
+     "title": "접수중 세무부문 통합세무팀 D-1 2026.10.30 ~ 2026.11.09 09:00 수시 일반채용 신입/경력 (새 창)",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130610"
     },
     {
-     "title": "접수중 세무부문 국제조세 및 M&A(경력) D-2 2026.11.02 ~ 2026.11.09 09:00 수시 일반채용 경력 (",
+     "title": "접수중 세무부문 국제조세 및 M&A(경력) D-1 2026.11.02 ~ 2026.11.09 09:00 수시 일반채용 경력 (",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131386"
     },
     {
-     "title": "접수중 세무부문 국내조세 전문가(시니어~매니저) D-2 2026.11.03 ~ 2026.11.09 09:00 수시 일반채용 경",
+     "title": "접수중 세무부문 국내조세 전문가(시니어~매니저) D-1 2026.11.03 ~ 2026.11.09 09:00 수시 일반채용 경",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131867"
     },
     {
-     "title": "접수중 감사부문 포렌식팀 인턴(전환형) D-2 2026.11.04 ~ 2026.11.09 10:00 수시 일반채용 인턴 (새 ",
+     "title": "접수중 감사부문 포렌식팀 인턴(전환형) D-1 2026.11.04 ~ 2026.11.09 10:00 수시 일반채용 인턴 (새 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131142"
     }
    ],
@@ -1335,7 +1335,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181131,
+    "browser_html_len": 181063,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -1495,7 +1495,7 @@
     "requests_anchor_count": 58,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 46820,
+    "browser_html_len": 46831,
     "browser_anchor_count": 150,
     "unique_links_sample": [
      {
@@ -1675,7 +1675,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 디지털IT개발팀 경력직 채용 D-11 2026.11.04 ~ 2026.11.18 23:59 수시 일반채용",
+     "title": "접수중 [ABL생명] 디지털IT개발팀 경력직 채용 D-10 2026.11.04 ~ 2026.11.18 23:59 수시 일반채용",
      "url": "https://abl.recruiter.co.kr/career/jobs/133445"
     },
     {
@@ -2099,10 +2099,10 @@
    "title": "[AIAPP] IT Operation & Planning Professional (IT운영 및 기획 담당자)",
    "url": "https://aia.wd3.myworkdayjobs.com/ko-KR/External/job/Seoul-KR-AIA-Korea/XMLNAME--AIAPP--IT-Operation---Planning-Professional--IT----_JR-70949?locationCountry=7a5a2aadf9d34086a2bfbfd408bc28da",
    "source_key": "aia",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-10-08)로부터 30일 경과",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-10-08"
@@ -2442,20 +2442,6 @@
    "deadline": "2026-10-29",
    "has_detail": true,
    "first_seen": "2026-10-17"
-  },
-  {
-   "id": "d5ca308fc469dd30",
-   "company": "DB그룹",
-   "title": "수시 일반채용 경력 [DB하이텍] 인사기획 경력채용 수시 26.09.10~26.09.23 23:59 D-11",
-   "url": "https://dbgroup.recruiter.co.kr/career/jobs/128169",
-   "source_key": "dbgroup",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-09-23 마감으로 오늘(2026-09-24) 기준 경과",
-   "deadline": "2026-09-23",
-   "has_detail": true,
-   "first_seen": "2026-09-12"
   },
   {
    "id": "abd8f82ab4a4fcbb",
