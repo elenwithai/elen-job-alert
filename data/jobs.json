@@ -1,24 +1,24 @@
 {
- "updated_at": "2026-11-10 13:30",
- "updated_at_iso": "2026-11-10T13:30:19.283178+09:00",
+ "updated_at": "2026-11-11 11:33",
+ "updated_at_iso": "2026-11-11T11:33:52.387098+09:00",
  "stats": {
-  "total": 280,
+  "total": 281,
   "fit_yes": 0,
   "pending": 0,
-  "unjudged": 38,
-  "expired": 229,
-  "ai_skipped_expired": 1,
-  "ai_skipped_filter": 0,
+  "unjudged": 39,
+  "expired": 226,
+  "ai_skipped_expired": 0,
+  "ai_skipped_filter": 3,
   "excluded_notjob": 0,
-  "excluded_employment": 0,
-  "excluded_expired": 1,
+  "excluded_employment": 3,
+  "excluded_expired": 0,
   "excluded_ai": 0,
   "stale_days": 30,
   "crawl_only": true,
   "new_this_run": 4,
   "ai_calls": 0,
   "ai_errors": 0,
-  "browser_pages": 34
+  "browser_pages": 36
  },
  "sources": [
   {
@@ -657,7 +657,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 98개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 100개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -666,8 +666,8 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 64748,
-    "browser_anchor_count": 98,
+    "browser_html_len": 69117,
+    "browser_anchor_count": 100,
     "unique_links_sample": [
      {
       "text": "삼성",
@@ -774,7 +774,7 @@
     "link_include": [
      "https://www.samsungcareers.com/hr/?no="
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 98개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 100개 있으나 패턴에 맞는 것 0개"
    }
   },
   {
@@ -804,7 +804,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 503336,
+    "browser_html_len": 503508,
     "browser_anchor_count": 28,
     "unique_links_sample": [
      {
@@ -914,7 +914,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 518,
+    "browser_html_len": 455,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -943,7 +943,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 디지털보안 담당자(경력) D-1 2026.11.04 ~ 2026.11.11 23:59 수시 일반채용 경력 (새 창)",
+     "title": "접수중 디지털보안 담당자(경력) D-Day 2026.11.04 ~ 2026.11.11 23:59 수시 일반채용 경력 (새 창)",
      "url": "https://shinhan-life.recruiter.co.kr/career/jobs/133314"
     },
     {
@@ -1028,15 +1028,15 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 0,
+   "new_found": 2,
    "detail_ok": 0,
-   "detail_failed": 0,
+   "detail_failed": 2,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "",
+   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
    "sample_links": [
     {
      "title": "공채 일반채용 신입 [DB손해보험]2026년 하반기 사무지원직 신입 채용 공채 26.10.16~26.10.25 23:59 마감",
@@ -1055,20 +1055,20 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 D-6 (새 ",
+     "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 D-5 (새 ",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/133125"
+    },
+    {
+     "title": "특별채용 일반채용 신입 [DB하이텍] 2026년 서강대학교 반도체 인력양성 Course 모집 특별채용 26.11.11~26.1",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/134086"
+    },
+    {
+     "title": "특별채용 일반채용 신입 [DB하이텍] 2026년 성균관대학교 반도체 인력양성 Course 모집 특별채용 26.11.11~26.",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/134089"
     },
     {
      "title": "수시 일반채용 신입 [DB생명] IFRS 모델링 및 검증 단기계약직 모집 수시 26.10.02~26.10.11 23:59 마감",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/130112"
-    },
-    {
-     "title": "공채 일반채용 신입 [DB손해보험] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 마감 (새",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/125713"
-    },
-    {
-     "title": "공채 일반채용 신입 [DB생명] 2026년 하반기 신입사원 모집 공채 26.09.01~26.10.02 17:00 마감 (새 창",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/125752"
     }
    ]
   },
@@ -1090,23 +1090,72 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
+   "note": "link_include 패턴 불일치 — 링크는 22개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 346,
-    "requests_anchor_count": 0,
+    "requests_html_len": 17036,
+    "requests_anchor_count": 17,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 379,
-    "browser_anchor_count": 0,
-    "unique_links_sample": [],
+    "browser_html_len": 20695,
+    "browser_anchor_count": 22,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://recruit.meritzfire.com/new/main.do"
+     },
+     {
+      "text": "성장스토리",
+      "url": "https://recruit.meritzfire.com/new/company/company01.do"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://recruit.meritzfire.com/new/company/company02.do"
+     },
+     {
+      "text": "오피스",
+      "url": "https://recruit.meritzfire.com/new/company/company03.do?idx=all"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://recruit.meritzfire.com/new/job/noticeList.do"
+     },
+     {
+      "text": "채용절차",
+      "url": "https://recruit.meritzfire.com/new/job/noticeProcess.do"
+     },
+     {
+      "text": "FAQ",
+      "url": "https://recruit.meritzfire.com/new/job/faq.do"
+     },
+     {
+      "text": "인터뷰",
+      "url": "https://recruit.meritzfire.com/new/people/interview.do"
+     },
+     {
+      "text": "기업문화",
+      "url": "https://recruit.meritzfire.com/new/culture/culture.do"
+     },
+     {
+      "text": "인재Pool",
+      "url": "https://recruit.meritzfire.com/new/job/poolWrite.do"
+     },
+     {
+      "text": "로그인",
+      "url": "https://recruit.meritzfire.com/new/common/login.do"
+     },
+     {
+      "text": "meritz_recruit@meritz.co.kr",
+      "url": "mailto:meritz_recruit@meritz.co.kr"
+     }
+    ],
     "matched_by_pattern": 0,
     "link_include": [
      "https://recruit.meritzfire.com/new/job/noticeView.do"
     ],
-    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
+    "verdict": "link_include 패턴 불일치 — 링크는 22개 있으나 패턴에 맞는 것 0개"
    }
   },
   {
@@ -1119,18 +1168,18 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 8,
-   "new_found": 1,
+   "new_found": 0,
    "detail_ok": 0,
-   "detail_failed": 1,
+   "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026 현대해상 하반기 경력직 채용 D-13 2026.11.10 ~ 2026.11.23 23:59 수시 일반채용 경력",
+     "title": "접수중 2026 현대해상 하반기 경력직 채용 D-12 2026.11.10 ~ 2026.11.23 23:59 수시 일반채용 경력",
      "url": "https://hi.recruiter.co.kr/career/jobs/133605"
     },
     {
@@ -1186,11 +1235,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 23363,
+    "requests_html_len": 23320,
     "requests_anchor_count": 1,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 62340,
+    "browser_html_len": 62297,
     "browser_anchor_count": 30,
     "unique_links_sample": [
      {
@@ -1250,7 +1299,7 @@
       "url": "https://kbinsure.recruiter.co.kr/career/welfare"
      },
      {
-      "text": "접수중 [KB손해보험] 2026년 하반기 IT개발·클라우드·자산운용·SIU·장기보상 경력사원 공개채용 D-5",
+      "text": "접수중 [KB손해보험] 2026년 하반기 IT개발·클라우드·자산운용·SIU·장기보상 경력사원 공개채용 D-4",
       "url": "https://kbinsure.recruiter.co.kr/career/jobs/132119"
      },
      {
@@ -1307,8 +1356,8 @@
    "fallback_attempted": true,
    "browser_links": 4,
    "links_found": 4,
-   "new_found": 2,
-   "detail_ok": 2,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1481,8 +1530,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 37,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 2,
+   "detail_ok": 2,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1491,6 +1540,14 @@
    "error": "",
    "note": "",
    "sample_links": [
+    {
+     "title": "AX Node XBRL센터 - 경력직 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261110-3.html"
+    },
+    {
+     "title": "AX Node XBRL센터 - 신입 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261110-2.html"
+    },
     {
      "title": "Risk Assurance 본부 Trust팀 경력직 채용 - Cybersecurity (AI Security)",
      "url": "https://www.pwc.com/kr/ko/career/experienced/r261110.html"
@@ -1514,14 +1571,6 @@
     {
      "title": "AI·IT 보안 및 거버넌스 컨설턴트 모집",
      "url": "https://www.pwc.com/kr/ko/career/experienced/r261103.html"
-    },
-    {
-     "title": "AI 연구소: AI & 데이터 엔지니어 인턴 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r261030-2.html"
-    },
-    {
-     "title": "AI 연구소: 풀스택 엔지니어 인턴 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r261030-1.html"
     }
    ]
   },
@@ -1552,7 +1601,7 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59026,
+    "browser_html_len": 59034,
     "browser_anchor_count": 120,
     "unique_links_sample": [
      {
@@ -1684,36 +1733,36 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 2026 파트타임 회계사 채용 D-3 2026.11.04 ~ 2026.11.13 23:59 공채 일반채용 신입/경력 (",
+     "title": "접수중 2026 파트타임 회계사 채용 D-2 2026.11.04 ~ 2026.11.13 23:59 공채 일반채용 신입/경력 (",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/133380"
     },
     {
-     "title": "접수중 감사부문 디지털 감사 & AI 리스크 분석 인턴 D-1 2026.11.04 ~ 2026.11.11 00:00 수시 일반",
-     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/133364"
-    },
-    {
-     "title": "접수중 감사부문 Forensic & Integrity Services [경력] D-1 2026.10.30 ~ 2026.11.1",
+     "title": "접수중 감사부문 Forensic & Integrity Services [경력] D-Day 2026.10.30 ~ 2026.11",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/126676"
     },
     {
-     "title": "접수중 금융컨설팅본부 IT컨설팅 (AXIS팀) 인턴 D-1 2026.11.06 ~ 2026.11.11 23:59 수시 일반채용",
+     "title": "접수중 금융컨설팅본부 IT컨설팅 (AXIS팀) 인턴 D-Day 2026.11.06 ~ 2026.11.11 23:59 수시 일반",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/133715"
     },
     {
-     "title": "접수중 경영지원본부 Talent 채용팀 인턴 D-2 2026.11.06 ~ 2026.11.12 12:00 수시 일반채용 신입 ",
+     "title": "접수중 경영지원본부 Talent 채용팀 인턴 D-1 2026.11.06 ~ 2026.11.12 12:00 수시 일반채용 신입 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/133659"
     },
     {
-     "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-2 2026.10.06 ~ 2026.11.12 23:59 수시 일반채용 신",
+     "title": "접수중 금융컨설팅본부 계리팀 경력직 전문가 채용 D-1 2026.10.06 ~ 2026.11.12 23:59 수시 일반채용 신",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/130523"
     },
     {
-     "title": "접수중 금융감사부문 컨설팅 인턴(전환형) D-2 2026.10.23 ~ 2026.11.12 23:59 수시 일반채용 인턴 (새",
+     "title": "접수중 금융감사부문 컨설팅 인턴(전환형) D-1 2026.10.23 ~ 2026.11.12 23:59 수시 일반채용 인턴 (새",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/132216"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-2 2026.11.06 ~ 2026.11.12 23:59 수시 일",
+     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-1 2026.11.06 ~ 2026.11.12 23:59 수시 일",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/133729"
+    },
+    {
+     "title": "접수중 컨설팅부문 Digital & Emerging Tech 경력직 컨설턴트 D-4 2026.10.30 ~ 2026.11.15",
+     "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128016"
     }
    ]
   },
@@ -1939,9 +1988,9 @@
    "key": "hanainsure",
    "company": "하나손보",
    "url": "https://www.hanainsure.co.kr/recruit/notify/jobList",
-   "list_ok": false,
+   "list_ok": true,
    "method": "browser",
-   "fallback_used": false,
+   "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 0,
@@ -1952,8 +2001,126 @@
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
-   "error": "렌더링 실패: TimeoutError",
-   "note": "URL이 바뀌었거나 차단됐을 수 있습니다. sources.json의 url을 확인하세요."
+   "error": "",
+   "note": "link_include 패턴 불일치 — 링크는 150개 있으나 패턴에 맞는 것 0개",
+   "sample_links": [],
+   "probe": {
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 52662,
+    "requests_anchor_count": 58,
+    "browser_ok": true,
+    "browser_error": "",
+    "browser_html_len": 46819,
+    "browser_anchor_count": 150,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://www.hanainsure.co.kr/recruit"
+     },
+     {
+      "text": "채용 FAQ",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/faq"
+     },
+     {
+      "text": "하나손해보험",
+      "url": "https://www.hanainsure.co.kr/"
+     },
+     {
+      "text": "하나손해보험소개",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/ceo"
+     },
+     {
+      "text": "인사제도",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/rightPeople"
+     },
+     {
+      "text": "채용정보",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/jobList"
+     },
+     {
+      "text": "회사개요",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/overview"
+     },
+     {
+      "text": "회사연혁",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/history"
+     },
+     {
+      "text": "위치안내",
+      "url": "https://www.hanainsure.co.kr/recruit/company/introduce/address"
+     },
+     {
+      "text": "인재육성",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/educate"
+     },
+     {
+      "text": "인사제도",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/system"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/reward"
+     },
+     {
+      "text": "직무소개",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/duty"
+     },
+     {
+      "text": "영업직",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/callreward"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/callduty"
+     },
+     {
+      "text": "근무환경",
+      "url": "https://www.hanainsure.co.kr/recruit/personnelSystem/callmilieu"
+     },
+     {
+      "text": "영업직",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/jobListCall"
+     },
+     {
+      "text": "입사지원 및 수정",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/resumeApply"
+     },
+     {
+      "text": "지원결과확인",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/resultInquiry"
+     },
+     {
+      "text": "채용문의",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/question"
+     },
+     {
+      "text": "등록",
+      "url": "https://www.hanainsure.co.kr/recruit/notify/resumeApplyStep"
+     },
+     {
+      "text": "하나금융그룹",
+      "url": "https://www.hanafn.com/main/index.do"
+     },
+     {
+      "text": "하나은행",
+      "url": "https://www.kebhana.com/"
+     },
+     {
+      "text": "하나증권",
+      "url": "https://www.hanaw.com/main/main/index.cmd"
+     },
+     {
+      "text": "하나카드",
+      "url": "https://www.hanacard.co.kr/index2.jsp"
+     }
+    ],
+    "matched_by_pattern": 0,
+    "link_include": [
+     "https://www.hanainsure.co.kr/recruit/notify/jobView?sHireNo="
+    ],
+    "verdict": "link_include 패턴 불일치 — 링크는 150개 있으나 패턴에 맞는 것 0개"
+   }
   },
   {
    "key": "hanalife",
@@ -2014,7 +2181,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 디지털IT개발팀 경력직 채용 D-8 2026.11.04 ~ 2026.11.18 23:59 수시 일반채용 ",
+     "title": "접수중 [ABL생명] 디지털IT개발팀 경력직 채용 D-7 2026.11.04 ~ 2026.11.18 23:59 수시 일반채용 ",
      "url": "https://abl.recruiter.co.kr/career/jobs/133445"
     },
     {
@@ -2050,6 +2217,91 @@
  ],
  "jobs": [
   {
+   "id": "95a4c51e8a97837f",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "AX Node XBRL센터 - 경력직 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261110-3.html",
+   "detail_title": "AX Node XBRL센터 - 경력직 채용",
+   "detail_status": "ok",
+   "deadline_guess": "상시",
+   "fit": "unjudged",
+   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "role": "",
+   "confidence": "low",
+   "ai_status": "skipped",
+   "stage": "unjudged",
+   "status": "대기",
+   "deadline": "상시",
+   "judged_at": "2026-11-11 11:33",
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-11",
+   "has_detail": true
+  },
+  {
+   "id": "043ae0aca7740b33",
+   "source_key": "pwc",
+   "company": "PwC삼일",
+   "title": "AX Node XBRL센터 - 신입 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261110-2.html",
+   "detail_title": "AX Node XBRL센터 - 신입 채용",
+   "detail_status": "ok",
+   "deadline_guess": "상시",
+   "fit": "no",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "stage": "employment",
+   "status": "제외",
+   "deadline": "상시",
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-11",
+   "has_detail": true
+  },
+  {
+   "id": "70baf5ba7a15e6a8",
+   "source_key": "dbgroup",
+   "company": "DB그룹",
+   "title": "특별채용 일반채용 신입 [DB하이텍] 2026년 서강대학교 반도체 인력양성 Course 모집 특별채용 26.11.11~26.11.30 23:59 D-19 (새 창)",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/134086",
+   "detail_title": "DB그룹",
+   "detail_status": "thin",
+   "deadline_guess": "2026-11-30",
+   "fit": "no",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "stage": "employment",
+   "status": "제외",
+   "deadline": "2026-11-30",
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-11",
+   "has_detail": false
+  },
+  {
+   "id": "e5cbf13d0685b765",
+   "source_key": "dbgroup",
+   "company": "DB그룹",
+   "title": "특별채용 일반채용 신입 [DB하이텍] 2026년 성균관대학교 반도체 인력양성 Course 모집 특별채용 26.11.11~26.11.30 23:59 D-19 (새 창)",
+   "url": "https://dbgroup.recruiter.co.kr/career/jobs/134089",
+   "detail_title": "DB그룹",
+   "detail_status": "thin",
+   "deadline_guess": "2026-11-30",
+   "fit": "no",
+   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
+   "role": "",
+   "confidence": "high",
+   "ai_status": "prefilter",
+   "stage": "employment",
+   "status": "제외",
+   "deadline": "2026-11-30",
+   "first_seen": "2026-11-11",
+   "last_seen": "2026-11-11",
+   "has_detail": false
+  },
+  {
    "id": "6a1d3faecea32edf",
    "source_key": "hi_recruiter",
    "company": "현대해상",
@@ -2066,9 +2318,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-23",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-10",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -2088,9 +2340,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-10",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2110,9 +2362,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-15",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-10",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2132,9 +2384,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-22",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-10",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2154,9 +2406,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-23",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-09",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2177,7 +2429,7 @@
    "status": "제외",
    "deadline": "2026-11-11",
    "first_seen": "2026-11-09",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2198,7 +2450,7 @@
    "status": "제외",
    "deadline": "2026-11-12",
    "first_seen": "2026-11-09",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2218,9 +2470,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-12",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-09",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2240,9 +2492,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-15",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-09",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2305,9 +2557,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2027-01-01",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-05",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2327,9 +2579,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-15",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-05",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2349,9 +2601,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-13",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-05",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2371,9 +2623,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-13",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-05",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -2393,9 +2645,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-18",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-05",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2416,7 +2668,7 @@
    "status": "제외",
    "deadline": "2026-11-17",
    "first_seen": "2026-11-04",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2436,9 +2688,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-30",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-04",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2458,9 +2710,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-04",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2481,7 +2733,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-11-03",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2502,7 +2754,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-11-03",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2522,9 +2774,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-16",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-11-03",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2566,9 +2818,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-31",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -2588,9 +2840,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-31",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -2610,9 +2862,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-31",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -2632,9 +2884,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-31",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -2654,9 +2906,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-12",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-31",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2743,7 +2995,7 @@
    "deadline": "2026-11-01",
    "judged_at": "2026-11-01 10:55",
    "first_seen": "2026-10-31",
-   "last_seen": "2026-11-02",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2805,9 +3057,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-29",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2849,7 +3101,7 @@
    "status": "제외",
    "deadline": "2026-11-17",
    "first_seen": "2026-10-29",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -2869,9 +3121,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-28",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3087,7 +3339,7 @@
    "status": "제외",
    "deadline": "2026-10-27",
    "first_seen": "2026-10-24",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3108,7 +3360,7 @@
    "status": "제외",
    "deadline": "2026-10-27",
    "first_seen": "2026-10-23",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3129,7 +3381,7 @@
    "status": "제외",
    "deadline": "2026-10-27",
    "first_seen": "2026-10-23",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3150,7 +3402,7 @@
    "status": "제외",
    "deadline": "2026-10-27",
    "first_seen": "2026-10-23",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3170,9 +3422,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-23",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3192,9 +3444,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-23",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3492,9 +3744,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-22",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -3514,9 +3766,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-20",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-22",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3536,9 +3788,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-22",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3559,7 +3811,7 @@
    "status": "제외",
    "deadline": "2026-10-31",
    "first_seen": "2026-10-22",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3623,7 +3875,7 @@
    "deadline": "2026-10-27",
    "judged_at": "2026-10-27 10:51",
    "first_seen": "2026-10-21",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3643,9 +3895,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-21",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3665,9 +3917,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-21",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3688,7 +3940,7 @@
    "status": "제외",
    "deadline": "2026-11-02",
    "first_seen": "2026-10-21",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3710,7 +3962,7 @@
    "deadline": "2026-11-02",
    "judged_at": "2026-11-02 11:08",
    "first_seen": "2026-10-21",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3732,7 +3984,7 @@
    "deadline": "2026-11-02",
    "judged_at": "2026-11-02 11:08",
    "first_seen": "2026-10-21",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3775,7 +4027,7 @@
    "status": "제외",
    "deadline": "2026-10-26",
    "first_seen": "2026-10-20",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3839,7 +4091,7 @@
    "deadline": "2026-11-08",
    "judged_at": "2026-11-08 11:05",
    "first_seen": "2026-10-20",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3861,7 +4113,7 @@
    "deadline": "2026-11-01",
    "judged_at": "2026-11-01 10:55",
    "first_seen": "2026-10-20",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -3990,9 +4242,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-17",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4012,9 +4264,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "상시",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-17",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4035,7 +4287,7 @@
    "status": "제외",
    "deadline": "2026-11-18",
    "first_seen": "2026-10-17",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4057,7 +4309,7 @@
    "deadline": "2026-10-29",
    "judged_at": "2026-10-29 11:10",
    "first_seen": "2026-10-17",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4120,9 +4372,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-14",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -4142,9 +4394,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-10-14",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -4166,7 +4418,7 @@
    "deadline": "2026-10-30",
    "judged_at": "2026-10-30 11:26",
    "first_seen": "2026-10-14",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4442,7 +4694,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-10-08",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4464,7 +4716,7 @@
    "deadline": "",
    "judged_at": "2026-11-07 11:33",
    "first_seen": "2026-10-08",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4486,7 +4738,7 @@
    "deadline": "2026-10-28",
    "judged_at": "2026-10-28 11:02",
    "first_seen": "2026-10-08",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4507,7 +4759,7 @@
    "status": "제외",
    "deadline": "2026-10-16",
    "first_seen": "2026-10-07",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4529,7 +4781,7 @@
    "deadline": "2026-10-18",
    "judged_at": "2026-10-18 09:41",
    "first_seen": "2026-10-07",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4551,7 +4803,7 @@
    "deadline": "",
    "judged_at": "2026-11-06 12:14",
    "first_seen": "2026-10-07",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4572,7 +4824,7 @@
    "status": "제외",
    "deadline": "2026-10-14",
    "first_seen": "2026-10-06",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4702,7 +4954,7 @@
    "status": "제외",
    "deadline": "2026-10-11",
    "first_seen": "2026-10-02",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4744,7 +4996,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-10-01",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -4809,7 +5061,7 @@
    "deadline": "상시",
    "judged_at": "2026-10-29 11:10",
    "first_seen": "2026-09-29",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5044,9 +5296,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-12-01",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-09-22",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5066,9 +5318,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-12-01",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-09-22",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5088,9 +5340,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-12-01",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-09-22",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5240,7 +5492,7 @@
    "deadline": "2026-10-12",
    "judged_at": "2026-10-12 11:07",
    "first_seen": "2026-09-19",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5459,7 +5711,7 @@
    "deadline": "상시",
    "judged_at": "2026-10-16 10:01",
    "first_seen": "2026-09-16",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5503,7 +5755,7 @@
    "deadline": "",
    "judged_at": "2026-10-15 10:15",
    "first_seen": "2026-09-15",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5573,27 +5825,6 @@
    "has_detail": true
   },
   {
-   "id": "5cf30639085f4644",
-   "source_key": "eycareers_kr",
-   "company": "EY한영",
-   "title": "접수중 컨설팅부문 Digital 컨설팅 인턴 D-3 2026.09.11 ~ 2026.09.17 23:59 수시 일반채용 인턴",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128280",
-   "detail_title": "컨설팅부문 Digital 컨설팅 인턴 | EY한영 채용",
-   "detail_status": "ok",
-   "deadline_guess": "2026-09-17",
-   "fit": "no",
-   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "role": "",
-   "confidence": "high",
-   "ai_status": "prefilter",
-   "stage": "employment",
-   "status": "제외",
-   "deadline": "2026-09-17",
-   "first_seen": "2026-09-14",
-   "last_seen": "2026-09-27",
-   "has_detail": true
-  },
-  {
    "id": "902cb4ce099d054c",
    "source_key": "eycareers_kr",
    "company": "EY한영",
@@ -5612,7 +5843,7 @@
    "deadline": "2026-09-30",
    "judged_at": "2026-09-30 10:52",
    "first_seen": "2026-09-14",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5787,7 +6018,7 @@
    "deadline": "상시",
    "judged_at": "2026-10-11 10:35",
    "first_seen": "2026-09-11",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5813,50 +6044,6 @@
    "has_detail": true
   },
   {
-   "id": "2025b21a909c93c0",
-   "source_key": "eycareers_kr",
-   "company": "EY한영",
-   "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-2 2026.09.01 ~ 2026.09.13 23:59 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127131",
-   "detail_title": "전략·재무자문부문 Deal3 (M&A) 팀 경력직 | EY한영 채용",
-   "detail_status": "ok",
-   "deadline_guess": "2026-09-13",
-   "fit": "expired",
-   "reason": "마감일 필터 — 2026-09-13 마감으로 오늘(2026-09-14) 기준 경과",
-   "role": "",
-   "confidence": "low",
-   "ai_status": "skipped_expired",
-   "stage": "expired",
-   "status": "제외",
-   "deadline": "2026-09-13",
-   "judged_at": "2026-09-13 08:10",
-   "first_seen": "2026-09-11",
-   "last_seen": "2026-09-27",
-   "has_detail": true
-  },
-  {
-   "id": "7d5c890a3634dac1",
-   "source_key": "eycareers_kr",
-   "company": "EY한영",
-   "title": "접수중 전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A D-2 2026.09.01 ~ 2026.09.13 23:59 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/127135",
-   "detail_title": "전략·재무자문부문 Deal3팀 경력직 – Cross-border M&A | EY한영 채용",
-   "detail_status": "ok",
-   "deadline_guess": "2026-09-13",
-   "fit": "expired",
-   "reason": "마감일 필터 — 2026-09-13 마감으로 오늘(2026-09-14) 기준 경과",
-   "role": "",
-   "confidence": "low",
-   "ai_status": "skipped_expired",
-   "stage": "expired",
-   "status": "제외",
-   "deadline": "2026-09-13",
-   "judged_at": "2026-09-13 08:10",
-   "first_seen": "2026-09-11",
-   "last_seen": "2026-09-27",
-   "has_detail": true
-  },
-  {
    "id": "a356e372479fed5c",
    "source_key": "aia",
    "company": "AIA생명",
@@ -5875,7 +6062,7 @@
    "deadline": "",
    "judged_at": "2026-10-11 10:35",
    "first_seen": "2026-09-11",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5896,7 +6083,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-09-11",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -5918,7 +6105,7 @@
    "deadline": "2026-09-28",
    "judged_at": "2026-09-28 10:26",
    "first_seen": "2026-09-11",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6006,7 +6193,7 @@
    "deadline": "2026-09-09",
    "judged_at": "2026-09-09 08:11",
    "first_seen": "2026-09-07",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6049,7 +6236,7 @@
    "status": "제외",
    "deadline": "2026-09-21",
    "first_seen": "2026-09-05",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6070,7 +6257,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-09-05",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6092,7 +6279,7 @@
    "deadline": "2026-09-14",
    "judged_at": "2026-09-14 08:10",
    "first_seen": "2026-09-04",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6113,7 +6300,7 @@
    "status": "제외",
    "deadline": "2026-08-10",
    "first_seen": "2026-09-03",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6157,7 +6344,7 @@
    "deadline": "",
    "judged_at": "2026-10-02 11:02",
    "first_seen": "2026-09-02",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6200,7 +6387,7 @@
    "status": "제외",
    "deadline": "2026-10-02",
    "first_seen": "2026-09-02",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6221,7 +6408,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-09-02",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": false
   },
   {
@@ -6369,7 +6556,7 @@
    "deadline": "2026-09-28",
    "judged_at": "2026-09-28 10:26",
    "first_seen": "2026-09-02",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6435,7 +6622,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-30 10:52",
    "first_seen": "2026-08-31",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6457,7 +6644,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-30 10:52",
    "first_seen": "2026-08-31",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6542,9 +6729,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-11-16",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6779,9 +6966,9 @@
    "stage": "unjudged",
    "status": "대기",
    "deadline": "2026-12-31",
-   "judged_at": "2026-11-10 13:30",
+   "judged_at": "2026-11-11 11:33",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6803,7 +6990,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6824,7 +7011,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6912,7 +7099,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6934,7 +7121,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6956,7 +7143,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -6978,7 +7165,7 @@
    "deadline": "2026-08-30",
    "judged_at": "2026-08-30 16:38",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7000,7 +7187,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7066,7 +7253,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7088,7 +7275,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7110,7 +7297,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7132,7 +7319,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7176,7 +7363,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7198,7 +7385,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7220,7 +7407,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7474,7 +7661,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7495,7 +7682,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7516,7 +7703,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7537,7 +7724,7 @@
    "status": "제외",
    "deadline": "2026-10-02",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7559,7 +7746,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7580,7 +7767,7 @@
    "status": "제외",
    "deadline": "2026-04-05",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7601,7 +7788,7 @@
    "status": "제외",
    "deadline": "2025-04-27",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7622,7 +7809,7 @@
    "status": "제외",
    "deadline": "",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7644,7 +7831,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7665,7 +7852,7 @@
    "status": "제외",
    "deadline": "상시",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7687,7 +7874,7 @@
    "deadline": "상시",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7731,7 +7918,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7841,7 +8028,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7863,7 +8050,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7929,7 +8116,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7951,7 +8138,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -7995,7 +8182,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -8039,7 +8226,7 @@
    "deadline": "",
    "judged_at": "2026-09-29 11:30",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
@@ -8061,7 +8248,7 @@
    "deadline": "2026-09-03",
    "judged_at": "2026-09-03 08:10",
    "first_seen": "2026-08-30",
-   "last_seen": "2026-11-10",
+   "last_seen": "2026-11-11",
    "has_detail": true
   },
   {
