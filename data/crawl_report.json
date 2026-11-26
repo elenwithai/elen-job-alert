@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-25 14:15",
+ "generated_at": "2026-11-26 13:43",
  "summary": {
-  "crawled_total": 276,
+  "crawled_total": 270,
   "passed": 0,
   "waiting": 28,
   "excluded_notjob": 0,
-  "excluded_employment": 0,
+  "excluded_employment": 1,
   "excluded_expired": 0,
   "excluded_ai": 0
  },
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 67896,
+    "browser_html_len": 67898,
     "browser_anchor_count": 100,
     "unique_links_sample": [
      {
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 507873,
+    "browser_html_len": 507712,
     "browser_anchor_count": 29,
     "unique_links_sample": [
      {
@@ -428,47 +428,47 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 1,
+   "new_found": 0,
    "detail_ok": 0,
-   "detail_failed": 1,
+   "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "상세 본문을 한 건도 못 가져왔습니다. 이 회사는 목록 정보만으로 판단됩니다.",
+   "note": "",
    "sample_links": [
     {
-     "title": "공채 일반채용 신입 [DB손해보험]2026년 하반기 사무지원직 신입 채용 공채 26.10.16~26.10.25 23:59 마감",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/131415"
+     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (11월) 수시 26.11.25~26.12.08 23:59 D-12 (새 ",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/135477"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 계약직 채용 수시 26.10.19~26.11.01 23:59 마감 (새 창",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
+     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 경력채용 수시 26.11.23~26.12.06 23:59 D-10 (새 창",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/135306"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 마감 (새 창",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/133125"
-    },
-    {
-     "title": "특별채용 일반채용 신입 [DB하이텍] 2026년 서강대학교 반도체 인력양성 Course 모집 특별채용 26.11.11~26.1",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/134086"
+     "title": "인턴 일반채용 [DB하이텍] HR 체험형 인턴 모집 인턴 26.11.18~26.11.29 23:59 D-3 (새 창)",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/134681"
     },
     {
      "title": "특별채용 일반채용 신입 [DB하이텍] 2026년 성균관대학교 반도체 인력양성 Course 모집 특별채용 26.11.11~26.",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/134089"
     },
     {
-     "title": "인턴 일반채용 [DB하이텍] HR 체험형 인턴 모집 인턴 26.11.18~26.11.29 23:59 D-4 (새 창)",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/134681"
+     "title": "특별채용 일반채용 신입 [DB하이텍] 2026년 서강대학교 반도체 인력양성 Course 모집 특별채용 26.11.11~26.1",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/134086"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 경력채용 수시 26.11.23~26.12.06 23:59 D-11 (새 창",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/135306"
+     "title": "공채 일반채용 신입 [DB손해보험]2026년 하반기 사무지원직 신입 채용 공채 26.10.16~26.10.25 23:59 마감",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/131415"
     },
     {
-     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (11월) 수시 26.11.25~26.12.08 23:59 D-13 (새 ",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/135477"
+     "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 마감 (새 창",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/133125"
+    },
+    {
+     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 계약직 채용 수시 26.10.19~26.11.01 23:59 마감 (새 창",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
     }
    ],
    "filtered": {
@@ -495,23 +495,72 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음",
+   "note": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 347,
-    "requests_anchor_count": 0,
+    "requests_html_len": 17042,
+    "requests_anchor_count": 17,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 380,
-    "browser_anchor_count": 0,
-    "unique_links_sample": [],
+    "browser_html_len": 19074,
+    "browser_anchor_count": 18,
+    "unique_links_sample": [
+     {
+      "text": "",
+      "url": "https://recruit.meritzfire.com/new/main.do"
+     },
+     {
+      "text": "성장스토리",
+      "url": "https://recruit.meritzfire.com/new/company/company01.do"
+     },
+     {
+      "text": "복리후생",
+      "url": "https://recruit.meritzfire.com/new/company/company02.do"
+     },
+     {
+      "text": "오피스",
+      "url": "https://recruit.meritzfire.com/new/company/company03.do?idx=all"
+     },
+     {
+      "text": "채용공고",
+      "url": "https://recruit.meritzfire.com/new/job/noticeList.do"
+     },
+     {
+      "text": "채용절차",
+      "url": "https://recruit.meritzfire.com/new/job/noticeProcess.do"
+     },
+     {
+      "text": "FAQ",
+      "url": "https://recruit.meritzfire.com/new/job/faq.do"
+     },
+     {
+      "text": "인터뷰",
+      "url": "https://recruit.meritzfire.com/new/people/interview.do"
+     },
+     {
+      "text": "기업문화",
+      "url": "https://recruit.meritzfire.com/new/culture/culture.do"
+     },
+     {
+      "text": "인재Pool",
+      "url": "https://recruit.meritzfire.com/new/job/poolWrite.do"
+     },
+     {
+      "text": "로그인",
+      "url": "https://recruit.meritzfire.com/new/common/login.do"
+     },
+     {
+      "text": "meritz_recruit@meritz.co.kr",
+      "url": "mailto:meritz_recruit@meritz.co.kr"
+     }
+    ],
     "matched_by_pattern": 0,
     "link_include": [
      "https://recruit.meritzfire.com/new/job/noticeView.do"
     ],
-    "verdict": "페이지는 열렸으나 링크(<a>)가 0개 — 목록을 JS로 그리는데 대기 시간이 부족하거나 로그인이 필요할 수 있음"
+    "verdict": "link_include 패턴 불일치 — 링크는 18개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -592,80 +641,23 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 20개 있으나 패턴에 맞는 것 0개",
+   "note": "브라우저 렌더링 실패 — 렌더링 실패: TimeoutError (requests는 200)",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 24074,
+    "requests_html_len": 24119,
     "requests_anchor_count": 1,
-    "browser_ok": true,
-    "browser_error": "",
-    "browser_html_len": 46863,
-    "browser_anchor_count": 20,
-    "unique_links_sample": [
-     {
-      "text": "회사소개",
-      "url": "https://kbinsure.recruiter.co.kr/career/company"
-     },
-     {
-      "text": "CEO소개",
-      "url": "https://kbinsure.recruiter.co.kr/career/CEO"
-     },
-     {
-      "text": "수상실적",
-      "url": "https://kbinsure.recruiter.co.kr/career/premier"
-     },
-     {
-      "text": "찾아오시는 길",
-      "url": "https://kbinsure.recruiter.co.kr/career/https://www.kbinsure.co.kr/CU601040001.ec"
-     },
-     {
-      "text": "채용정보",
-      "url": "https://kbinsure.recruiter.co.kr/career/process"
-     },
-     {
-      "text": "진행 중인 채용공고",
-      "url": "https://kbinsure.recruiter.co.kr/career/job_posting"
-     },
-     {
-      "text": "채용 FAQ",
-      "url": "https://kbinsure.recruiter.co.kr/career/job_posting(1)"
-     },
-     {
-      "text": "1:1 문의 ↗",
-      "url": "https://kbinsure.recruiter.co.kr/career/https://kbinsure.recruiter.co.kr/career?viewType=QnA"
-     },
-     {
-      "text": "입사지원",
-      "url": "https://kbinsure.recruiter.co.kr/career/apply"
-     },
-     {
-      "text": "지원서 수정 ↗",
-      "url": "https://kbinsure.recruiter.co.kr/career/https://kbinsure.recruiter.co.kr/career?viewType=ResumeUpdate"
-     },
-     {
-      "text": "마이페이지 ↗",
-      "url": "https://kbinsure.recruiter.co.kr/career/https://kbinsure.recruiter.co.kr/v1/applicant/my-page/login"
-     },
-     {
-      "text": "인사제도",
-      "url": "https://kbinsure.recruiter.co.kr/career/talent"
-     },
-     {
-      "text": "인재육성",
-      "url": "https://kbinsure.recruiter.co.kr/career/talent_course"
-     },
-     {
-      "text": "복리후생",
-      "url": "https://kbinsure.recruiter.co.kr/career/welfare"
-     }
-    ],
+    "browser_ok": false,
+    "browser_error": "렌더링 실패: TimeoutError",
+    "browser_html_len": 0,
+    "browser_anchor_count": 0,
+    "unique_links_sample": [],
     "matched_by_pattern": 0,
     "link_include": [
      "https://kbinsure.recruiter.co.kr/app/jobnotice/view?systemKindCode=MRS2&jobnoticeSn="
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 20개 있으나 패턴에 맞는 것 0개"
+    "verdict": "브라우저 렌더링 실패 — 렌더링 실패: TimeoutError (requests는 200)"
    },
    "filtered": {
     "notjob": 0,
@@ -738,9 +730,9 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 35,
-   "new_found": 0,
-   "detail_ok": 0,
+   "links_found": 36,
+   "new_found": 1,
+   "detail_ok": 1,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -749,6 +741,10 @@
    "error": "",
    "note": "",
    "sample_links": [
+    {
+     "title": "Public Service팀 내 의료헬스케어 분야 RA 인턴 채용",
+     "url": "https://www.pwc.com/kr/ko/career/experienced/r261124.html"
+    },
     {
      "title": "Fulcrum Valuation 인턴 채용",
      "url": "https://www.pwc.com/kr/ko/career/experienced/r261124-3.html"
@@ -776,15 +772,11 @@
     {
      "title": "AX Node XBRL센터 - 경력직 채용",
      "url": "https://www.pwc.com/kr/ko/career/experienced/r261110-3.html"
-    },
-    {
-     "title": "AX Node XBRL센터 - 신입 채용",
-     "url": "https://www.pwc.com/kr/ko/career/experienced/r261110-2.html"
     }
    ],
    "filtered": {
     "notjob": 0,
-    "employment": 0,
+    "employment": 1,
     "expired": 0
    }
   },
@@ -806,7 +798,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -815,8 +807,8 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59131,
-    "browser_anchor_count": 122,
+    "browser_html_len": 59095,
+    "browser_anchor_count": 121,
     "unique_links_sample": [
      {
       "text": "KMPG careers",
@@ -923,7 +915,7 @@
     "link_include": [
      "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -941,8 +933,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 10,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -952,15 +944,15 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 재무실 FP&A (Financial Planning & Analysis) [경력/리더급] D-5 2026.11.17 ~",
+     "title": "접수중 재무실 FP&A (Financial Planning & Analysis) [경력/리더급] D-4 2026.11.17 ~",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/134672"
     },
     {
-     "title": "접수중 금융컨설팅본부 AITS팀 정보보호 분야 경력직 D-1 2026.11.17 ~ 2026.11.26 23:59 수시 일반채",
+     "title": "접수중 금융컨설팅본부 AITS팀 정보보호 분야 경력직 D-Day 2026.11.17 ~ 2026.11.26 23:59 수시 일",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/134773"
     },
     {
-     "title": "접수중 금융감사부문 IT 시스템 및 규제 프로젝트 인턴 D-1 2026.11.18 ~ 2026.11.26 23:59 수시 일반",
+     "title": "접수중 금융감사부문 IT 시스템 및 규제 프로젝트 인턴 D-Day 2026.11.18 ~ 2026.11.26 23:59 수시 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/134830"
     },
     {
@@ -968,19 +960,19 @@
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/134899"
     },
     {
-     "title": "접수중 감사부문 감사지원팀 CoE ADC_Audit 인턴 채용 D-1 2026.11.19 ~ 2026.11.26 23:59 수",
+     "title": "접수중 감사부문 감사지원팀 CoE ADC_Audit 인턴 채용 D-Day 2026.11.19 ~ 2026.11.26 23:59",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/134987"
     },
     {
-     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-1 2026.11.19 ~ 2026.11.26 23:59 상시 일",
+     "title": "접수중 전략·재무자문부문 Deal3 (M&A) 팀 경력직 D-Day 2026.11.19 ~ 2026.11.26 23:59 상시",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/134994"
     },
     {
-     "title": "접수중 품질위험관리부문(Risk Management) 독립성팀 인턴 D-1 2026.11.20 ~ 2026.11.26 12:0",
+     "title": "접수마감 품질위험관리부문(Risk Management) 독립성팀 인턴 2026.11.20 ~ 2026.11.26 12:00 수",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/135187"
     },
     {
-     "title": "접수중 AI Center 인턴 (정규전환형) D-1 2026.11.23 ~ 2026.11.26 12:00 수시 일반채용 신입 ",
+     "title": "접수마감 AI Center 인턴 (정규전환형) 2026.11.23 ~ 2026.11.26 12:00 수시 일반채용 신입 (새 ",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/135244"
     }
    ],
@@ -1155,11 +1147,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 210977,
+    "requests_html_len": 211001,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181146,
+    "browser_html_len": 181171,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -1183,7 +1175,7 @@
    "fallback_used": true,
    "fallback_attempted": false,
    "browser_links": null,
-   "links_found": 0,
+   "links_found": 1,
    "new_found": 0,
    "detail_ok": 0,
    "detail_failed": 0,
@@ -1192,75 +1184,13 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 미지정 + 휴리스틱 미통과 — 링크 14개 중 공고로 인정된 것 없음",
-   "sample_links": [],
-   "probe": {
-    "requests_status": 200,
-    "requests_error": "",
-    "requests_html_len": 113467,
-    "requests_anchor_count": 15,
-    "browser_ok": true,
-    "browser_error": "",
-    "browser_html_len": 85609,
-    "browser_anchor_count": 14,
-    "unique_links_sample": [
-     {
-      "text": "",
-      "url": "https://kblife-recruiting.career.greetinghr.com/ko"
-     },
-     {
-      "text": "About",
-      "url": "https://kblife-recruiting.career.greetinghr.com/ko/overview"
-     },
-     {
-      "text": "KB Life",
-      "url": "https://kblife-recruiting.career.greetinghr.com/ko/benefit"
-     },
-     {
-      "text": "Career",
-      "url": "https://kblife-recruiting.career.greetinghr.com/ko/career"
-     },
-     {
-      "text": "공고 바로가기",
-      "url": "https://kblife-recruiting.career.greetinghr.com/ko/home#1e4ca025-43e0-4071-8413-d5aca14fd1b4"
-     },
-     {
-      "text": "KB라이프생명 둘러보기",
-      "url": "https://www.kblife.co.kr/"
-     },
-     {
-      "text": "",
-      "url": "https://www.kblife.co.kr/customer-common/kbLifeStory.do"
-     },
-     {
-      "text": "",
-      "url": "https://careers.kbfg.com/life/story"
-     },
-     {
-      "text": "KB라이프생명 유튜브 둘러보기 ↗",
-      "url": "https://www.youtube.com/channel/UCrKJwnv6-psXk6AMDg5zX7A"
-     },
-     {
-      "text": "개인정보처리방침",
-      "url": "https://kblife-recruiting.career.greetinghr.com/privacy"
-     },
-     {
-      "text": "",
-      "url": "https://post.naver.com/kblifeinsurance2018"
-     },
-     {
-      "text": "",
-      "url": "https://www.facebook.com/KBlife.kr"
-     },
-     {
-      "text": "Greeting",
-      "url": "https://www.greetinghr.com/?utm_source=career_page&utm_medium=11093"
-     }
-    ],
-    "matched_by_pattern": 0,
-    "link_include": [],
-    "verdict": "link_include 미지정 + 휴리스틱 미통과 — 링크 14개 중 공고로 인정된 것 없음"
-   },
+   "note": "",
+   "sample_links": [
+    {
+     "title": "고객컨택파트 경력 계약직 채용 고객경험혁신본부 고객컨택파트 경력 2년 이상 계약직 KB라이프생명 2026. 12. 02, 14",
+     "url": "https://kblife-recruiting.career.greetinghr.com/ko/o/244962"
+    }
+   ],
    "filtered": {
     "notjob": 0,
     "employment": 0,
@@ -1313,10 +1243,10 @@
    "note": "link_include 패턴 불일치 — 링크는 4개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
-    "requests_status": null,
-    "requests_error": "요청 실패: ConnectionError",
-    "requests_html_len": 0,
-    "requests_anchor_count": 0,
+    "requests_status": 200,
+    "requests_error": "",
+    "requests_html_len": 12787,
+    "requests_anchor_count": 4,
     "browser_ok": true,
     "browser_error": "",
     "browser_html_len": 12785,
@@ -1400,8 +1330,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 8,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1411,7 +1341,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 재무회계팀 경력직 채용 D-11 2026.11.25 ~ 2026.12.06 23:59 수시 일반채용 경력",
+     "title": "접수중 [ABL생명] 재무회계팀 경력직 채용 D-10 2026.11.25 ~ 2026.12.06 23:59 수시 일반채용 경력",
      "url": "https://abl.recruiter.co.kr/career/jobs/135554"
     },
     {
@@ -2530,20 +2460,6 @@
    "first_seen": "2026-10-14"
   },
   {
-   "id": "ba4b1663a72f0b15",
-   "company": "EY한영",
-   "title": "접수중 감사부문 AI 신사업 기획 및 IT 내부회계 PA [경력] D-17 2026.09.17 ~ 2026.10.05 00:00 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128728",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-10-05 마감으로 오늘(2026-10-06) 기준 경과",
-   "deadline": "2026-10-05",
-   "has_detail": true,
-   "first_seen": "2026-09-18"
-  },
-  {
    "id": "36e773bdb19ece53",
    "company": "EY한영",
    "title": "접수중 감사부문 Data Analytics – IT Specialist 인턴 D-7 2026.10.14 ~ 2026.10.22 23:59 수시 일반채용 인턴",
@@ -2726,20 +2642,6 @@
    "first_seen": "2026-10-23"
   },
   {
-   "id": "9adaa28fd48c3c1c",
-   "company": "EY한영",
-   "title": "접수중 글로벌 이커머스 플랫폼 구축 컨설팅 인턴 D-6 2026.09.28 ~ 2026.10.05 23:59 수시 일반채용 인턴",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129681",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-10-05",
-   "has_detail": true,
-   "first_seen": "2026-09-29"
-  },
-  {
    "id": "059d882588b5675c",
    "company": "EY한영",
    "title": "접수중 금융감사부문 IT 시스템 및 규제 프로젝트 인턴 D-8 2026.11.18 ~ 2026.11.26 23:59 수시 일반채용 인턴 (새 창)",
@@ -2878,20 +2780,6 @@
    "deadline": "2026-11-08",
    "has_detail": true,
    "first_seen": "2026-11-02"
-  },
-  {
-   "id": "1e85fe8073baddd4",
-   "company": "EY한영",
-   "title": "접수중 금융컨설팅본부 리스크 컨설팅 인턴 D-4 2026.09.22 ~ 2026.09.27 23:59 수시 일반채용 인턴",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129197",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-09-27",
-   "has_detail": true,
-   "first_seen": "2026-09-23"
   },
   {
    "id": "92662bd36597e565",
@@ -3102,34 +2990,6 @@
    "deadline": "2026-10-11",
    "has_detail": true,
    "first_seen": "2026-09-30"
-  },
-  {
-   "id": "6bf3c1d5cf184b33",
-   "company": "EY한영",
-   "title": "접수중 전략·재무자문본부 Infrastructure Deal Advisory Service 인턴 D-11 2026.09.30 ~ 2026.10.11 23:59 수시 일반채용 인턴",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/129926",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-10-11",
-   "has_detail": true,
-   "first_seen": "2026-09-30"
-  },
-  {
-   "id": "fc38cf941d2a746e",
-   "company": "EY한영",
-   "title": "접수중 전략·재무자문부문 Deal1 경력직 D-14 2026.09.16 ~ 2026.10.01 23:59 수시 일반채용 경력",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/128666",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-10-01 마감으로 오늘(2026-10-02) 기준 경과",
-   "deadline": "2026-10-01",
-   "has_detail": true,
-   "first_seen": "2026-09-17"
   },
   {
    "id": "5e8148f318883223",
@@ -3608,20 +3468,6 @@
    "first_seen": "2026-09-23"
   },
   {
-   "id": "2dca75d0008fa76a",
-   "company": "KB금융지주",
-   "title": "디지털WM Biz부 경력직(연봉계약직) 채용",
-   "url": "https://careers.kbfg.com/apply/919",
-   "source_key": "careers_kbfg",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 2026-10-11 마감으로 오늘(2026-10-12) 기준 경과",
-   "deadline": "2026-10-11",
-   "has_detail": true,
-   "first_seen": "2026-09-22"
-  },
-  {
    "id": "25653d70d74ac046",
    "company": "KB금융지주",
    "title": "디지털영업본부 핀테크Biz팀 경력직(연봉계약직) 채용",
@@ -4000,20 +3846,6 @@
    "first_seen": "2026-11-11"
   },
   {
-   "id": "2c4c70ca3a4ad90e",
-   "company": "PwC삼일",
-   "title": "AX Node 공공·비영리 부문 플랫폼 개발자 채용",
-   "url": "https://www.pwc.com/kr/ko/career/experienced/r260908-1.html",
-   "source_key": "pwc",
-   "status": "제외",
-   "stage": "expired",
-   "stage_label": "4단계 마감일",
-   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-09-11)로부터 30일 경과",
-   "deadline": "상시",
-   "has_detail": true,
-   "first_seen": "2026-09-11"
-  },
-  {
    "id": "3720edb60849ee52",
    "company": "PwC삼일",
    "title": "AX Node 사업비정산 회계사 채용",
@@ -4362,6 +4194,20 @@
    "deadline": "2026-10-27",
    "has_detail": true,
    "first_seen": "2026-10-21"
+  },
+  {
+   "id": "c62c4d8c7523242d",
+   "company": "PwC삼일",
+   "title": "Public Service팀 내 의료헬스케어 분야 RA 인턴 채용",
+   "url": "https://www.pwc.com/kr/ko/career/experienced/r261124.html",
+   "source_key": "pwc",
+   "status": "제외",
+   "stage": "employment",
+   "stage_label": "3단계 고용형태",
+   "reason": "고용형태 제외 — 제목에서 '인턴' 발견 (경력/정규직 표현 없음)",
+   "deadline": "2026-12-08",
+   "has_detail": true,
+   "first_seen": "2026-11-26"
   },
   {
    "id": "e155a7fe3b9031f0",
