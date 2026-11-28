@@ -1,12 +1,12 @@
 {
- "generated_at": "2026-11-27 13:49",
+ "generated_at": "2026-11-28 13:33",
  "summary": {
-  "crawled_total": 265,
+  "crawled_total": 264,
   "passed": 0,
-  "waiting": 26,
+  "waiting": 25,
   "excluded_notjob": 0,
   "excluded_employment": 0,
-  "excluded_expired": 3,
+  "excluded_expired": 1,
   "excluded_ai": 0
  },
  "sources": [
@@ -37,7 +37,7 @@
     "requests_anchor_count": 92,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 66476,
+    "browser_html_len": 66472,
     "browser_anchor_count": 99,
     "unique_links_sample": [
      {
@@ -180,7 +180,7 @@
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 507684,
+    "browser_html_len": 507769,
     "browser_anchor_count": 29,
     "unique_links_sample": [
      {
@@ -439,15 +439,15 @@
    "note": "",
    "sample_links": [
     {
-     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (11월) 수시 26.11.25~26.12.08 23:59 D-11 (새 ",
+     "title": "수시 일반채용 경력 [DB하이텍] 경력사원 공개채용 (11월) 수시 26.11.25~26.12.08 23:59 D-10 (새 ",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/135477"
     },
     {
-     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 경력채용 수시 26.11.23~26.12.06 23:59 D-9 (새 창)",
+     "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 경력채용 수시 26.11.23~26.12.06 23:59 D-8 (새 창)",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/135306"
     },
     {
-     "title": "인턴 일반채용 [DB하이텍] HR 체험형 인턴 모집 인턴 26.11.18~26.11.29 23:59 D-2 (새 창)",
+     "title": "인턴 일반채용 [DB하이텍] HR 체험형 인턴 모집 인턴 26.11.18~26.11.29 23:59 D-1 (새 창)",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/134681"
     },
     {
@@ -459,16 +459,16 @@
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/134086"
     },
     {
-     "title": "공채 일반채용 신입 [DB손해보험]2026년 하반기 사무지원직 신입 채용 공채 26.10.16~26.10.25 23:59 마감",
-     "url": "https://dbgroup.recruiter.co.kr/career/jobs/131415"
-    },
-    {
      "title": "수시 일반채용 경력 [DB글로벌칩] 경력사원 공개채용 (11월) 수시 26.11.02~26.11.16 23:59 마감 (새 창",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/133125"
     },
     {
      "title": "수시 일반채용 경력 [DB글로벌칩] IT인프라/보안 계약직 채용 수시 26.10.19~26.11.01 23:59 마감 (새 창",
      "url": "https://dbgroup.recruiter.co.kr/career/jobs/131711"
+    },
+    {
+     "title": "공채 일반채용 신입 [DB손해보험]2026년 하반기 사무지원직 신입 채용 공채 26.10.16~26.10.25 23:59 마감",
+     "url": "https://dbgroup.recruiter.co.kr/career/jobs/131415"
     }
    ],
    "filtered": {
@@ -500,11 +500,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 346,
+    "requests_html_len": 345,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 379,
+    "browser_html_len": 378,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -785,7 +785,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 1
+    "expired": 0
    }
   },
   {
@@ -806,7 +806,7 @@
    "manual_only": false,
    "self_links_skipped": 0,
    "error": "",
-   "note": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개",
+   "note": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
     "requests_status": 200,
@@ -815,8 +815,8 @@
     "requests_anchor_count": 93,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 59148,
-    "browser_anchor_count": 122,
+    "browser_html_len": 59091,
+    "browser_anchor_count": 121,
     "unique_links_sample": [
      {
       "text": "KMPG careers",
@@ -923,7 +923,7 @@
     "link_include": [
      "https://career.kr.kpmg.com/hr/rec/recruit/jobopen/controller/candidate/JobOpen310WebController/DetailInit.hr"
     ],
-    "verdict": "link_include 패턴 불일치 — 링크는 122개 있으나 패턴에 맞는 것 0개"
+    "verdict": "link_include 패턴 불일치 — 링크는 121개 있으나 패턴에 맞는 것 0개"
    },
    "filtered": {
     "notjob": 0,
@@ -952,7 +952,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 재무실 FP&A (Financial Planning & Analysis) [경력/리더급] D-3 2026.11.17 ~",
+     "title": "접수중 재무실 FP&A (Financial Planning & Analysis) [경력/리더급] D-2 2026.11.17 ~",
      "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/134672"
     },
     {
@@ -987,7 +987,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 2
+    "expired": 0
    }
   },
   {
@@ -1129,7 +1129,7 @@
    "filtered": {
     "notjob": 0,
     "employment": 0,
-    "expired": 0
+    "expired": 1
    }
   },
   {
@@ -1155,11 +1155,11 @@
    "probe": {
     "requests_status": 200,
     "requests_error": "",
-    "requests_html_len": 211000,
+    "requests_html_len": 210999,
     "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
-    "browser_html_len": 181170,
+    "browser_html_len": 181169,
     "browser_anchor_count": 0,
     "unique_links_sample": [],
     "matched_by_pattern": 0,
@@ -1184,8 +1184,8 @@
    "fallback_attempted": false,
    "browser_links": null,
    "links_found": 2,
-   "new_found": 1,
-   "detail_ok": 1,
+   "new_found": 0,
+   "detail_ok": 0,
    "detail_failed": 0,
    "detail_fetch_enabled": true,
    "deferred": 0,
@@ -1255,10 +1255,10 @@
    "note": "link_include 패턴 불일치 — 링크는 4개 있으나 패턴에 맞는 것 0개",
    "sample_links": [],
    "probe": {
-    "requests_status": 200,
-    "requests_error": "",
-    "requests_html_len": 12787,
-    "requests_anchor_count": 4,
+    "requests_status": null,
+    "requests_error": "요청 실패: ConnectionError",
+    "requests_html_len": 0,
+    "requests_anchor_count": 0,
     "browser_ok": true,
     "browser_error": "",
     "browser_html_len": 12785,
@@ -1353,7 +1353,7 @@
    "note": "",
    "sample_links": [
     {
-     "title": "접수중 [ABL생명] 재무회계팀 경력직 채용 D-9 2026.11.25 ~ 2026.12.06 23:59 수시 일반채용 경력 ",
+     "title": "접수중 [ABL생명] 재무회계팀 경력직 채용 D-8 2026.11.25 ~ 2026.12.06 23:59 수시 일반채용 경력 ",
      "url": "https://abl.recruiter.co.kr/career/jobs/135554"
     },
     {
@@ -2400,20 +2400,6 @@
    "deadline": "2026-10-18",
    "has_detail": true,
    "first_seen": "2026-10-09"
-  },
-  {
-   "id": "2b0361463e7228fe",
-   "company": "EY한영",
-   "title": "접수중 RM(Risk Management) 부문 독립성팀 인턴 D-12 2026.10.14 ~ 2026.10.26 23:59 수시 일반채용 신입",
-   "url": "https://eycareers-kr.recruiter.co.kr/career/jobs/131191",
-   "source_key": "eycareers_kr",
-   "status": "제외",
-   "stage": "employment",
-   "stage_label": "3단계 고용형태",
-   "reason": "고용형태 제외 — 제목에서 '신입' 발견 (경력/정규직 표현 없음)",
-   "deadline": "2026-10-26",
-   "has_detail": true,
-   "first_seen": "2026-10-14"
   },
   {
    "id": "36e773bdb19ece53",
@@ -4521,10 +4507,10 @@
    "title": "Actuarial Analyst - Modeling",
    "url": "https://www.metlifecareers.com/ko_KR/ml/JobDetail/Actuarial-Analyst-Modeling/21320",
    "source_key": "metlifecareers",
-   "status": "대기",
-   "stage": "unjudged",
-   "stage_label": "5단계 AI 적합도(미실행)",
-   "reason": "AI 판단 전 — API 키를 등록하면 다음 실행에서 판단합니다",
+   "status": "제외",
+   "stage": "expired",
+   "stage_label": "4단계 마감일",
+   "reason": "마감일 필터 — 마감일을 읽지 못했고 발견일(2026-10-28)로부터 30일 경과",
    "deadline": "",
    "has_detail": true,
    "first_seen": "2026-10-28"
